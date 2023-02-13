@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Phase1
-Mon Feb 06 15:54:20 2023
+Mon Feb 13 17:50:20 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -10,7 +10,15 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Ver
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
+ 13. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -36,20 +44,20 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                          ;
 +------------------------------------+--------------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Mon Feb 06 15:54:20 2023                ;
+; Analysis & Synthesis Status        ; Successful - Mon Feb 13 17:50:19 2023            ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                      ; Phase1                                           ;
 ; Top-level Entity Name              ; encoder                                          ;
 ; Family                             ; Cyclone III                                      ;
-; Total logic elements               ; N/A until Partition Merge                        ;
-;     Total combinational functions  ; N/A until Partition Merge                        ;
-;     Dedicated logic registers      ; N/A until Partition Merge                        ;
-; Total registers                    ; N/A until Partition Merge                        ;
-; Total pins                         ; N/A until Partition Merge                        ;
-; Total virtual pins                 ; N/A until Partition Merge                        ;
-; Total memory bits                  ; N/A until Partition Merge                        ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                        ;
-; Total PLLs                         ; N/A until Partition Merge                        ;
+; Total logic elements               ; 46                                               ;
+;     Total combinational functions  ; 46                                               ;
+;     Dedicated logic registers      ; 0                                                ;
+; Total registers                    ; 0                                                ;
+; Total pins                         ; 29                                               ;
+; Total virtual pins                 ; 0                                                ;
+; Total memory bits                  ; 0                                                ;
+; Embedded Multiplier 9-bit elements ; 0                                                ;
+; Total PLLs                         ; 0                                                ;
 +------------------------------------+--------------------------------------------------+
 
 
@@ -157,13 +165,110 @@ applicable agreement for further details.
 +----------------------------+-------------+
 
 
++----------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                           ;
++----------------------------------+-----------------+------------------------+------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path             ; Library ;
++----------------------------------+-----------------+------------------------+------------------------------------------+---------+
+; encoder.v                        ; yes             ; User Verilog HDL File  ; C:/Users/789wi/Videos/ELEC-374/encoder.v ;         ;
++----------------------------------+-----------------+------------------------+------------------------------------------+---------+
+
+
++------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary          ;
++---------------------------------------------+--------+
+; Resource                                    ; Usage  ;
++---------------------------------------------+--------+
+; Estimated Total logic elements              ; 46     ;
+;                                             ;        ;
+; Total combinational functions               ; 46     ;
+; Logic element usage by number of LUT inputs ;        ;
+;     -- 4 input functions                    ; 33     ;
+;     -- 3 input functions                    ; 12     ;
+;     -- <=2 input functions                  ; 1      ;
+;                                             ;        ;
+; Logic elements by mode                      ;        ;
+;     -- normal mode                          ; 46     ;
+;     -- arithmetic mode                      ; 0      ;
+;                                             ;        ;
+; Total registers                             ; 0      ;
+;     -- Dedicated logic registers            ; 0      ;
+;     -- I/O registers                        ; 0      ;
+;                                             ;        ;
+; I/O pins                                    ; 29     ;
+; Embedded Multiplier 9-bit elements          ; 0      ;
+; Maximum fan-out node                        ; d[4]~6 ;
+; Maximum fan-out                             ; 10     ;
+; Total fan-out                               ; 204    ;
+; Average fan-out                             ; 1.96   ;
++---------------------------------------------+--------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; |encoder                   ; 46 (46)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 29   ; 0            ; |encoder            ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                               ;
++----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------+------------------------+
+; d[0]$latch                                         ; GND                 ; yes                    ;
+; d[1]$latch                                         ; GND                 ; yes                    ;
+; d[2]$latch                                         ; GND                 ; yes                    ;
+; d[3]$latch                                         ; GND                 ; yes                    ;
+; d[4]$latch                                         ; GND                 ; yes                    ;
+; Number of user-specified and inferred latches = 5  ;                     ;                        ;
++----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 16:1               ; 2 bits    ; 20 LEs        ; 12 LEs               ; 8 LEs                  ; No         ; |encoder|d[3]              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Mon Feb 06 15:54:18 2023
+    Info: Processing started: Mon Feb 13 17:50:15 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Phase1 -c Phase1
 Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
 Info (12021): Found 1 design units, including 1 entities, in source file adder.bdf
@@ -181,7 +286,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file bus.v
     Info (12023): Found entity 1: mybusmux
 Info (12021): Found 1 design units, including 1 entities, in source file mdrunit.v
     Info (12023): Found entity 1: MDRunit
-Info (12021): Found 0 design units, including 0 entities, in source file boothmultiplier.v
+Info (12021): Found 1 design units, including 1 entities, in source file boothmultiplier.v
+    Info (12023): Found entity 1: boothMultiplier
 Info (12021): Found 1 design units, including 1 entities, in source file twocompliment.v
     Info (12023): Found entity 1: twoCompliment
 Warning (10236): Verilog HDL Implicit Net warning at Bus.v(8): created implicit net for "BusMuxIn"
@@ -212,14 +318,34 @@ Warning (10236): Verilog HDL Implicit Net warning at Bus.v(8): created implicit 
 Warning (10236): Verilog HDL Implicit Net warning at Bus.v(8): created implicit net for "SIGN"
 Warning (10236): Verilog HDL Implicit Net warning at Bus.v(8): created implicit net for "EXTENDED"
 Warning (10236): Verilog HDL Implicit Net warning at MDRunit.v(9): created implicit net for "MDRout"
-Error (10048): Verilog HDL error at twoCompliment.v(7): values cannot be assigned directly to all or part of array "j" - assignments must be made to individual elements only File: D:/ELEC374/twoCompliment.v Line: 7
-Error (10048): Verilog HDL error at twoCompliment.v(9): values cannot be assigned directly to all or part of array "j" - assignments must be made to individual elements only File: D:/ELEC374/twoCompliment.v Line: 9
-Error (10686): SystemVerilog error at twoCompliment.v(9): j has an aggregate value File: D:/ELEC374/twoCompliment.v Line: 9
-Error (10044): Verilog HDL error at twoCompliment.v(11): expression cannot reference entire array "j" File: D:/ELEC374/twoCompliment.v Line: 11
-Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 4 errors, 30 warnings
-    Error: Peak virtual memory: 4574 megabytes
-    Error: Processing ended: Mon Feb 06 15:54:28 2023
-    Error: Elapsed time: 00:00:10
-    Error: Total CPU time (on all processors): 00:00:01
+Info (12127): Elaborating entity "encoder" for the top level hierarchy
+Warning (10240): Verilog HDL Always Construct warning at encoder.v(10): inferring latch(es) for variable "d", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "d[0]" at encoder.v(13)
+Info (10041): Inferred latch for "d[1]" at encoder.v(13)
+Info (10041): Inferred latch for "d[2]" at encoder.v(13)
+Info (10041): Inferred latch for "d[3]" at encoder.v(13)
+Info (10041): Inferred latch for "d[4]" at encoder.v(13)
+Warning (12189): OpenCore Simulation-Only Evaluation feature is turned on for all cores in the design
+    Warning (12191): Some cores in this design do not support the OpenCore Plus Hardware Evaluation feature
+        Warning (12192): "8B10B Encoder-Decoder (6AF7_0079)" does not support the OpenCore Plus Hardware Evaluation feature
+Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file C:/Users/789wi/Videos/ELEC-374/output_files/Phase1.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 75 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 24 input pins
+    Info (21059): Implemented 5 output pins
+    Info (21061): Implemented 46 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 34 warnings
+    Info: Peak virtual memory: 4609 megabytes
+    Info: Processing ended: Mon Feb 13 17:50:20 2023
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:02
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/789wi/Videos/ELEC-374/output_files/Phase1.map.smsg.
 
 

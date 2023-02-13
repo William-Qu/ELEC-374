@@ -1,8 +1,11 @@
-module twoCompliment(input [31:0] d,output [31:0] q);
-	reg j[31:0];
-	always @ (*) begin
-		j = !(d);
-		j = j + 1'b1;
-		q = j;
+module twoCompliment(input [31:0] d,output reg [31:0] q);
+	integer i;
+	always @ (*) 
+	begin
+		for (i=0; i<32; i=i+1) 
+		begin
+			q[i] = !(d[i]);
+		end
+		q = q + 'b1;
 	end	
 endmodule

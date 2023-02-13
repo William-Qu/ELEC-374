@@ -1,5 +1,5 @@
 EDA Netlist Writer report for Phase1
-Fri Feb 03 16:07:36 2023
+Mon Feb 13 17:50:40 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Fri Feb 03 16:07:36 2023 ;
+; EDA Netlist Writer Status ; Successful - Mon Feb 13 17:50:39 2023 ;
 ; Revision Name             ; Phase1                                ;
 ; Top-level Entity Name     ; encoder                               ;
 ; Family                    ; Cyclone III                           ;
@@ -66,20 +66,20 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------------------+---------------------------+
 
 
-+----------------------------------------------------------------+
-; Simulation Generated Files                                     ;
-+----------------------------------------------------------------+
-; Generated Files                                                ;
-+----------------------------------------------------------------+
-; D:/ELEC374/simulation/modelsim/Phase1_6_1200mv_85c_slow.vo     ;
-; D:/ELEC374/simulation/modelsim/Phase1_6_1200mv_0c_slow.vo      ;
-; D:/ELEC374/simulation/modelsim/Phase1_min_1200mv_0c_fast.vo    ;
-; D:/ELEC374/simulation/modelsim/Phase1.vo                       ;
-; D:/ELEC374/simulation/modelsim/Phase1_6_1200mv_85c_v_slow.sdo  ;
-; D:/ELEC374/simulation/modelsim/Phase1_6_1200mv_0c_v_slow.sdo   ;
-; D:/ELEC374/simulation/modelsim/Phase1_min_1200mv_0c_v_fast.sdo ;
-; D:/ELEC374/simulation/modelsim/Phase1_v.sdo                    ;
-+----------------------------------------------------------------+
++------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                         ;
++------------------------------------------------------------------------------------+
+; Generated Files                                                                    ;
++------------------------------------------------------------------------------------+
+; C:/Users/789wi/Videos/ELEC-374/simulation/modelsim/Phase1_6_1200mv_85c_slow.vo     ;
+; C:/Users/789wi/Videos/ELEC-374/simulation/modelsim/Phase1_6_1200mv_0c_slow.vo      ;
+; C:/Users/789wi/Videos/ELEC-374/simulation/modelsim/Phase1_min_1200mv_0c_fast.vo    ;
+; C:/Users/789wi/Videos/ELEC-374/simulation/modelsim/Phase1.vo                       ;
+; C:/Users/789wi/Videos/ELEC-374/simulation/modelsim/Phase1_6_1200mv_85c_v_slow.sdo  ;
+; C:/Users/789wi/Videos/ELEC-374/simulation/modelsim/Phase1_6_1200mv_0c_v_slow.sdo   ;
+; C:/Users/789wi/Videos/ELEC-374/simulation/modelsim/Phase1_min_1200mv_0c_v_fast.sdo ;
+; C:/Users/789wi/Videos/ELEC-374/simulation/modelsim/Phase1_v.sdo                    ;
++------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -88,20 +88,20 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Fri Feb 03 16:07:32 2023
+    Info: Processing started: Mon Feb 13 17:50:37 2023
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off Phase1 -c Phase1
-Info (204019): Generated file Phase1_6_1200mv_85c_slow.vo in folder "D:/ELEC374/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file Phase1_6_1200mv_0c_slow.vo in folder "D:/ELEC374/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file Phase1_min_1200mv_0c_fast.vo in folder "D:/ELEC374/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file Phase1.vo in folder "D:/ELEC374/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file Phase1_6_1200mv_85c_v_slow.sdo in folder "D:/ELEC374/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file Phase1_6_1200mv_0c_v_slow.sdo in folder "D:/ELEC374/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file Phase1_min_1200mv_0c_v_fast.sdo in folder "D:/ELEC374/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file Phase1_v.sdo in folder "D:/ELEC374/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file Phase1_6_1200mv_85c_slow.vo in folder "C:/Users/789wi/Videos/ELEC-374/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file Phase1_6_1200mv_0c_slow.vo in folder "C:/Users/789wi/Videos/ELEC-374/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file Phase1_min_1200mv_0c_fast.vo in folder "C:/Users/789wi/Videos/ELEC-374/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file Phase1.vo in folder "C:/Users/789wi/Videos/ELEC-374/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file Phase1_6_1200mv_85c_v_slow.sdo in folder "C:/Users/789wi/Videos/ELEC-374/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file Phase1_6_1200mv_0c_v_slow.sdo in folder "C:/Users/789wi/Videos/ELEC-374/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file Phase1_min_1200mv_0c_v_fast.sdo in folder "C:/Users/789wi/Videos/ELEC-374/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file Phase1_v.sdo in folder "C:/Users/789wi/Videos/ELEC-374/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4521 megabytes
-    Info: Processing ended: Fri Feb 03 16:07:38 2023
-    Info: Elapsed time: 00:00:06
+    Info: Peak virtual memory: 4523 megabytes
+    Info: Processing ended: Mon Feb 13 17:50:40 2023
+    Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:01
 
 
