@@ -12,6 +12,7 @@ source_file = 1, C:/Users/789wi/Videos/ELEC-374/Bus.v
 source_file = 1, C:/Users/789wi/Videos/ELEC-374/MDRunit.v
 source_file = 1, C:/Users/789wi/Videos/ELEC-374/boothMultiplier.v
 source_file = 1, C:/Users/789wi/Videos/ELEC-374/twoCompliment.v
+source_file = 1, C:/Users/789wi/Videos/ELEC-374/nonRestoringDivision.v
 source_file = 1, C:/Users/789wi/Videos/ELEC-374/db/Phase1.cbx.xml
 design_name = encoder
 instance = comp, \d[0]~8 , d[0]~8, encoder, 1
