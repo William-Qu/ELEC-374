@@ -18,7 +18,9 @@ assign tempM = divisor[31:0];
 		//Initialize Q and M depending on if the given divisor is positive or negative
 		for (i=0; i<32; i=i+1) 
 				begin
-					Q[i] <= dividend[i];
+					if (dividend[31] == 0)Q[i] <= dividend[i]; else
+					if (dividend[31] == 1)Q[i] <= !(dividend[i]);
+					
 					if (divisor[31] == 0) begin
 						M[i] <= divisor[i]; 
 					end
@@ -27,7 +29,8 @@ assign tempM = divisor[31:0];
 						divisorTwos[i] <= tempM[i];						
 					end
 				end
-				
+		
+		if (dividend[31] == 1) Q = Q + 'b1;
 		//Step 1 of the Non-Restoring Division Algorithm (Done 32 times)
 		for (i=0; i<32; i=i+1)
 				begin
@@ -48,14 +51,16 @@ assign tempM = divisor[31:0];
 		//If A < 0, add M to A to ensure a positive remainder
 		if (A[31] == 1) A = A + divisor;
 		
-		//Determine whether the outputs should be positive or negative (positives we don't do anythin 
+		//Determine whether the outputs should be positive or negative (positives we don't do anything
 		//if (divisor[31] == 1 && dividend[31] == 1) ; else
 		if ((divisor[31] == 0 && dividend[31] == 1) || (divisor[31] == 1 && dividend[31] == 0))begin
 			for (i=0; i<32; i=i+1) 
 			begin
 				Q[i] <= !(Q[i]);
+				A[i] <= !(A[i]);
 			end
 			Q <= Q + 'b1;
+			A <= A + 'b1;
 		end
 		//if (divisor[31] == 0 && dividend[31] == 0) ;
 	end
