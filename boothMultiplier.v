@@ -1,4 +1,7 @@
-module boothMultiplier(input [31:0] multiplier, multiplicand, output [31:0] ansHI, ansLO);
+module boothMultiplier(
+input [31:0] multiplier, multiplicand, 
+output [31:0] ansHI, ansLO
+);
 	integer i, k, j;
 
 	reg [63:0] ans;
