@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Phase1
-Sat Feb 25 18:20:00 2023
+Sun Feb 26 19:09:50 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -44,7 +44,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                          ;
 +------------------------------------+--------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Feb 25 18:20:00 2023            ;
+; Analysis & Synthesis Status        ; Successful - Sun Feb 26 19:09:50 2023            ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                      ; Phase1                                           ;
 ; Top-level Entity Name              ; encoder                                          ;
@@ -268,7 +268,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Sat Feb 25 18:19:57 2023
+    Info: Processing started: Sun Feb 26 19:09:45 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Phase1 -c Phase1
 Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
 Info (12021): Found 1 design units, including 1 entities, in source file adder.bdf
@@ -296,6 +296,10 @@ Warning (12018): Entity "NOT" will be ignored because it conflicts with Quartus 
 Info (12021): Found 1 design units, including 1 entities, in source file not.v
 Info (12021): Found 1 design units, including 1 entities, in source file nonrestoringdivisionposineg.v
     Info (12023): Found entity 1: nonRestoringDivisionPosiNeg
+Info (12021): Found 1 design units, including 1 entities, in source file alu.v
+    Info (12023): Found entity 1: ALU
+Info (12021): Found 1 design units, including 1 entities, in source file controlunit.v
+    Info (12023): Found entity 1: ControlUnit
 Warning (10236): Verilog HDL Implicit Net warning at Bus.v(8): created implicit net for "BusMuxIn"
 Warning (10236): Verilog HDL Implicit Net warning at Bus.v(8): created implicit net for "R0"
 Warning (10236): Verilog HDL Implicit Net warning at Bus.v(8): created implicit net for "R1"
@@ -324,6 +328,7 @@ Warning (10236): Verilog HDL Implicit Net warning at Bus.v(8): created implicit 
 Warning (10236): Verilog HDL Implicit Net warning at Bus.v(8): created implicit net for "SIGN"
 Warning (10236): Verilog HDL Implicit Net warning at Bus.v(8): created implicit net for "EXTENDED"
 Warning (10236): Verilog HDL Implicit Net warning at MDRunit.v(9): created implicit net for "MDRout"
+Warning (10236): Verilog HDL Implicit Net warning at ALU.v(27): created implicit net for "clr"
 Info (12127): Elaborating entity "encoder" for the top level hierarchy
 Warning (10240): Verilog HDL Always Construct warning at encoder.v(10): inferring latch(es) for variable "d", which holds its previous value in one or more paths through the always construct
 Info (10041): Inferred latch for "d[0]" at encoder.v(13)
@@ -342,11 +347,11 @@ Info (21057): Implemented 75 device resources after synthesis - the final resour
     Info (21058): Implemented 24 input pins
     Info (21059): Implemented 5 output pins
     Info (21061): Implemented 46 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 35 warnings
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 36 warnings
     Info: Peak virtual memory: 4609 megabytes
-    Info: Processing ended: Sat Feb 25 18:20:00 2023
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Processing ended: Sun Feb 26 19:09:50 2023
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:04
 
 
 +------------------------------------------+
