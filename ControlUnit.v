@@ -1,43 +1,14 @@
 module ControlUnit(
 input clk, clr, wren, 
-input [31:0] IR
+input [31:0] IR,
+output [31:0] HIout, LOout
 );
 
 //Create the wires that will feed out of the ALU/Control Units General Registers
-wire [31:0] r0out;
-wire [31:0] r1out;
-wire [31:0] r2out;
-wire [31:0] r3out;
-wire [31:0] r4out;
-wire [31:0] r5out;
-wire [31:0] r6out;
-wire [31:0] r7out;
-wire [31:0] r8out;
-wire [31:0] r9out;
-wire [31:0] r10out;
-wire [31:0] r11out;
-wire [31:0] r12out;
-wire [31:0] r13out;
-wire [31:0] r14out;
-wire [31:0] r15out;
+wire [31:0] r0out, r1out, r2out, r3out, r4out, r5out, r6out, r7out, r8out, r9out, r10out, r11out, r12out, r13out, r14out, r15out;
 
 //These registers will feed into the ALU/Control Units General Registers
-reg [31:0] r0in;  
-reg [31:0] r1in;  
-reg [31:0] r2in;  
-reg [31:0] r3in;  
-reg [31:0] r4in;  
-reg [31:0] r5in;  
-reg [31:0] r6in;  
-reg [31:0] r7in;  
-reg [31:0] r8in;  
-reg [31:0] r9in;  
-reg [31:0] r10in;
-reg [31:0] r11in;
-reg [31:0] r12in;
-reg [31:0] r13in;
-reg [31:0] r14in;
-reg [31:0] r15in;
+reg [31:0] r0in, r1in, r2in, r3in, r4in, r5in, r6in, r7in, r8in, r9in, r10in, r11in, r12in, r13in, r14in, r15in;
 
 //Create the general 32-bit registers for use in the ALU/Control Unit from our code with input and output wires
 	generate 
@@ -121,6 +92,9 @@ wire [31:0] regLO, regHI;
 //Split the Z register into regLO and regHI
 assign regLO = regZ[31:0];
 assign regHI = regZ[63:32];
+
+assign LOout = regZ[31:0];
+assign HIout = regZ[63:32];
 
 //This always statement will be to determine which register to put the operations output into depending on destSel and if its not mult or div (Since these don't have a destination slot yet)
 //NOTE: There may be overflow from addition, this will just be left in regHI

@@ -5,15 +5,18 @@ output [31:0] quotient, remainder
 integer i;
 
 reg [31:0] divisorTwos, A, Q; //divisor is the same as M in the lecture slides, and divisorTwos is (-1 * M)
+wire[31:0] divisorTwostemp;
 
 //Find the Two's Compliment of divisor
-twoCompliment two (divisor, divisorTwos);
+twoCompliment two (divisor, divisorTwostemp);
+
 
 	always @ (*) begin
-		//Initialize Q
+		//Initialize Q and divisorTwos using divisorTwosTemp
 		for (i=0; i<32; i=i+1) 
 				begin
-					Q[i] <= dividend[i];
+					Q[i] = dividend[i];
+					divisorTwos[i] = divisorTwostemp[i];
 				end
 				
 		//Step 1 of the Non-Restoring Division Algorithm (Done 32 times)

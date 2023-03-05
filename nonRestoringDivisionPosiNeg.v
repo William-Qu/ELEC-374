@@ -6,27 +6,31 @@ integer i;
 
 reg [31:0] M, divisorTwos, A, Q; //divisorTwos is (-1 * M)
 wire [31:0] tempM;
+wire[31:0] divisorTwostemp;
 
-//Find the Two's Compliment of divisor
-twoCompliment two (divisor, divisorTwos);
+//Find the twos compliment of the divisor
+twoCompliment two (divisor, divisorTwostemp);
 
 assign tempM = divisor[31:0];
 
 	always @ (*) begin
-		
+		//Set divisorTwos using divisorTwostemp
+		for(i=0; i<32; i=i+1)begin
+			divisorTwos[i] = divisorTwostemp[i];
+		end
 	
 		//Initialize Q and M depending on if the given divisor is positive or negative
 		for (i=0; i<32; i=i+1) 
 				begin
-					if (dividend[31] == 0)Q[i] <= dividend[i]; else
-					if (dividend[31] == 1)Q[i] <= !(dividend[i]);
+					if (dividend[31] == 0)Q[i] = dividend[i]; else
+					if (dividend[31] == 1)Q[i] = !(dividend[i]);
 					
 					if (divisor[31] == 0) begin
-						M[i] <= divisor[i]; 
+						M[i] = divisor[i]; 
 					end
 					else if (divisor[31] == 1) begin
-						M[i] <= divisorTwos[i];
-						divisorTwos[i] <= tempM[i];						
+						M[i] = divisorTwos[i];
+						divisorTwos[i] = tempM[i];						
 					end
 				end
 		
@@ -56,11 +60,11 @@ assign tempM = divisor[31:0];
 		if ((divisor[31] == 0 && dividend[31] == 1) || (divisor[31] == 1 && dividend[31] == 0))begin
 			for (i=0; i<32; i=i+1) 
 			begin
-				Q[i] <= !(Q[i]);
-				A[i] <= !(A[i]);
+				Q[i] = !(Q[i]);
+				A[i] = !(A[i]);
 			end
-			Q <= Q + 'b1;
-			A <= A + 'b1;
+			Q = Q + 'b1;
+			A = A + 'b1;
 		end
 		//if (divisor[31] == 0 && dividend[31] == 0) ;
 	end
@@ -69,4 +73,4 @@ assign tempM = divisor[31:0];
 	assign quotient = Q[31:0];
 	assign remainder = A[31:0];
 
-endmodule
+endmodule 
