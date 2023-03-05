@@ -26,14 +26,17 @@ module TestbenchControlUnit;
 		//case 0 -- 
 		regA <= 32'b00000000000000000000000000000000;
 		regB <= 32'b00000000000000000000000000000000;
+		OPCode <= 5'b00001;
 		#10 $display("Output = %b", regZ);			//|
 		//case 1
 		regA <= 32'b00000000000000000000000000000000;
 		regB <= 32'b00000000000000000000000000000000;
+		OPCode <= 5'b00001;
 		#10 $display("Output = %b", regZ);			//|
 		//case 1
 		regA <= 32'b00000000000000000000000000000000;
 		regB <= 32'b00000000000000000000000000000000;
+		OPCode <= 5'b00001;
 		#10 $display("Output = %b", regZ);			//|
 	end
 endmodule 

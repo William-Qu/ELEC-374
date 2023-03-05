@@ -2,7 +2,7 @@ module boothMultiplier(
 input [31:0] multiplier, multiplicand, 
 output [31:0] ansHI, ansLO
 );
-	integer i, k, j;
+	integer i;
 
 	reg [63:0] ans;
 	reg [32:0] mrShifted; //This is the register that is prepared for the booth algorithm counting
@@ -20,25 +20,25 @@ output [31:0] ansHI, ansLO
 
 		for (i=0; i<32; i=i+1) //Prep all of the multiplicand values into sign extended 64 bit registers
 			begin
-				mrShifted[i+1] <= multiplier[i];
-				mc[i] <= mcTemp[i];
-				mcTwos[i] <= mcTempTwos[i];
+				mrShifted[i+1] = multiplier[i];
+				mc[i] = mcTemp[i];
+				mcTwos[i] = mcTempTwos[i];
 			end
 		dmc = mc <<< 1;
 		dmcTwos = mcTwos <<< 1;
 		
 
 		//At this point all of the multiplicand values should be prepped, and so should the mrShifted register
-		for (k=1; k<33; k=k+2) 
+		for (i=1; i<33; i=i+2) 
 			begin
-				if (mrShifted[k+1] == 0 && mrShifted[k] == 0 && mrShifted[k-1] == 0) ans = ans + (0 <<< (k-1)); else
-				if (mrShifted[k+1] == 0 && mrShifted[k] == 0 && mrShifted[k-1] == 1) ans = ans + (mc <<< (k-1)); else
-				if (mrShifted[k+1] == 0 && mrShifted[k] == 1 && mrShifted[k-1] == 0) ans = ans + (mc <<< (k-1)); else
-				if (mrShifted[k+1] == 0 && mrShifted[k] == 1 && mrShifted[k-1] == 1) ans = ans + (dmc <<< (k-1)); else
-				if (mrShifted[k+1] == 1 && mrShifted[k] == 0 && mrShifted[k-1] == 0) ans = ans + (dmcTwos <<< (k-1)); else
-				if (mrShifted[k+1] == 1 && mrShifted[k] == 0 && mrShifted[k-1] == 1) ans = ans + (mcTwos <<< (k-1)); else
-				if (mrShifted[k+1] == 1 && mrShifted[k] == 1 && mrShifted[k-1] == 0) ans = ans + (mcTwos <<< (k-1)); else
-				if (mrShifted[k+1] == 1 && mrShifted[k] == 1 && mrShifted[k-1] == 1) ans = ans + (0 <<< (k-1));
+				if (mrShifted[i+1] == 0 && mrShifted[i] == 0 && mrShifted[i-1] == 0) ans = ans + (0 <<< (i-1)); else
+				if (mrShifted[i+1] == 0 && mrShifted[i] == 0 && mrShifted[i-1] == 1) ans = ans + (mc <<< (i-1)); else
+				if (mrShifted[i+1] == 0 && mrShifted[i] == 1 && mrShifted[i-1] == 0) ans = ans + (mc <<< (i-1)); else
+				if (mrShifted[i+1] == 0 && mrShifted[i] == 1 && mrShifted[i-1] == 1) ans = ans + (dmc <<< (i-1)); else
+				if (mrShifted[i+1] == 1 && mrShifted[i] == 0 && mrShifted[i-1] == 0) ans = ans + (dmcTwos <<< (i-1)); else
+				if (mrShifted[i+1] == 1 && mrShifted[i] == 0 && mrShifted[i-1] == 1) ans = ans + (mcTwos <<< (i-1)); else
+				if (mrShifted[i+1] == 1 && mrShifted[i] == 1 && mrShifted[i-1] == 0) ans = ans + (mcTwos <<< (i-1)); else
+				if (mrShifted[i+1] == 1 && mrShifted[i] == 1 && mrShifted[i-1] == 1) ans = ans + (0 <<< (i-1));
 			end
 
 		//At this point the multiplication should be done for the signed mc and mr, and the answer should be stored in the 64 bit ans register

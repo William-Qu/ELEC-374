@@ -2,7 +2,7 @@ module TestbenchMultiplier;
 	reg [31:0] mp, mc;
 	wire [31:0] HI, LO;
 	
-	twoCompliment DUT(mp, LO);
+	boothMultiplier two (mp, mc, HI, LO);
 	
 	initial 
 	begin 

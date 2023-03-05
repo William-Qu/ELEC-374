@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Phase1
-Fri Mar 03 16:30:10 2023
+Sun Mar 05 13:12:55 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -10,10 +10,9 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Ver
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Port Connectivity Checks: "twoCompliment:DUT"
+  5. Port Connectivity Checks: "boothMultiplier:two"
   6. Elapsed Time Per Partition
   7. Analysis & Synthesis Messages
-  8. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -39,7 +38,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                          ;
 +------------------------------------+--------------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Fri Mar 03 16:30:10 2023                ;
+; Analysis & Synthesis Status        ; Failed - Sun Mar 05 13:12:55 2023                ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                      ; Phase1                                           ;
 ; Top-level Entity Name              ; TestbenchMultiplier                              ;
@@ -160,13 +159,14 @@ applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "twoCompliment:DUT"                                                                  ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "boothMultiplier:two"                                                                 ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; ansHI ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ansLO ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-------------------------------+
@@ -184,7 +184,7 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Fri Mar 03 16:30:06 2023
+    Info: Processing started: Sun Mar 05 13:12:52 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Phase1 -c Phase1
 Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
 Info (12021): Found 1 design units, including 1 entities, in source file adder.bdf
@@ -213,8 +213,6 @@ Info (12021): Found 1 design units, including 1 entities, in source file control
     Info (12023): Found entity 1: ControlUnit
 Info (12021): Found 1 design units, including 1 entities, in source file testbenchmultiplier.v
     Info (12023): Found entity 1: TestbenchMultiplier
-Info (12021): Found 1 design units, including 1 entities, in source file nonrestoringdivision.v
-    Info (12023): Found entity 1: nonRestoringDivision
 Info (12021): Found 1 design units, including 1 entities, in source file testbenchcontrolunit.v
     Info (12023): Found entity 1: TestbenchControlUnit
 Info (12021): Found 1 design units, including 1 entities, in source file notoperation.v
@@ -246,29 +244,89 @@ Warning (10236): Verilog HDL Implicit Net warning at Bus.v(7): created implicit 
 Warning (10236): Verilog HDL Implicit Net warning at Bus.v(7): created implicit net for "C"
 Warning (10236): Verilog HDL Implicit Net warning at Bus.v(7): created implicit net for "SIGN"
 Warning (10236): Verilog HDL Implicit Net warning at Bus.v(7): created implicit net for "EXTENDED"
-Warning (10236): Verilog HDL Implicit Net warning at MDRunit.v(9): created implicit net for "MDRout"
+Warning (10236): Verilog HDL Implicit Net warning at MDRunit.v(11): created implicit net for "MDRout"
 Warning (10236): Verilog HDL Implicit Net warning at ALU.v(27): created implicit net for "clr"
 Info (12127): Elaborating entity "TestbenchMultiplier" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at TestbenchMultiplier.v(2): object "mc" assigned a value but never read
 Info (10648): Verilog HDL Display System Task info at TestbenchMultiplier.v(12): HI = ................................
 Info (10648): Verilog HDL Display System Task info at TestbenchMultiplier.v(13): LO = ................................
 Info (10648): Verilog HDL Display System Task info at TestbenchMultiplier.v(17): HI = ................................
 Info (10648): Verilog HDL Display System Task info at TestbenchMultiplier.v(18): LO = ................................
 Info (10648): Verilog HDL Display System Task info at TestbenchMultiplier.v(22): HI = ................................
 Info (10648): Verilog HDL Display System Task info at TestbenchMultiplier.v(23): LO = ................................
-Info (12128): Elaborating entity "twoCompliment" for hierarchy "twoCompliment:DUT"
+Info (12128): Elaborating entity "boothMultiplier" for hierarchy "boothMultiplier:two"
+Warning (10240): Verilog HDL Always Construct warning at boothMultiplier.v(19): inferring latch(es) for variable "ans", which holds its previous value in one or more paths through the always construct
+Warning (10030): Net "mrShifted[0]" at boothMultiplier.v(8) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "mc[63..32]" at boothMultiplier.v(10) has no driver or initial value, using a default initial value '0'
+Info (10041): Inferred latch for "ans[30]" at boothMultiplier.v(35)
+Info (10041): Inferred latch for "ans[31]" at boothMultiplier.v(35)
+Info (10041): Inferred latch for "ans[32]" at boothMultiplier.v(35)
+Info (10041): Inferred latch for "ans[33]" at boothMultiplier.v(35)
+Info (10041): Inferred latch for "ans[34]" at boothMultiplier.v(35)
+Info (10041): Inferred latch for "ans[35]" at boothMultiplier.v(35)
+Info (10041): Inferred latch for "ans[36]" at boothMultiplier.v(35)
+Info (10041): Inferred latch for "ans[37]" at boothMultiplier.v(35)
+Info (10041): Inferred latch for "ans[38]" at boothMultiplier.v(35)
+Info (10041): Inferred latch for "ans[39]" at boothMultiplier.v(35)
+Info (10041): Inferred latch for "ans[40]" at boothMultiplier.v(35)
+Info (10041): Inferred latch for "ans[41]" at boothMultiplier.v(35)
+Info (10041): Inferred latch for "ans[42]" at boothMultiplier.v(35)
+Info (10041): Inferred latch for "ans[43]" at boothMultiplier.v(35)
+Info (10041): Inferred latch for "ans[44]" at boothMultiplier.v(35)
+Info (10041): Inferred latch for "ans[45]" at boothMultiplier.v(35)
+Info (10041): Inferred latch for "ans[46]" at boothMultiplier.v(35)
+Info (10041): Inferred latch for "ans[47]" at boothMultiplier.v(35)
+Info (10041): Inferred latch for "ans[48]" at boothMultiplier.v(35)
+Info (10041): Inferred latch for "ans[49]" at boothMultiplier.v(35)
+Info (10041): Inferred latch for "ans[50]" at boothMultiplier.v(35)
+Info (10041): Inferred latch for "ans[51]" at boothMultiplier.v(35)
+Info (10041): Inferred latch for "ans[52]" at boothMultiplier.v(35)
+Info (10041): Inferred latch for "ans[53]" at boothMultiplier.v(35)
+Info (10041): Inferred latch for "ans[54]" at boothMultiplier.v(35)
+Info (10041): Inferred latch for "ans[55]" at boothMultiplier.v(35)
+Info (10041): Inferred latch for "ans[56]" at boothMultiplier.v(35)
+Info (10041): Inferred latch for "ans[57]" at boothMultiplier.v(35)
+Info (10041): Inferred latch for "ans[58]" at boothMultiplier.v(35)
+Info (10041): Inferred latch for "ans[59]" at boothMultiplier.v(35)
+Info (10041): Inferred latch for "ans[60]" at boothMultiplier.v(35)
+Info (10041): Inferred latch for "ans[61]" at boothMultiplier.v(35)
+Info (10041): Inferred latch for "ans[62]" at boothMultiplier.v(35)
+Info (10041): Inferred latch for "ans[63]" at boothMultiplier.v(35)
+Info (10041): Inferred latch for "ans[28]" at boothMultiplier.v(35)
+Info (10041): Inferred latch for "ans[29]" at boothMultiplier.v(35)
+Info (10041): Inferred latch for "ans[26]" at boothMultiplier.v(35)
+Info (10041): Inferred latch for "ans[27]" at boothMultiplier.v(35)
+Info (10041): Inferred latch for "ans[24]" at boothMultiplier.v(35)
+Info (10041): Inferred latch for "ans[25]" at boothMultiplier.v(35)
+Info (10041): Inferred latch for "ans[22]" at boothMultiplier.v(35)
+Info (10041): Inferred latch for "ans[23]" at boothMultiplier.v(35)
+Info (10041): Inferred latch for "ans[20]" at boothMultiplier.v(35)
+Info (10041): Inferred latch for "ans[21]" at boothMultiplier.v(35)
+Info (10041): Inferred latch for "ans[18]" at boothMultiplier.v(35)
+Info (10041): Inferred latch for "ans[19]" at boothMultiplier.v(35)
+Info (10041): Inferred latch for "ans[16]" at boothMultiplier.v(35)
+Info (10041): Inferred latch for "ans[17]" at boothMultiplier.v(35)
+Info (10041): Inferred latch for "ans[14]" at boothMultiplier.v(35)
+Info (10041): Inferred latch for "ans[15]" at boothMultiplier.v(35)
+Info (10041): Inferred latch for "ans[12]" at boothMultiplier.v(35)
+Info (10041): Inferred latch for "ans[13]" at boothMultiplier.v(35)
+Info (10041): Inferred latch for "ans[10]" at boothMultiplier.v(35)
+Info (10041): Inferred latch for "ans[11]" at boothMultiplier.v(35)
+Info (10041): Inferred latch for "ans[8]" at boothMultiplier.v(35)
+Info (10041): Inferred latch for "ans[9]" at boothMultiplier.v(35)
+Info (10041): Inferred latch for "ans[6]" at boothMultiplier.v(35)
+Info (10041): Inferred latch for "ans[7]" at boothMultiplier.v(35)
+Info (10041): Inferred latch for "ans[4]" at boothMultiplier.v(35)
+Info (10041): Inferred latch for "ans[5]" at boothMultiplier.v(35)
+Info (10041): Inferred latch for "ans[2]" at boothMultiplier.v(35)
+Info (10041): Inferred latch for "ans[3]" at boothMultiplier.v(35)
+Info (10041): Inferred latch for "ans[0]" at boothMultiplier.v(35)
+Info (10041): Inferred latch for "ans[1]" at boothMultiplier.v(35)
+Info (12128): Elaborating entity "twoCompliment" for hierarchy "boothMultiplier:two|twoCompliment:two"
 Error (12061): Can't synthesize current design -- Top partition does not contain any logic
-Info (144001): Generated suppressed messages file C:/Users/789wi/Videos/ELEC-374/output_files/Phase1.map.smsg
-Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 1 error, 31 warnings
-    Error: Peak virtual memory: 4574 megabytes
-    Error: Processing ended: Fri Mar 03 16:30:10 2023
-    Error: Elapsed time: 00:00:04
-    Error: Total CPU time (on all processors): 00:00:03
-
-
-+------------------------------------------+
-; Analysis & Synthesis Suppressed Messages ;
-+------------------------------------------+
-The suppressed messages can be found in C:/Users/789wi/Videos/ELEC-374/output_files/Phase1.map.smsg.
+Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 1 error, 33 warnings
+    Error: Peak virtual memory: 4577 megabytes
+    Error: Processing ended: Sun Mar 05 13:12:55 2023
+    Error: Elapsed time: 00:00:03
+    Error: Total CPU time (on all processors): 00:00:02
 
 

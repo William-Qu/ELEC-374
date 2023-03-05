@@ -5,8 +5,7 @@ output [31:0] quotient, remainder
 integer i;
 
 reg [31:0] M, divisorTwos, A, Q; //divisorTwos is (-1 * M)
-wire [31:0] tempM;
-wire[31:0] divisorTwostemp;
+wire [31:0] tempM, divisorTwostemp;
 
 //Find the twos compliment of the divisor
 twoCompliment two (divisor, divisorTwostemp);
@@ -15,15 +14,12 @@ assign tempM = divisor[31:0];
 
 	always @ (*) begin
 		//Set divisorTwos using divisorTwostemp
-		for(i=0; i<32; i=i+1)begin
-			divisorTwos[i] = divisorTwostemp[i];
-		end
+		divisorTwos = divisorTwostemp;
 	
 		//Initialize Q and M depending on if the given divisor is positive or negative
 		for (i=0; i<32; i=i+1) 
 				begin
-					if (dividend[31] == 0)Q[i] = dividend[i]; else
-					if (dividend[31] == 1)Q[i] = !(dividend[i]);
+					Q = dividend[31] ? !(dividend) : dividend;
 					
 					if (divisor[31] == 0) begin
 						M[i] = divisor[i]; 

@@ -1,7 +1,7 @@
 module ControlUnit(
 input clk, clr, wren, 
 input [31:0] IR,
-output [31:0] HIout, LOout
+output [31:0] r0outf, r1outf, r2outf, r3outf, r4outf, r5outf, r6outf, r7outf, r8outf, r9outf, r10outf, r11outf, r12outf, r13outf, r14outf, r15outf
 );
 
 //Create the wires that will feed out of the ALU/Control Units General Registers
@@ -93,9 +93,6 @@ wire [31:0] regLO, regHI;
 assign regLO = regZ[31:0];
 assign regHI = regZ[63:32];
 
-assign LOout = regZ[31:0];
-assign HIout = regZ[63:32];
-
 //This always statement will be to determine which register to put the operations output into depending on destSel and if its not mult or div (Since these don't have a destination slot yet)
 //NOTE: There may be overflow from addition, this will just be left in regHI
 	always @ (*) begin
@@ -119,4 +116,21 @@ assign HIout = regZ[63:32];
 		end
 	end
 
+assign r0outf = r0in;	
+assign r1outf = r1in;	
+assign r2outf = r2in;	
+assign r3outf = r3in;	
+assign r4outf = r4in;	
+assign r5outf = r5in;	
+assign r6outf = r6in;	
+assign r7outf = r7in;	
+assign r8outf = r8in;	
+assign r9outf = r9in;	
+assign r10outf = r10in;	
+assign r11outf = r11in;	
+assign r12outf = r12in;	
+assign r13outf = r13in;	
+assign r14outf = r14in;	
+assign r15outf = r15in;	
+	
 endmodule
