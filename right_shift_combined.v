@@ -33,8 +33,10 @@ output wire	[31:0] Q;
 
 wire	[31:0] Q_ALTERA_SYNTHESIZED;
 wire	SYNTHESIZED_WIRE_0;
+wire dump;
 
 assign	SYNTHESIZED_WIRE_0 = 0;
+
 
 
 
@@ -51,7 +53,8 @@ mux2_1	b2v_inst1(
 dff_Q	b2v_inst35(
 	.D(D[0]),
 	.clk(clk),
-	.clr(clr)
+	.clr(clr),
+	.Q(dump)
 	);
 
 

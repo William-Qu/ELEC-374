@@ -30,7 +30,7 @@ input wire	[31:0] D;
 output wire	[31:0] Q;
 
 wire	[31:0] Q_ALTERA_SYNTHESIZED;
-
+wire dump;
 
 
 
@@ -257,8 +257,8 @@ dff_Q	b2v_inst70(
 dff_Q	b2v_inst71(
 	.D(D[31]),
 	.clk(clk),
-	.clr(clr)
-	);
+	.clr(clr),
+	.Q(dump));
 
 assign	Q = Q_ALTERA_SYNTHESIZED;
 assign	Q_ALTERA_SYNTHESIZED[0] = 0;

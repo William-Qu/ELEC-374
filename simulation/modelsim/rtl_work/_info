@@ -3,48 +3,376 @@ K3
 13
 cModel Technology
 Z0 dC:\Users\789wi\Videos\ELEC-374\simulation\modelsim
-vboothMultiplier
-IE5YFKCiCJ7B4b>mk<NBok0
-V3Ej02Sic5l3DfKiWHKl@83
+vALU
+Imc;9bY7VbR746zI;86^nD0
+V<PCjZW9bO1f;2L:DB<;570
 Z1 dC:\Users\789wi\Videos\ELEC-374\simulation\modelsim
-w1677436944
-8C:/Users/789wi/Videos/ELEC-374/boothMultiplier.v
-FC:/Users/789wi/Videos/ELEC-374/boothMultiplier.v
+w1678138051
+8C:/Users/789wi/Videos/ELEC-374/ALU.v
+FC:/Users/789wi/Videos/ELEC-374/ALU.v
 L0 1
 Z2 OV;L;10.1d;51
 r1
 31
 Z3 o-vlog01compat -work work -O0
-nbooth@multiplier
 Z4 !s92 -vlog01compat -work work +incdir+C:/Users/789wi/Videos/ELEC-374 -O0
+n@a@l@u
 !i10b 1
-!s100 Ed4^RZN<DeIeW7e2M;^3L2
+!s100 WAIf1F=7zH9mV0Qa71AD01
 !s85 0
-!s108 1677535312.008000
+!s108 1678142003.218000
+!s107 C:/Users/789wi/Videos/ELEC-374/ALU.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/789wi/Videos/ELEC-374|C:/Users/789wi/Videos/ELEC-374/ALU.v|
+!s101 -O0
+vboothMultiplier
+I<=@TMzFf0Pl8><UhL[m6d3
+V3Ej02Sic5l3DfKiWHKl@83
+R1
+w1678141950
+8C:/Users/789wi/Videos/ELEC-374/boothMultiplier.v
+FC:/Users/789wi/Videos/ELEC-374/boothMultiplier.v
+L0 1
+R2
+r1
+31
+R3
+R4
+nbooth@multiplier
+!i10b 1
+!s100 GP:3FY9i62?8L]d=Ez0>z1
+!s85 0
+!s108 1678142003.108000
 !s107 C:/Users/789wi/Videos/ELEC-374/boothMultiplier.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/789wi/Videos/ELEC-374|C:/Users/789wi/Videos/ELEC-374/boothMultiplier.v|
 !s101 -O0
-vTestbenchMultiplier
-!i10b 1
-!s100 TEFBN2gCjMXS2VPiC;ZAS1
-If52H>Ooh1O5Qez95j=7<z2
-V1co:H8IMYbzRPXzF96Xz32
+vCLA_8inputs_updated
+IXMoHo32]8Sh3[`32MC=m;1
+VH1:RHnN6Y5EXKGV]8G[z01
 R1
-w1677535256
-8C:/Users/789wi/Videos/ELEC-374/TestbenchMultiplier.v
-FC:/Users/789wi/Videos/ELEC-374/TestbenchMultiplier.v
+w1678137540
+8C:/Users/789wi/Videos/ELEC-374/CLA_8inputs_updated.v
+FC:/Users/789wi/Videos/ELEC-374/CLA_8inputs_updated.v
+L0 19
+R2
+r1
+31
+R3
+n@c@l@a_8inputs_updated
+R4
+!i10b 1
+!s100 6J^XfWkgf=`jF3Vl>=`Ac0
+!s85 0
+!s108 1678142001.272000
+!s107 C:/Users/789wi/Videos/ELEC-374/CLA_8inputs_updated.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/789wi/Videos/ELEC-374|C:/Users/789wi/Videos/ELEC-374/CLA_8inputs_updated.v|
+!s101 -O0
+vControlUnit
+IhC1UGZcfZ?iC6di4j7iW:3
+Viieg>JC:bBN2d;h@5<idH0
+R1
+w1678141236
+8C:/Users/789wi/Videos/ELEC-374/ControlUnit.v
+FC:/Users/789wi/Videos/ELEC-374/ControlUnit.v
 L0 1
+R2
+r1
+31
+R3
+R4
+n@control@unit
+!i10b 1
+!s100 :Bb_deMhX`4Th`48b?QzM2
+!s85 0
+!s108 1678142002.992000
+!s107 C:/Users/789wi/Videos/ELEC-374/ControlUnit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/789wi/Videos/ELEC-374|C:/Users/789wi/Videos/ELEC-374/ControlUnit.v|
+!s101 -O0
+vdff_Q
+IXd]z@S0aN0YL2OSRHC6V:1
+V>QlS;6XB6fh9=M1l>EHma1
+R1
+Z5 w1677456668
+8C:/Users/789wi/Videos/ELEC-374/dff_Q.v
+FC:/Users/789wi/Videos/ELEC-374/dff_Q.v
+L0 19
+R2
+r1
+31
+R3
+R4
+ndff_@q
+!i10b 1
+!s100 BJ<4C7U_[TH?PdHzz;hhl3
+!s85 0
+!s108 1678142002.884000
+!s107 C:/Users/789wi/Videos/ELEC-374/dff_Q.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/789wi/Videos/ELEC-374|C:/Users/789wi/Videos/ELEC-374/dff_Q.v|
+!s101 -O0
+vHierarchical_CLA
+IM=hg5OE3@6`FlDfSaEj<P2
+VCD4=<4K0_8BP79FA8HRO81
+R1
+R5
+8C:/Users/789wi/Videos/ELEC-374/Hierarchical_CLA.v
+FC:/Users/789wi/Videos/ELEC-374/Hierarchical_CLA.v
+L0 19
+R2
+r1
+31
+R3
+R4
+n@hierarchical_@c@l@a
+!i10b 1
+!s100 Id<9Yha=o]UmLA2NaJ_E`3
+!s85 0
+!s108 1678142002.774000
+!s107 C:/Users/789wi/Videos/ELEC-374/Hierarchical_CLA.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/789wi/Videos/ELEC-374|C:/Users/789wi/Videos/ELEC-374/Hierarchical_CLA.v|
+!s101 -O0
+vleft_rotate
+IJ<aQiFPJV^h5NellQL3o70
+VDBcF_=<FXD6Tz`O]^TfH70
+R1
+R5
+8C:/Users/789wi/Videos/ELEC-374/left_rotate.v
+FC:/Users/789wi/Videos/ELEC-374/left_rotate.v
+L0 19
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 3]FKZhboJ:MdoJlQ<SzoZ2
+!s85 0
+!s108 1678142002.668000
+!s107 C:/Users/789wi/Videos/ELEC-374/left_rotate.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/789wi/Videos/ELEC-374|C:/Users/789wi/Videos/ELEC-374/left_rotate.v|
+!s101 -O0
+vleft_shift
+IBXaejDz2Tgm_4LZ_:Em@10
+VV^U<3U>3@`O:YICXLT4Fn3
+R1
+w1678138812
+8C:/Users/789wi/Videos/ELEC-374/left_shift.v
+FC:/Users/789wi/Videos/ELEC-374/left_shift.v
+L0 19
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 OFFTmn[HmAQ<`9Y2g;OD30
+!s85 0
+!s108 1678142002.542000
+!s107 C:/Users/789wi/Videos/ELEC-374/left_shift.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/789wi/Videos/ELEC-374|C:/Users/789wi/Videos/ELEC-374/left_shift.v|
+!s101 -O0
+vlogical_and
+IDAb_SkINEE=jKEI[1]kYV1
+V85U>QK;H;FWn<=QbU@2<F0
+R1
+R5
+8C:/Users/789wi/Videos/ELEC-374/logical_and.v
+FC:/Users/789wi/Videos/ELEC-374/logical_and.v
+L0 19
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 iF2gOYclFEQT[OM>nggRJ2
+!s85 0
+!s108 1678142002.419000
+!s107 C:/Users/789wi/Videos/ELEC-374/logical_and.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/789wi/Videos/ELEC-374|C:/Users/789wi/Videos/ELEC-374/logical_and.v|
+!s101 -O0
+vlogical_or
+IaT:B>38m29z^>@lZU1;Q33
+Vk3L8UW8c03dTN:nXGF@EC1
+R1
+R5
+8C:/Users/789wi/Videos/ELEC-374/logical_or.v
+FC:/Users/789wi/Videos/ELEC-374/logical_or.v
+L0 19
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 b6efBDklJ^[00SMVAVhzm0
+!s85 0
+!s108 1678142002.289000
+!s107 C:/Users/789wi/Videos/ELEC-374/logical_or.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/789wi/Videos/ELEC-374|C:/Users/789wi/Videos/ELEC-374/logical_or.v|
+!s101 -O0
+vmux2_1
+IbP>eKdZ2F2>=]=9E[hZ[W3
+VN=Lz6VBfZlSFEX5R>NhY=2
+R1
+w1678133716
+8C:/Users/789wi/Videos/ELEC-374/mux2_1.v
+FC:/Users/789wi/Videos/ELEC-374/mux2_1.v
+L0 19
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 NiBn^^NGJDObdIjjj8H^C2
+!s85 0
+!s108 1678142001.393000
+!s107 C:/Users/789wi/Videos/ELEC-374/mux2_1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/789wi/Videos/ELEC-374|C:/Users/789wi/Videos/ELEC-374/mux2_1.v|
+!s101 -O0
+vnonRestoringDivisionPosiNeg
+I5JH_1^l?`HmzB_Jm;nj>U0
+V0J1h[_lj0EREd[I8Y4D?B1
+R1
+w1678134250
+8C:/Users/789wi/Videos/ELEC-374/nonRestoringDivisionPosiNeg.v
+FC:/Users/789wi/Videos/ELEC-374/nonRestoringDivisionPosiNeg.v
+L0 1
+R2
+r1
+31
+R3
+R4
+nnon@restoring@division@posi@neg
+!i10b 1
+!s100 64CBjMV>:XE1aiA5n4@Ce1
+!s85 0
+!s108 1678142002.172000
+!s107 C:/Users/789wi/Videos/ELEC-374/nonRestoringDivisionPosiNeg.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/789wi/Videos/ELEC-374|C:/Users/789wi/Videos/ELEC-374/nonRestoringDivisionPosiNeg.v|
+!s101 -O0
+vNotOperation
+InfdGVTn[WL`z88B>53n4T3
+V3f`29>:0^5aZzm319VO^O1
+R1
+w1677877679
+8C:/Users/789wi/Videos/ELEC-374/NotOperation.v
+FC:/Users/789wi/Videos/ELEC-374/NotOperation.v
+L0 1
+R2
+r1
+31
+R3
+R4
+n@not@operation
+!i10b 1
+!s100 R?i3j]c@[I:gZI4R[XD?63
+!s85 0
+!s108 1678142002.065000
+!s107 C:/Users/789wi/Videos/ELEC-374/NotOperation.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/789wi/Videos/ELEC-374|C:/Users/789wi/Videos/ELEC-374/NotOperation.v|
+!s101 -O0
+vP_G_block
+IS8_Vk31^5anRS:eoI`CoT2
+VPeeonoei0@Jj5aDBI3H?=3
+R1
+R5
+8C:/Users/789wi/Videos/ELEC-374/P_G_block.v
+FC:/Users/789wi/Videos/ELEC-374/P_G_block.v
+L0 19
+R2
+r1
+31
+R3
+R4
+n@p_@g_block
+!i10b 1
+!s100 <^gBE;5dUZlbcJhiMKz]E1
+!s85 0
+!s108 1678142001.956000
+!s107 C:/Users/789wi/Videos/ELEC-374/P_G_block.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/789wi/Videos/ELEC-374|C:/Users/789wi/Videos/ELEC-374/P_G_block.v|
+!s101 -O0
+vreg32bit
+I2EGTK[@:akdiF?eg9S];U0
+VNNh:4_G6A[gOPcSfl_VD00
+R1
+w1674509770
+8C:/Users/789wi/Videos/ELEC-374/reg32bit.v
+FC:/Users/789wi/Videos/ELEC-374/reg32bit.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 KE4ICN:@_=i:>KzAUQYAZ3
+!s85 0
+!s108 1678142001.851000
+!s107 C:/Users/789wi/Videos/ELEC-374/reg32bit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/789wi/Videos/ELEC-374|C:/Users/789wi/Videos/ELEC-374/reg32bit.v|
+!s101 -O0
+vright_rotate
+IXF80G]zOOlIo6l2k2;iUk1
+Vcf2Sn8BDk1A`WdcZOIzfm0
+R1
+R5
+8C:/Users/789wi/Videos/ELEC-374/right_rotate.v
+FC:/Users/789wi/Videos/ELEC-374/right_rotate.v
+L0 19
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 EZg4d4`==<d?_29O6R=FN3
+!s85 0
+!s108 1678142001.744000
+!s107 C:/Users/789wi/Videos/ELEC-374/right_rotate.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/789wi/Videos/ELEC-374|C:/Users/789wi/Videos/ELEC-374/right_rotate.v|
+!s101 -O0
+vright_shift_combined
+ID>KilgVH]LOVSUmOaa?T73
+V4N;5?3H2k6?Je7X@07;eR3
+R1
+w1678138923
+8C:/Users/789wi/Videos/ELEC-374/right_shift_combined.v
+FC:/Users/789wi/Videos/ELEC-374/right_shift_combined.v
+L0 19
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 Jl9Pa7287Bg9R3WUO5Wbh0
+!s85 0
+!s108 1678142001.634000
+!s107 C:/Users/789wi/Videos/ELEC-374/right_shift_combined.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/789wi/Videos/ELEC-374|C:/Users/789wi/Videos/ELEC-374/right_shift_combined.v|
+!s101 -O0
+vTestbenchControlUnit
+!i10b 1
+!s100 cMK>HnH9@cV50BZC<@5cg0
+ILnQF4dBaMF15h_EkU9ChB3
+VmSW>PIWaMnSIO]MUnng4H1
+R1
+w1678140766
+8C:/Users/789wi/Videos/ELEC-374/TestbenchControlUnit.v
+FC:/Users/789wi/Videos/ELEC-374/TestbenchControlUnit.v
+L0 2
 R2
 r1
 !s85 0
 31
-!s108 1677535312.439000
-!s107 C:/Users/789wi/Videos/ELEC-374/TestbenchMultiplier.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/789wi/Videos/ELEC-374|C:/Users/789wi/Videos/ELEC-374/TestbenchMultiplier.v|
+!s108 1678142003.330000
+!s107 C:/Users/789wi/Videos/ELEC-374/TestbenchControlUnit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/789wi/Videos/ELEC-374|C:/Users/789wi/Videos/ELEC-374/TestbenchControlUnit.v|
 !s101 -O0
 R3
 R4
-n@testbench@multiplier
+n@testbench@control@unit
 vtwoCompliment
 IXFHVHoBS1JBbkcV;?FQG@0
 V_`j>XkFVKmnKoSSDeh1AW3
@@ -62,7 +390,7 @@ ntwo@compliment
 !i10b 1
 !s100 zDYmnBzigTgh<FW40HFIJ3
 !s85 0
-!s108 1677535312.221000
+!s108 1678142001.523000
 !s107 C:/Users/789wi/Videos/ELEC-374/twoCompliment.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/789wi/Videos/ELEC-374|C:/Users/789wi/Videos/ELEC-374/twoCompliment.v|
 !s101 -O0

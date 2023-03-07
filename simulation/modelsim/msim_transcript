@@ -7,28 +7,124 @@
 # vmap work rtl_work
 # Modifying C:\altera\13.0sp1\modelsim_ae\win32aloem/../modelsim.ini
 # 
-# vlog -vlog01compat -work work +incdir+C:/Users/789wi/Videos/ELEC-374 {C:/Users/789wi/Videos/ELEC-374/boothMultiplier.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/789wi/Videos/ELEC-374 {C:/Users/789wi/Videos/ELEC-374/CLA_8inputs_updated.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module boothMultiplier
+# -- Compiling module CLA_8inputs_updated
 # 
 # Top level modules:
-# 	boothMultiplier
+# 	CLA_8inputs_updated
+# vlog -vlog01compat -work work +incdir+C:/Users/789wi/Videos/ELEC-374 {C:/Users/789wi/Videos/ELEC-374/mux2_1.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mux2_1
+# 
+# Top level modules:
+# 	mux2_1
 # vlog -vlog01compat -work work +incdir+C:/Users/789wi/Videos/ELEC-374 {C:/Users/789wi/Videos/ELEC-374/twoCompliment.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module twoCompliment
 # 
 # Top level modules:
 # 	twoCompliment
-# 
-# vlog -vlog01compat -work work +incdir+C:/Users/789wi/Videos/ELEC-374 {C:/Users/789wi/Videos/ELEC-374/TestbenchMultiplier.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/789wi/Videos/ELEC-374 {C:/Users/789wi/Videos/ELEC-374/right_shift_combined.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module TestbenchMultiplier
+# -- Compiling module right_shift_combined
 # 
 # Top level modules:
-# 	TestbenchMultiplier
+# 	right_shift_combined
+# vlog -vlog01compat -work work +incdir+C:/Users/789wi/Videos/ELEC-374 {C:/Users/789wi/Videos/ELEC-374/right_rotate.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module right_rotate
 # 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiii_ver -L rtl_work -L work -voptargs="+acc"  TestbenchMultiplier
-# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiii_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps TestbenchMultiplier 
+# Top level modules:
+# 	right_rotate
+# vlog -vlog01compat -work work +incdir+C:/Users/789wi/Videos/ELEC-374 {C:/Users/789wi/Videos/ELEC-374/reg32bit.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module reg32bit
+# 
+# Top level modules:
+# 	reg32bit
+# vlog -vlog01compat -work work +incdir+C:/Users/789wi/Videos/ELEC-374 {C:/Users/789wi/Videos/ELEC-374/P_G_block.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module P_G_block
+# 
+# Top level modules:
+# 	P_G_block
+# vlog -vlog01compat -work work +incdir+C:/Users/789wi/Videos/ELEC-374 {C:/Users/789wi/Videos/ELEC-374/NotOperation.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module NotOperation
+# 
+# Top level modules:
+# 	NotOperation
+# vlog -vlog01compat -work work +incdir+C:/Users/789wi/Videos/ELEC-374 {C:/Users/789wi/Videos/ELEC-374/nonRestoringDivisionPosiNeg.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module nonRestoringDivisionPosiNeg
+# 
+# Top level modules:
+# 	nonRestoringDivisionPosiNeg
+# vlog -vlog01compat -work work +incdir+C:/Users/789wi/Videos/ELEC-374 {C:/Users/789wi/Videos/ELEC-374/logical_or.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module logical_or
+# 
+# Top level modules:
+# 	logical_or
+# vlog -vlog01compat -work work +incdir+C:/Users/789wi/Videos/ELEC-374 {C:/Users/789wi/Videos/ELEC-374/logical_and.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module logical_and
+# 
+# Top level modules:
+# 	logical_and
+# vlog -vlog01compat -work work +incdir+C:/Users/789wi/Videos/ELEC-374 {C:/Users/789wi/Videos/ELEC-374/left_shift.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module left_shift
+# 
+# Top level modules:
+# 	left_shift
+# vlog -vlog01compat -work work +incdir+C:/Users/789wi/Videos/ELEC-374 {C:/Users/789wi/Videos/ELEC-374/left_rotate.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module left_rotate
+# 
+# Top level modules:
+# 	left_rotate
+# vlog -vlog01compat -work work +incdir+C:/Users/789wi/Videos/ELEC-374 {C:/Users/789wi/Videos/ELEC-374/Hierarchical_CLA.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Hierarchical_CLA
+# 
+# Top level modules:
+# 	Hierarchical_CLA
+# vlog -vlog01compat -work work +incdir+C:/Users/789wi/Videos/ELEC-374 {C:/Users/789wi/Videos/ELEC-374/dff_Q.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module dff_Q
+# 
+# Top level modules:
+# 	dff_Q
+# vlog -vlog01compat -work work +incdir+C:/Users/789wi/Videos/ELEC-374 {C:/Users/789wi/Videos/ELEC-374/ControlUnit.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ControlUnit
+# 
+# Top level modules:
+# 	ControlUnit
+# vlog -vlog01compat -work work +incdir+C:/Users/789wi/Videos/ELEC-374 {C:/Users/789wi/Videos/ELEC-374/boothMultiplier.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module boothMultiplier
+# 
+# Top level modules:
+# 	boothMultiplier
+# vlog -vlog01compat -work work +incdir+C:/Users/789wi/Videos/ELEC-374 {C:/Users/789wi/Videos/ELEC-374/ALU.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/789wi/Videos/ELEC-374 {C:/Users/789wi/Videos/ELEC-374/TestbenchControlUnit.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module TestbenchControlUnit
+# 
+# Top level modules:
+# 	TestbenchControlUnit
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiii_ver -L rtl_work -L work -voptargs="+acc"  TestbenchControlUnit
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiii_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps TestbenchControlUnit 
 # //  ModelSim ALTERA 10.1d Nov  2 2012 
 # //
 # //  Copyright 1991-2012 Mentor Graphics Corporation
@@ -38,18 +134,269 @@
 # //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
 # //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
 # //
-# Loading work.TestbenchMultiplier
+# Loading work.TestbenchControlUnit
+# Loading work.ControlUnit
+# Loading work.reg32bit
+# Loading work.ALU
+# Loading work.left_shift
+# Loading work.dff_Q
+# Loading work.right_shift_combined
+# Loading work.mux2_1
+# Loading work.left_rotate
+# Loading work.right_rotate
+# Loading work.logical_and
+# Loading work.logical_or
+# Loading work.NotOperation
 # Loading work.twoCompliment
+# Loading work.Hierarchical_CLA
+# Loading work.CLA_8inputs_updated
+# Loading work.P_G_block
+# Loading work.boothMultiplier
+# Loading work.nonRestoringDivisionPosiNeg
 # 
 # add wave *
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
-# run 500 ns
-# HI = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
-# LO = 00000000000000000000000000000000
-# HI = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
-# LO = 00000000000000000000000000000001
-# HI = zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
-# LO = 11011101111111100110010001010110
+# run 800 ns
+# Output reg 0 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 1 = 00000000000000000000000010001101
+# Output reg 2 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 3 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 4 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 5 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 6 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 7 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 8 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 9 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 10 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 11 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 12 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 13 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 14 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 15 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 0 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 1 = 00000000000000000000000010001101
+# Output reg 2 = 00000000000000000000000000101001
+# Output reg 3 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 4 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 5 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 6 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 7 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 8 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 9 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 10 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 11 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 12 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 13 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 14 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 15 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 0 = 00000000000000000000000010110110
+# Output reg 1 = 00000000000000000000000010001101
+# Output reg 2 = 00000000000000000000000000101001
+# Output reg 3 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 4 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 5 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 6 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 7 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 8 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 9 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 10 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 11 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 12 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 13 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 14 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 15 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 0 = 00000000000000000000000010110110
+# Output reg 1 = 00000000000000000000000010001101
+# Output reg 2 = 00000000000000000000000000101001
+# Output reg 3 = 00000000000000000000000000001001
+# Output reg 4 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 5 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 6 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 7 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 8 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 9 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 10 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 11 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 12 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 13 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 14 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 15 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 0 = 00000000000000000000000010110110
+# Output reg 1 = 00000000000000000000000010001101
+# Output reg 2 = 00000000000000000000000000101001
+# Output reg 3 = 00000000000000000000000000001001
+# Output reg 4 = 00000000000000000000000010101101
+# Output reg 5 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 6 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 7 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 8 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 9 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 10 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 11 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 12 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 13 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 14 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 15 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 0 = 00000000000000000000000010110110
+# Output reg 1 = 00000000000000000000000010001101
+# Output reg 2 = 00000000000000000000000000101001
+# Output reg 3 = 00000000000000000000000000001001
+# Output reg 4 = 00000000000000000000000010101101
+# Output reg 5 = 00000000000000000000000001100100
+# Output reg 6 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 7 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 8 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 9 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 10 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 11 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 12 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 13 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 14 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 15 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 0 = 00000000000000000000000010110110
+# Output reg 1 = 00000000000000000000000010001101
+# Output reg 2 = 00000000000000000000000000101001
+# Output reg 3 = 00000000000000000000000000001001
+# Output reg 4 = 00000000000000000000000010101101
+# Output reg 5 = 00000000000000000000000001100100
+# Output reg 6 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 7 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 8 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 9 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 10 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 11 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 12 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 13 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 14 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 15 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 0 = 00000000000000000000000010110110
+# Output reg 1 = 00000000000000000000000010001101
+# Output reg 2 = 00000000000000000000000000101001
+# Output reg 3 = 00000000000000000000000000001001
+# Output reg 4 = 00000000000000000000000010101101
+# Output reg 5 = 00000000000000000000000001100100
+# Output reg 6 = 00000000000000000000000000000011
+# Output reg 7 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 8 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 9 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 10 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 11 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 12 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 13 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 14 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 15 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 0 = 00000000000000000000000010110110
+# Output reg 1 = 00000000000000000000000010001101
+# Output reg 2 = 00000000000000000000000000101001
+# Output reg 3 = 00000000000000000000000000001001
+# Output reg 4 = 00000000000000000000000010101101
+# Output reg 5 = 00000000000000000000000001100100
+# Output reg 6 = 00000000000000000000000000000011
+# Output reg 7 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 8 = 00000000000000000000000001000110
+# Output reg 9 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 10 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 11 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 12 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 13 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 14 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 15 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 0 = 00000000000000000000000010110110
+# Output reg 1 = 00000000000000000000000010001101
+# Output reg 2 = 00000000000000000000000000101001
+# Output reg 3 = 00000000000000000000000000001001
+# Output reg 4 = 00000000000000000000000010101101
+# Output reg 5 = 00000000000000000000000001100100
+# Output reg 6 = 00000000000000000000000000000011
+# Output reg 7 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 8 = 0000000000000000000000000x000xx0
+# Output reg 9 = 00000000000000000000000001000110
+# Output reg 10 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 11 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 12 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 13 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 14 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 15 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 0 = 00000000000000000000000010110110
+# Output reg 1 = 00000000000000000000000010001101
+# Output reg 2 = 00000000000000000000000000101001
+# Output reg 3 = 00000000000000000000000000001001
+# Output reg 4 = 00000000000000000000000010101101
+# Output reg 5 = 00000000000000000000000001100100
+# Output reg 6 = 00000000000000000000000000000011
+# Output reg 7 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 8 = 0000000000000000000000000x000xx0
+# Output reg 9 = 0000000000000000000000000x000xx0
+# Output reg 10 = 00000000000000000000000100011010
+# Output reg 11 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 12 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 13 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 14 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 15 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 0 = 00000000000000000000000010110110
+# Output reg 1 = 00000000000000000000000010001101
+# Output reg 2 = 00000000000000000000000000101001
+# Output reg 3 = 00000000000000000000000000001001
+# Output reg 4 = 00000000000000000000000010101101
+# Output reg 5 = 00000000000000000000000001100100
+# Output reg 6 = 00000000000000000000000000000011
+# Output reg 7 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 8 = 0000000000000000000000000x000xx0
+# Output reg 9 = 0000000000000000000000000x000xx0
+# Output reg 10 = 00000000000000000000000x000xx0x0
+# Output reg 11 = 10000000000000000000000001000110
+# Output reg 12 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 13 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 14 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 15 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 0 = 00000000000000000000000010110110
+# Output reg 1 = 00000000000000000000000010001101
+# Output reg 2 = 00000000000000000000000000101001
+# Output reg 3 = 00000000000000000000000000001001
+# Output reg 4 = 00000000000000000000000010101101
+# Output reg 5 = 00000000000000000000000001100100
+# Output reg 6 = 00000000000000000000000000000011
+# Output reg 7 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 8 = 0000000000000000000000000x000xx0
+# Output reg 9 = 0000000000000000000000000x000xx0
+# Output reg 10 = 00000000000000000000000x000xx0x0
+# Output reg 11 = x000000000000000000000000x000xx0
+# Output reg 12 = 00000000000000000000000100011010
+# Output reg 13 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 14 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 15 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 0 = 00000000000000000000000010110110
+# Output reg 1 = 00000000000000000000000010001101
+# Output reg 2 = 00000000000000000000000000101001
+# Output reg 3 = 00000000000000000000000000001001
+# Output reg 4 = 00000000000000000000000010101101
+# Output reg 5 = 00000000000000000000000001100100
+# Output reg 6 = 00000000000000000000000000000011
+# Output reg 7 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 8 = 0000000000000000000000000x000xx0
+# Output reg 9 = 0000000000000000000000000x000xx0
+# Output reg 10 = 00000000000000000000000x000xx0x0
+# Output reg 11 = x000000000000000000000000x000xx0
+# Output reg 12 = 00000000000000000000000x000xx0x0
+# Output reg 13 = 11111111111111111111111101110011
+# Output reg 14 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 15 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 0 = 00000000000000000000000010110110
+# Output reg 1 = 00000000000000000000000010001101
+# Output reg 2 = 00000000000000000000000000101001
+# Output reg 3 = 00000000000000000000000000001001
+# Output reg 4 = 00000000000000000000000010101101
+# Output reg 5 = 00000000000000000000000001100100
+# Output reg 6 = 00000000000000000000000000000011
+# Output reg 7 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# Output reg 8 = 0000000000000000000000000x000xx0
+# Output reg 9 = 0000000000000000000000000x000xx0
+# Output reg 10 = 00000000000000000000000x000xx0x0
+# Output reg 11 = x000000000000000000000000x000xx0
+# Output reg 12 = 00000000000000000000000x000xx0x0
+# Output reg 13 = 11111111111111111111111101110011
+# Output reg 14 = 11111111111111111111111101110010
+# Output reg 15 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx

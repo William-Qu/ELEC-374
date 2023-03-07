@@ -3,7 +3,7 @@ input clk, clr, wren,
 input [31:0] IR,
 output [31:0] r0outf, r1outf, r2outf, r3outf, r4outf, r5outf, r6outf, r7outf, r8outf, r9outf, r10outf, r11outf, r12outf, r13outf, r14outf, r15outf
 );
-
+//ControlUnit ctrlTest (clk, clr, wren, IR, reg0, reg1, reg2, reg3, reg4, reg5, reg6, reg7, reg8, reg9, reg10, reg11, reg12, reg13, reg14, reg15);
 //Create the wires that will feed out of the ALU/Control Units General Registers
 wire [31:0] r0out, r1out, r2out, r3out, r4out, r5out, r6out, r7out, r8out, r9out, r10out, r11out, r12out, r13out, r14out, r15out;
 
@@ -33,7 +33,7 @@ reg [31:0] r0in, r1in, r2in, r3in, r4in, r5in, r6in, r7in, r8in, r9in, r10in, r1
 //IR Block Broken up
 wire [4:0] OPCode;
 wire [3:0] regASel, regBSel, destSel;
-reg [31:0] regA, regB;
+reg [31:0] regA, regB, immVal;
 wire [63:0] regZ;
 
 //Break Up IR Input
@@ -47,6 +47,8 @@ wire [31:0] regLO, regHI;
 
 //Using regASel and regBSel, get the contents of the correct registers into regA and regB
 	always @ (*) begin
+		immVal = IR[14:0];
+	
 		//Put contents of the correct register into regA using regASel
 		if (regASel == 'b0000) regA = r0out[31:0]; else
 		if (regASel == 'b0001) regA = r1out[31:0]; else
@@ -64,6 +66,8 @@ wire [31:0] regLO, regHI;
 		if (regASel == 'b1101) regA = r13out[31:0]; else
 		if (regASel == 'b1110) regA = r14out[31:0]; else
 		if (regASel == 'b1111) regA = r15out[31:0];
+		
+		if (OPCode[4] == 1'b1) regA = immVal;
 		
 		//Put contents of the correct register into regB using regBSel
 		if (regBSel == 'b0000) regB = r0out[31:0]; else
@@ -96,8 +100,8 @@ assign regHI = regZ[63:32];
 //This always statement will be to determine which register to put the operations output into depending on destSel and if its not mult or div (Since these don't have a destination slot yet)
 //NOTE: There may be overflow from addition, this will just be left in regHI
 	always @ (*) begin
-		if (OPCode != 'b01100 && OPCode != 'b01101) begin //If not mult, or div, put regLO in proper register
-			//if (destSel == 'b0000) r0in <= regLO; else //r0 should always remain 0
+		//if (OPCode != 'b01100 && OPCode != 'b01101) begin //If not mult, or div, put regLO in proper register
+			if (destSel == 'b0000) r0in <= regLO; else //r0 should always remain 0
 			if (destSel == 'b0001) r1in <= regLO; else
 			if (destSel == 'b0010) r2in <= regLO; else
 			if (destSel == 'b0011) r3in <= regLO; else
@@ -113,7 +117,7 @@ assign regHI = regZ[63:32];
 			if (destSel == 'b1101) r13in <= regLO; else
 			if (destSel == 'b1110) r14in <= regLO; else
 			if (destSel == 'b1111) r15in <= regLO;
-		end
+		//end
 	end
 
 assign r0outf = r0in;	

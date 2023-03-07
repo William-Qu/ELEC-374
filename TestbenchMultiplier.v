@@ -1,3 +1,4 @@
+`timescale 1ns/10ps
 module TestbenchMultiplier;
 	reg [31:0] mp, mc;
 	wire [31:0] HI, LO;

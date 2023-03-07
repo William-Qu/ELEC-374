@@ -1,5 +1,5 @@
 //Initialize MUX
-module mybusmux (output [31:0]BusMuxOut,input [31:0]BusMuxInR0,BusMuxInR1,BusMuxInR2,BusMuxInR3,BusMuxInR4,BusMuxInR5,BusMuxInR6,BusMuxInR7,BusMuxInR8,BusMuxInR9,BusMuxInR10,BusMuxInR11,BusMuxInR12,BusMuxInR13,BusMuxInR14,BusMuxInR15,BusMuxInHI,BusMuxInLO,BusMuxInZHI,BusMuxInZLO,BusMuxInPC,BusMuxInMDR,BusMuxInINPORT,BusMuxInCSIGNEXTENDED,R0out, R1out, R2out, R3out, R4out, R5out, R6out, R7out,R8out, R9out, R10out, R11out, R12out, R13out, R14out, R15out,HIout, LOout, ZHIout, ZLOout,PCout, MDRout, InPortOut, Cout);
+module Bus(output [31:0]BusMuxOut,input [31:0]BusMuxInR0,BusMuxInR1,BusMuxInR2,BusMuxInR3,BusMuxInR4,BusMuxInR5,BusMuxInR6,BusMuxInR7,BusMuxInR8,BusMuxInR9,BusMuxInR10,BusMuxInR11,BusMuxInR12,BusMuxInR13,BusMuxInR14,BusMuxInR15,BusMuxInHI,BusMuxInLO,BusMuxInZHI,BusMuxInZLO,BusMuxInPC,BusMuxInMDR,BusMuxInINPORT,BusMuxInCSIGNEXTENDED,R0out, R1out, R2out, R3out, R4out, R5out, R6out, R7out,R8out, R9out, R10out, R11out, R12out, R13out, R14out, R15out,HIout, LOout, ZHIout, ZLOout,PCout, MDRout, InPortOut, Cout);
 			
 			wire [4:0]EnOut;
 			generate
