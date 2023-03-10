@@ -6,7 +6,7 @@ vlib rtl_work
 vmap work rtl_work
 
 vlog -vlog01compat -work work +incdir+C:/Users/789wi/Videos/ELEC-374 {C:/Users/789wi/Videos/ELEC-374/twoCompliment.v}
-vlog -vlog01compat -work work +incdir+C:/Users/789wi/Videos/ELEC-374 {C:/Users/789wi/Videos/ELEC-374/boothMultiplier.v}
+vlog -vlog01compat -work work +incdir+C:/Users/789wi/Videos/ELEC-374 {C:/Users/789wi/Videos/ELEC-374/nonRestoringDivisionPosiNeg.v}
 
 vlog -vlog01compat -work work +incdir+C:/Users/789wi/Videos/ELEC-374 {C:/Users/789wi/Videos/ELEC-374/TestbenchMultiplier.v}
 

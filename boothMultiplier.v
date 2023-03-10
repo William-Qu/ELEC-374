@@ -32,18 +32,13 @@ output [31:0] ansHI, ansLO
 		for (i=1; i<33; i=i+2) 
 			begin
 				if (mrShifted[i+1] == 0 && mrShifted[i] == 0 && mrShifted[i-1] == 0) ans = ans + (0); else
-				if (mrShifted[i+1] == 0 && mrShifted[i] == 0 && mrShifted[i-1] == 1) ans = ans + (mc); else
-				if (mrShifted[i+1] == 0 && mrShifted[i] == 1 && mrShifted[i-1] == 0) ans = ans + (mc); else
-				if (mrShifted[i+1] == 0 && mrShifted[i] == 1 && mrShifted[i-1] == 1) ans = ans + (dmc); else
-				if (mrShifted[i+1] == 1 && mrShifted[i] == 0 && mrShifted[i-1] == 0) ans = ans + (dmcTwos); else
-				if (mrShifted[i+1] == 1 && mrShifted[i] == 0 && mrShifted[i-1] == 1) ans = ans + (mcTwos); else
-				if (mrShifted[i+1] == 1 && mrShifted[i] == 1 && mrShifted[i-1] == 0) ans = ans + (mcTwos); else
+				if (mrShifted[i+1] == 0 && mrShifted[i] == 0 && mrShifted[i-1] == 1) ans = ans + (mc <<< i-1); else
+				if (mrShifted[i+1] == 0 && mrShifted[i] == 1 && mrShifted[i-1] == 0) ans = ans + (mc <<< i-1); else
+				if (mrShifted[i+1] == 0 && mrShifted[i] == 1 && mrShifted[i-1] == 1) ans = ans + (dmc <<< i-1); else
+				if (mrShifted[i+1] == 1 && mrShifted[i] == 0 && mrShifted[i-1] == 0) ans = ans + (dmcTwos <<< i-1); else
+				if (mrShifted[i+1] == 1 && mrShifted[i] == 0 && mrShifted[i-1] == 1) ans = ans + (mcTwos <<< i-1); else
+				if (mrShifted[i+1] == 1 && mrShifted[i] == 1 && mrShifted[i-1] == 0) ans = ans + (mcTwos <<< i-1); else
 				if (mrShifted[i+1] == 1 && mrShifted[i] == 1 && mrShifted[i-1] == 1) ans = ans + (0);
-				
-				mc = mc <<< 2;
-				dmc = dmc <<< 2;
-				dmcTwos = dmcTwos <<< 2;
-				mcTwos = mcTwos <<< 2;
 			end
 
 		//At this point the multiplication should be done for the signed mc and mr, and the answer should be stored in the 64 bit ans register

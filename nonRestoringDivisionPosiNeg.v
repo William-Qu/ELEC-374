@@ -11,8 +11,11 @@ wire [31:0] tempM, divisorTwostemp;
 twoCompliment two (divisor, divisorTwostemp);
 
 assign tempM = divisor[31:0];
-
+	
 	always @ (*) begin
+		A = 32'b00000000000000000000000000000000;
+		M = 32'b00000000000000000000000000000000;
+		Q = 32'b00000000000000000000000000000000;
 		//Set divisorTwos using divisorTwostemp
 		divisorTwos = divisorTwostemp;
 	

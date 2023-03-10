@@ -13,12 +13,12 @@
 # 
 # Top level modules:
 # 	twoCompliment
-# vlog -vlog01compat -work work +incdir+C:/Users/789wi/Videos/ELEC-374 {C:/Users/789wi/Videos/ELEC-374/boothMultiplier.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/789wi/Videos/ELEC-374 {C:/Users/789wi/Videos/ELEC-374/nonRestoringDivisionPosiNeg.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module boothMultiplier
+# -- Compiling module nonRestoringDivisionPosiNeg
 # 
 # Top level modules:
-# 	boothMultiplier
+# 	nonRestoringDivisionPosiNeg
 # 
 # vlog -vlog01compat -work work +incdir+C:/Users/789wi/Videos/ELEC-374 {C:/Users/789wi/Videos/ELEC-374/TestbenchMultiplier.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
@@ -39,18 +39,27 @@
 # //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
 # //
 # Loading work.TestbenchMultiplier
-# Loading work.boothMultiplier
+# Loading work.nonRestoringDivisionPosiNeg
 # Loading work.twoCompliment
 # 
 # add wave *
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: 789wi  Hostname: DESKTOP-MP94GB7  ProcessID: 25124
+# 
+#           Attempting to use alternate WLF file "./wlftqv1zs9".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlftqv1zs9
+# 
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run 500 ns
 # HI = 00000000000000000000000000000000
-# LO = 00000000000000000000000000000000
-# HI = 00000000000000000000000000000000
-# LO = 00000000000000000000000000000001
+# LO = 11111111111111111111111111111111
 # HI = 00000000000000000000000000000010
-# LO = 00000000000000000000000000000100
+# LO = 00000000000000000000000000000001
+# HI = 11111111111111111111111111111111
+# LO = 00000000000000000000000000000000

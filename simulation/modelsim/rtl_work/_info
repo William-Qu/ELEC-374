@@ -3,34 +3,34 @@ K3
 13
 cModel Technology
 Z0 dC:\Users\789wi\Videos\ELEC-374\simulation\modelsim
-vboothMultiplier
-INjE:4U?5=fVZaQ4MOF5IX1
-V3Ej02Sic5l3DfKiWHKl@83
+vnonRestoringDivisionPosiNeg
+I@?F_9`6okN3TE_R:06;>Y1
+V0J1h[_lj0EREd[I8Y4D?B1
 Z1 dC:\Users\789wi\Videos\ELEC-374\simulation\modelsim
-w1678484791
-8C:/Users/789wi/Videos/ELEC-374/boothMultiplier.v
-FC:/Users/789wi/Videos/ELEC-374/boothMultiplier.v
+w1678486225
+8C:/Users/789wi/Videos/ELEC-374/nonRestoringDivisionPosiNeg.v
+FC:/Users/789wi/Videos/ELEC-374/nonRestoringDivisionPosiNeg.v
 L0 1
 Z2 OV;L;10.1d;51
 r1
 31
 Z3 o-vlog01compat -work work -O0
 Z4 !s92 -vlog01compat -work work +incdir+C:/Users/789wi/Videos/ELEC-374 -O0
-nbooth@multiplier
+nnon@restoring@division@posi@neg
 !i10b 1
-!s100 GLOOAdGQbNRYYoQRZ`WfH0
+!s100 mbNUAVOz9AkEO_S_V:Sl`2
 !s85 0
-!s108 1678484933.789000
-!s107 C:/Users/789wi/Videos/ELEC-374/boothMultiplier.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/789wi/Videos/ELEC-374|C:/Users/789wi/Videos/ELEC-374/boothMultiplier.v|
+!s108 1678486757.740000
+!s107 C:/Users/789wi/Videos/ELEC-374/nonRestoringDivisionPosiNeg.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/789wi/Videos/ELEC-374|C:/Users/789wi/Videos/ELEC-374/nonRestoringDivisionPosiNeg.v|
 !s101 -O0
 vTestbenchMultiplier
 !i10b 1
-!s100 BkICRW2kV0Q61QO6o7d0e3
-IBD>DI:XKT^0Z>B`9fY<zo3
+!s100 CHA;=kOA6IRfN>V>F:1X40
+IDi0_h5cVeP7PlQ;EczUK]1
 V1co:H8IMYbzRPXzF96Xz32
 R1
-w1678484902
+w1678486735
 8C:/Users/789wi/Videos/ELEC-374/TestbenchMultiplier.v
 FC:/Users/789wi/Videos/ELEC-374/TestbenchMultiplier.v
 L0 2
@@ -38,7 +38,7 @@ R2
 r1
 !s85 0
 31
-!s108 1678484933.955000
+!s108 1678486757.858000
 !s107 C:/Users/789wi/Videos/ELEC-374/TestbenchMultiplier.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/789wi/Videos/ELEC-374|C:/Users/789wi/Videos/ELEC-374/TestbenchMultiplier.v|
 !s101 -O0
@@ -62,7 +62,7 @@ R4
 !i10b 1
 !s100 zDYmnBzigTgh<FW40HFIJ3
 !s85 0
-!s108 1678484933.635000
+!s108 1678486757.624000
 !s107 C:/Users/789wi/Videos/ELEC-374/twoCompliment.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/789wi/Videos/ELEC-374|C:/Users/789wi/Videos/ELEC-374/twoCompliment.v|
 !s101 -O0
