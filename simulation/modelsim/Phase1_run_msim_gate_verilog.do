@@ -14,4 +14,4 @@ vsim -t 1ps +transport_int_delays +transport_path_delays -L altera_ver -L cyclon
 add wave *
 view structure
 view signals
-run 500 ns
+run 800 ns

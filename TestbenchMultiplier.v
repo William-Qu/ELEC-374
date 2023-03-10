@@ -18,8 +18,8 @@ module TestbenchMultiplier;
 		#10 $display("HI = %b", HI);
 		#10 $display("LO = %b", LO);
 		//case 2
-		mc <= 'h74FF8201;
-		mp <= 'h22019BAA;
+		mc <= 'h00000002;
+		mp <= 'h00000002;
 		#10 $display("HI = %b", HI);
 		#10 $display("LO = %b", LO);
 	end

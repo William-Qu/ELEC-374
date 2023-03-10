@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Mon Mar 06 17:32:56 2023
+Analysis & Synthesis Status : Successful - Fri Mar 10 16:48:32 2023
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
 Revision Name : Phase1
-Top-level Entity Name : ControlUnit
+Top-level Entity Name : boothMultiplier
 Family : Cyclone III
-Total logic elements : 7,059
-    Total combinational functions : 7,059
-    Dedicated logic registers : 512
-Total registers : 512
-Total pins : 547
+Total logic elements : 3,608
+    Total combinational functions : 3,608
+    Dedicated logic registers : 0
+Total registers : 0
+Total pins : 128
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

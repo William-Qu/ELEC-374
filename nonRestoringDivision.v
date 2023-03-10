@@ -8,16 +8,14 @@ reg [31:0] divisorTwos, A, Q; //divisor is the same as M in the lecture slides, 
 wire[31:0] divisorTwostemp;
 
 //Find the Two's Compliment of divisor
-twoCompliment two (divisor, divisorTwostemp);
-
+generate
+	twoCompliment TMU (divisor, divisorTwostemp);
+endgenerate
 
 	always @ (*) begin
 		//Initialize Q and divisorTwos using divisorTwosTemp
-		for (i=0; i<32; i=i+1) 
-				begin
-					Q[i] = dividend[i];
-					divisorTwos[i] = divisorTwostemp[i];
-				end
+		Q = dividend;
+		divisorTwos = divisorTwostemp;
 				
 		//Step 1 of the Non-Restoring Division Algorithm (Done 32 times)
 		for (i=0; i<32; i=i+1)
@@ -41,7 +39,7 @@ twoCompliment two (divisor, divisorTwostemp);
 	end
 	
 	//Set the outputs (quotient = Q and remainder = A)
-	assign quotient = Q[31:0];
-	assign remainder = A[31:0];
+	assign quotient = Q;
+	assign remainder = A;
 
 endmodule

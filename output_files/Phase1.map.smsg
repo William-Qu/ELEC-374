@@ -1,1 +1,4 @@
-Warning (10268): Verilog HDL information at boothMultiplier.v(19): always construct contains both blocking and non-blocking assignments
+Info (10281): Verilog HDL Declaration information at Bus.v(4): object "MDRout" differs only in case from object "MDROut" in the same scope
+Info (10281): Verilog HDL Declaration information at Bus.v(4): object "PCout" differs only in case from object "PCOut" in the same scope
+Info (10281): Verilog HDL Declaration information at Bus.v(4): object "ZLOout" differs only in case from object "ZLoOut" in the same scope
+Info (10281): Verilog HDL Declaration information at Bus.v(4): object "ZHIout" differs only in case from object "ZHiOut" in the same scope

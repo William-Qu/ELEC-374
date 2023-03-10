@@ -15,34 +15,40 @@ output [31:0] ansHI, ansLO
 	twoCompliment two (multiplicand, mcTempTwos);
 	assign mcTemp = multiplicand;
 	
+	
 	always @ (*) begin
+		ans = 64'h0000000000000000;
 		mcTwos = 64'hFFFFFFFFFFFFFFFF; //Set this register to all 1's
-
-		for (i=0; i<32; i=i+1) //Prep all of the multiplicand values into sign extended 64 bit registers
-			begin
-				mrShifted[i+1] = multiplier[i];
-				mc[i] = mcTemp[i];
-				mcTwos[i] = mcTempTwos[i];
-			end
+		
+		//Prep all registers into their 64 bit counterparts with the correct values
+		mc = mcTemp;
+		mcTwos = mcTempTwos;
 		dmc = mc <<< 1;
 		dmcTwos = mcTwos <<< 1;
+		mrShifted = multiplier <<< 1;
 		
 
 		//At this point all of the multiplicand values should be prepped, and so should the mrShifted register
 		for (i=1; i<33; i=i+2) 
 			begin
-				if (mrShifted[i+1] == 0 && mrShifted[i] == 0 && mrShifted[i-1] == 0) ans = ans + (0 <<< (i-1)); else
-				if (mrShifted[i+1] == 0 && mrShifted[i] == 0 && mrShifted[i-1] == 1) ans = ans + (mc <<< (i-1)); else
-				if (mrShifted[i+1] == 0 && mrShifted[i] == 1 && mrShifted[i-1] == 0) ans = ans + (mc <<< (i-1)); else
-				if (mrShifted[i+1] == 0 && mrShifted[i] == 1 && mrShifted[i-1] == 1) ans = ans + (dmc <<< (i-1)); else
-				if (mrShifted[i+1] == 1 && mrShifted[i] == 0 && mrShifted[i-1] == 0) ans = ans + (dmcTwos <<< (i-1)); else
-				if (mrShifted[i+1] == 1 && mrShifted[i] == 0 && mrShifted[i-1] == 1) ans = ans + (mcTwos <<< (i-1)); else
-				if (mrShifted[i+1] == 1 && mrShifted[i] == 1 && mrShifted[i-1] == 0) ans = ans + (mcTwos <<< (i-1)); else
-				if (mrShifted[i+1] == 1 && mrShifted[i] == 1 && mrShifted[i-1] == 1) ans = ans + (0 <<< (i-1));
+				if (mrShifted[i+1] == 0 && mrShifted[i] == 0 && mrShifted[i-1] == 0) ans = ans + (0); else
+				if (mrShifted[i+1] == 0 && mrShifted[i] == 0 && mrShifted[i-1] == 1) ans = ans + (mc); else
+				if (mrShifted[i+1] == 0 && mrShifted[i] == 1 && mrShifted[i-1] == 0) ans = ans + (mc); else
+				if (mrShifted[i+1] == 0 && mrShifted[i] == 1 && mrShifted[i-1] == 1) ans = ans + (dmc); else
+				if (mrShifted[i+1] == 1 && mrShifted[i] == 0 && mrShifted[i-1] == 0) ans = ans + (dmcTwos); else
+				if (mrShifted[i+1] == 1 && mrShifted[i] == 0 && mrShifted[i-1] == 1) ans = ans + (mcTwos); else
+				if (mrShifted[i+1] == 1 && mrShifted[i] == 1 && mrShifted[i-1] == 0) ans = ans + (mcTwos); else
+				if (mrShifted[i+1] == 1 && mrShifted[i] == 1 && mrShifted[i-1] == 1) ans = ans + (0);
+				
+				mc = mc <<< 2;
+				dmc = dmc <<< 2;
+				dmcTwos = dmcTwos <<< 2;
+				mcTwos = mcTwos <<< 2;
 			end
 
 		//At this point the multiplication should be done for the signed mc and mr, and the answer should be stored in the 64 bit ans register
 	end 
+	
 	//At this point the answer from the ans register should be split into the output registers ansHI and ansLO
 	assign ansHI = ans[63:32];
 	assign ansLO = ans[31:0];

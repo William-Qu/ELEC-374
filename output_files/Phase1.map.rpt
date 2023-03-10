@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Phase1
-Mon Mar 06 17:32:56 2023
+Fri Mar 10 16:48:32 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -13,21 +13,11 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Ver
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. User-Specified and Inferred Latches
-  9. General Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Parameter Settings for Inferred Entity Instance: ALU:compute|nonRestoringDivisionPosiNeg:div|lpm_divide:Div0
- 12. Parameter Settings for Inferred Entity Instance: ALU:compute|nonRestoringDivisionPosiNeg:div|lpm_divide:Mod0
- 13. Port Connectivity Checks: "ALU:compute|Hierarchical_CLA:sub"
- 14. Port Connectivity Checks: "ALU:compute|Hierarchical_CLA:add"
- 15. Port Connectivity Checks: "ALU:compute|right_shift_combined:SHRA"
- 16. Port Connectivity Checks: "ALU:compute|right_shift_combined:SHRL|dff_Q:b2v_inst35"
- 17. Port Connectivity Checks: "ALU:compute|right_shift_combined:SHRL|mux2_1:b2v_inst1"
- 18. Port Connectivity Checks: "ALU:compute|right_shift_combined:SHRL"
- 19. Port Connectivity Checks: "ALU:compute|left_shift:SHL|dff_Q:b2v_inst71"
- 20. Port Connectivity Checks: "ALU:compute"
- 21. Elapsed Time Per Partition
- 22. Analysis & Synthesis Messages
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
+ 12. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -53,16 +43,16 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                          ;
 +------------------------------------+--------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Mar 06 17:32:56 2023            ;
+; Analysis & Synthesis Status        ; Successful - Fri Mar 10 16:48:32 2023            ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                      ; Phase1                                           ;
-; Top-level Entity Name              ; ControlUnit                                      ;
+; Top-level Entity Name              ; boothMultiplier                                  ;
 ; Family                             ; Cyclone III                                      ;
-; Total logic elements               ; 7,059                                            ;
-;     Total combinational functions  ; 7,059                                            ;
-;     Dedicated logic registers      ; 512                                              ;
-; Total registers                    ; 512                                              ;
-; Total pins                         ; 547                                              ;
+; Total logic elements               ; 3,608                                            ;
+;     Total combinational functions  ; 3,608                                            ;
+;     Dedicated logic registers      ; 0                                                ;
+; Total registers                    ; 0                                                ;
+; Total pins                         ; 128                                              ;
 ; Total virtual pins                 ; 0                                                ;
 ; Total memory bits                  ; 0                                                ;
 ; Embedded Multiplier 9-bit elements ; 0                                                ;
@@ -76,7 +66,7 @@ applicable agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP3C16F484C6       ;                    ;
-; Top-level entity name                                                      ; ControlUnit        ; Phase1             ;
+; Top-level entity name                                                      ; boothMultiplier    ; Phase1             ;
 ; Family name                                                                ; Cyclone III        ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -175,290 +165,55 @@ applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                              ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                          ; Library ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------+---------+
-; CLA_8inputs_updated.v            ; yes             ; User Verilog HDL File        ; C:/Users/789wi/Videos/ELEC-374/CLA_8inputs_updated.v                  ;         ;
-; mux2_1.v                         ; yes             ; User Verilog HDL File        ; C:/Users/789wi/Videos/ELEC-374/mux2_1.v                               ;         ;
-; twoCompliment.v                  ; yes             ; User Verilog HDL File        ; C:/Users/789wi/Videos/ELEC-374/twoCompliment.v                        ;         ;
-; right_shift_combined.v           ; yes             ; User Verilog HDL File        ; C:/Users/789wi/Videos/ELEC-374/right_shift_combined.v                 ;         ;
-; right_rotate.v                   ; yes             ; User Verilog HDL File        ; C:/Users/789wi/Videos/ELEC-374/right_rotate.v                         ;         ;
-; reg32bit.v                       ; yes             ; User Verilog HDL File        ; C:/Users/789wi/Videos/ELEC-374/reg32bit.v                             ;         ;
-; P_G_block.v                      ; yes             ; User Verilog HDL File        ; C:/Users/789wi/Videos/ELEC-374/P_G_block.v                            ;         ;
-; NotOperation.v                   ; yes             ; User Verilog HDL File        ; C:/Users/789wi/Videos/ELEC-374/NotOperation.v                         ;         ;
-; nonRestoringDivisionPosiNeg.v    ; yes             ; User Verilog HDL File        ; C:/Users/789wi/Videos/ELEC-374/nonRestoringDivisionPosiNeg.v          ;         ;
-; logical_or.v                     ; yes             ; User Verilog HDL File        ; C:/Users/789wi/Videos/ELEC-374/logical_or.v                           ;         ;
-; logical_and.v                    ; yes             ; User Verilog HDL File        ; C:/Users/789wi/Videos/ELEC-374/logical_and.v                          ;         ;
-; left_shift.v                     ; yes             ; User Verilog HDL File        ; C:/Users/789wi/Videos/ELEC-374/left_shift.v                           ;         ;
-; left_rotate.v                    ; yes             ; User Verilog HDL File        ; C:/Users/789wi/Videos/ELEC-374/left_rotate.v                          ;         ;
-; Hierarchical_CLA.v               ; yes             ; User Verilog HDL File        ; C:/Users/789wi/Videos/ELEC-374/Hierarchical_CLA.v                     ;         ;
-; dff_Q.v                          ; yes             ; User Verilog HDL File        ; C:/Users/789wi/Videos/ELEC-374/dff_Q.v                                ;         ;
-; ControlUnit.v                    ; yes             ; User Verilog HDL File        ; C:/Users/789wi/Videos/ELEC-374/ControlUnit.v                          ;         ;
-; boothMultiplier.v                ; yes             ; User Verilog HDL File        ; C:/Users/789wi/Videos/ELEC-374/boothMultiplier.v                      ;         ;
-; ALU.v                            ; yes             ; User Verilog HDL File        ; C:/Users/789wi/Videos/ELEC-374/ALU.v                                  ;         ;
-; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_divide.tdf      ;         ;
-; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/abs_divider.inc     ;         ;
-; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/sign_div_unsign.inc ;         ;
-; aglobal130.inc                   ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc      ;         ;
-; db/lpm_divide_8jm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/789wi/Videos/ELEC-374/db/lpm_divide_8jm.tdf                  ;         ;
-; db/sign_div_unsign_9nh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/789wi/Videos/ELEC-374/db/sign_div_unsign_9nh.tdf             ;         ;
-; db/alt_u_div_t8f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/789wi/Videos/ELEC-374/db/alt_u_div_t8f.tdf                   ;         ;
-; db/add_sub_unc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/789wi/Videos/ELEC-374/db/add_sub_unc.tdf                     ;         ;
-; db/add_sub_vnc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/789wi/Videos/ELEC-374/db/add_sub_vnc.tdf                     ;         ;
-; db/lpm_divide_bbm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/789wi/Videos/ELEC-374/db/lpm_divide_bbm.tdf                  ;         ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                   ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                     ; Library ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------+---------+
+; twoCompliment.v                  ; yes             ; User Verilog HDL File  ; C:/Users/789wi/Videos/ELEC-374/twoCompliment.v   ;         ;
+; boothMultiplier.v                ; yes             ; User Verilog HDL File  ; C:/Users/789wi/Videos/ELEC-374/boothMultiplier.v ;         ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------+---------+
 
 
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 7,059     ;
-;                                             ;           ;
-; Total combinational functions               ; 7059      ;
-; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 3303      ;
-;     -- 3 input functions                    ; 3004      ;
-;     -- <=2 input functions                  ; 752       ;
-;                                             ;           ;
-; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 4954      ;
-;     -- arithmetic mode                      ; 2105      ;
-;                                             ;           ;
-; Total registers                             ; 512       ;
-;     -- Dedicated logic registers            ; 512       ;
-;     -- I/O registers                        ; 0         ;
-;                                             ;           ;
-; I/O pins                                    ; 547       ;
-; Embedded Multiplier 9-bit elements          ; 0         ;
-; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 546       ;
-; Total fan-out                               ; 26201     ;
-; Average fan-out                             ; 3.02      ;
-+---------------------------------------------+-----------+
++-------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                       ;
++---------------------------------------------+---------------------+
+; Resource                                    ; Usage               ;
++---------------------------------------------+---------------------+
+; Estimated Total logic elements              ; 3,608               ;
+;                                             ;                     ;
+; Total combinational functions               ; 3608                ;
+; Logic element usage by number of LUT inputs ;                     ;
+;     -- 4 input functions                    ; 1053                ;
+;     -- 3 input functions                    ; 2425                ;
+;     -- <=2 input functions                  ; 130                 ;
+;                                             ;                     ;
+; Logic elements by mode                      ;                     ;
+;     -- normal mode                          ; 1657                ;
+;     -- arithmetic mode                      ; 1951                ;
+;                                             ;                     ;
+; Total registers                             ; 0                   ;
+;     -- Dedicated logic registers            ; 0                   ;
+;     -- I/O registers                        ; 0                   ;
+;                                             ;                     ;
+; I/O pins                                    ; 128                 ;
+; Embedded Multiplier 9-bit elements          ; 0                   ;
+; Maximum fan-out node                        ; multiplier[1]~input ;
+; Maximum fan-out                             ; 69                  ;
+; Total fan-out                               ; 11818               ;
+; Average fan-out                             ; 3.06                ;
++---------------------------------------------+---------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                      ;
-+----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node                   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                            ; Library Name ;
-+----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |ControlUnit                                 ; 7059 (1200)       ; 512 (0)      ; 0           ; 0            ; 0       ; 0         ; 547  ; 0            ; |ControlUnit                                                                                                                                                                   ; work         ;
-;    |ALU:compute|                             ; 5346 (323)        ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute                                                                                                                                                       ; work         ;
-;       |Hierarchical_CLA:add|                 ; 99 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|Hierarchical_CLA:add                                                                                                                                  ; work         ;
-;          |CLA_8inputs_updated:b2v_inst38|    ; 26 (19)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst38                                                                                                   ; work         ;
-;             |P_G_block:b2v_inst35|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst38|P_G_block:b2v_inst35                                                                              ; work         ;
-;             |P_G_block:b2v_inst36|           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst38|P_G_block:b2v_inst36                                                                              ; work         ;
-;             |P_G_block:b2v_inst37|           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst38|P_G_block:b2v_inst37                                                                              ; work         ;
-;             |P_G_block:b2v_inst38|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst38|P_G_block:b2v_inst38                                                                              ; work         ;
-;             |P_G_block:b2v_inst41|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst38|P_G_block:b2v_inst41                                                                              ; work         ;
-;          |CLA_8inputs_updated:b2v_inst39|    ; 27 (19)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst39                                                                                                   ; work         ;
-;             |P_G_block:b2v_inst35|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst39|P_G_block:b2v_inst35                                                                              ; work         ;
-;             |P_G_block:b2v_inst36|           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst39|P_G_block:b2v_inst36                                                                              ; work         ;
-;             |P_G_block:b2v_inst37|           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst39|P_G_block:b2v_inst37                                                                              ; work         ;
-;             |P_G_block:b2v_inst38|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst39|P_G_block:b2v_inst38                                                                              ; work         ;
-;             |P_G_block:b2v_inst41|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst39|P_G_block:b2v_inst41                                                                              ; work         ;
-;             |P_G_block:b2v_inst|             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst39|P_G_block:b2v_inst                                                                                ; work         ;
-;          |CLA_8inputs_updated:b2v_inst40|    ; 25 (19)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst40                                                                                                   ; work         ;
-;             |P_G_block:b2v_inst35|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst40|P_G_block:b2v_inst35                                                                              ; work         ;
-;             |P_G_block:b2v_inst36|           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst40|P_G_block:b2v_inst36                                                                              ; work         ;
-;             |P_G_block:b2v_inst37|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst40|P_G_block:b2v_inst37                                                                              ; work         ;
-;             |P_G_block:b2v_inst38|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst40|P_G_block:b2v_inst38                                                                              ; work         ;
-;             |P_G_block:b2v_inst|             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst40|P_G_block:b2v_inst                                                                                ; work         ;
-;          |CLA_8inputs_updated:b2v_inst4|     ; 21 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst4                                                                                                    ; work         ;
-;             |P_G_block:b2v_inst35|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst4|P_G_block:b2v_inst35                                                                               ; work         ;
-;             |P_G_block:b2v_inst36|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst4|P_G_block:b2v_inst36                                                                               ; work         ;
-;             |P_G_block:b2v_inst37|           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst4|P_G_block:b2v_inst37                                                                               ; work         ;
-;             |P_G_block:b2v_inst|             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst4|P_G_block:b2v_inst                                                                                 ; work         ;
-;       |Hierarchical_CLA:sub|                 ; 50 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|Hierarchical_CLA:sub                                                                                                                                  ; work         ;
-;          |CLA_8inputs_updated:b2v_inst38|    ; 14 (13)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|Hierarchical_CLA:sub|CLA_8inputs_updated:b2v_inst38                                                                                                   ; work         ;
-;             |P_G_block:b2v_inst37|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|Hierarchical_CLA:sub|CLA_8inputs_updated:b2v_inst38|P_G_block:b2v_inst37                                                                              ; work         ;
-;          |CLA_8inputs_updated:b2v_inst39|    ; 13 (12)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|Hierarchical_CLA:sub|CLA_8inputs_updated:b2v_inst39                                                                                                   ; work         ;
-;             |P_G_block:b2v_inst35|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|Hierarchical_CLA:sub|CLA_8inputs_updated:b2v_inst39|P_G_block:b2v_inst35                                                                              ; work         ;
-;          |CLA_8inputs_updated:b2v_inst40|    ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|Hierarchical_CLA:sub|CLA_8inputs_updated:b2v_inst40                                                                                                   ; work         ;
-;          |CLA_8inputs_updated:b2v_inst4|     ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|Hierarchical_CLA:sub|CLA_8inputs_updated:b2v_inst4                                                                                                    ; work         ;
-;       |boothMultiplier:mul|                  ; 2575 (2543)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|boothMultiplier:mul                                                                                                                                   ; work         ;
-;          |twoCompliment:two|                 ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|boothMultiplier:mul|twoCompliment:two                                                                                                                 ; work         ;
-;       |left_rotate:rotateL|                  ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|left_rotate:rotateL                                                                                                                                   ; work         ;
-;          |dff_Q:b2v_inst71|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|left_rotate:rotateL|dff_Q:b2v_inst71                                                                                                                  ; work         ;
-;       |left_shift:SHL|                       ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|left_shift:SHL                                                                                                                                        ; work         ;
-;          |dff_Q:b2v_inst35|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|left_shift:SHL|dff_Q:b2v_inst35                                                                                                                       ; work         ;
-;       |logical_and:log_and|                  ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|logical_and:log_and                                                                                                                                   ; work         ;
-;       |logical_or:log_or|                    ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|logical_or:log_or                                                                                                                                     ; work         ;
-;       |nonRestoringDivisionPosiNeg:div|      ; 2223 (32)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|nonRestoringDivisionPosiNeg:div                                                                                                                       ; work         ;
-;          |lpm_divide:Div0|                   ; 1103 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|nonRestoringDivisionPosiNeg:div|lpm_divide:Div0                                                                                                       ; work         ;
-;             |lpm_divide_8jm:auto_generated|  ; 1103 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|nonRestoringDivisionPosiNeg:div|lpm_divide:Div0|lpm_divide_8jm:auto_generated                                                                         ; work         ;
-;                |sign_div_unsign_9nh:divider| ; 1103 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|nonRestoringDivisionPosiNeg:div|lpm_divide:Div0|lpm_divide_8jm:auto_generated|sign_div_unsign_9nh:divider                                             ; work         ;
-;                   |alt_u_div_t8f:divider|    ; 1103 (1102)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|nonRestoringDivisionPosiNeg:div|lpm_divide:Div0|lpm_divide_8jm:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_t8f:divider                       ; work         ;
-;                      |add_sub_vnc:add_sub_1| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|nonRestoringDivisionPosiNeg:div|lpm_divide:Div0|lpm_divide_8jm:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_t8f:divider|add_sub_vnc:add_sub_1 ; work         ;
-;          |lpm_divide:Mod0|                   ; 1088 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|nonRestoringDivisionPosiNeg:div|lpm_divide:Mod0                                                                                                       ; work         ;
-;             |lpm_divide_bbm:auto_generated|  ; 1088 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|nonRestoringDivisionPosiNeg:div|lpm_divide:Mod0|lpm_divide_bbm:auto_generated                                                                         ; work         ;
-;                |sign_div_unsign_9nh:divider| ; 1088 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|nonRestoringDivisionPosiNeg:div|lpm_divide:Mod0|lpm_divide_bbm:auto_generated|sign_div_unsign_9nh:divider                                             ; work         ;
-;                   |alt_u_div_t8f:divider|    ; 1088 (1087)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|nonRestoringDivisionPosiNeg:div|lpm_divide:Mod0|lpm_divide_bbm:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_t8f:divider                       ; work         ;
-;                      |add_sub_vnc:add_sub_1| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|nonRestoringDivisionPosiNeg:div|lpm_divide:Mod0|lpm_divide_bbm:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_t8f:divider|add_sub_vnc:add_sub_1 ; work         ;
-;       |right_shift_combined:SHRL|            ; 30 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|right_shift_combined:SHRL                                                                                                                             ; work         ;
-;          |dff_Q:b2v_inst38|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|right_shift_combined:SHRL|dff_Q:b2v_inst38                                                                                                            ; work         ;
-;          |dff_Q:b2v_inst39|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|right_shift_combined:SHRL|dff_Q:b2v_inst39                                                                                                            ; work         ;
-;          |dff_Q:b2v_inst40|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|right_shift_combined:SHRL|dff_Q:b2v_inst40                                                                                                            ; work         ;
-;          |dff_Q:b2v_inst41|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|right_shift_combined:SHRL|dff_Q:b2v_inst41                                                                                                            ; work         ;
-;          |dff_Q:b2v_inst42|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|right_shift_combined:SHRL|dff_Q:b2v_inst42                                                                                                            ; work         ;
-;          |dff_Q:b2v_inst43|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|right_shift_combined:SHRL|dff_Q:b2v_inst43                                                                                                            ; work         ;
-;          |dff_Q:b2v_inst44|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|right_shift_combined:SHRL|dff_Q:b2v_inst44                                                                                                            ; work         ;
-;          |dff_Q:b2v_inst45|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|right_shift_combined:SHRL|dff_Q:b2v_inst45                                                                                                            ; work         ;
-;          |dff_Q:b2v_inst48|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|right_shift_combined:SHRL|dff_Q:b2v_inst48                                                                                                            ; work         ;
-;          |dff_Q:b2v_inst49|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|right_shift_combined:SHRL|dff_Q:b2v_inst49                                                                                                            ; work         ;
-;          |dff_Q:b2v_inst50|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|right_shift_combined:SHRL|dff_Q:b2v_inst50                                                                                                            ; work         ;
-;          |dff_Q:b2v_inst51|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|right_shift_combined:SHRL|dff_Q:b2v_inst51                                                                                                            ; work         ;
-;          |dff_Q:b2v_inst52|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|right_shift_combined:SHRL|dff_Q:b2v_inst52                                                                                                            ; work         ;
-;          |dff_Q:b2v_inst53|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|right_shift_combined:SHRL|dff_Q:b2v_inst53                                                                                                            ; work         ;
-;          |dff_Q:b2v_inst54|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|right_shift_combined:SHRL|dff_Q:b2v_inst54                                                                                                            ; work         ;
-;          |dff_Q:b2v_inst55|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|right_shift_combined:SHRL|dff_Q:b2v_inst55                                                                                                            ; work         ;
-;          |dff_Q:b2v_inst56|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|right_shift_combined:SHRL|dff_Q:b2v_inst56                                                                                                            ; work         ;
-;          |dff_Q:b2v_inst57|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|right_shift_combined:SHRL|dff_Q:b2v_inst57                                                                                                            ; work         ;
-;          |dff_Q:b2v_inst58|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|right_shift_combined:SHRL|dff_Q:b2v_inst58                                                                                                            ; work         ;
-;          |dff_Q:b2v_inst59|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|right_shift_combined:SHRL|dff_Q:b2v_inst59                                                                                                            ; work         ;
-;          |dff_Q:b2v_inst60|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|right_shift_combined:SHRL|dff_Q:b2v_inst60                                                                                                            ; work         ;
-;          |dff_Q:b2v_inst61|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|right_shift_combined:SHRL|dff_Q:b2v_inst61                                                                                                            ; work         ;
-;          |dff_Q:b2v_inst63|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|right_shift_combined:SHRL|dff_Q:b2v_inst63                                                                                                            ; work         ;
-;          |dff_Q:b2v_inst64|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|right_shift_combined:SHRL|dff_Q:b2v_inst64                                                                                                            ; work         ;
-;          |dff_Q:b2v_inst65|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|right_shift_combined:SHRL|dff_Q:b2v_inst65                                                                                                            ; work         ;
-;          |dff_Q:b2v_inst66|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|right_shift_combined:SHRL|dff_Q:b2v_inst66                                                                                                            ; work         ;
-;          |dff_Q:b2v_inst67|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|right_shift_combined:SHRL|dff_Q:b2v_inst67                                                                                                            ; work         ;
-;          |dff_Q:b2v_inst68|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|right_shift_combined:SHRL|dff_Q:b2v_inst68                                                                                                            ; work         ;
-;          |dff_Q:b2v_inst69|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|right_shift_combined:SHRL|dff_Q:b2v_inst69                                                                                                            ; work         ;
-;          |dff_Q:b2v_inst70|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|right_shift_combined:SHRL|dff_Q:b2v_inst70                                                                                                            ; work         ;
-;       |twoCompliment:neg|                    ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|ALU:compute|twoCompliment:neg                                                                                                                                     ; work         ;
-;    |reg32bit:gr0|                            ; 32 (32)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|reg32bit:gr0                                                                                                                                                      ; work         ;
-;    |reg32bit:gr10|                           ; 32 (32)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|reg32bit:gr10                                                                                                                                                     ; work         ;
-;    |reg32bit:gr11|                           ; 32 (32)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|reg32bit:gr11                                                                                                                                                     ; work         ;
-;    |reg32bit:gr12|                           ; 33 (33)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|reg32bit:gr12                                                                                                                                                     ; work         ;
-;    |reg32bit:gr13|                           ; 32 (32)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|reg32bit:gr13                                                                                                                                                     ; work         ;
-;    |reg32bit:gr14|                           ; 32 (32)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|reg32bit:gr14                                                                                                                                                     ; work         ;
-;    |reg32bit:gr15|                           ; 32 (32)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|reg32bit:gr15                                                                                                                                                     ; work         ;
-;    |reg32bit:gr1|                            ; 32 (32)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|reg32bit:gr1                                                                                                                                                      ; work         ;
-;    |reg32bit:gr2|                            ; 32 (32)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|reg32bit:gr2                                                                                                                                                      ; work         ;
-;    |reg32bit:gr3|                            ; 32 (32)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|reg32bit:gr3                                                                                                                                                      ; work         ;
-;    |reg32bit:gr4|                            ; 32 (32)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|reg32bit:gr4                                                                                                                                                      ; work         ;
-;    |reg32bit:gr5|                            ; 32 (32)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|reg32bit:gr5                                                                                                                                                      ; work         ;
-;    |reg32bit:gr6|                            ; 32 (32)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|reg32bit:gr6                                                                                                                                                      ; work         ;
-;    |reg32bit:gr7|                            ; 32 (32)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|reg32bit:gr7                                                                                                                                                      ; work         ;
-;    |reg32bit:gr8|                            ; 32 (32)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|reg32bit:gr8                                                                                                                                                      ; work         ;
-;    |reg32bit:gr9|                            ; 32 (32)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnit|reg32bit:gr9                                                                                                                                                      ; work         ;
-+----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                        ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------+--------------+
+; |boothMultiplier           ; 3608 (3576)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 128  ; 0            ; |boothMultiplier                   ; work         ;
+;    |twoCompliment:two|     ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |boothMultiplier|twoCompliment:two ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+-----------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                 ;
-+------------------------------------------------------+---------------------+------------------------+
-; Latch Name                                           ; Latch Enable Signal ; Free of Timing Hazards ;
-+------------------------------------------------------+---------------------+------------------------+
-; r0in[0]                                              ; Equal32             ; yes                    ;
-; r0in[1]                                              ; Equal32             ; yes                    ;
-; r0in[2]                                              ; Equal32             ; yes                    ;
-; r0in[3]                                              ; Equal32             ; yes                    ;
-; r0in[4]                                              ; Equal32             ; yes                    ;
-; r0in[5]                                              ; Equal32             ; yes                    ;
-; r0in[6]                                              ; Equal32             ; yes                    ;
-; r0in[7]                                              ; Equal32             ; yes                    ;
-; r0in[8]                                              ; Equal32             ; yes                    ;
-; r0in[9]                                              ; Equal32             ; yes                    ;
-; r0in[10]                                             ; Equal32             ; yes                    ;
-; r0in[11]                                             ; Equal32             ; yes                    ;
-; r0in[12]                                             ; Equal32             ; yes                    ;
-; r0in[13]                                             ; Equal32             ; yes                    ;
-; r0in[14]                                             ; Equal32             ; yes                    ;
-; r0in[15]                                             ; Equal32             ; yes                    ;
-; r0in[16]                                             ; Equal32             ; yes                    ;
-; r0in[17]                                             ; Equal32             ; yes                    ;
-; r0in[18]                                             ; Equal32             ; yes                    ;
-; r0in[19]                                             ; Equal32             ; yes                    ;
-; r0in[20]                                             ; Equal32             ; yes                    ;
-; r0in[21]                                             ; Equal32             ; yes                    ;
-; r0in[22]                                             ; Equal32             ; yes                    ;
-; r0in[23]                                             ; Equal32             ; yes                    ;
-; r0in[24]                                             ; Equal32             ; yes                    ;
-; r0in[25]                                             ; Equal32             ; yes                    ;
-; r0in[26]                                             ; Equal32             ; yes                    ;
-; r0in[27]                                             ; Equal32             ; yes                    ;
-; r0in[28]                                             ; Equal32             ; yes                    ;
-; r0in[29]                                             ; Equal32             ; yes                    ;
-; r0in[30]                                             ; Equal32             ; yes                    ;
-; r0in[31]                                             ; Equal32             ; yes                    ;
-; r1in[0]                                              ; Equal32             ; yes                    ;
-; r1in[1]                                              ; Equal32             ; yes                    ;
-; r1in[2]                                              ; Equal32             ; yes                    ;
-; r1in[3]                                              ; Equal32             ; yes                    ;
-; r1in[4]                                              ; Equal32             ; yes                    ;
-; r1in[5]                                              ; Equal32             ; yes                    ;
-; r1in[6]                                              ; Equal32             ; yes                    ;
-; r1in[7]                                              ; Equal32             ; yes                    ;
-; r1in[8]                                              ; Equal32             ; yes                    ;
-; r1in[9]                                              ; Equal32             ; yes                    ;
-; r1in[10]                                             ; Equal32             ; yes                    ;
-; r1in[11]                                             ; Equal32             ; yes                    ;
-; r1in[12]                                             ; Equal32             ; yes                    ;
-; r1in[13]                                             ; Equal32             ; yes                    ;
-; r1in[14]                                             ; Equal32             ; yes                    ;
-; r1in[15]                                             ; Equal32             ; yes                    ;
-; r1in[16]                                             ; Equal32             ; yes                    ;
-; r1in[17]                                             ; Equal32             ; yes                    ;
-; r1in[18]                                             ; Equal32             ; yes                    ;
-; r1in[19]                                             ; Equal32             ; yes                    ;
-; r1in[20]                                             ; Equal32             ; yes                    ;
-; r1in[21]                                             ; Equal32             ; yes                    ;
-; r1in[22]                                             ; Equal32             ; yes                    ;
-; r1in[23]                                             ; Equal32             ; yes                    ;
-; r1in[24]                                             ; Equal32             ; yes                    ;
-; r1in[25]                                             ; Equal32             ; yes                    ;
-; r1in[26]                                             ; Equal32             ; yes                    ;
-; r1in[27]                                             ; Equal32             ; yes                    ;
-; r1in[28]                                             ; Equal32             ; yes                    ;
-; r1in[29]                                             ; Equal32             ; yes                    ;
-; r1in[30]                                             ; Equal32             ; yes                    ;
-; r1in[31]                                             ; Equal32             ; yes                    ;
-; r2in[0]                                              ; Equal32             ; yes                    ;
-; r2in[1]                                              ; Equal32             ; yes                    ;
-; r2in[2]                                              ; Equal32             ; yes                    ;
-; r2in[3]                                              ; Equal32             ; yes                    ;
-; r2in[4]                                              ; Equal32             ; yes                    ;
-; r2in[5]                                              ; Equal32             ; yes                    ;
-; r2in[6]                                              ; Equal32             ; yes                    ;
-; r2in[7]                                              ; Equal32             ; yes                    ;
-; r2in[8]                                              ; Equal32             ; yes                    ;
-; r2in[9]                                              ; Equal32             ; yes                    ;
-; r2in[10]                                             ; Equal32             ; yes                    ;
-; r2in[11]                                             ; Equal32             ; yes                    ;
-; r2in[12]                                             ; Equal32             ; yes                    ;
-; r2in[13]                                             ; Equal32             ; yes                    ;
-; r2in[14]                                             ; Equal32             ; yes                    ;
-; r2in[15]                                             ; Equal32             ; yes                    ;
-; r2in[16]                                             ; Equal32             ; yes                    ;
-; r2in[17]                                             ; Equal32             ; yes                    ;
-; r2in[18]                                             ; Equal32             ; yes                    ;
-; r2in[19]                                             ; Equal32             ; yes                    ;
-; r2in[20]                                             ; Equal32             ; yes                    ;
-; r2in[21]                                             ; Equal32             ; yes                    ;
-; r2in[22]                                             ; Equal32             ; yes                    ;
-; r2in[23]                                             ; Equal32             ; yes                    ;
-; r2in[24]                                             ; Equal32             ; yes                    ;
-; r2in[25]                                             ; Equal32             ; yes                    ;
-; r2in[26]                                             ; Equal32             ; yes                    ;
-; r2in[27]                                             ; Equal32             ; yes                    ;
-; r2in[28]                                             ; Equal32             ; yes                    ;
-; r2in[29]                                             ; Equal32             ; yes                    ;
-; r2in[30]                                             ; Equal32             ; yes                    ;
-; r2in[31]                                             ; Equal32             ; yes                    ;
-; r3in[0]                                              ; Equal32             ; yes                    ;
-; r3in[1]                                              ; Equal32             ; yes                    ;
-; r3in[2]                                              ; Equal32             ; yes                    ;
-; r3in[3]                                              ; Equal32             ; yes                    ;
-; Number of user-specified and inferred latches = 593  ;                     ;                        ;
-+------------------------------------------------------+---------------------+------------------------+
-Table restricted to first 100 entries. Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +------------------------------------------------------+
@@ -466,164 +221,39 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 512   ;
+; Total registers                              ; 0     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 512   ;
+; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
-; 3:1                ; 512 bits  ; 1024 LEs      ; 512 LEs              ; 512 LEs                ; Yes        ; |ControlUnit|reg32bit:gr12|r[26]                     ;
-; 5:1                ; 62 bits   ; 186 LEs       ; 124 LEs              ; 62 LEs                 ; No         ; |ControlUnit|ALU:compute|boothMultiplier:mul|ans     ;
-; 6:1                ; 34 bits   ; 136 LEs       ; 68 LEs               ; 68 LEs                 ; No         ; |ControlUnit|ALU:compute|boothMultiplier:mul|ans     ;
-; 6:1                ; 36 bits   ; 144 LEs       ; 72 LEs               ; 72 LEs                 ; No         ; |ControlUnit|ALU:compute|boothMultiplier:mul|ans     ;
-; 6:1                ; 38 bits   ; 152 LEs       ; 76 LEs               ; 76 LEs                 ; No         ; |ControlUnit|ALU:compute|boothMultiplier:mul|ans     ;
-; 6:1                ; 40 bits   ; 160 LEs       ; 80 LEs               ; 80 LEs                 ; No         ; |ControlUnit|ALU:compute|boothMultiplier:mul|ans     ;
-; 6:1                ; 42 bits   ; 168 LEs       ; 84 LEs               ; 84 LEs                 ; No         ; |ControlUnit|ALU:compute|boothMultiplier:mul|ans     ;
-; 6:1                ; 44 bits   ; 176 LEs       ; 88 LEs               ; 88 LEs                 ; No         ; |ControlUnit|ALU:compute|boothMultiplier:mul|ans     ;
-; 6:1                ; 46 bits   ; 184 LEs       ; 92 LEs               ; 92 LEs                 ; No         ; |ControlUnit|ALU:compute|boothMultiplier:mul|ans     ;
-; 6:1                ; 48 bits   ; 192 LEs       ; 96 LEs               ; 96 LEs                 ; No         ; |ControlUnit|ALU:compute|boothMultiplier:mul|ans     ;
-; 16:1               ; 17 bits   ; 170 LEs       ; 170 LEs              ; 0 LEs                  ; No         ; |ControlUnit|regA[23]                                ;
-; 16:1               ; 32 bits   ; 320 LEs       ; 320 LEs              ; 0 LEs                  ; No         ; |ControlUnit|regB[31]                                ;
-; 6:1                ; 50 bits   ; 200 LEs       ; 100 LEs              ; 100 LEs                ; No         ; |ControlUnit|ALU:compute|boothMultiplier:mul|ans     ;
-; 6:1                ; 52 bits   ; 208 LEs       ; 104 LEs              ; 104 LEs                ; No         ; |ControlUnit|ALU:compute|boothMultiplier:mul|ans     ;
-; 6:1                ; 54 bits   ; 216 LEs       ; 108 LEs              ; 108 LEs                ; No         ; |ControlUnit|ALU:compute|boothMultiplier:mul|ans     ;
-; 6:1                ; 56 bits   ; 224 LEs       ; 112 LEs              ; 112 LEs                ; No         ; |ControlUnit|ALU:compute|boothMultiplier:mul|ans     ;
-; 6:1                ; 58 bits   ; 232 LEs       ; 116 LEs              ; 116 LEs                ; No         ; |ControlUnit|ALU:compute|boothMultiplier:mul|ans     ;
-; 6:1                ; 60 bits   ; 240 LEs       ; 120 LEs              ; 120 LEs                ; No         ; |ControlUnit|ALU:compute|boothMultiplier:mul|ans     ;
-; 17:1               ; 8 bits    ; 88 LEs        ; 56 LEs               ; 32 LEs                 ; No         ; |ControlUnit|ALU:compute|regLO[27]                   ;
-; 17:1               ; 7 bits    ; 77 LEs        ; 56 LEs               ; 21 LEs                 ; No         ; |ControlUnit|ALU:compute|regLO[13]                   ;
-; 17:1               ; 15 bits   ; 165 LEs       ; 165 LEs              ; 0 LEs                  ; No         ; |ControlUnit|regA[14]                                ;
-; 17:1               ; 8 bits    ; 88 LEs        ; 56 LEs               ; 32 LEs                 ; No         ; |ControlUnit|ALU:compute|regLO[30]                   ;
-; 17:1               ; 7 bits    ; 77 LEs        ; 56 LEs               ; 21 LEs                 ; No         ; |ControlUnit|ALU:compute|regLO[12]                   ;
-; 65:1               ; 33 bits   ; 1419 LEs      ; 1056 LEs             ; 363 LEs                ; No         ; |ControlUnit|ALU:compute|boothMultiplier:mul|ans[45] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: ALU:compute|nonRestoringDivisionPosiNeg:div|lpm_divide:Div0 ;
-+------------------------+----------------+--------------------------------------------------------------------+
-; Parameter Name         ; Value          ; Type                                                               ;
-+------------------------+----------------+--------------------------------------------------------------------+
-; LPM_WIDTHN             ; 32             ; Untyped                                                            ;
-; LPM_WIDTHD             ; 32             ; Untyped                                                            ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                            ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                            ;
-; LPM_PIPELINE           ; 0              ; Untyped                                                            ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                            ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                                            ;
-; CBXI_PARAMETER         ; lpm_divide_8jm ; Untyped                                                            ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                                            ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                            ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                         ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                       ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                       ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                     ;
-+------------------------+----------------+--------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: ALU:compute|nonRestoringDivisionPosiNeg:div|lpm_divide:Mod0 ;
-+------------------------+----------------+--------------------------------------------------------------------+
-; Parameter Name         ; Value          ; Type                                                               ;
-+------------------------+----------------+--------------------------------------------------------------------+
-; LPM_WIDTHN             ; 32             ; Untyped                                                            ;
-; LPM_WIDTHD             ; 32             ; Untyped                                                            ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                            ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                            ;
-; LPM_PIPELINE           ; 0              ; Untyped                                                            ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                            ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                                            ;
-; CBXI_PARAMETER         ; lpm_divide_bbm ; Untyped                                                            ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                                            ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                            ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                         ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                       ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                       ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                     ;
-+------------------------+----------------+--------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------+
-; Port Connectivity Checks: "ALU:compute|Hierarchical_CLA:sub" ;
-+--------+-------+----------+----------------------------------+
-; Port   ; Type  ; Severity ; Details                          ;
-+--------+-------+----------+----------------------------------+
-; Select ; Input ; Info     ; Stuck at VCC                     ;
-+--------+-------+----------+----------------------------------+
-
-
-+--------------------------------------------------------------+
-; Port Connectivity Checks: "ALU:compute|Hierarchical_CLA:add" ;
-+--------+-------+----------+----------------------------------+
-; Port   ; Type  ; Severity ; Details                          ;
-+--------+-------+----------+----------------------------------+
-; Select ; Input ; Info     ; Stuck at GND                     ;
-+--------+-------+----------+----------------------------------+
-
-
-+-------------------------------------------------------------------+
-; Port Connectivity Checks: "ALU:compute|right_shift_combined:SHRA" ;
-+--------+-------+----------+---------------------------------------+
-; Port   ; Type  ; Severity ; Details                               ;
-+--------+-------+----------+---------------------------------------+
-; select ; Input ; Info     ; Stuck at VCC                          ;
-+--------+-------+----------+---------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ALU:compute|right_shift_combined:SHRL|dff_Q:b2v_inst35"                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ALU:compute|right_shift_combined:SHRL|mux2_1:b2v_inst1" ;
-+------+-------+----------+----------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                  ;
-+------+-------+----------+----------------------------------------------------------+
-; a    ; Input ; Info     ; Stuck at GND                                             ;
-+------+-------+----------+----------------------------------------------------------+
-
-
-+-------------------------------------------------------------------+
-; Port Connectivity Checks: "ALU:compute|right_shift_combined:SHRL" ;
-+--------+-------+----------+---------------------------------------+
-; Port   ; Type  ; Severity ; Details                               ;
-+--------+-------+----------+---------------------------------------+
-; select ; Input ; Info     ; Stuck at GND                          ;
-+--------+-------+----------+---------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ALU:compute|left_shift:SHL|dff_Q:b2v_inst71"                                        ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ALU:compute"                                                                                ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port         ; Type   ; Severity ; Details                                                                             ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------+
-; regZ[63..32] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 8:1                ; 31 bits   ; 155 LEs       ; 93 LEs               ; 62 LEs                 ; No         ; |boothMultiplier|ans       ;
+; 8:1                ; 31 bits   ; 155 LEs       ; 93 LEs               ; 62 LEs                 ; No         ; |boothMultiplier|ans       ;
+; 8:1                ; 31 bits   ; 155 LEs       ; 93 LEs               ; 62 LEs                 ; No         ; |boothMultiplier|ans       ;
+; 8:1                ; 31 bits   ; 155 LEs       ; 93 LEs               ; 62 LEs                 ; No         ; |boothMultiplier|ans       ;
+; 8:1                ; 31 bits   ; 155 LEs       ; 93 LEs               ; 62 LEs                 ; No         ; |boothMultiplier|ans       ;
+; 8:1                ; 31 bits   ; 155 LEs       ; 93 LEs               ; 62 LEs                 ; No         ; |boothMultiplier|ans       ;
+; 8:1                ; 31 bits   ; 155 LEs       ; 93 LEs               ; 62 LEs                 ; No         ; |boothMultiplier|ans       ;
+; 8:1                ; 31 bits   ; 155 LEs       ; 93 LEs               ; 62 LEs                 ; No         ; |boothMultiplier|ans       ;
+; 8:1                ; 31 bits   ; 155 LEs       ; 93 LEs               ; 62 LEs                 ; No         ; |boothMultiplier|ans       ;
+; 8:1                ; 31 bits   ; 155 LEs       ; 93 LEs               ; 62 LEs                 ; No         ; |boothMultiplier|ans       ;
+; 8:1                ; 31 bits   ; 155 LEs       ; 93 LEs               ; 62 LEs                 ; No         ; |boothMultiplier|ans       ;
+; 8:1                ; 31 bits   ; 155 LEs       ; 93 LEs               ; 62 LEs                 ; No         ; |boothMultiplier|ans       ;
+; 8:1                ; 31 bits   ; 155 LEs       ; 93 LEs               ; 62 LEs                 ; No         ; |boothMultiplier|ans       ;
+; 8:1                ; 31 bits   ; 155 LEs       ; 93 LEs               ; 62 LEs                 ; No         ; |boothMultiplier|ans       ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 6 LEs                ; 4 LEs                  ; No         ; |boothMultiplier|ans       ;
+; 8:1                ; 30 bits   ; 150 LEs       ; 90 LEs               ; 60 LEs                 ; No         ; |boothMultiplier|ans       ;
+; 5:1                ; 31 bits   ; 93 LEs        ; 93 LEs               ; 0 LEs                  ; No         ; |boothMultiplier|ans       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
 +-------------------------------+
@@ -631,7 +261,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:19     ;
+; Top            ; 00:00:04     ;
 +----------------+--------------+
 
 
@@ -641,9 +271,11 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Mon Mar 06 17:32:32 2023
+    Info: Processing started: Fri Mar 10 16:48:25 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Phase1 -c Phase1
 Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
+Info (12021): Found 1 design units, including 1 entities, in source file bus.v
+    Info (12023): Found entity 1: Bus
 Info (12021): Found 1 design units, including 1 entities, in source file cla_8inputs_updated.v
     Info (12023): Found entity 1: CLA_8inputs_updated
 Info (12021): Found 1 design units, including 1 entities, in source file mux2_1.v
@@ -701,1005 +333,54 @@ Info (12021): Found 1 design units, including 1 entities, in source file dff_q.v
     Info (12023): Found entity 1: dff_Q
 Info (12021): Found 1 design units, including 1 entities, in source file controlunit.v
     Info (12023): Found entity 1: ControlUnit
-Info (12021): Found 1 design units, including 1 entities, in source file bus.v
-    Info (12023): Found entity 1: Bus
 Info (12021): Found 1 design units, including 1 entities, in source file boothmultiplier.v
     Info (12023): Found entity 1: boothMultiplier
 Info (12021): Found 1 design units, including 1 entities, in source file alu.v
     Info (12023): Found entity 1: ALU
+Info (12021): Found 1 design units, including 1 entities, in source file aluregisters.v
+    Info (12023): Found entity 1: ALURegisters
+Warning (10236): Verilog HDL Implicit Net warning at Bus.v(36): created implicit net for "RegOutportOut"
 Warning (10236): Verilog HDL Implicit Net warning at MDRunit.v(11): created implicit net for "MDRout"
-Warning (10236): Verilog HDL Implicit Net warning at Bus.v(7): created implicit net for "BusMuxIn"
-Warning (10236): Verilog HDL Implicit Net warning at Bus.v(7): created implicit net for "R0"
-Warning (10236): Verilog HDL Implicit Net warning at Bus.v(7): created implicit net for "R1"
-Warning (10236): Verilog HDL Implicit Net warning at Bus.v(7): created implicit net for "R2"
-Warning (10236): Verilog HDL Implicit Net warning at Bus.v(7): created implicit net for "R3"
-Warning (10236): Verilog HDL Implicit Net warning at Bus.v(7): created implicit net for "R4"
-Warning (10236): Verilog HDL Implicit Net warning at Bus.v(7): created implicit net for "R5"
-Warning (10236): Verilog HDL Implicit Net warning at Bus.v(7): created implicit net for "R6"
-Warning (10236): Verilog HDL Implicit Net warning at Bus.v(7): created implicit net for "R7"
-Warning (10236): Verilog HDL Implicit Net warning at Bus.v(7): created implicit net for "R8"
-Warning (10236): Verilog HDL Implicit Net warning at Bus.v(7): created implicit net for "R9"
-Warning (10236): Verilog HDL Implicit Net warning at Bus.v(7): created implicit net for "R10"
-Warning (10236): Verilog HDL Implicit Net warning at Bus.v(7): created implicit net for "R11"
-Warning (10236): Verilog HDL Implicit Net warning at Bus.v(7): created implicit net for "R12"
-Warning (10236): Verilog HDL Implicit Net warning at Bus.v(7): created implicit net for "R13"
-Warning (10236): Verilog HDL Implicit Net warning at Bus.v(7): created implicit net for "R14"
-Warning (10236): Verilog HDL Implicit Net warning at Bus.v(7): created implicit net for "R15"
-Warning (10236): Verilog HDL Implicit Net warning at Bus.v(7): created implicit net for "HI"
-Warning (10236): Verilog HDL Implicit Net warning at Bus.v(7): created implicit net for "LO"
-Warning (10236): Verilog HDL Implicit Net warning at Bus.v(7): created implicit net for "ZHI"
-Warning (10236): Verilog HDL Implicit Net warning at Bus.v(7): created implicit net for "ZLO"
-Warning (10236): Verilog HDL Implicit Net warning at Bus.v(7): created implicit net for "PC"
-Warning (10236): Verilog HDL Implicit Net warning at Bus.v(7): created implicit net for "MDR"
-Warning (10236): Verilog HDL Implicit Net warning at Bus.v(7): created implicit net for "INPORT"
-Warning (10236): Verilog HDL Implicit Net warning at Bus.v(7): created implicit net for "C"
-Warning (10236): Verilog HDL Implicit Net warning at Bus.v(7): created implicit net for "SIGN"
-Warning (10236): Verilog HDL Implicit Net warning at Bus.v(7): created implicit net for "EXTENDED"
 Warning (10236): Verilog HDL Implicit Net warning at ALU.v(29): created implicit net for "clr"
-Info (12127): Elaborating entity "ControlUnit" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at ControlUnit.v(46): object "regHI" assigned a value but never read
-Warning (10240): Verilog HDL Always Construct warning at ControlUnit.v(50): inferring latch(es) for variable "regA", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at ControlUnit.v(50): inferring latch(es) for variable "regB", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at ControlUnit.v(104): inferring latch(es) for variable "r0in", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at ControlUnit.v(104): inferring latch(es) for variable "r1in", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at ControlUnit.v(104): inferring latch(es) for variable "r2in", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at ControlUnit.v(104): inferring latch(es) for variable "r3in", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at ControlUnit.v(104): inferring latch(es) for variable "r4in", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at ControlUnit.v(104): inferring latch(es) for variable "r5in", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at ControlUnit.v(104): inferring latch(es) for variable "r6in", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at ControlUnit.v(104): inferring latch(es) for variable "r7in", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at ControlUnit.v(104): inferring latch(es) for variable "r8in", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at ControlUnit.v(104): inferring latch(es) for variable "r9in", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at ControlUnit.v(104): inferring latch(es) for variable "r10in", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at ControlUnit.v(104): inferring latch(es) for variable "r11in", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at ControlUnit.v(104): inferring latch(es) for variable "r12in", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at ControlUnit.v(104): inferring latch(es) for variable "r13in", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at ControlUnit.v(104): inferring latch(es) for variable "r14in", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at ControlUnit.v(104): inferring latch(es) for variable "r15in", which holds its previous value in one or more paths through the always construct
-Info (10041): Inferred latch for "r15in[0]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r15in[1]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r15in[2]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r15in[3]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r15in[4]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r15in[5]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r15in[6]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r15in[7]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r15in[8]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r15in[9]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r15in[10]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r15in[11]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r15in[12]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r15in[13]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r15in[14]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r15in[15]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r15in[16]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r15in[17]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r15in[18]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r15in[19]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r15in[20]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r15in[21]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r15in[22]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r15in[23]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r15in[24]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r15in[25]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r15in[26]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r15in[27]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r15in[28]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r15in[29]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r15in[30]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r15in[31]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r14in[0]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r14in[1]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r14in[2]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r14in[3]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r14in[4]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r14in[5]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r14in[6]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r14in[7]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r14in[8]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r14in[9]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r14in[10]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r14in[11]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r14in[12]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r14in[13]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r14in[14]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r14in[15]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r14in[16]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r14in[17]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r14in[18]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r14in[19]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r14in[20]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r14in[21]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r14in[22]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r14in[23]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r14in[24]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r14in[25]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r14in[26]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r14in[27]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r14in[28]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r14in[29]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r14in[30]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r14in[31]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r13in[0]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r13in[1]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r13in[2]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r13in[3]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r13in[4]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r13in[5]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r13in[6]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r13in[7]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r13in[8]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r13in[9]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r13in[10]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r13in[11]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r13in[12]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r13in[13]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r13in[14]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r13in[15]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r13in[16]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r13in[17]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r13in[18]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r13in[19]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r13in[20]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r13in[21]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r13in[22]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r13in[23]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r13in[24]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r13in[25]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r13in[26]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r13in[27]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r13in[28]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r13in[29]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r13in[30]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r13in[31]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r12in[0]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r12in[1]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r12in[2]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r12in[3]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r12in[4]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r12in[5]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r12in[6]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r12in[7]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r12in[8]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r12in[9]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r12in[10]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r12in[11]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r12in[12]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r12in[13]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r12in[14]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r12in[15]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r12in[16]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r12in[17]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r12in[18]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r12in[19]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r12in[20]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r12in[21]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r12in[22]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r12in[23]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r12in[24]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r12in[25]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r12in[26]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r12in[27]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r12in[28]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r12in[29]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r12in[30]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r12in[31]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r11in[0]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r11in[1]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r11in[2]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r11in[3]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r11in[4]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r11in[5]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r11in[6]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r11in[7]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r11in[8]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r11in[9]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r11in[10]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r11in[11]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r11in[12]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r11in[13]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r11in[14]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r11in[15]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r11in[16]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r11in[17]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r11in[18]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r11in[19]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r11in[20]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r11in[21]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r11in[22]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r11in[23]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r11in[24]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r11in[25]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r11in[26]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r11in[27]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r11in[28]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r11in[29]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r11in[30]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r11in[31]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r10in[0]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r10in[1]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r10in[2]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r10in[3]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r10in[4]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r10in[5]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r10in[6]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r10in[7]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r10in[8]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r10in[9]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r10in[10]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r10in[11]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r10in[12]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r10in[13]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r10in[14]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r10in[15]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r10in[16]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r10in[17]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r10in[18]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r10in[19]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r10in[20]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r10in[21]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r10in[22]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r10in[23]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r10in[24]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r10in[25]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r10in[26]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r10in[27]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r10in[28]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r10in[29]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r10in[30]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r10in[31]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r9in[0]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r9in[1]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r9in[2]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r9in[3]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r9in[4]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r9in[5]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r9in[6]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r9in[7]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r9in[8]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r9in[9]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r9in[10]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r9in[11]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r9in[12]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r9in[13]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r9in[14]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r9in[15]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r9in[16]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r9in[17]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r9in[18]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r9in[19]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r9in[20]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r9in[21]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r9in[22]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r9in[23]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r9in[24]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r9in[25]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r9in[26]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r9in[27]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r9in[28]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r9in[29]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r9in[30]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r9in[31]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r8in[0]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r8in[1]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r8in[2]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r8in[3]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r8in[4]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r8in[5]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r8in[6]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r8in[7]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r8in[8]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r8in[9]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r8in[10]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r8in[11]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r8in[12]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r8in[13]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r8in[14]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r8in[15]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r8in[16]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r8in[17]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r8in[18]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r8in[19]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r8in[20]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r8in[21]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r8in[22]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r8in[23]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r8in[24]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r8in[25]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r8in[26]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r8in[27]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r8in[28]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r8in[29]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r8in[30]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r8in[31]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r7in[0]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r7in[1]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r7in[2]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r7in[3]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r7in[4]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r7in[5]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r7in[6]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r7in[7]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r7in[8]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r7in[9]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r7in[10]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r7in[11]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r7in[12]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r7in[13]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r7in[14]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r7in[15]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r7in[16]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r7in[17]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r7in[18]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r7in[19]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r7in[20]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r7in[21]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r7in[22]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r7in[23]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r7in[24]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r7in[25]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r7in[26]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r7in[27]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r7in[28]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r7in[29]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r7in[30]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r7in[31]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r6in[0]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r6in[1]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r6in[2]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r6in[3]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r6in[4]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r6in[5]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r6in[6]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r6in[7]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r6in[8]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r6in[9]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r6in[10]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r6in[11]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r6in[12]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r6in[13]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r6in[14]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r6in[15]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r6in[16]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r6in[17]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r6in[18]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r6in[19]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r6in[20]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r6in[21]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r6in[22]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r6in[23]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r6in[24]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r6in[25]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r6in[26]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r6in[27]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r6in[28]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r6in[29]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r6in[30]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r6in[31]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r5in[0]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r5in[1]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r5in[2]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r5in[3]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r5in[4]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r5in[5]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r5in[6]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r5in[7]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r5in[8]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r5in[9]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r5in[10]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r5in[11]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r5in[12]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r5in[13]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r5in[14]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r5in[15]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r5in[16]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r5in[17]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r5in[18]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r5in[19]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r5in[20]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r5in[21]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r5in[22]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r5in[23]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r5in[24]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r5in[25]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r5in[26]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r5in[27]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r5in[28]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r5in[29]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r5in[30]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r5in[31]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r4in[0]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r4in[1]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r4in[2]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r4in[3]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r4in[4]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r4in[5]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r4in[6]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r4in[7]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r4in[8]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r4in[9]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r4in[10]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r4in[11]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r4in[12]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r4in[13]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r4in[14]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r4in[15]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r4in[16]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r4in[17]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r4in[18]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r4in[19]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r4in[20]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r4in[21]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r4in[22]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r4in[23]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r4in[24]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r4in[25]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r4in[26]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r4in[27]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r4in[28]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r4in[29]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r4in[30]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r4in[31]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r3in[0]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r3in[1]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r3in[2]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r3in[3]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r3in[4]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r3in[5]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r3in[6]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r3in[7]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r3in[8]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r3in[9]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r3in[10]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r3in[11]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r3in[12]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r3in[13]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r3in[14]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r3in[15]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r3in[16]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r3in[17]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r3in[18]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r3in[19]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r3in[20]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r3in[21]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r3in[22]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r3in[23]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r3in[24]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r3in[25]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r3in[26]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r3in[27]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r3in[28]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r3in[29]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r3in[30]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r3in[31]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r2in[0]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r2in[1]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r2in[2]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r2in[3]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r2in[4]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r2in[5]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r2in[6]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r2in[7]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r2in[8]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r2in[9]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r2in[10]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r2in[11]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r2in[12]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r2in[13]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r2in[14]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r2in[15]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r2in[16]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r2in[17]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r2in[18]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r2in[19]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r2in[20]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r2in[21]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r2in[22]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r2in[23]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r2in[24]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r2in[25]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r2in[26]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r2in[27]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r2in[28]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r2in[29]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r2in[30]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r2in[31]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r1in[0]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r1in[1]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r1in[2]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r1in[3]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r1in[4]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r1in[5]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r1in[6]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r1in[7]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r1in[8]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r1in[9]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r1in[10]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r1in[11]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r1in[12]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r1in[13]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r1in[14]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r1in[15]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r1in[16]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r1in[17]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r1in[18]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r1in[19]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r1in[20]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r1in[21]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r1in[22]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r1in[23]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r1in[24]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r1in[25]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r1in[26]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r1in[27]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r1in[28]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r1in[29]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r1in[30]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r1in[31]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r0in[0]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r0in[1]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r0in[2]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r0in[3]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r0in[4]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r0in[5]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r0in[6]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r0in[7]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r0in[8]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r0in[9]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r0in[10]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r0in[11]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r0in[12]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r0in[13]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r0in[14]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r0in[15]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r0in[16]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r0in[17]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r0in[18]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r0in[19]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r0in[20]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r0in[21]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r0in[22]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r0in[23]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r0in[24]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r0in[25]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r0in[26]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r0in[27]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r0in[28]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r0in[29]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r0in[30]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "r0in[31]" at ControlUnit.v(104)
-Info (10041): Inferred latch for "regB[0]" at ControlUnit.v(74)
-Info (10041): Inferred latch for "regB[1]" at ControlUnit.v(74)
-Info (10041): Inferred latch for "regB[2]" at ControlUnit.v(74)
-Info (10041): Inferred latch for "regB[3]" at ControlUnit.v(74)
-Info (10041): Inferred latch for "regB[4]" at ControlUnit.v(74)
-Info (10041): Inferred latch for "regB[5]" at ControlUnit.v(74)
-Info (10041): Inferred latch for "regB[6]" at ControlUnit.v(74)
-Info (10041): Inferred latch for "regB[7]" at ControlUnit.v(74)
-Info (10041): Inferred latch for "regB[8]" at ControlUnit.v(74)
-Info (10041): Inferred latch for "regB[9]" at ControlUnit.v(74)
-Info (10041): Inferred latch for "regB[10]" at ControlUnit.v(74)
-Info (10041): Inferred latch for "regB[11]" at ControlUnit.v(74)
-Info (10041): Inferred latch for "regB[12]" at ControlUnit.v(74)
-Info (10041): Inferred latch for "regB[13]" at ControlUnit.v(74)
-Info (10041): Inferred latch for "regB[14]" at ControlUnit.v(74)
-Info (10041): Inferred latch for "regB[15]" at ControlUnit.v(74)
-Info (10041): Inferred latch for "regB[16]" at ControlUnit.v(74)
-Info (10041): Inferred latch for "regB[17]" at ControlUnit.v(74)
-Info (10041): Inferred latch for "regB[18]" at ControlUnit.v(74)
-Info (10041): Inferred latch for "regB[19]" at ControlUnit.v(74)
-Info (10041): Inferred latch for "regB[20]" at ControlUnit.v(74)
-Info (10041): Inferred latch for "regB[21]" at ControlUnit.v(74)
-Info (10041): Inferred latch for "regB[22]" at ControlUnit.v(74)
-Info (10041): Inferred latch for "regB[23]" at ControlUnit.v(74)
-Info (10041): Inferred latch for "regB[24]" at ControlUnit.v(74)
-Info (10041): Inferred latch for "regB[25]" at ControlUnit.v(74)
-Info (10041): Inferred latch for "regB[26]" at ControlUnit.v(74)
-Info (10041): Inferred latch for "regB[27]" at ControlUnit.v(74)
-Info (10041): Inferred latch for "regB[28]" at ControlUnit.v(74)
-Info (10041): Inferred latch for "regB[29]" at ControlUnit.v(74)
-Info (10041): Inferred latch for "regB[30]" at ControlUnit.v(74)
-Info (10041): Inferred latch for "regB[31]" at ControlUnit.v(74)
-Info (10041): Inferred latch for "regA[0]" at ControlUnit.v(70)
-Info (10041): Inferred latch for "regA[1]" at ControlUnit.v(70)
-Info (10041): Inferred latch for "regA[2]" at ControlUnit.v(70)
-Info (10041): Inferred latch for "regA[3]" at ControlUnit.v(70)
-Info (10041): Inferred latch for "regA[4]" at ControlUnit.v(70)
-Info (10041): Inferred latch for "regA[5]" at ControlUnit.v(70)
-Info (10041): Inferred latch for "regA[6]" at ControlUnit.v(70)
-Info (10041): Inferred latch for "regA[7]" at ControlUnit.v(70)
-Info (10041): Inferred latch for "regA[8]" at ControlUnit.v(70)
-Info (10041): Inferred latch for "regA[9]" at ControlUnit.v(70)
-Info (10041): Inferred latch for "regA[10]" at ControlUnit.v(70)
-Info (10041): Inferred latch for "regA[11]" at ControlUnit.v(70)
-Info (10041): Inferred latch for "regA[12]" at ControlUnit.v(70)
-Info (10041): Inferred latch for "regA[13]" at ControlUnit.v(70)
-Info (10041): Inferred latch for "regA[14]" at ControlUnit.v(70)
-Info (10041): Inferred latch for "regA[15]" at ControlUnit.v(70)
-Info (10041): Inferred latch for "regA[16]" at ControlUnit.v(70)
-Info (10041): Inferred latch for "regA[17]" at ControlUnit.v(70)
-Info (10041): Inferred latch for "regA[18]" at ControlUnit.v(70)
-Info (10041): Inferred latch for "regA[19]" at ControlUnit.v(70)
-Info (10041): Inferred latch for "regA[20]" at ControlUnit.v(70)
-Info (10041): Inferred latch for "regA[21]" at ControlUnit.v(70)
-Info (10041): Inferred latch for "regA[22]" at ControlUnit.v(70)
-Info (10041): Inferred latch for "regA[23]" at ControlUnit.v(70)
-Info (10041): Inferred latch for "regA[24]" at ControlUnit.v(70)
-Info (10041): Inferred latch for "regA[25]" at ControlUnit.v(70)
-Info (10041): Inferred latch for "regA[26]" at ControlUnit.v(70)
-Info (10041): Inferred latch for "regA[27]" at ControlUnit.v(70)
-Info (10041): Inferred latch for "regA[28]" at ControlUnit.v(70)
-Info (10041): Inferred latch for "regA[29]" at ControlUnit.v(70)
-Info (10041): Inferred latch for "regA[30]" at ControlUnit.v(70)
-Info (10041): Inferred latch for "regA[31]" at ControlUnit.v(70)
-Info (12128): Elaborating entity "reg32bit" for hierarchy "reg32bit:gr0"
-Info (12128): Elaborating entity "ALU" for hierarchy "ALU:compute"
-Warning (10240): Verilog HDL Always Construct warning at ALU.v(45): inferring latch(es) for variable "regLO", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at ALU.v(45): inferring latch(es) for variable "regHI", which holds its previous value in one or more paths through the always construct
-Info (10041): Inferred latch for "regHI[0]" at ALU.v(46)
-Info (10041): Inferred latch for "regHI[1]" at ALU.v(46)
-Info (10041): Inferred latch for "regHI[2]" at ALU.v(46)
-Info (10041): Inferred latch for "regHI[3]" at ALU.v(46)
-Info (10041): Inferred latch for "regHI[4]" at ALU.v(46)
-Info (10041): Inferred latch for "regHI[5]" at ALU.v(46)
-Info (10041): Inferred latch for "regHI[6]" at ALU.v(46)
-Info (10041): Inferred latch for "regHI[7]" at ALU.v(46)
-Info (10041): Inferred latch for "regHI[8]" at ALU.v(46)
-Info (10041): Inferred latch for "regHI[9]" at ALU.v(46)
-Info (10041): Inferred latch for "regHI[10]" at ALU.v(46)
-Info (10041): Inferred latch for "regHI[11]" at ALU.v(46)
-Info (10041): Inferred latch for "regHI[12]" at ALU.v(46)
-Info (10041): Inferred latch for "regHI[13]" at ALU.v(46)
-Info (10041): Inferred latch for "regHI[14]" at ALU.v(46)
-Info (10041): Inferred latch for "regHI[15]" at ALU.v(46)
-Info (10041): Inferred latch for "regHI[16]" at ALU.v(46)
-Info (10041): Inferred latch for "regHI[17]" at ALU.v(46)
-Info (10041): Inferred latch for "regHI[18]" at ALU.v(46)
-Info (10041): Inferred latch for "regHI[19]" at ALU.v(46)
-Info (10041): Inferred latch for "regHI[20]" at ALU.v(46)
-Info (10041): Inferred latch for "regHI[21]" at ALU.v(46)
-Info (10041): Inferred latch for "regHI[22]" at ALU.v(46)
-Info (10041): Inferred latch for "regHI[23]" at ALU.v(46)
-Info (10041): Inferred latch for "regHI[24]" at ALU.v(46)
-Info (10041): Inferred latch for "regHI[25]" at ALU.v(46)
-Info (10041): Inferred latch for "regHI[26]" at ALU.v(46)
-Info (10041): Inferred latch for "regHI[27]" at ALU.v(46)
-Info (10041): Inferred latch for "regHI[28]" at ALU.v(46)
-Info (10041): Inferred latch for "regHI[29]" at ALU.v(46)
-Info (10041): Inferred latch for "regHI[30]" at ALU.v(46)
-Info (10041): Inferred latch for "regHI[31]" at ALU.v(46)
-Info (10041): Inferred latch for "regLO[0]" at ALU.v(46)
-Info (10041): Inferred latch for "regLO[1]" at ALU.v(46)
-Info (10041): Inferred latch for "regLO[2]" at ALU.v(46)
-Info (10041): Inferred latch for "regLO[3]" at ALU.v(46)
-Info (10041): Inferred latch for "regLO[4]" at ALU.v(46)
-Info (10041): Inferred latch for "regLO[5]" at ALU.v(46)
-Info (10041): Inferred latch for "regLO[6]" at ALU.v(46)
-Info (10041): Inferred latch for "regLO[7]" at ALU.v(46)
-Info (10041): Inferred latch for "regLO[8]" at ALU.v(46)
-Info (10041): Inferred latch for "regLO[9]" at ALU.v(46)
-Info (10041): Inferred latch for "regLO[10]" at ALU.v(46)
-Info (10041): Inferred latch for "regLO[11]" at ALU.v(46)
-Info (10041): Inferred latch for "regLO[12]" at ALU.v(46)
-Info (10041): Inferred latch for "regLO[13]" at ALU.v(46)
-Info (10041): Inferred latch for "regLO[14]" at ALU.v(46)
-Info (10041): Inferred latch for "regLO[15]" at ALU.v(46)
-Info (10041): Inferred latch for "regLO[16]" at ALU.v(46)
-Info (10041): Inferred latch for "regLO[17]" at ALU.v(46)
-Info (10041): Inferred latch for "regLO[18]" at ALU.v(46)
-Info (10041): Inferred latch for "regLO[19]" at ALU.v(46)
-Info (10041): Inferred latch for "regLO[20]" at ALU.v(46)
-Info (10041): Inferred latch for "regLO[21]" at ALU.v(46)
-Info (10041): Inferred latch for "regLO[22]" at ALU.v(46)
-Info (10041): Inferred latch for "regLO[23]" at ALU.v(46)
-Info (10041): Inferred latch for "regLO[24]" at ALU.v(46)
-Info (10041): Inferred latch for "regLO[25]" at ALU.v(46)
-Info (10041): Inferred latch for "regLO[26]" at ALU.v(46)
-Info (10041): Inferred latch for "regLO[27]" at ALU.v(46)
-Info (10041): Inferred latch for "regLO[28]" at ALU.v(46)
-Info (10041): Inferred latch for "regLO[29]" at ALU.v(46)
-Info (10041): Inferred latch for "regLO[30]" at ALU.v(46)
-Info (10041): Inferred latch for "regLO[31]" at ALU.v(46)
-Info (12128): Elaborating entity "left_shift" for hierarchy "ALU:compute|left_shift:SHL"
-Info (12128): Elaborating entity "dff_Q" for hierarchy "ALU:compute|left_shift:SHL|dff_Q:b2v_inst35"
-Info (12128): Elaborating entity "right_shift_combined" for hierarchy "ALU:compute|right_shift_combined:SHRL"
-Info (12128): Elaborating entity "mux2_1" for hierarchy "ALU:compute|right_shift_combined:SHRL|mux2_1:b2v_inst1"
-Info (12128): Elaborating entity "left_rotate" for hierarchy "ALU:compute|left_rotate:rotateL"
-Info (12128): Elaborating entity "right_rotate" for hierarchy "ALU:compute|right_rotate:rotateR"
-Info (12128): Elaborating entity "logical_and" for hierarchy "ALU:compute|logical_and:log_and"
-Info (12128): Elaborating entity "logical_or" for hierarchy "ALU:compute|logical_or:log_or"
-Info (12128): Elaborating entity "NotOperation" for hierarchy "ALU:compute|NotOperation:operationNot"
-Info (12128): Elaborating entity "twoCompliment" for hierarchy "ALU:compute|twoCompliment:neg"
-Info (12128): Elaborating entity "Hierarchical_CLA" for hierarchy "ALU:compute|Hierarchical_CLA:add"
-Info (12128): Elaborating entity "CLA_8inputs_updated" for hierarchy "ALU:compute|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst38"
-Info (12128): Elaborating entity "P_G_block" for hierarchy "ALU:compute|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst38|P_G_block:b2v_inst"
-Info (12128): Elaborating entity "boothMultiplier" for hierarchy "ALU:compute|boothMultiplier:mul"
-Warning (10240): Verilog HDL Always Construct warning at boothMultiplier.v(19): inferring latch(es) for variable "ans", which holds its previous value in one or more paths through the always construct
-Warning (10030): Net "mrShifted[0]" at boothMultiplier.v(8) has no driver or initial value, using a default initial value '0'
-Warning (10030): Net "mc[63..32]" at boothMultiplier.v(10) has no driver or initial value, using a default initial value '0'
-Info (10041): Inferred latch for "ans[30]" at boothMultiplier.v(35)
-Info (10041): Inferred latch for "ans[31]" at boothMultiplier.v(35)
-Info (10041): Inferred latch for "ans[32]" at boothMultiplier.v(35)
-Info (10041): Inferred latch for "ans[33]" at boothMultiplier.v(35)
-Info (10041): Inferred latch for "ans[34]" at boothMultiplier.v(35)
-Info (10041): Inferred latch for "ans[35]" at boothMultiplier.v(35)
-Info (10041): Inferred latch for "ans[36]" at boothMultiplier.v(35)
-Info (10041): Inferred latch for "ans[37]" at boothMultiplier.v(35)
-Info (10041): Inferred latch for "ans[38]" at boothMultiplier.v(35)
-Info (10041): Inferred latch for "ans[39]" at boothMultiplier.v(35)
-Info (10041): Inferred latch for "ans[40]" at boothMultiplier.v(35)
-Info (10041): Inferred latch for "ans[41]" at boothMultiplier.v(35)
-Info (10041): Inferred latch for "ans[42]" at boothMultiplier.v(35)
-Info (10041): Inferred latch for "ans[43]" at boothMultiplier.v(35)
-Info (10041): Inferred latch for "ans[44]" at boothMultiplier.v(35)
-Info (10041): Inferred latch for "ans[45]" at boothMultiplier.v(35)
-Info (10041): Inferred latch for "ans[46]" at boothMultiplier.v(35)
-Info (10041): Inferred latch for "ans[47]" at boothMultiplier.v(35)
-Info (10041): Inferred latch for "ans[48]" at boothMultiplier.v(35)
-Info (10041): Inferred latch for "ans[49]" at boothMultiplier.v(35)
-Info (10041): Inferred latch for "ans[50]" at boothMultiplier.v(35)
-Info (10041): Inferred latch for "ans[51]" at boothMultiplier.v(35)
-Info (10041): Inferred latch for "ans[52]" at boothMultiplier.v(35)
-Info (10041): Inferred latch for "ans[53]" at boothMultiplier.v(35)
-Info (10041): Inferred latch for "ans[54]" at boothMultiplier.v(35)
-Info (10041): Inferred latch for "ans[55]" at boothMultiplier.v(35)
-Info (10041): Inferred latch for "ans[56]" at boothMultiplier.v(35)
-Info (10041): Inferred latch for "ans[57]" at boothMultiplier.v(35)
-Info (10041): Inferred latch for "ans[58]" at boothMultiplier.v(35)
-Info (10041): Inferred latch for "ans[59]" at boothMultiplier.v(35)
-Info (10041): Inferred latch for "ans[60]" at boothMultiplier.v(35)
-Info (10041): Inferred latch for "ans[61]" at boothMultiplier.v(35)
-Info (10041): Inferred latch for "ans[62]" at boothMultiplier.v(35)
-Info (10041): Inferred latch for "ans[63]" at boothMultiplier.v(35)
-Info (10041): Inferred latch for "ans[28]" at boothMultiplier.v(35)
-Info (10041): Inferred latch for "ans[29]" at boothMultiplier.v(35)
-Info (10041): Inferred latch for "ans[26]" at boothMultiplier.v(35)
-Info (10041): Inferred latch for "ans[27]" at boothMultiplier.v(35)
-Info (10041): Inferred latch for "ans[24]" at boothMultiplier.v(35)
-Info (10041): Inferred latch for "ans[25]" at boothMultiplier.v(35)
-Info (10041): Inferred latch for "ans[22]" at boothMultiplier.v(35)
-Info (10041): Inferred latch for "ans[23]" at boothMultiplier.v(35)
-Info (10041): Inferred latch for "ans[20]" at boothMultiplier.v(35)
-Info (10041): Inferred latch for "ans[21]" at boothMultiplier.v(35)
-Info (10041): Inferred latch for "ans[18]" at boothMultiplier.v(35)
-Info (10041): Inferred latch for "ans[19]" at boothMultiplier.v(35)
-Info (10041): Inferred latch for "ans[16]" at boothMultiplier.v(35)
-Info (10041): Inferred latch for "ans[17]" at boothMultiplier.v(35)
-Info (10041): Inferred latch for "ans[14]" at boothMultiplier.v(35)
-Info (10041): Inferred latch for "ans[15]" at boothMultiplier.v(35)
-Info (10041): Inferred latch for "ans[12]" at boothMultiplier.v(35)
-Info (10041): Inferred latch for "ans[13]" at boothMultiplier.v(35)
-Info (10041): Inferred latch for "ans[10]" at boothMultiplier.v(35)
-Info (10041): Inferred latch for "ans[11]" at boothMultiplier.v(35)
-Info (10041): Inferred latch for "ans[8]" at boothMultiplier.v(35)
-Info (10041): Inferred latch for "ans[9]" at boothMultiplier.v(35)
-Info (10041): Inferred latch for "ans[6]" at boothMultiplier.v(35)
-Info (10041): Inferred latch for "ans[7]" at boothMultiplier.v(35)
-Info (10041): Inferred latch for "ans[4]" at boothMultiplier.v(35)
-Info (10041): Inferred latch for "ans[5]" at boothMultiplier.v(35)
-Info (10041): Inferred latch for "ans[2]" at boothMultiplier.v(35)
-Info (10041): Inferred latch for "ans[3]" at boothMultiplier.v(35)
-Info (10041): Inferred latch for "ans[0]" at boothMultiplier.v(35)
-Info (10041): Inferred latch for "ans[1]" at boothMultiplier.v(35)
-Info (12128): Elaborating entity "nonRestoringDivisionPosiNeg" for hierarchy "ALU:compute|nonRestoringDivisionPosiNeg:div"
-Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "ALU:compute|clr" is missing source, defaulting to GND
-Warning (14026): LATCH primitive "regA[0]" is permanently enabled
-Warning (14026): LATCH primitive "regA[1]" is permanently enabled
-Warning (14026): LATCH primitive "regB[0]" is permanently enabled
-Warning (14026): LATCH primitive "regA[14]" is permanently enabled
-Warning (14026): LATCH primitive "regA[13]" is permanently enabled
-Warning (14026): LATCH primitive "regA[12]" is permanently enabled
-Warning (14026): LATCH primitive "regA[11]" is permanently enabled
-Warning (14026): LATCH primitive "regA[10]" is permanently enabled
-Warning (14026): LATCH primitive "regA[9]" is permanently enabled
-Warning (14026): LATCH primitive "regA[8]" is permanently enabled
-Warning (14026): LATCH primitive "regA[7]" is permanently enabled
-Warning (14026): LATCH primitive "regA[6]" is permanently enabled
-Warning (14026): LATCH primitive "regA[5]" is permanently enabled
-Warning (14026): LATCH primitive "regA[4]" is permanently enabled
-Warning (14026): LATCH primitive "regA[3]" is permanently enabled
-Warning (14026): LATCH primitive "regA[2]" is permanently enabled
-Warning (14026): LATCH primitive "regB[31]" is permanently enabled
-Warning (14026): LATCH primitive "regB[30]" is permanently enabled
-Warning (14026): LATCH primitive "regB[29]" is permanently enabled
-Warning (14026): LATCH primitive "regB[28]" is permanently enabled
-Warning (14026): LATCH primitive "regB[27]" is permanently enabled
-Warning (14026): LATCH primitive "regB[26]" is permanently enabled
-Warning (14026): LATCH primitive "regB[25]" is permanently enabled
-Warning (14026): LATCH primitive "regB[24]" is permanently enabled
-Warning (14026): LATCH primitive "regB[23]" is permanently enabled
-Warning (14026): LATCH primitive "regB[22]" is permanently enabled
-Warning (14026): LATCH primitive "regB[21]" is permanently enabled
-Warning (14026): LATCH primitive "regB[20]" is permanently enabled
-Warning (14026): LATCH primitive "regB[19]" is permanently enabled
-Warning (14026): LATCH primitive "regB[18]" is permanently enabled
-Warning (14026): LATCH primitive "regB[17]" is permanently enabled
-Warning (14026): LATCH primitive "regB[16]" is permanently enabled
-Warning (14026): LATCH primitive "regB[15]" is permanently enabled
-Warning (14026): LATCH primitive "regB[14]" is permanently enabled
-Warning (14026): LATCH primitive "regB[13]" is permanently enabled
-Warning (14026): LATCH primitive "regB[12]" is permanently enabled
-Warning (14026): LATCH primitive "regB[11]" is permanently enabled
-Warning (14026): LATCH primitive "regB[10]" is permanently enabled
-Warning (14026): LATCH primitive "regB[9]" is permanently enabled
-Warning (14026): LATCH primitive "regB[8]" is permanently enabled
-Warning (14026): LATCH primitive "regB[7]" is permanently enabled
-Warning (14026): LATCH primitive "regB[6]" is permanently enabled
-Warning (14026): LATCH primitive "regB[5]" is permanently enabled
-Warning (14026): LATCH primitive "regB[4]" is permanently enabled
-Warning (14026): LATCH primitive "regB[3]" is permanently enabled
-Warning (14026): LATCH primitive "regB[2]" is permanently enabled
-Warning (14026): LATCH primitive "regB[1]" is permanently enabled
-Info (278001): Inferred 2 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ALU:compute|nonRestoringDivisionPosiNeg:div|Div0"
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ALU:compute|nonRestoringDivisionPosiNeg:div|Mod0"
-Info (12130): Elaborated megafunction instantiation "ALU:compute|nonRestoringDivisionPosiNeg:div|lpm_divide:Div0"
-Info (12133): Instantiated megafunction "ALU:compute|nonRestoringDivisionPosiNeg:div|lpm_divide:Div0" with the following parameter:
-    Info (12134): Parameter "LPM_WIDTHN" = "32"
-    Info (12134): Parameter "LPM_WIDTHD" = "32"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_8jm.tdf
-    Info (12023): Found entity 1: lpm_divide_8jm
-Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_9nh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_9nh
-Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_t8f.tdf
-    Info (12023): Found entity 1: alt_u_div_t8f
-Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_unc.tdf
-    Info (12023): Found entity 1: add_sub_unc
-Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_vnc.tdf
-    Info (12023): Found entity 1: add_sub_vnc
-Info (12130): Elaborated megafunction instantiation "ALU:compute|nonRestoringDivisionPosiNeg:div|lpm_divide:Mod0"
-Info (12133): Instantiated megafunction "ALU:compute|nonRestoringDivisionPosiNeg:div|lpm_divide:Mod0" with the following parameter:
-    Info (12134): Parameter "LPM_WIDTHN" = "32"
-    Info (12134): Parameter "LPM_WIDTHD" = "32"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_bbm.tdf
-    Info (12023): Found entity 1: lpm_divide_bbm
+Warning (10236): Verilog HDL Implicit Net warning at ALURegisters.v(9): created implicit net for "r0out"
+Warning (10236): Verilog HDL Implicit Net warning at ALURegisters.v(10): created implicit net for "r1out"
+Warning (10236): Verilog HDL Implicit Net warning at ALURegisters.v(11): created implicit net for "r2out"
+Warning (10236): Verilog HDL Implicit Net warning at ALURegisters.v(12): created implicit net for "r3out"
+Warning (10236): Verilog HDL Implicit Net warning at ALURegisters.v(13): created implicit net for "r4out"
+Warning (10236): Verilog HDL Implicit Net warning at ALURegisters.v(14): created implicit net for "r5out"
+Warning (10236): Verilog HDL Implicit Net warning at ALURegisters.v(15): created implicit net for "r6out"
+Warning (10236): Verilog HDL Implicit Net warning at ALURegisters.v(16): created implicit net for "r7out"
+Warning (10236): Verilog HDL Implicit Net warning at ALURegisters.v(17): created implicit net for "r8out"
+Warning (10236): Verilog HDL Implicit Net warning at ALURegisters.v(18): created implicit net for "r9out"
+Warning (10236): Verilog HDL Implicit Net warning at ALURegisters.v(19): created implicit net for "r10out"
+Warning (10236): Verilog HDL Implicit Net warning at ALURegisters.v(20): created implicit net for "r11out"
+Warning (10236): Verilog HDL Implicit Net warning at ALURegisters.v(21): created implicit net for "r12out"
+Warning (10236): Verilog HDL Implicit Net warning at ALURegisters.v(22): created implicit net for "r13out"
+Warning (10236): Verilog HDL Implicit Net warning at ALURegisters.v(23): created implicit net for "r14out"
+Warning (10236): Verilog HDL Implicit Net warning at ALURegisters.v(24): created implicit net for "r15out"
+Info (12127): Elaborating entity "boothMultiplier" for the top level hierarchy
+Info (12128): Elaborating entity "twoCompliment" for hierarchy "twoCompliment:two"
 Warning (12189): OpenCore Simulation-Only Evaluation feature is turned on for all cores in the design
     Warning (12191): Some cores in this design do not support the OpenCore Plus Hardware Evaluation feature
         Warning (12192): "8B10B Encoder-Decoder (6AF7_0079)" does not support the OpenCore Plus Hardware Evaluation feature
-Warning (13012): Latch ALU:compute|regLO[0] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal IR[31]
-Warning (13012): Latch ALU:compute|regLO[1] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal IR[31]
-Warning (13012): Latch ALU:compute|regLO[2] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal IR[31]
-Warning (13012): Latch ALU:compute|regLO[3] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal IR[31]
-Warning (13012): Latch ALU:compute|regLO[4] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal IR[31]
-Warning (13012): Latch ALU:compute|regLO[5] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal IR[31]
-Warning (13012): Latch ALU:compute|regLO[6] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal IR[31]
-Warning (13012): Latch ALU:compute|regLO[7] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal IR[31]
-Warning (13012): Latch ALU:compute|regLO[8] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal IR[31]
-Warning (13012): Latch ALU:compute|regLO[9] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal IR[31]
-Warning (13012): Latch ALU:compute|regLO[10] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal IR[31]
-Warning (13012): Latch ALU:compute|regLO[11] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal IR[31]
-Warning (13012): Latch ALU:compute|regLO[12] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal IR[31]
-Warning (13012): Latch ALU:compute|regLO[13] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal IR[31]
-Warning (13012): Latch ALU:compute|regLO[14] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal IR[31]
-Warning (13012): Latch ALU:compute|regLO[15] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal IR[31]
-Warning (13012): Latch ALU:compute|regLO[16] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal IR[31]
-Warning (13012): Latch ALU:compute|regLO[17] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal IR[31]
-Warning (13012): Latch ALU:compute|regLO[18] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal IR[31]
-Warning (13012): Latch ALU:compute|regLO[19] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal IR[31]
-Warning (13012): Latch ALU:compute|regLO[20] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal IR[31]
-Warning (13012): Latch ALU:compute|regLO[21] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal IR[31]
-Warning (13012): Latch ALU:compute|regLO[22] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal IR[31]
-Warning (13012): Latch ALU:compute|regLO[23] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal IR[31]
-Warning (13012): Latch ALU:compute|regLO[24] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal IR[31]
-Warning (13012): Latch ALU:compute|regLO[25] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal IR[31]
-Warning (13012): Latch ALU:compute|regLO[26] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal IR[31]
-Warning (13012): Latch ALU:compute|regLO[27] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal IR[31]
-Warning (13012): Latch ALU:compute|regLO[28] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal IR[31]
-Warning (13012): Latch ALU:compute|regLO[29] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal IR[31]
-Warning (13012): Latch ALU:compute|regLO[30] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal IR[31]
-Warning (13012): Latch ALU:compute|regLO[31] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal IR[31]
-Warning (13012): Latch ALU:compute|boothMultiplier:mul|ans[0] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal IR[31]
-Warning (13012): Latch ALU:compute|boothMultiplier:mul|ans[1] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal IR[0]
-Warning (13012): Latch ALU:compute|boothMultiplier:mul|ans[2] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal IR[31]
-Warning (13012): Latch ALU:compute|boothMultiplier:mul|ans[3] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal IR[2]
-Warning (13012): Latch ALU:compute|boothMultiplier:mul|ans[4] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal IR[5]
-Warning (13012): Latch ALU:compute|boothMultiplier:mul|ans[5] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal IR[4]
-Warning (13012): Latch ALU:compute|boothMultiplier:mul|ans[6] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal IR[7]
-Warning (13012): Latch ALU:compute|boothMultiplier:mul|ans[7] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal IR[6]
-Warning (13012): Latch ALU:compute|boothMultiplier:mul|ans[8] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal IR[9]
-Warning (13012): Latch ALU:compute|boothMultiplier:mul|ans[9] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal IR[8]
-Warning (13012): Latch ALU:compute|boothMultiplier:mul|ans[10] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal IR[11]
-Warning (13012): Latch ALU:compute|boothMultiplier:mul|ans[11] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal IR[10]
-Warning (13012): Latch ALU:compute|boothMultiplier:mul|ans[12] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal IR[13]
-Warning (13012): Latch ALU:compute|boothMultiplier:mul|ans[13] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal IR[12]
-Warning (13012): Latch ALU:compute|boothMultiplier:mul|ans[14] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal regA[15]
-Warning (13012): Latch ALU:compute|boothMultiplier:mul|ans[15] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal regA[15]
-Warning (13012): Latch ALU:compute|boothMultiplier:mul|ans[16] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal regA[17]
-Warning (13012): Latch ALU:compute|boothMultiplier:mul|ans[17] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal regA[15]
-Warning (13012): Latch ALU:compute|boothMultiplier:mul|ans[18] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal regA[19]
-Warning (13012): Latch ALU:compute|boothMultiplier:mul|ans[19] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal regA[17]
-Warning (13012): Latch ALU:compute|boothMultiplier:mul|ans[20] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal regA[21]
-Warning (13012): Latch ALU:compute|boothMultiplier:mul|ans[21] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal regA[19]
-Warning (13012): Latch ALU:compute|boothMultiplier:mul|ans[22] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal regA[23]
-Warning (13012): Latch ALU:compute|boothMultiplier:mul|ans[23] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal regA[21]
-Warning (13012): Latch ALU:compute|boothMultiplier:mul|ans[24] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal regA[25]
-Warning (13012): Latch ALU:compute|boothMultiplier:mul|ans[25] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal regA[23]
-Warning (13012): Latch ALU:compute|boothMultiplier:mul|ans[26] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal regA[27]
-Warning (13012): Latch ALU:compute|boothMultiplier:mul|ans[27] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal regA[25]
-Warning (13012): Latch ALU:compute|boothMultiplier:mul|ans[28] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal regA[29]
-Warning (13012): Latch ALU:compute|boothMultiplier:mul|ans[29] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal regA[27]
-Warning (13012): Latch ALU:compute|boothMultiplier:mul|ans[30] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal regA[31]
-Warning (13012): Latch ALU:compute|boothMultiplier:mul|ans[31] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal IR[31]
 Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file C:/Users/789wi/Videos/ELEC-374/output_files/Phase1.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 7606 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 35 input pins
-    Info (21059): Implemented 512 output pins
-    Info (21061): Implemented 7059 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 233 warnings
-    Info: Peak virtual memory: 4679 megabytes
-    Info: Processing ended: Mon Mar 06 17:32:56 2023
-    Info: Elapsed time: 00:00:24
-    Info: Total CPU time (on all processors): 00:00:24
+Info (21057): Implemented 3736 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 64 input pins
+    Info (21059): Implemented 64 output pins
+    Info (21061): Implemented 3608 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 22 warnings
+    Info: Peak virtual memory: 4624 megabytes
+    Info: Processing ended: Fri Mar 10 16:48:32 2023
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:07
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/789wi/Videos/ELEC-374/output_files/Phase1.map.smsg.
 
 

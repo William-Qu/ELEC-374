@@ -38,7 +38,7 @@ reg [31:0] regLO, regHI;
 		Hierarchical_CLA add(1'b0, regA, regB, regHIadd, regLOadd);  		//Add Module Name: Hierarchical_CLA
 		Hierarchical_CLA sub(1'b1, regA, regB, regHIsub, regLOsub);  		//Subtract Module Name: Hierarchical_CLA
 		boothMultiplier mul (regA, regB, regHImul, regLOmul); 				//Multiply Module Name: boothMultiplier
-		nonRestoringDivisionPosiNeg div (regA, regB, regLOdiv, regHIdiv); //Divide Module Name: nonRestoringDivisionPosiNeg
+		//nonRestoringDivisionPosiNeg div (regA, regB, regLOdiv, regHIdiv); //Divide Module Name: nonRestoringDivisionPosiNeg
 	endgenerate
 
 	always @ (*) begin

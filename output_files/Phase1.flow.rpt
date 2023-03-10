@@ -1,5 +1,5 @@
 Flow report for Phase1
-Mon Mar 06 17:32:56 2023
+Fri Mar 10 16:48:32 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -40,18 +40,18 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Flow Summary                                                                          ;
 +------------------------------------+--------------------------------------------------+
-; Flow Status                        ; Successful - Mon Mar 06 17:32:56 2023            ;
+; Flow Status                        ; Successful - Fri Mar 10 16:48:32 2023            ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                      ; Phase1                                           ;
-; Top-level Entity Name              ; ControlUnit                                      ;
+; Top-level Entity Name              ; boothMultiplier                                  ;
 ; Family                             ; Cyclone III                                      ;
 ; Device                             ; EP3C16F484C6                                     ;
 ; Timing Models                      ; Final                                            ;
-; Total logic elements               ; 7,059                                            ;
-;     Total combinational functions  ; 7,059                                            ;
-;     Dedicated logic registers      ; 512                                              ;
-; Total registers                    ; 512                                              ;
-; Total pins                         ; 547                                              ;
+; Total logic elements               ; 3,608                                            ;
+;     Total combinational functions  ; 3,608                                            ;
+;     Dedicated logic registers      ; 0                                                ;
+; Total registers                    ; 0                                                ;
+; Total pins                         ; 128                                              ;
 ; Total virtual pins                 ; 0                                                ;
 ; Total memory bits                  ; 0                                                ;
 ; Embedded Multiplier 9-bit elements ; 0                                                ;
@@ -64,53 +64,53 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/06/2023 17:32:33 ;
+; Start date & time ; 03/10/2023 16:48:26 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Phase1              ;
 +-------------------+---------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                  ;
-+--------------------------------------+---------------------------------------+---------------+-------------+----------------------+
-; Assignment Name                      ; Value                                 ; Default Value ; Entity Name ; Section Id           ;
-+--------------------------------------+---------------------------------------+---------------+-------------+----------------------+
-; COMPILER_SIGNATURE_ID                ; 71384935557563.167814195315512        ; --            ; --          ; --                   ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; TestbenchMultiplier  ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; TestbenchControlUnit ;
-; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; TestbenchControlUnit                  ; --            ; --          ; eda_simulation       ;
-; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                           ; --            ; --          ; eda_simulation       ;
-; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (Verilog)             ; <None>        ; --          ; --                   ;
-; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                       ; --            ; --          ; eda_simulation       ;
-; EDA_TEST_BENCH_FILE                  ; TestbenchMultiplier.v                 ; --            ; --          ; TestbenchMultiplier  ;
-; EDA_TEST_BENCH_FILE                  ; TestbenchControlUnit.v                ; --            ; --          ; TestbenchControlUnit ;
-; EDA_TEST_BENCH_MODULE_NAME           ; TestbenchMultiplier                   ; --            ; --          ; TestbenchMultiplier  ;
-; EDA_TEST_BENCH_MODULE_NAME           ; TestbenchControlUnit                  ; --            ; --          ; TestbenchControlUnit ;
-; EDA_TEST_BENCH_NAME                  ; TestbenchMultiplier                   ; --            ; --          ; eda_simulation       ;
-; EDA_TEST_BENCH_NAME                  ; TestbenchControlUnit                  ; --            ; --          ; eda_simulation       ;
-; EDA_TEST_BENCH_RUN_SIM_FOR           ; 500 ns                                ; --            ; --          ; TestbenchMultiplier  ;
-; EDA_TEST_BENCH_RUN_SIM_FOR           ; 800 ns                                ; --            ; --          ; TestbenchControlUnit ;
-; EDA_TIME_SCALE                       ; 1 ps                                  ; --            ; --          ; eda_simulation       ;
-; IP_TOOL_NAME                         ; 8B10B Encoder-Decoder                 ; --            ; --          ; --                   ;
-; IP_TOOL_VERSION                      ; 13.0                                  ; --            ; --          ; --                   ;
-; MAX_CORE_JUNCTION_TEMP               ; 85                                    ; --            ; --          ; --                   ;
-; MIN_CORE_JUNCTION_TEMP               ; 0                                     ; --            ; --          ; --                   ;
-; MISC_FILE                            ; myencoder32_constraints.tcl           ; --            ; --          ; --                   ;
-; MISC_FILE                            ; myencoder32_enc8b10b.v                ; --            ; --          ; --                   ;
-; MISC_FILE                            ; myencoder32.v                         ; --            ; --          ; --                   ;
-; MISC_FILE                            ; myencoder32.bsf                       ; --            ; --          ; --                   ;
-; MISC_FILE                            ; myencoder32.qip                       ; --            ; --          ; --                   ;
-; MISC_FILE                            ; myencoder32.html                      ; --            ; --          ; --                   ;
-; NOMINAL_CORE_SUPPLY_VOLTAGE          ; 1.2V                                  ; --            ; --          ; --                   ;
-; PARTITION_COLOR                      ; 16764057                              ; --            ; ControlUnit ; Top                  ;
-; PARTITION_FITTER_PRESERVATION_LEVEL  ; PLACEMENT_AND_ROUTING                 ; --            ; ControlUnit ; Top                  ;
-; PARTITION_NETLIST_TYPE               ; SOURCE                                ; --            ; ControlUnit ; Top                  ;
-; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                   ; --            ; --          ; --                   ;
-; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --            ; --          ; --                   ;
-; PROJECT_OUTPUT_DIRECTORY             ; output_files                          ; --            ; --          ; --                   ;
-; SEARCH_PATH                          ; .                                     ; --            ; --          ; --                   ;
-; TOP_LEVEL_ENTITY                     ; ControlUnit                           ; Phase1        ; --          ; --                   ;
-+--------------------------------------+---------------------------------------+---------------+-------------+----------------------+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                      ;
++--------------------------------------+---------------------------------------+---------------+-----------------+----------------------+
+; Assignment Name                      ; Value                                 ; Default Value ; Entity Name     ; Section Id           ;
++--------------------------------------+---------------------------------------+---------------+-----------------+----------------------+
+; COMPILER_SIGNATURE_ID                ; 71384935557563.167848490627004        ; --            ; --              ; --                   ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --              ; TestbenchMultiplier  ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --              ; TestbenchControlUnit ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; TestbenchMultiplier                   ; --            ; --              ; eda_simulation       ;
+; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                           ; --            ; --              ; eda_simulation       ;
+; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (Verilog)             ; <None>        ; --              ; --                   ;
+; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                       ; --            ; --              ; eda_simulation       ;
+; EDA_TEST_BENCH_FILE                  ; TestbenchMultiplier.v                 ; --            ; --              ; TestbenchMultiplier  ;
+; EDA_TEST_BENCH_FILE                  ; TestbenchControlUnit.v                ; --            ; --              ; TestbenchControlUnit ;
+; EDA_TEST_BENCH_MODULE_NAME           ; TestbenchMultiplier                   ; --            ; --              ; TestbenchMultiplier  ;
+; EDA_TEST_BENCH_MODULE_NAME           ; TestbenchControlUnit                  ; --            ; --              ; TestbenchControlUnit ;
+; EDA_TEST_BENCH_NAME                  ; TestbenchMultiplier                   ; --            ; --              ; eda_simulation       ;
+; EDA_TEST_BENCH_NAME                  ; TestbenchControlUnit                  ; --            ; --              ; eda_simulation       ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 500 ns                                ; --            ; --              ; TestbenchMultiplier  ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 800 ns                                ; --            ; --              ; TestbenchControlUnit ;
+; EDA_TIME_SCALE                       ; 1 ps                                  ; --            ; --              ; eda_simulation       ;
+; IP_TOOL_NAME                         ; 8B10B Encoder-Decoder                 ; --            ; --              ; --                   ;
+; IP_TOOL_VERSION                      ; 13.0                                  ; --            ; --              ; --                   ;
+; MAX_CORE_JUNCTION_TEMP               ; 85                                    ; --            ; --              ; --                   ;
+; MIN_CORE_JUNCTION_TEMP               ; 0                                     ; --            ; --              ; --                   ;
+; MISC_FILE                            ; myencoder32_constraints.tcl           ; --            ; --              ; --                   ;
+; MISC_FILE                            ; myencoder32_enc8b10b.v                ; --            ; --              ; --                   ;
+; MISC_FILE                            ; myencoder32.v                         ; --            ; --              ; --                   ;
+; MISC_FILE                            ; myencoder32.bsf                       ; --            ; --              ; --                   ;
+; MISC_FILE                            ; myencoder32.qip                       ; --            ; --              ; --                   ;
+; MISC_FILE                            ; myencoder32.html                      ; --            ; --              ; --                   ;
+; NOMINAL_CORE_SUPPLY_VOLTAGE          ; 1.2V                                  ; --            ; --              ; --                   ;
+; PARTITION_COLOR                      ; 16764057                              ; --            ; boothMultiplier ; Top                  ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; PLACEMENT_AND_ROUTING                 ; --            ; boothMultiplier ; Top                  ;
+; PARTITION_NETLIST_TYPE               ; SOURCE                                ; --            ; boothMultiplier ; Top                  ;
+; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                   ; --            ; --              ; --                   ;
+; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --            ; --              ; --                   ;
+; PROJECT_OUTPUT_DIRECTORY             ; output_files                          ; --            ; --              ; --                   ;
+; SEARCH_PATH                          ; .                                     ; --            ; --              ; --                   ;
+; TOP_LEVEL_ENTITY                     ; boothMultiplier                       ; Phase1        ; --              ; --                   ;
++--------------------------------------+---------------------------------------+---------------+-----------------+----------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -118,8 +118,8 @@ applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:23     ; 1.0                     ; 4679 MB             ; 00:00:23                           ;
-; Total                ; 00:00:23     ; --                      ; --                  ; 00:00:23                           ;
+; Analysis & Synthesis ; 00:00:06     ; 1.0                     ; 4624 MB             ; 00:00:06                           ;
+; Total                ; 00:00:06     ; --                      ; --                  ; 00:00:06                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
