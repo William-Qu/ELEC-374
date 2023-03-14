@@ -178,7 +178,7 @@ module TestbenchControlUnit;
 		$display("Output reg 15 = %b", reg15);		//|
 		//case 7 -- DIV RA, RB
 		//        |IR ||DT||RA||RB||  IMMEDIATE  |
-		IR <= 32'b01101011000010010000000000101001;
+		IR <= 32'b01101011100010010000000000101001;
 		clr <= 1'b0;
 		wren <= 1'b1;
 #40 $display("Output reg 0 = %b", reg0);			//|

@@ -9,7 +9,7 @@ output [31:0] OutportOut //Outport Output Signal to output signals to a display
 			
 			//These are the output wires of the hardware modules
 			wire [31:0] r0outf, r1outf, r2outf, r3outf, r4outf, r5outf, r6outf, r7outf, r8outf, r9outf, r10outf, r11outf, r12outf, r13outf, r14outf, r15outf;
-			wire [31:0] MDROut, PCOut, RegHiOut, RegLoOut, IROut, ZLoOut, ZHiOut, BusMuxOut, RegInportOut, CLoOut, CHiOut;
+			wire [31:0] MDROut, PCOut, RegHiOut, RegLoOut, IROut, ZLoOut, ZHiOut, BusMuxOut, RegInportOut, RegOutportOut, CLoOut, CHiOut;
 			wire [63:0] ALUOutput;
 			wire [4:0] EnIn, EnOut;
 			
@@ -38,8 +38,8 @@ output [31:0] OutportOut //Outport Output Signal to output signals to a display
 				reg32bit CLO (CLoOut, CLoIn, clr, clk, wren);
 				reg32bit CHI (CHiOut, CHiIn, clr, clk, wren);
 				
-				ALU Logic (clk, regA, regB, OPCode, ALUOutput);
-				ALURegisters LogicReg (clr, clk, wren, r0in, r1in, r2in, r3in, r4in, r5in, r6in, r7in, r8in, r9in, r10in, r11in, r12in, r13in, r14in, r15in, r0outf, r1outf, r2outf, r3outf, r4outf, r5outf, r6outf, r7outf, r8outf, r9outf, r10outf, r11outf, r12outf, r13outf, r14outf, r15outf);
+				ALU Logic (regA, regB, OPCode, ALUOutput);
+				ALURegisters LogicReg (clr, clk, wren, r0outf, r1outf, r2outf, r3outf, r4outf, r5outf, r6outf, r7outf, r8outf, r9outf, r10outf, r11outf, r12outf, r13outf, r14outf, r15outf, r0in, r1in, r2in, r3in, r4in, r5in, r6in, r7in, r8in, r9in, r10in, r11in, r12in, r13in, r14in, r15in);
 			endgenerate 
 			
 			//Generate the Bus Control System (Encoder and Multiplexer)
@@ -49,10 +49,38 @@ output [31:0] OutportOut //Outport Output Signal to output signals to a display
 				Multiplexer Mux (r0outf, r1outf, r2outf, r3outf, r4outf, r5outf, r6outf, r7outf, r8outf, r9outf, r10outf, r11outf, r12outf, r13outf, r14outf, r15outf,RegHiOut,RegLoOut,ZHiOut,ZLoOut,PCOut,MDROut,RegInportOut,CLoOut, EnOut, BusMuxOut);
 			endgenerate
 			
-			
+			initial begin
+				r0in = 32'h00000000; 
+				r1in = 32'h00000000;
+				r2in = 32'h00000000;
+				r3in = 32'h00000000;
+				r4in = 32'h00000000;
+				r5in = 32'h00000000;
+				r6in = 32'h00000000;
+				r7in = 32'h00000000;
+				r8in = 32'h00000000;
+				r9in = 32'h00000000;
+				r10in = 32'h00000000; 
+				r11in = 32'h00000000;
+				r12in = 32'h00000000;
+				r13in = 32'h00000000;
+				r14in = 32'h00000000;
+				r15in = 32'h00000000;
+				MDRMuxIn = 32'h00000000; 
+				PCIn = 32'h00000000;
+				RegHiIn = 32'h00000000;
+				RegLoIn = 32'h00000000;
+				IRIn = 32'h00000000;
+				ZLoIn = 32'h00000000;
+				ZHiIn = 32'h00000000;
+				RegInportIn = 32'h00000000;
+				RegOutportIn = 32'h00000000;
+				CLoIn = 32'h00000000;
+				CHiIn = 32'h00000000;	
+			end
 			
 			//Set the Output Data From the Multiplexer to the correct input signal
-			always @ (posedge clk) begin
+			always @ (*) begin
 				if (EnIn == 5'b00000) r0in = BusMuxOut;
 				if (EnIn == 5'b00001) r1in = BusMuxOut;
 				if (EnIn == 5'b00010) r2in = BusMuxOut;
@@ -90,7 +118,7 @@ output [31:0] OutportOut //Outport Output Signal to output signals to a display
 
 			//This always statement will use the IR to operate the ALU		
 			always @ (*) begin
-				immVal = IR[14:0];
+				immVal = IROut[14:0];
 	
 				//Put contents of the correct register into regA using regASel
 				if (regASel == 4'b0000) regA = r0outf[31:0]; else
@@ -132,7 +160,7 @@ output [31:0] OutportOut //Outport Output Signal to output signals to a display
 			end
 		
 			//Put the ALU result into the C register
-			always @ (posedge clk) begin
+			always @ (*) begin
 				if (ALUen) begin //If the ALU has been enabled then we can write data 
 					CLoIn = ALUOutput[31:0];
 					CHiIn = ALUOutput[63:32];

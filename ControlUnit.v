@@ -90,7 +90,7 @@ wire [31:0] regLO, regHI;
 
 //Do the computation with an ALU unit and get the output in the Z register
 	generate
-		ALU compute (clk, regA, regB, OPCode, regZ);
+		ALU compute (regA, regB, OPCode, regZ);
 	endgenerate
 	
 //Split the Z register into regLO and regHI

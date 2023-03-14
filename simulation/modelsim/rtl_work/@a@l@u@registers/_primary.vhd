@@ -1,0 +1,41 @@
+library verilog;
+use verilog.vl_types.all;
+entity ALURegisters is
+    port(
+        clr             : in     vl_logic;
+        clk             : in     vl_logic;
+        wren            : in     vl_logic;
+        r0outf          : out    vl_logic_vector(31 downto 0);
+        r1outf          : out    vl_logic_vector(31 downto 0);
+        r2outf          : out    vl_logic_vector(31 downto 0);
+        r3outf          : out    vl_logic_vector(31 downto 0);
+        r4outf          : out    vl_logic_vector(31 downto 0);
+        r5outf          : out    vl_logic_vector(31 downto 0);
+        r6outf          : out    vl_logic_vector(31 downto 0);
+        r7outf          : out    vl_logic_vector(31 downto 0);
+        r8outf          : out    vl_logic_vector(31 downto 0);
+        r9outf          : out    vl_logic_vector(31 downto 0);
+        r10outf         : out    vl_logic_vector(31 downto 0);
+        r11outf         : out    vl_logic_vector(31 downto 0);
+        r12outf         : out    vl_logic_vector(31 downto 0);
+        r13outf         : out    vl_logic_vector(31 downto 0);
+        r14outf         : out    vl_logic_vector(31 downto 0);
+        r15outf         : out    vl_logic_vector(31 downto 0);
+        r0in            : in     vl_logic_vector(31 downto 0);
+        r1in            : in     vl_logic_vector(31 downto 0);
+        r2in            : in     vl_logic_vector(31 downto 0);
+        r3in            : in     vl_logic_vector(31 downto 0);
+        r4in            : in     vl_logic_vector(31 downto 0);
+        r5in            : in     vl_logic_vector(31 downto 0);
+        r6in            : in     vl_logic_vector(31 downto 0);
+        r7in            : in     vl_logic_vector(31 downto 0);
+        r8in            : in     vl_logic_vector(31 downto 0);
+        r9in            : in     vl_logic_vector(31 downto 0);
+        r10in           : in     vl_logic_vector(31 downto 0);
+        r11in           : in     vl_logic_vector(31 downto 0);
+        r12in           : in     vl_logic_vector(31 downto 0);
+        r13in           : in     vl_logic_vector(31 downto 0);
+        r14in           : in     vl_logic_vector(31 downto 0);
+        r15in           : in     vl_logic_vector(31 downto 0)
+    );
+end ALURegisters;

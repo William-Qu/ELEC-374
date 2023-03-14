@@ -1,5 +1,4 @@
 module ALU(
-input clk,
 input [31:0] regA, regB,
 input [4:0] OPCode, 
 output [63:0] regZ
@@ -26,19 +25,19 @@ reg [31:0] regLO, regHI;
 
 //Generate the computational hardware, this will perform all operations, and then we will then later choose the one we want
 	generate
-		left_shift SHL (clk, clr, regA, regLOshl);  								//SHL Module Name: left_shift
-		right_shift_combined SHRL (clk, clr, 1'b0, regA, regLOshrl);  		//SHR logical Module Name: right_shift_combined
-		right_shift_combined SHRA (clk, clr, 1'b1, regA, regLOshra); 		//SHR arithmetic Module Name: right_shift_combined
-		left_rotate rotateL ( clk, clr, regA, regLOrotatel);  				//Rotate L Module Name: left_rotate
-		right_rotate rotateR (clk, clr, regA, regLOrotater);  				//Rotate R Module Name: left_rotate
+		left_shift SHL (1'b1, 1'b0, regA, regLOshl);  								//SHL Module Name: left_shift
+		right_shift_combined SHRL (1'b1, 1'b0, 1'b0, regA, regLOshrl);  		//SHR logical Module Name: right_shift_combined
+		right_shift_combined SHRA (1'b1, 1'b0, 1'b1, regA, regLOshra); 		//SHR arithmetic Module Name: right_shift_combined
+		left_rotate rotateL ( 1'b1, 1'b0, regA, regLOrotatel);  				//Rotate L Module Name: left_rotate
+		right_rotate rotateR (1'b1, 1'b0, regA, regLOrotater);  				//Rotate R Module Name: left_rotate
 		logical_and log_and (regA, regB, regLOlog_and); 						//AND Module Name: logical_and
 		logical_or log_or (regA, regB, regLOlog_or);  							//OR Module Name: logical_or
-		NotOperation operationNot (regA, regLOnot);  													//NOT Module Name: NOT
+		NotOperation operationNot (regA, regLOnot);  							//NOT Module Name: NOT
 		twoCompliment neg (regA, regLOneg); 										//Neg Module Name: twoCompliment
 		Hierarchical_CLA add(1'b0, regA, regB, regHIadd, regLOadd);  		//Add Module Name: Hierarchical_CLA
 		Hierarchical_CLA sub(1'b1, regA, regB, regHIsub, regLOsub);  		//Subtract Module Name: Hierarchical_CLA
 		boothMultiplier mul (regA, regB, regHImul, regLOmul); 				//Multiply Module Name: boothMultiplier
-		//nonRestoringDivisionPosiNeg div (regA, regB, regLOdiv, regHIdiv); //Divide Module Name: nonRestoringDivisionPosiNeg
+		nonRestoringDivisionPosiNeg div (regA, regB, regLOdiv, regHIdiv); //Divide Module Name: nonRestoringDivisionPosiNeg
 	endgenerate
 
 	always @ (*) begin

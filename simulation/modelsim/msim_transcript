@@ -7,28 +7,148 @@
 # vmap work rtl_work
 # Modifying C:\altera\13.0sp1\modelsim_ae\win32aloem/../modelsim.ini
 # 
+# vlog -vlog01compat -work work +incdir+C:/Users/789wi/Videos/ELEC-374 {C:/Users/789wi/Videos/ELEC-374/Bus.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Bus
+# 
+# Top level modules:
+# 	Bus
+# vlog -vlog01compat -work work +incdir+C:/Users/789wi/Videos/ELEC-374 {C:/Users/789wi/Videos/ELEC-374/CLA_8inputs_updated.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module CLA_8inputs_updated
+# 
+# Top level modules:
+# 	CLA_8inputs_updated
+# vlog -vlog01compat -work work +incdir+C:/Users/789wi/Videos/ELEC-374 {C:/Users/789wi/Videos/ELEC-374/mux2_1.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mux2_1
+# 
+# Top level modules:
+# 	mux2_1
 # vlog -vlog01compat -work work +incdir+C:/Users/789wi/Videos/ELEC-374 {C:/Users/789wi/Videos/ELEC-374/twoCompliment.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module twoCompliment
 # 
 # Top level modules:
 # 	twoCompliment
+# vlog -vlog01compat -work work +incdir+C:/Users/789wi/Videos/ELEC-374 {C:/Users/789wi/Videos/ELEC-374/right_shift_combined.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module right_shift_combined
+# 
+# Top level modules:
+# 	right_shift_combined
+# vlog -vlog01compat -work work +incdir+C:/Users/789wi/Videos/ELEC-374 {C:/Users/789wi/Videos/ELEC-374/right_rotate.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module right_rotate
+# 
+# Top level modules:
+# 	right_rotate
+# vlog -vlog01compat -work work +incdir+C:/Users/789wi/Videos/ELEC-374 {C:/Users/789wi/Videos/ELEC-374/reg32bit.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module reg32bit
+# 
+# Top level modules:
+# 	reg32bit
+# vlog -vlog01compat -work work +incdir+C:/Users/789wi/Videos/ELEC-374 {C:/Users/789wi/Videos/ELEC-374/P_G_block.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module P_G_block
+# 
+# Top level modules:
+# 	P_G_block
+# vlog -vlog01compat -work work +incdir+C:/Users/789wi/Videos/ELEC-374 {C:/Users/789wi/Videos/ELEC-374/NotOperation.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module NotOperation
+# 
+# Top level modules:
+# 	NotOperation
 # vlog -vlog01compat -work work +incdir+C:/Users/789wi/Videos/ELEC-374 {C:/Users/789wi/Videos/ELEC-374/nonRestoringDivisionPosiNeg.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module nonRestoringDivisionPosiNeg
 # 
 # Top level modules:
 # 	nonRestoringDivisionPosiNeg
-# 
-# vlog -vlog01compat -work work +incdir+C:/Users/789wi/Videos/ELEC-374 {C:/Users/789wi/Videos/ELEC-374/TestbenchMultiplier.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/789wi/Videos/ELEC-374 {C:/Users/789wi/Videos/ELEC-374/Multiplexer.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module TestbenchMultiplier
+# -- Compiling module Multiplexer
 # 
 # Top level modules:
-# 	TestbenchMultiplier
+# 	Multiplexer
+# vlog -vlog01compat -work work +incdir+C:/Users/789wi/Videos/ELEC-374 {C:/Users/789wi/Videos/ELEC-374/MDRunit.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module MDRunit
 # 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiii_ver -L rtl_work -L work -voptargs="+acc"  TestbenchMultiplier
-# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiii_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps TestbenchMultiplier 
+# Top level modules:
+# 	MDRunit
+# vlog -vlog01compat -work work +incdir+C:/Users/789wi/Videos/ELEC-374 {C:/Users/789wi/Videos/ELEC-374/logical_or.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module logical_or
+# 
+# Top level modules:
+# 	logical_or
+# vlog -vlog01compat -work work +incdir+C:/Users/789wi/Videos/ELEC-374 {C:/Users/789wi/Videos/ELEC-374/logical_and.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module logical_and
+# 
+# Top level modules:
+# 	logical_and
+# vlog -vlog01compat -work work +incdir+C:/Users/789wi/Videos/ELEC-374 {C:/Users/789wi/Videos/ELEC-374/left_shift.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module left_shift
+# 
+# Top level modules:
+# 	left_shift
+# vlog -vlog01compat -work work +incdir+C:/Users/789wi/Videos/ELEC-374 {C:/Users/789wi/Videos/ELEC-374/left_rotate.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module left_rotate
+# 
+# Top level modules:
+# 	left_rotate
+# vlog -vlog01compat -work work +incdir+C:/Users/789wi/Videos/ELEC-374 {C:/Users/789wi/Videos/ELEC-374/Hierarchical_CLA.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Hierarchical_CLA
+# 
+# Top level modules:
+# 	Hierarchical_CLA
+# vlog -vlog01compat -work work +incdir+C:/Users/789wi/Videos/ELEC-374 {C:/Users/789wi/Videos/ELEC-374/encoder.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module encoder
+# 
+# Top level modules:
+# 	encoder
+# vlog -vlog01compat -work work +incdir+C:/Users/789wi/Videos/ELEC-374 {C:/Users/789wi/Videos/ELEC-374/dff_Q.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module dff_Q
+# 
+# Top level modules:
+# 	dff_Q
+# vlog -vlog01compat -work work +incdir+C:/Users/789wi/Videos/ELEC-374 {C:/Users/789wi/Videos/ELEC-374/boothMultiplier.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module boothMultiplier
+# 
+# Top level modules:
+# 	boothMultiplier
+# vlog -vlog01compat -work work +incdir+C:/Users/789wi/Videos/ELEC-374 {C:/Users/789wi/Videos/ELEC-374/ALU.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# vlog -vlog01compat -work work +incdir+C:/Users/789wi/Videos/ELEC-374 {C:/Users/789wi/Videos/ELEC-374/ALURegisters.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALURegisters
+# 
+# Top level modules:
+# 	ALURegisters
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/789wi/Videos/ELEC-374 {C:/Users/789wi/Videos/ELEC-374/ADD_tb.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ADD_tb
+# 
+# Top level modules:
+# 	ADD_tb
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiii_ver -L rtl_work -L work -voptargs="+acc"  ADD_tb
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiii_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps ADD_tb 
 # //  ModelSim ALTERA 10.1d Nov  2 2012 
 # //
 # //  Copyright 1991-2012 Mentor Graphics Corporation
@@ -38,28 +158,191 @@
 # //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
 # //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
 # //
-# Loading work.TestbenchMultiplier
-# Loading work.nonRestoringDivisionPosiNeg
+# Loading work.ADD_tb
+# Loading work.Bus
+# Loading work.reg32bit
+# Loading work.MDRunit
+# Loading work.ALU
+# Loading work.left_shift
+# Loading work.dff_Q
+# Loading work.right_shift_combined
+# Loading work.mux2_1
+# Loading work.left_rotate
+# Loading work.right_rotate
+# Loading work.logical_and
+# Loading work.logical_or
+# Loading work.NotOperation
 # Loading work.twoCompliment
+# Loading work.Hierarchical_CLA
+# Loading work.CLA_8inputs_updated
+# Loading work.P_G_block
+# Loading work.boothMultiplier
+# Loading work.nonRestoringDivisionPosiNeg
+# Loading work.ALURegisters
+# Loading work.encoder
+# Loading work.Multiplexer
+# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'r0out'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
+# 
+#         Region: /ADD_tb/DUT/Mux
+# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'r1out'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
+# 
+#         Region: /ADD_tb/DUT/Mux
+# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'r2out'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
+# 
+#         Region: /ADD_tb/DUT/Mux
+# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'r3out'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
+# 
+#         Region: /ADD_tb/DUT/Mux
+# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'r4out'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
+# 
+#         Region: /ADD_tb/DUT/Mux
+# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'r5out'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
+# 
+#         Region: /ADD_tb/DUT/Mux
+# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'r6out'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
+# 
+#         Region: /ADD_tb/DUT/Mux
+# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'r7out'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
+# 
+#         Region: /ADD_tb/DUT/Mux
+# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'r8out'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
+# 
+#         Region: /ADD_tb/DUT/Mux
+# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'r9out'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
+# 
+#         Region: /ADD_tb/DUT/Mux
+# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'r10out'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
+# 
+#         Region: /ADD_tb/DUT/Mux
+# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'r11out'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
+# 
+#         Region: /ADD_tb/DUT/Mux
+# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'r12out'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
+# 
+#         Region: /ADD_tb/DUT/Mux
+# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'r13out'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
+# 
+#         Region: /ADD_tb/DUT/Mux
+# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'r14out'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
+# 
+#         Region: /ADD_tb/DUT/Mux
+# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'r15out'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
+# 
+#         Region: /ADD_tb/DUT/Mux
+# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'RegHiOut'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
+# 
+#         Region: /ADD_tb/DUT/Mux
+# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'RegLoOut'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
+# 
+#         Region: /ADD_tb/DUT/Mux
+# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'ZHiOut'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
+# 
+#         Region: /ADD_tb/DUT/Mux
+# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'ZLoOut'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
+# 
+#         Region: /ADD_tb/DUT/Mux
+# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'PCOut'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
+# 
+#         Region: /ADD_tb/DUT/Mux
+# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'MDROut'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
+# 
+#         Region: /ADD_tb/DUT/Mux
+# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'RegInportOut'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
+# 
+#         Region: /ADD_tb/DUT/Mux
+# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'CLoOut'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
+# 
+#         Region: /ADD_tb/DUT/Mux
 # 
 # add wave *
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 # 
 #           File in use by: 789wi  Hostname: DESKTOP-MP94GB7  ProcessID: 25124
 # 
-#           Attempting to use alternate WLF file "./wlftqv1zs9".
+#           Attempting to use alternate WLF file "./wlft39i5xq".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
 # 
-#           Using alternate file: ./wlftqv1zs9
+#           Using alternate file: ./wlft39i5xq
 # 
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
-# run 500 ns
-# HI = 00000000000000000000000000000000
-# LO = 11111111111111111111111111111111
-# HI = 00000000000000000000000000000010
-# LO = 00000000000000000000000000000001
-# HI = 11111111111111111111111111111111
-# LO = 00000000000000000000000000000000
+# run 1000 ns
+add wave -position insertpoint sim:/ADD_tb/DUT/IR/*
+add wave -position insertpoint sim:/ADD_tb/DUT/LogicReg/gr2/*
+add wave -position insertpoint sim:/ADD_tb/DUT/LogicReg/gr3/*
+restart
+# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'r0out'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
+# 
+#         Region: /ADD_tb/DUT/Mux
+# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'r1out'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
+# 
+#         Region: /ADD_tb/DUT/Mux
+# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'r2out'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
+# 
+#         Region: /ADD_tb/DUT/Mux
+# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'r3out'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
+# 
+#         Region: /ADD_tb/DUT/Mux
+# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'r4out'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
+# 
+#         Region: /ADD_tb/DUT/Mux
+# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'r5out'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
+# 
+#         Region: /ADD_tb/DUT/Mux
+# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'r6out'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
+# 
+#         Region: /ADD_tb/DUT/Mux
+# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'r7out'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
+# 
+#         Region: /ADD_tb/DUT/Mux
+# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'r8out'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
+# 
+#         Region: /ADD_tb/DUT/Mux
+# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'r9out'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
+# 
+#         Region: /ADD_tb/DUT/Mux
+# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'r10out'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
+# 
+#         Region: /ADD_tb/DUT/Mux
+# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'r11out'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
+# 
+#         Region: /ADD_tb/DUT/Mux
+# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'r12out'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
+# 
+#         Region: /ADD_tb/DUT/Mux
+# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'r13out'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
+# 
+#         Region: /ADD_tb/DUT/Mux
+# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'r14out'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
+# 
+#         Region: /ADD_tb/DUT/Mux
+# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'r15out'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
+# 
+#         Region: /ADD_tb/DUT/Mux
+# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'RegHiOut'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
+# 
+#         Region: /ADD_tb/DUT/Mux
+# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'RegLoOut'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
+# 
+#         Region: /ADD_tb/DUT/Mux
+# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'ZHiOut'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
+# 
+#         Region: /ADD_tb/DUT/Mux
+# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'ZLoOut'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
+# 
+#         Region: /ADD_tb/DUT/Mux
+# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'PCOut'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
+# 
+#         Region: /ADD_tb/DUT/Mux
+# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'MDROut'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
+# 
+#         Region: /ADD_tb/DUT/Mux
+# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'RegInportOut'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
+# 
+#         Region: /ADD_tb/DUT/Mux
+# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'CLoOut'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
+# 
+#         Region: /ADD_tb/DUT/Mux
+run 1000ns
