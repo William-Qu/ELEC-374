@@ -1,8 +1,8 @@
 //Initialize MUX
 module Bus(
-input clr, clk, wren, MDRRead, ALUen, //Bits for enabling and disabling register functions
+input clr, clk, MDRRead, ALUen, //Bits for enabling and disabling register functions
 input R0out, R1out, R2out, R3out, R4out, R5out, R6out, R7out,R8out, R9out, R10out, R11out, R12out, R13out, R14out, R15out,HIout, LOout, ZHIout, ZLOout,PCout, MDRout, InportOut, Cout, //Output Select Signals for which register were taking data from
-input r0ins, r1ins, r2ins, r3ins, r4ins, r5ins, r6ins, r7ins, r8ins, r9ins, r10ins, r11ins, r12ins, r13ins, r14ins, r15ins, HIins, LOins, ZHIins, ZLOins,PCins, MDRins, Outports, IRins, //Input Select Signals for which register were putting data into
+input r0ins, r1ins, r2ins, r3ins, r4ins, r5ins, r6ins, r7ins, r8ins, r9ins, r10ins, r11ins, r12ins, r13ins, r14ins, r15ins, HIins, LOins, ZHIins, ZLOins,PCins, MDRins, Inports, Outports, IRins, //Input Select Signals for which register were putting data into
 input [31:0] MDRMDataIn, //MDR Data In register
 output [31:0] OutportOut //Outport Output Signal to output signals to a display
 );
@@ -11,108 +11,46 @@ output [31:0] OutportOut //Outport Output Signal to output signals to a display
 			wire [31:0] r0outf, r1outf, r2outf, r3outf, r4outf, r5outf, r6outf, r7outf, r8outf, r9outf, r10outf, r11outf, r12outf, r13outf, r14outf, r15outf;
 			wire [31:0] MDROut, PCOut, RegHiOut, RegLoOut, IROut, ZLoOut, ZHiOut, BusMuxOut, RegInportOut, RegOutportOut, CLoOut, CHiOut;
 			wire [63:0] ALUOutput;
-			wire [4:0] EnIn, EnOut;
+			wire [4:0] EnOut;
 			
-			//These are the input wires of the hardware modules
-			reg [31:0] r0in, r1in, r2in, r3in, r4in, r5in, r6in, r7in, r8in, r9in, r10in, r11in, r12in, r13in, r14in, r15in;
-			reg [31:0] MDRMuxIn, PCIn, RegHiIn, RegLoIn, IRIn, ZLoIn, ZHiIn, RegInportIn, RegOutportIn, CLoIn, CHiIn;
+			//Output Registers of the ALU
+			reg [31:0] CLoIn, CHiIn;
 			
 			//IR Breakdown Registers
 			wire [4:0] OPCode;
-			wire [3:0] regASel, regBSel, destSel;
+			wire [3:0] regASel, regBSel;
+			//wire [3:0] destSel;
 			reg [31:0] regA, regB, immVal;
 			
 			//Generate Outside Hardware (Generally only in the ALU so far)
 			generate
-				reg32bit PC  (PCOut, PCIn, clr, clk, wren);
-				reg32bit RegHi  (RegHiOut, RegHiIn, clr, clk, wren);
-				reg32bit RegLo  (RegLoOut, RegLoIn, clr, clk, wren);
-				reg32bit IR  (IROut, IRIn, clr, clk, wren);
-				reg32bit ZLO (ZLoOut, ZLoIn, clr, clk, wren);
-				reg32bit ZHI (ZHiOut, ZHiIn, clr, clk, wren);
-				MDRunit mdr (MDRRead, clr, clk, wren, MDRMuxIn, MDRMDataIn, MDROut);
+				reg32bit PC  (PCOut, BusMuxOut, clr, clk, PCins);
+				reg32bit RegHi  (RegHiOut, BusMuxOut, clr, clk, HIins);
+				reg32bit RegLo  (RegLoOut, BusMuxOut, clr, clk, LOins);
+				reg32bit IR  (IROut, BusMuxOut, clr, clk, IRins);
+				reg32bit ZLO (ZLoOut, BusMuxOut, clr, clk, ZHIins);
+				reg32bit ZHI (ZHiOut, BusMuxOut, clr, clk, ZLOins);
+				MDRunit mdr (MDRRead, clr, clk, MDRins, BusMuxOut, MDRMDataIn, MDROut);
 				
-				reg32bit InPort (RegInportOut, RegInportIn, clr, clk, wren);
-				reg32bit OutPort (RegOutportOut, RegOutportIn, clr, clk, wren);
+				reg32bit InPort (RegInportOut, BusMuxOut, clr, clk, Inports);
+				reg32bit OutPort (RegOutportOut, BusMuxOut, clr, clk, Outports);
 				
-				reg32bit CLO (CLoOut, CLoIn, clr, clk, wren);
-				reg32bit CHI (CHiOut, CHiIn, clr, clk, wren);
+				reg32bit CLO (CLoOut, CLoIn, clr, clk, ALUen);
+				reg32bit CHI (CHiOut, CHiIn, clr, clk, ALUen);
 				
 				ALU Logic (regA, regB, OPCode, ALUOutput);
-				ALURegisters LogicReg (clr, clk, wren, r0outf, r1outf, r2outf, r3outf, r4outf, r5outf, r6outf, r7outf, r8outf, r9outf, r10outf, r11outf, r12outf, r13outf, r14outf, r15outf, r0in, r1in, r2in, r3in, r4in, r5in, r6in, r7in, r8in, r9in, r10in, r11in, r12in, r13in, r14in, r15in);
+				ALURegisters LogicReg (clr, clk, r0outf, r1outf, r2outf, r3outf, r4outf, r5outf, r6outf, r7outf, r8outf, r9outf, r10outf, r11outf, r12outf, r13outf, r14outf, r15outf, r0ins, r1ins, r2ins, r3ins, r4ins, r5ins, r6ins, r7ins, r8ins, r9ins, r10ins, r11ins, r12ins, r13ins, r14ins, r15ins, BusMuxOut);
 			endgenerate 
 			
 			//Generate the Bus Control System (Encoder and Multiplexer)
 			generate
 				encoder EnO (R0out, R1out, R2out, R3out, R4out, R5out, R6out, R7out,R8out, R9out, R10out, R11out, R12out, R13out, R14out, R15out,HIout, LOout, ZHIout, ZLOout,PCout, MDRout, InportOut, Cout, EnOut);
-				encoder EnI (r0ins, r1ins, r2ins, r3ins, r4ins, r5ins, r6ins, r7ins, r8ins, r9ins, r10ins, r11ins, r12ins, r13ins, r14ins, r15ins, HIins, LOins, ZHIins, ZLOins,PCins, MDRins, IRins, Outports, EnIn);
 				Multiplexer Mux (r0outf, r1outf, r2outf, r3outf, r4outf, r5outf, r6outf, r7outf, r8outf, r9outf, r10outf, r11outf, r12outf, r13outf, r14outf, r15outf,RegHiOut,RegLoOut,ZHiOut,ZLoOut,PCOut,MDROut,RegInportOut,CLoOut, EnOut, BusMuxOut);
 			endgenerate
 			
-			initial begin
-				r0in = 32'h00000000; 
-				r1in = 32'h00000000;
-				r2in = 32'h00000000;
-				r3in = 32'h00000000;
-				r4in = 32'h00000000;
-				r5in = 32'h00000000;
-				r6in = 32'h00000000;
-				r7in = 32'h00000000;
-				r8in = 32'h00000000;
-				r9in = 32'h00000000;
-				r10in = 32'h00000000; 
-				r11in = 32'h00000000;
-				r12in = 32'h00000000;
-				r13in = 32'h00000000;
-				r14in = 32'h00000000;
-				r15in = 32'h00000000;
-				MDRMuxIn = 32'h00000000; 
-				PCIn = 32'h00000000;
-				RegHiIn = 32'h00000000;
-				RegLoIn = 32'h00000000;
-				IRIn = 32'h00000000;
-				ZLoIn = 32'h00000000;
-				ZHiIn = 32'h00000000;
-				RegInportIn = 32'h00000000;
-				RegOutportIn = 32'h00000000;
-				CLoIn = 32'h00000000;
-				CHiIn = 32'h00000000;	
-			end
-			
-			//Set the Output Data From the Multiplexer to the correct input signal
-			always @ (*) begin
-				if (EnIn == 5'b00000) r0in = BusMuxOut;
-				if (EnIn == 5'b00001) r1in = BusMuxOut;
-				if (EnIn == 5'b00010) r2in = BusMuxOut;
-				if (EnIn == 5'b00011) r3in = BusMuxOut;
-				if (EnIn == 5'b00100) r4in = BusMuxOut;
-				if (EnIn == 5'b00101) r5in = BusMuxOut;
-				if (EnIn == 5'b00110) r6in = BusMuxOut;
-				if (EnIn == 5'b00111) r7in = BusMuxOut;
-				if (EnIn == 5'b01000) r8in = BusMuxOut;
-				if (EnIn == 5'b01001) r9in = BusMuxOut;
-				if (EnIn == 5'b01010) r10in = BusMuxOut;
-				if (EnIn == 5'b01011) r11in = BusMuxOut;
-				if (EnIn == 5'b01100) r12in = BusMuxOut;
-				if (EnIn == 5'b01101) r13in = BusMuxOut;
-				if (EnIn == 5'b01110) r14in = BusMuxOut;
-				if (EnIn == 5'b01111) r15in = BusMuxOut;
-				if (EnIn == 5'b10000) RegHiIn = BusMuxOut; 
-				if (EnIn == 5'b10001) RegLoIn = BusMuxOut; 
-				if (EnIn == 5'b10010) ZHiIn = BusMuxOut; 
-				if (EnIn == 5'b10011) ZLoIn = BusMuxOut; 
-				if (EnIn == 5'b10100) PCIn = BusMuxOut;
-				if (EnIn == 5'b10101) MDRMuxIn = BusMuxOut; 	
-				if (EnIn == 5'b10110) RegOutportIn = BusMuxOut;
-				if (EnIn == 5'b10111) IRIn = BusMuxOut;
-				
-				if (EnIn == 5'b10000 && EnOut == 5'b10111) RegHiIn = CHiOut; 
-				if (EnIn == 5'b10010 && EnOut == 5'b10111) ZHiIn = CHiOut; 
-			end
-					
 			//Break Up IR Input
 			assign OPCode = IROut[31:27];
-			assign destSel = IROut[26:23];
+			//assign destSel = IROut[26:23];
 			assign regASel = IROut[22:19];
 			assign regBSel = IROut[18:15];
 
@@ -161,9 +99,7 @@ output [31:0] OutportOut //Outport Output Signal to output signals to a display
 		
 			//Put the ALU result into the C register
 			always @ (*) begin
-				if (ALUen) begin //If the ALU has been enabled then we can write data 
-					CLoIn = ALUOutput[31:0];
-					CHiIn = ALUOutput[63:32];
-				end
+				CLoIn = ALUOutput[31:0];
+				CHiIn = ALUOutput[63:32];
 			end
 endmodule

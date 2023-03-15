@@ -4,7 +4,6 @@ entity \Bus\ is
     port(
         clr             : in     vl_logic;
         clk             : in     vl_logic;
-        wren            : in     vl_logic;
         MDRRead         : in     vl_logic;
         ALUen           : in     vl_logic;
         R0out           : in     vl_logic;
@@ -53,6 +52,7 @@ entity \Bus\ is
         ZLOins          : in     vl_logic;
         PCins           : in     vl_logic;
         MDRins          : in     vl_logic;
+        Inports         : in     vl_logic;
         Outports        : in     vl_logic;
         IRins           : in     vl_logic;
         MDRMDataIn      : in     vl_logic_vector(31 downto 0);

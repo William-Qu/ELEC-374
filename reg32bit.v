@@ -6,10 +6,10 @@ module reg32bit (q, d, clr, clk, wren);
 	always @(posedge clk)
 	begin
 		if (wren) begin
-			r <= d;
+			r = d;
 		end
 		if (clr) begin
-			r <= 32'b0;
+			r = 32'b0;
 		end
 	end
 	assign q = r;

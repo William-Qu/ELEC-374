@@ -181,168 +181,30 @@
 # Loading work.ALURegisters
 # Loading work.encoder
 # Loading work.Multiplexer
-# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'r0out'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
-# 
-#         Region: /ADD_tb/DUT/Mux
-# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'r1out'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
-# 
-#         Region: /ADD_tb/DUT/Mux
-# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'r2out'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
-# 
-#         Region: /ADD_tb/DUT/Mux
-# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'r3out'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
-# 
-#         Region: /ADD_tb/DUT/Mux
-# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'r4out'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
-# 
-#         Region: /ADD_tb/DUT/Mux
-# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'r5out'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
-# 
-#         Region: /ADD_tb/DUT/Mux
-# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'r6out'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
-# 
-#         Region: /ADD_tb/DUT/Mux
-# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'r7out'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
-# 
-#         Region: /ADD_tb/DUT/Mux
-# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'r8out'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
-# 
-#         Region: /ADD_tb/DUT/Mux
-# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'r9out'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
-# 
-#         Region: /ADD_tb/DUT/Mux
-# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'r10out'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
-# 
-#         Region: /ADD_tb/DUT/Mux
-# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'r11out'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
-# 
-#         Region: /ADD_tb/DUT/Mux
-# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'r12out'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
-# 
-#         Region: /ADD_tb/DUT/Mux
-# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'r13out'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
-# 
-#         Region: /ADD_tb/DUT/Mux
-# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'r14out'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
-# 
-#         Region: /ADD_tb/DUT/Mux
-# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'r15out'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
-# 
-#         Region: /ADD_tb/DUT/Mux
-# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'RegHiOut'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
-# 
-#         Region: /ADD_tb/DUT/Mux
-# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'RegLoOut'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
-# 
-#         Region: /ADD_tb/DUT/Mux
-# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'ZHiOut'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
-# 
-#         Region: /ADD_tb/DUT/Mux
-# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'ZLoOut'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
-# 
-#         Region: /ADD_tb/DUT/Mux
-# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'PCOut'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
-# 
-#         Region: /ADD_tb/DUT/Mux
-# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'MDROut'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
-# 
-#         Region: /ADD_tb/DUT/Mux
-# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'RegInportOut'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
-# 
-#         Region: /ADD_tb/DUT/Mux
-# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'CLoOut'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
-# 
-#         Region: /ADD_tb/DUT/Mux
 # 
 # add wave *
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 # 
 #           File in use by: 789wi  Hostname: DESKTOP-MP94GB7  ProcessID: 25124
 # 
-#           Attempting to use alternate WLF file "./wlft39i5xq".
+#           Attempting to use alternate WLF file "./wlftcatnqc".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
 # 
-#           Using alternate file: ./wlft39i5xq
+#           Using alternate file: ./wlftcatnqc
 # 
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run 1000 ns
-add wave -position insertpoint sim:/ADD_tb/DUT/IR/*
-add wave -position insertpoint sim:/ADD_tb/DUT/LogicReg/gr2/*
-add wave -position insertpoint sim:/ADD_tb/DUT/LogicReg/gr3/*
+add wave -position insertpoint sim:/ADD_tb/Datapath/Mux/*
+add wave -position insertpoint sim:/ADD_tb/Datapath/mdr/*
+add wave -position insertpoint sim:/ADD_tb/Datapath/IR/*
+add wave -position insertpoint sim:/ADD_tb/Datapath/LogicReg/gr2/*
+add wave -position insertpoint sim:/ADD_tb/Datapath/LogicReg/gr3/*
+add wave -position insertpoint sim:/ADD_tb/Datapath/LogicReg/gr0/*
 restart
-# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'r0out'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
-# 
-#         Region: /ADD_tb/DUT/Mux
-# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'r1out'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
-# 
-#         Region: /ADD_tb/DUT/Mux
-# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'r2out'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
-# 
-#         Region: /ADD_tb/DUT/Mux
-# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'r3out'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
-# 
-#         Region: /ADD_tb/DUT/Mux
-# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'r4out'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
-# 
-#         Region: /ADD_tb/DUT/Mux
-# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'r5out'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
-# 
-#         Region: /ADD_tb/DUT/Mux
-# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'r6out'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
-# 
-#         Region: /ADD_tb/DUT/Mux
-# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'r7out'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
-# 
-#         Region: /ADD_tb/DUT/Mux
-# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'r8out'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
-# 
-#         Region: /ADD_tb/DUT/Mux
-# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'r9out'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
-# 
-#         Region: /ADD_tb/DUT/Mux
-# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'r10out'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
-# 
-#         Region: /ADD_tb/DUT/Mux
-# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'r11out'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
-# 
-#         Region: /ADD_tb/DUT/Mux
-# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'r12out'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
-# 
-#         Region: /ADD_tb/DUT/Mux
-# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'r13out'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
-# 
-#         Region: /ADD_tb/DUT/Mux
-# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'r14out'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
-# 
-#         Region: /ADD_tb/DUT/Mux
-# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'r15out'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
-# 
-#         Region: /ADD_tb/DUT/Mux
-# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'RegHiOut'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
-# 
-#         Region: /ADD_tb/DUT/Mux
-# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'RegLoOut'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
-# 
-#         Region: /ADD_tb/DUT/Mux
-# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'ZHiOut'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
-# 
-#         Region: /ADD_tb/DUT/Mux
-# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'ZLoOut'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
-# 
-#         Region: /ADD_tb/DUT/Mux
-# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'PCOut'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
-# 
-#         Region: /ADD_tb/DUT/Mux
-# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'MDROut'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
-# 
-#         Region: /ADD_tb/DUT/Mux
-# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'RegInportOut'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
-# 
-#         Region: /ADD_tb/DUT/Mux
-# ** Warning: (vsim-3015) C:/Users/789wi/Videos/ELEC-374/Bus.v(49): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'CLoOut'. The port definition is at: C:/Users/789wi/Videos/ELEC-374/Multiplexer.v(2).
-# 
-#         Region: /ADD_tb/DUT/Mux
+run 1000ns
+add wave -position insertpoint sim:/ADD_tb/Datapath/CLO/*
+restart
 run 1000ns

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Phase1
-Mon Mar 13 19:45:21 2023
+Tue Mar 14 21:58:40 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -14,30 +14,22 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Ver
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Port Connectivity Checks: "Multiplexer:Mux"
- 10. Port Connectivity Checks: "ALU:Logic|Hierarchical_CLA:sub"
- 11. Port Connectivity Checks: "ALU:Logic|Hierarchical_CLA:add"
- 12. Port Connectivity Checks: "ALU:Logic|right_rotate:rotateR"
- 13. Port Connectivity Checks: "ALU:Logic|left_rotate:rotateL"
- 14. Port Connectivity Checks: "ALU:Logic|right_shift_combined:SHRA"
- 15. Port Connectivity Checks: "ALU:Logic|right_shift_combined:SHRL|dff_Q:b2v_inst35"
- 16. Port Connectivity Checks: "ALU:Logic|right_shift_combined:SHRL|mux2_1:b2v_inst1"
- 17. Port Connectivity Checks: "ALU:Logic|right_shift_combined:SHRL"
- 18. Port Connectivity Checks: "ALU:Logic|left_shift:SHL|dff_Q:b2v_inst71"
- 19. Port Connectivity Checks: "ALU:Logic|left_shift:SHL"
- 20. Port Connectivity Checks: "reg32bit:CLO"
- 21. Port Connectivity Checks: "reg32bit:OutPort"
- 22. Port Connectivity Checks: "reg32bit:InPort"
- 23. Port Connectivity Checks: "MDRunit:mdr"
- 24. Port Connectivity Checks: "reg32bit:ZHI"
- 25. Port Connectivity Checks: "reg32bit:ZLO"
- 26. Port Connectivity Checks: "reg32bit:IR"
- 27. Port Connectivity Checks: "reg32bit:RegLo"
- 28. Port Connectivity Checks: "reg32bit:RegHi"
- 29. Port Connectivity Checks: "reg32bit:PC"
- 30. Elapsed Time Per Partition
- 31. Analysis & Synthesis Messages
- 32. Analysis & Synthesis Suppressed Messages
+  9. Port Connectivity Checks: "ALU:Logic|Hierarchical_CLA:sub"
+ 10. Port Connectivity Checks: "ALU:Logic|Hierarchical_CLA:add"
+ 11. Port Connectivity Checks: "ALU:Logic|right_rotate:rotateR"
+ 12. Port Connectivity Checks: "ALU:Logic|left_rotate:rotateL"
+ 13. Port Connectivity Checks: "ALU:Logic|right_shift_combined:SHRA"
+ 14. Port Connectivity Checks: "ALU:Logic|right_shift_combined:SHRL|dff_Q:b2v_inst35"
+ 15. Port Connectivity Checks: "ALU:Logic|right_shift_combined:SHRL|mux2_1:b2v_inst1"
+ 16. Port Connectivity Checks: "ALU:Logic|right_shift_combined:SHRL"
+ 17. Port Connectivity Checks: "ALU:Logic|left_shift:SHL|dff_Q:b2v_inst71"
+ 18. Port Connectivity Checks: "ALU:Logic|left_shift:SHL"
+ 19. Port Connectivity Checks: "reg32bit:CHI"
+ 20. Port Connectivity Checks: "reg32bit:OutPort"
+ 21. Port Connectivity Checks: "reg32bit:IR"
+ 22. Elapsed Time Per Partition
+ 23. Analysis & Synthesis Messages
+ 24. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -63,7 +55,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                          ;
 +------------------------------------+--------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Mar 13 19:45:21 2023            ;
+; Analysis & Synthesis Status        ; Successful - Tue Mar 14 21:58:40 2023            ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                      ; Phase1                                           ;
 ; Top-level Entity Name              ; Bus                                              ;
@@ -268,38 +260,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Multiplexer:Mux"                                                                                                                                                                          ;
-+--------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port         ; Type  ; Severity ; Details                                                                                                                                                                            ;
-+--------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; r0out        ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; r1out        ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; r2out        ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; r3out        ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; r4out        ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; r5out        ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; r6out        ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; r7out        ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; r8out        ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; r9out        ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; r10out       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; r11out       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; r12out       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; r13out       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; r14out       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; r15out       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; RegHiOut     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; RegLoOut     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; ZHiOut       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; ZLoOut       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; PCOut        ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; MDROut       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; RegInportOut ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; CLoOut       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-+--------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
 +------------------------------------------------------------+
 ; Port Connectivity Checks: "ALU:Logic|Hierarchical_CLA:sub" ;
 +--------+-------+----------+--------------------------------+
@@ -397,13 +357,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------+-------+----------+----------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "reg32bit:CLO"                                                                           ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                             ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; q[31..1] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "reg32bit:CHI"                                                                       ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------+
@@ -415,42 +375,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "reg32bit:InPort"                                                                        ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                             ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; q[31..1] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "MDRunit:mdr"                                                                                 ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port          ; Type   ; Severity ; Details                                                                             ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
-; MDRout[31..1] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "reg32bit:ZHI"                                                                           ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                             ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; q[31..1] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "reg32bit:ZLO"                                                                           ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                             ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; q[31..1] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-
-
 +---------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "reg32bit:IR"                                                                             ;
 +-----------+--------+----------+-------------------------------------------------------------------------------------+
@@ -458,33 +382,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------+--------+----------+-------------------------------------------------------------------------------------+
 ; q[26..23] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +-----------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "reg32bit:RegLo"                                                                         ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                             ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; q[31..1] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "reg32bit:RegHi"                                                                         ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                             ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; q[31..1] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "reg32bit:PC"                                                                            ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                             ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; q[31..1] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-------------------------------+
@@ -502,7 +399,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Mon Mar 13 19:45:17 2023
+    Info: Processing started: Tue Mar 14 21:58:36 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Phase1 -c Phase1
 Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
 Info (12021): Found 1 design units, including 1 entities, in source file add_tb.v
@@ -597,932 +494,73 @@ Info (12021): Found 1 design units, including 1 entities, in source file alu.v
 Info (12021): Found 1 design units, including 1 entities, in source file aluregisters.v
     Info (12023): Found entity 1: ALURegisters
 Info (12127): Elaborating entity "Bus" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at Bus.v(22): object "destSel" assigned a value but never read
-Warning (10240): Verilog HDL Always Construct warning at Bus.v(84): inferring latch(es) for variable "r0in", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Bus.v(84): inferring latch(es) for variable "r1in", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Bus.v(84): inferring latch(es) for variable "r2in", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Bus.v(84): inferring latch(es) for variable "r3in", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Bus.v(84): inferring latch(es) for variable "r4in", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Bus.v(84): inferring latch(es) for variable "r5in", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Bus.v(84): inferring latch(es) for variable "r6in", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Bus.v(84): inferring latch(es) for variable "r7in", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Bus.v(84): inferring latch(es) for variable "r8in", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Bus.v(84): inferring latch(es) for variable "r9in", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Bus.v(84): inferring latch(es) for variable "r10in", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Bus.v(84): inferring latch(es) for variable "r11in", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Bus.v(84): inferring latch(es) for variable "r12in", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Bus.v(84): inferring latch(es) for variable "r13in", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Bus.v(84): inferring latch(es) for variable "r14in", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Bus.v(84): inferring latch(es) for variable "r15in", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Bus.v(84): inferring latch(es) for variable "RegHiIn", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Bus.v(84): inferring latch(es) for variable "RegLoIn", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Bus.v(84): inferring latch(es) for variable "ZHiIn", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Bus.v(84): inferring latch(es) for variable "ZLoIn", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Bus.v(84): inferring latch(es) for variable "PCIn", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Bus.v(84): inferring latch(es) for variable "MDRMuxIn", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Bus.v(84): inferring latch(es) for variable "RegOutportIn", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Bus.v(84): inferring latch(es) for variable "IRIn", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Bus.v(121): inferring latch(es) for variable "regA", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Bus.v(121): inferring latch(es) for variable "regB", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Bus.v(164): inferring latch(es) for variable "CLoIn", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Bus.v(164): inferring latch(es) for variable "CHiIn", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Bus.v(59): inferring latch(es) for variable "regA", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Bus.v(59): inferring latch(es) for variable "regB", which holds its previous value in one or more paths through the always construct
 Warning (10034): Output port "OutportOut" at Bus.v(8) has no driver
-Info (10041): Inferred latch for "CHiIn[0]" at Bus.v(164)
-Info (10041): Inferred latch for "CHiIn[1]" at Bus.v(164)
-Info (10041): Inferred latch for "CHiIn[2]" at Bus.v(164)
-Info (10041): Inferred latch for "CHiIn[3]" at Bus.v(164)
-Info (10041): Inferred latch for "CHiIn[4]" at Bus.v(164)
-Info (10041): Inferred latch for "CHiIn[5]" at Bus.v(164)
-Info (10041): Inferred latch for "CHiIn[6]" at Bus.v(164)
-Info (10041): Inferred latch for "CHiIn[7]" at Bus.v(164)
-Info (10041): Inferred latch for "CHiIn[8]" at Bus.v(164)
-Info (10041): Inferred latch for "CHiIn[9]" at Bus.v(164)
-Info (10041): Inferred latch for "CHiIn[10]" at Bus.v(164)
-Info (10041): Inferred latch for "CHiIn[11]" at Bus.v(164)
-Info (10041): Inferred latch for "CHiIn[12]" at Bus.v(164)
-Info (10041): Inferred latch for "CHiIn[13]" at Bus.v(164)
-Info (10041): Inferred latch for "CHiIn[14]" at Bus.v(164)
-Info (10041): Inferred latch for "CHiIn[15]" at Bus.v(164)
-Info (10041): Inferred latch for "CHiIn[16]" at Bus.v(164)
-Info (10041): Inferred latch for "CHiIn[17]" at Bus.v(164)
-Info (10041): Inferred latch for "CHiIn[18]" at Bus.v(164)
-Info (10041): Inferred latch for "CHiIn[19]" at Bus.v(164)
-Info (10041): Inferred latch for "CHiIn[20]" at Bus.v(164)
-Info (10041): Inferred latch for "CHiIn[21]" at Bus.v(164)
-Info (10041): Inferred latch for "CHiIn[22]" at Bus.v(164)
-Info (10041): Inferred latch for "CHiIn[23]" at Bus.v(164)
-Info (10041): Inferred latch for "CHiIn[24]" at Bus.v(164)
-Info (10041): Inferred latch for "CHiIn[25]" at Bus.v(164)
-Info (10041): Inferred latch for "CHiIn[26]" at Bus.v(164)
-Info (10041): Inferred latch for "CHiIn[27]" at Bus.v(164)
-Info (10041): Inferred latch for "CHiIn[28]" at Bus.v(164)
-Info (10041): Inferred latch for "CHiIn[29]" at Bus.v(164)
-Info (10041): Inferred latch for "CHiIn[30]" at Bus.v(164)
-Info (10041): Inferred latch for "CHiIn[31]" at Bus.v(164)
-Info (10041): Inferred latch for "CLoIn[0]" at Bus.v(164)
-Info (10041): Inferred latch for "CLoIn[1]" at Bus.v(164)
-Info (10041): Inferred latch for "CLoIn[2]" at Bus.v(164)
-Info (10041): Inferred latch for "CLoIn[3]" at Bus.v(164)
-Info (10041): Inferred latch for "CLoIn[4]" at Bus.v(164)
-Info (10041): Inferred latch for "CLoIn[5]" at Bus.v(164)
-Info (10041): Inferred latch for "CLoIn[6]" at Bus.v(164)
-Info (10041): Inferred latch for "CLoIn[7]" at Bus.v(164)
-Info (10041): Inferred latch for "CLoIn[8]" at Bus.v(164)
-Info (10041): Inferred latch for "CLoIn[9]" at Bus.v(164)
-Info (10041): Inferred latch for "CLoIn[10]" at Bus.v(164)
-Info (10041): Inferred latch for "CLoIn[11]" at Bus.v(164)
-Info (10041): Inferred latch for "CLoIn[12]" at Bus.v(164)
-Info (10041): Inferred latch for "CLoIn[13]" at Bus.v(164)
-Info (10041): Inferred latch for "CLoIn[14]" at Bus.v(164)
-Info (10041): Inferred latch for "CLoIn[15]" at Bus.v(164)
-Info (10041): Inferred latch for "CLoIn[16]" at Bus.v(164)
-Info (10041): Inferred latch for "CLoIn[17]" at Bus.v(164)
-Info (10041): Inferred latch for "CLoIn[18]" at Bus.v(164)
-Info (10041): Inferred latch for "CLoIn[19]" at Bus.v(164)
-Info (10041): Inferred latch for "CLoIn[20]" at Bus.v(164)
-Info (10041): Inferred latch for "CLoIn[21]" at Bus.v(164)
-Info (10041): Inferred latch for "CLoIn[22]" at Bus.v(164)
-Info (10041): Inferred latch for "CLoIn[23]" at Bus.v(164)
-Info (10041): Inferred latch for "CLoIn[24]" at Bus.v(164)
-Info (10041): Inferred latch for "CLoIn[25]" at Bus.v(164)
-Info (10041): Inferred latch for "CLoIn[26]" at Bus.v(164)
-Info (10041): Inferred latch for "CLoIn[27]" at Bus.v(164)
-Info (10041): Inferred latch for "CLoIn[28]" at Bus.v(164)
-Info (10041): Inferred latch for "CLoIn[29]" at Bus.v(164)
-Info (10041): Inferred latch for "CLoIn[30]" at Bus.v(164)
-Info (10041): Inferred latch for "CLoIn[31]" at Bus.v(164)
-Info (10041): Inferred latch for "regB[0]" at Bus.v(145)
-Info (10041): Inferred latch for "regB[1]" at Bus.v(145)
-Info (10041): Inferred latch for "regB[2]" at Bus.v(145)
-Info (10041): Inferred latch for "regB[3]" at Bus.v(145)
-Info (10041): Inferred latch for "regB[4]" at Bus.v(145)
-Info (10041): Inferred latch for "regB[5]" at Bus.v(145)
-Info (10041): Inferred latch for "regB[6]" at Bus.v(145)
-Info (10041): Inferred latch for "regB[7]" at Bus.v(145)
-Info (10041): Inferred latch for "regB[8]" at Bus.v(145)
-Info (10041): Inferred latch for "regB[9]" at Bus.v(145)
-Info (10041): Inferred latch for "regB[10]" at Bus.v(145)
-Info (10041): Inferred latch for "regB[11]" at Bus.v(145)
-Info (10041): Inferred latch for "regB[12]" at Bus.v(145)
-Info (10041): Inferred latch for "regB[13]" at Bus.v(145)
-Info (10041): Inferred latch for "regB[14]" at Bus.v(145)
-Info (10041): Inferred latch for "regB[15]" at Bus.v(145)
-Info (10041): Inferred latch for "regB[16]" at Bus.v(145)
-Info (10041): Inferred latch for "regB[17]" at Bus.v(145)
-Info (10041): Inferred latch for "regB[18]" at Bus.v(145)
-Info (10041): Inferred latch for "regB[19]" at Bus.v(145)
-Info (10041): Inferred latch for "regB[20]" at Bus.v(145)
-Info (10041): Inferred latch for "regB[21]" at Bus.v(145)
-Info (10041): Inferred latch for "regB[22]" at Bus.v(145)
-Info (10041): Inferred latch for "regB[23]" at Bus.v(145)
-Info (10041): Inferred latch for "regB[24]" at Bus.v(145)
-Info (10041): Inferred latch for "regB[25]" at Bus.v(145)
-Info (10041): Inferred latch for "regB[26]" at Bus.v(145)
-Info (10041): Inferred latch for "regB[27]" at Bus.v(145)
-Info (10041): Inferred latch for "regB[28]" at Bus.v(145)
-Info (10041): Inferred latch for "regB[29]" at Bus.v(145)
-Info (10041): Inferred latch for "regB[30]" at Bus.v(145)
-Info (10041): Inferred latch for "regB[31]" at Bus.v(145)
-Info (10041): Inferred latch for "regA[0]" at Bus.v(141)
-Info (10041): Inferred latch for "regA[1]" at Bus.v(141)
-Info (10041): Inferred latch for "regA[2]" at Bus.v(141)
-Info (10041): Inferred latch for "regA[3]" at Bus.v(141)
-Info (10041): Inferred latch for "regA[4]" at Bus.v(141)
-Info (10041): Inferred latch for "regA[5]" at Bus.v(141)
-Info (10041): Inferred latch for "regA[6]" at Bus.v(141)
-Info (10041): Inferred latch for "regA[7]" at Bus.v(141)
-Info (10041): Inferred latch for "regA[8]" at Bus.v(141)
-Info (10041): Inferred latch for "regA[9]" at Bus.v(141)
-Info (10041): Inferred latch for "regA[10]" at Bus.v(141)
-Info (10041): Inferred latch for "regA[11]" at Bus.v(141)
-Info (10041): Inferred latch for "regA[12]" at Bus.v(141)
-Info (10041): Inferred latch for "regA[13]" at Bus.v(141)
-Info (10041): Inferred latch for "regA[14]" at Bus.v(141)
-Info (10041): Inferred latch for "regA[15]" at Bus.v(141)
-Info (10041): Inferred latch for "regA[16]" at Bus.v(141)
-Info (10041): Inferred latch for "regA[17]" at Bus.v(141)
-Info (10041): Inferred latch for "regA[18]" at Bus.v(141)
-Info (10041): Inferred latch for "regA[19]" at Bus.v(141)
-Info (10041): Inferred latch for "regA[20]" at Bus.v(141)
-Info (10041): Inferred latch for "regA[21]" at Bus.v(141)
-Info (10041): Inferred latch for "regA[22]" at Bus.v(141)
-Info (10041): Inferred latch for "regA[23]" at Bus.v(141)
-Info (10041): Inferred latch for "regA[24]" at Bus.v(141)
-Info (10041): Inferred latch for "regA[25]" at Bus.v(141)
-Info (10041): Inferred latch for "regA[26]" at Bus.v(141)
-Info (10041): Inferred latch for "regA[27]" at Bus.v(141)
-Info (10041): Inferred latch for "regA[28]" at Bus.v(141)
-Info (10041): Inferred latch for "regA[29]" at Bus.v(141)
-Info (10041): Inferred latch for "regA[30]" at Bus.v(141)
-Info (10041): Inferred latch for "regA[31]" at Bus.v(141)
-Info (10041): Inferred latch for "ZHiIn[0]" at Bus.v(110)
-Info (10041): Inferred latch for "ZHiIn[1]" at Bus.v(110)
-Info (10041): Inferred latch for "ZHiIn[2]" at Bus.v(110)
-Info (10041): Inferred latch for "ZHiIn[3]" at Bus.v(110)
-Info (10041): Inferred latch for "ZHiIn[4]" at Bus.v(110)
-Info (10041): Inferred latch for "ZHiIn[5]" at Bus.v(110)
-Info (10041): Inferred latch for "ZHiIn[6]" at Bus.v(110)
-Info (10041): Inferred latch for "ZHiIn[7]" at Bus.v(110)
-Info (10041): Inferred latch for "ZHiIn[8]" at Bus.v(110)
-Info (10041): Inferred latch for "ZHiIn[9]" at Bus.v(110)
-Info (10041): Inferred latch for "ZHiIn[10]" at Bus.v(110)
-Info (10041): Inferred latch for "ZHiIn[11]" at Bus.v(110)
-Info (10041): Inferred latch for "ZHiIn[12]" at Bus.v(110)
-Info (10041): Inferred latch for "ZHiIn[13]" at Bus.v(110)
-Info (10041): Inferred latch for "ZHiIn[14]" at Bus.v(110)
-Info (10041): Inferred latch for "ZHiIn[15]" at Bus.v(110)
-Info (10041): Inferred latch for "ZHiIn[16]" at Bus.v(110)
-Info (10041): Inferred latch for "ZHiIn[17]" at Bus.v(110)
-Info (10041): Inferred latch for "ZHiIn[18]" at Bus.v(110)
-Info (10041): Inferred latch for "ZHiIn[19]" at Bus.v(110)
-Info (10041): Inferred latch for "ZHiIn[20]" at Bus.v(110)
-Info (10041): Inferred latch for "ZHiIn[21]" at Bus.v(110)
-Info (10041): Inferred latch for "ZHiIn[22]" at Bus.v(110)
-Info (10041): Inferred latch for "ZHiIn[23]" at Bus.v(110)
-Info (10041): Inferred latch for "ZHiIn[24]" at Bus.v(110)
-Info (10041): Inferred latch for "ZHiIn[25]" at Bus.v(110)
-Info (10041): Inferred latch for "ZHiIn[26]" at Bus.v(110)
-Info (10041): Inferred latch for "ZHiIn[27]" at Bus.v(110)
-Info (10041): Inferred latch for "ZHiIn[28]" at Bus.v(110)
-Info (10041): Inferred latch for "ZHiIn[29]" at Bus.v(110)
-Info (10041): Inferred latch for "ZHiIn[30]" at Bus.v(110)
-Info (10041): Inferred latch for "ZHiIn[31]" at Bus.v(110)
-Info (10041): Inferred latch for "RegHiIn[0]" at Bus.v(109)
-Info (10041): Inferred latch for "RegHiIn[1]" at Bus.v(109)
-Info (10041): Inferred latch for "RegHiIn[2]" at Bus.v(109)
-Info (10041): Inferred latch for "RegHiIn[3]" at Bus.v(109)
-Info (10041): Inferred latch for "RegHiIn[4]" at Bus.v(109)
-Info (10041): Inferred latch for "RegHiIn[5]" at Bus.v(109)
-Info (10041): Inferred latch for "RegHiIn[6]" at Bus.v(109)
-Info (10041): Inferred latch for "RegHiIn[7]" at Bus.v(109)
-Info (10041): Inferred latch for "RegHiIn[8]" at Bus.v(109)
-Info (10041): Inferred latch for "RegHiIn[9]" at Bus.v(109)
-Info (10041): Inferred latch for "RegHiIn[10]" at Bus.v(109)
-Info (10041): Inferred latch for "RegHiIn[11]" at Bus.v(109)
-Info (10041): Inferred latch for "RegHiIn[12]" at Bus.v(109)
-Info (10041): Inferred latch for "RegHiIn[13]" at Bus.v(109)
-Info (10041): Inferred latch for "RegHiIn[14]" at Bus.v(109)
-Info (10041): Inferred latch for "RegHiIn[15]" at Bus.v(109)
-Info (10041): Inferred latch for "RegHiIn[16]" at Bus.v(109)
-Info (10041): Inferred latch for "RegHiIn[17]" at Bus.v(109)
-Info (10041): Inferred latch for "RegHiIn[18]" at Bus.v(109)
-Info (10041): Inferred latch for "RegHiIn[19]" at Bus.v(109)
-Info (10041): Inferred latch for "RegHiIn[20]" at Bus.v(109)
-Info (10041): Inferred latch for "RegHiIn[21]" at Bus.v(109)
-Info (10041): Inferred latch for "RegHiIn[22]" at Bus.v(109)
-Info (10041): Inferred latch for "RegHiIn[23]" at Bus.v(109)
-Info (10041): Inferred latch for "RegHiIn[24]" at Bus.v(109)
-Info (10041): Inferred latch for "RegHiIn[25]" at Bus.v(109)
-Info (10041): Inferred latch for "RegHiIn[26]" at Bus.v(109)
-Info (10041): Inferred latch for "RegHiIn[27]" at Bus.v(109)
-Info (10041): Inferred latch for "RegHiIn[28]" at Bus.v(109)
-Info (10041): Inferred latch for "RegHiIn[29]" at Bus.v(109)
-Info (10041): Inferred latch for "RegHiIn[30]" at Bus.v(109)
-Info (10041): Inferred latch for "RegHiIn[31]" at Bus.v(109)
-Info (10041): Inferred latch for "IRIn[0]" at Bus.v(107)
-Info (10041): Inferred latch for "IRIn[1]" at Bus.v(107)
-Info (10041): Inferred latch for "IRIn[2]" at Bus.v(107)
-Info (10041): Inferred latch for "IRIn[3]" at Bus.v(107)
-Info (10041): Inferred latch for "IRIn[4]" at Bus.v(107)
-Info (10041): Inferred latch for "IRIn[5]" at Bus.v(107)
-Info (10041): Inferred latch for "IRIn[6]" at Bus.v(107)
-Info (10041): Inferred latch for "IRIn[7]" at Bus.v(107)
-Info (10041): Inferred latch for "IRIn[8]" at Bus.v(107)
-Info (10041): Inferred latch for "IRIn[9]" at Bus.v(107)
-Info (10041): Inferred latch for "IRIn[10]" at Bus.v(107)
-Info (10041): Inferred latch for "IRIn[11]" at Bus.v(107)
-Info (10041): Inferred latch for "IRIn[12]" at Bus.v(107)
-Info (10041): Inferred latch for "IRIn[13]" at Bus.v(107)
-Info (10041): Inferred latch for "IRIn[14]" at Bus.v(107)
-Info (10041): Inferred latch for "IRIn[15]" at Bus.v(107)
-Info (10041): Inferred latch for "IRIn[16]" at Bus.v(107)
-Info (10041): Inferred latch for "IRIn[17]" at Bus.v(107)
-Info (10041): Inferred latch for "IRIn[18]" at Bus.v(107)
-Info (10041): Inferred latch for "IRIn[19]" at Bus.v(107)
-Info (10041): Inferred latch for "IRIn[20]" at Bus.v(107)
-Info (10041): Inferred latch for "IRIn[21]" at Bus.v(107)
-Info (10041): Inferred latch for "IRIn[22]" at Bus.v(107)
-Info (10041): Inferred latch for "IRIn[23]" at Bus.v(107)
-Info (10041): Inferred latch for "IRIn[24]" at Bus.v(107)
-Info (10041): Inferred latch for "IRIn[25]" at Bus.v(107)
-Info (10041): Inferred latch for "IRIn[26]" at Bus.v(107)
-Info (10041): Inferred latch for "IRIn[27]" at Bus.v(107)
-Info (10041): Inferred latch for "IRIn[28]" at Bus.v(107)
-Info (10041): Inferred latch for "IRIn[29]" at Bus.v(107)
-Info (10041): Inferred latch for "IRIn[30]" at Bus.v(107)
-Info (10041): Inferred latch for "IRIn[31]" at Bus.v(107)
-Info (10041): Inferred latch for "RegOutportIn[0]" at Bus.v(106)
-Info (10041): Inferred latch for "RegOutportIn[1]" at Bus.v(106)
-Info (10041): Inferred latch for "RegOutportIn[2]" at Bus.v(106)
-Info (10041): Inferred latch for "RegOutportIn[3]" at Bus.v(106)
-Info (10041): Inferred latch for "RegOutportIn[4]" at Bus.v(106)
-Info (10041): Inferred latch for "RegOutportIn[5]" at Bus.v(106)
-Info (10041): Inferred latch for "RegOutportIn[6]" at Bus.v(106)
-Info (10041): Inferred latch for "RegOutportIn[7]" at Bus.v(106)
-Info (10041): Inferred latch for "RegOutportIn[8]" at Bus.v(106)
-Info (10041): Inferred latch for "RegOutportIn[9]" at Bus.v(106)
-Info (10041): Inferred latch for "RegOutportIn[10]" at Bus.v(106)
-Info (10041): Inferred latch for "RegOutportIn[11]" at Bus.v(106)
-Info (10041): Inferred latch for "RegOutportIn[12]" at Bus.v(106)
-Info (10041): Inferred latch for "RegOutportIn[13]" at Bus.v(106)
-Info (10041): Inferred latch for "RegOutportIn[14]" at Bus.v(106)
-Info (10041): Inferred latch for "RegOutportIn[15]" at Bus.v(106)
-Info (10041): Inferred latch for "RegOutportIn[16]" at Bus.v(106)
-Info (10041): Inferred latch for "RegOutportIn[17]" at Bus.v(106)
-Info (10041): Inferred latch for "RegOutportIn[18]" at Bus.v(106)
-Info (10041): Inferred latch for "RegOutportIn[19]" at Bus.v(106)
-Info (10041): Inferred latch for "RegOutportIn[20]" at Bus.v(106)
-Info (10041): Inferred latch for "RegOutportIn[21]" at Bus.v(106)
-Info (10041): Inferred latch for "RegOutportIn[22]" at Bus.v(106)
-Info (10041): Inferred latch for "RegOutportIn[23]" at Bus.v(106)
-Info (10041): Inferred latch for "RegOutportIn[24]" at Bus.v(106)
-Info (10041): Inferred latch for "RegOutportIn[25]" at Bus.v(106)
-Info (10041): Inferred latch for "RegOutportIn[26]" at Bus.v(106)
-Info (10041): Inferred latch for "RegOutportIn[27]" at Bus.v(106)
-Info (10041): Inferred latch for "RegOutportIn[28]" at Bus.v(106)
-Info (10041): Inferred latch for "RegOutportIn[29]" at Bus.v(106)
-Info (10041): Inferred latch for "RegOutportIn[30]" at Bus.v(106)
-Info (10041): Inferred latch for "RegOutportIn[31]" at Bus.v(106)
-Info (10041): Inferred latch for "MDRMuxIn[0]" at Bus.v(105)
-Info (10041): Inferred latch for "MDRMuxIn[1]" at Bus.v(105)
-Info (10041): Inferred latch for "MDRMuxIn[2]" at Bus.v(105)
-Info (10041): Inferred latch for "MDRMuxIn[3]" at Bus.v(105)
-Info (10041): Inferred latch for "MDRMuxIn[4]" at Bus.v(105)
-Info (10041): Inferred latch for "MDRMuxIn[5]" at Bus.v(105)
-Info (10041): Inferred latch for "MDRMuxIn[6]" at Bus.v(105)
-Info (10041): Inferred latch for "MDRMuxIn[7]" at Bus.v(105)
-Info (10041): Inferred latch for "MDRMuxIn[8]" at Bus.v(105)
-Info (10041): Inferred latch for "MDRMuxIn[9]" at Bus.v(105)
-Info (10041): Inferred latch for "MDRMuxIn[10]" at Bus.v(105)
-Info (10041): Inferred latch for "MDRMuxIn[11]" at Bus.v(105)
-Info (10041): Inferred latch for "MDRMuxIn[12]" at Bus.v(105)
-Info (10041): Inferred latch for "MDRMuxIn[13]" at Bus.v(105)
-Info (10041): Inferred latch for "MDRMuxIn[14]" at Bus.v(105)
-Info (10041): Inferred latch for "MDRMuxIn[15]" at Bus.v(105)
-Info (10041): Inferred latch for "MDRMuxIn[16]" at Bus.v(105)
-Info (10041): Inferred latch for "MDRMuxIn[17]" at Bus.v(105)
-Info (10041): Inferred latch for "MDRMuxIn[18]" at Bus.v(105)
-Info (10041): Inferred latch for "MDRMuxIn[19]" at Bus.v(105)
-Info (10041): Inferred latch for "MDRMuxIn[20]" at Bus.v(105)
-Info (10041): Inferred latch for "MDRMuxIn[21]" at Bus.v(105)
-Info (10041): Inferred latch for "MDRMuxIn[22]" at Bus.v(105)
-Info (10041): Inferred latch for "MDRMuxIn[23]" at Bus.v(105)
-Info (10041): Inferred latch for "MDRMuxIn[24]" at Bus.v(105)
-Info (10041): Inferred latch for "MDRMuxIn[25]" at Bus.v(105)
-Info (10041): Inferred latch for "MDRMuxIn[26]" at Bus.v(105)
-Info (10041): Inferred latch for "MDRMuxIn[27]" at Bus.v(105)
-Info (10041): Inferred latch for "MDRMuxIn[28]" at Bus.v(105)
-Info (10041): Inferred latch for "MDRMuxIn[29]" at Bus.v(105)
-Info (10041): Inferred latch for "MDRMuxIn[30]" at Bus.v(105)
-Info (10041): Inferred latch for "MDRMuxIn[31]" at Bus.v(105)
-Info (10041): Inferred latch for "PCIn[0]" at Bus.v(104)
-Info (10041): Inferred latch for "PCIn[1]" at Bus.v(104)
-Info (10041): Inferred latch for "PCIn[2]" at Bus.v(104)
-Info (10041): Inferred latch for "PCIn[3]" at Bus.v(104)
-Info (10041): Inferred latch for "PCIn[4]" at Bus.v(104)
-Info (10041): Inferred latch for "PCIn[5]" at Bus.v(104)
-Info (10041): Inferred latch for "PCIn[6]" at Bus.v(104)
-Info (10041): Inferred latch for "PCIn[7]" at Bus.v(104)
-Info (10041): Inferred latch for "PCIn[8]" at Bus.v(104)
-Info (10041): Inferred latch for "PCIn[9]" at Bus.v(104)
-Info (10041): Inferred latch for "PCIn[10]" at Bus.v(104)
-Info (10041): Inferred latch for "PCIn[11]" at Bus.v(104)
-Info (10041): Inferred latch for "PCIn[12]" at Bus.v(104)
-Info (10041): Inferred latch for "PCIn[13]" at Bus.v(104)
-Info (10041): Inferred latch for "PCIn[14]" at Bus.v(104)
-Info (10041): Inferred latch for "PCIn[15]" at Bus.v(104)
-Info (10041): Inferred latch for "PCIn[16]" at Bus.v(104)
-Info (10041): Inferred latch for "PCIn[17]" at Bus.v(104)
-Info (10041): Inferred latch for "PCIn[18]" at Bus.v(104)
-Info (10041): Inferred latch for "PCIn[19]" at Bus.v(104)
-Info (10041): Inferred latch for "PCIn[20]" at Bus.v(104)
-Info (10041): Inferred latch for "PCIn[21]" at Bus.v(104)
-Info (10041): Inferred latch for "PCIn[22]" at Bus.v(104)
-Info (10041): Inferred latch for "PCIn[23]" at Bus.v(104)
-Info (10041): Inferred latch for "PCIn[24]" at Bus.v(104)
-Info (10041): Inferred latch for "PCIn[25]" at Bus.v(104)
-Info (10041): Inferred latch for "PCIn[26]" at Bus.v(104)
-Info (10041): Inferred latch for "PCIn[27]" at Bus.v(104)
-Info (10041): Inferred latch for "PCIn[28]" at Bus.v(104)
-Info (10041): Inferred latch for "PCIn[29]" at Bus.v(104)
-Info (10041): Inferred latch for "PCIn[30]" at Bus.v(104)
-Info (10041): Inferred latch for "PCIn[31]" at Bus.v(104)
-Info (10041): Inferred latch for "ZLoIn[0]" at Bus.v(103)
-Info (10041): Inferred latch for "ZLoIn[1]" at Bus.v(103)
-Info (10041): Inferred latch for "ZLoIn[2]" at Bus.v(103)
-Info (10041): Inferred latch for "ZLoIn[3]" at Bus.v(103)
-Info (10041): Inferred latch for "ZLoIn[4]" at Bus.v(103)
-Info (10041): Inferred latch for "ZLoIn[5]" at Bus.v(103)
-Info (10041): Inferred latch for "ZLoIn[6]" at Bus.v(103)
-Info (10041): Inferred latch for "ZLoIn[7]" at Bus.v(103)
-Info (10041): Inferred latch for "ZLoIn[8]" at Bus.v(103)
-Info (10041): Inferred latch for "ZLoIn[9]" at Bus.v(103)
-Info (10041): Inferred latch for "ZLoIn[10]" at Bus.v(103)
-Info (10041): Inferred latch for "ZLoIn[11]" at Bus.v(103)
-Info (10041): Inferred latch for "ZLoIn[12]" at Bus.v(103)
-Info (10041): Inferred latch for "ZLoIn[13]" at Bus.v(103)
-Info (10041): Inferred latch for "ZLoIn[14]" at Bus.v(103)
-Info (10041): Inferred latch for "ZLoIn[15]" at Bus.v(103)
-Info (10041): Inferred latch for "ZLoIn[16]" at Bus.v(103)
-Info (10041): Inferred latch for "ZLoIn[17]" at Bus.v(103)
-Info (10041): Inferred latch for "ZLoIn[18]" at Bus.v(103)
-Info (10041): Inferred latch for "ZLoIn[19]" at Bus.v(103)
-Info (10041): Inferred latch for "ZLoIn[20]" at Bus.v(103)
-Info (10041): Inferred latch for "ZLoIn[21]" at Bus.v(103)
-Info (10041): Inferred latch for "ZLoIn[22]" at Bus.v(103)
-Info (10041): Inferred latch for "ZLoIn[23]" at Bus.v(103)
-Info (10041): Inferred latch for "ZLoIn[24]" at Bus.v(103)
-Info (10041): Inferred latch for "ZLoIn[25]" at Bus.v(103)
-Info (10041): Inferred latch for "ZLoIn[26]" at Bus.v(103)
-Info (10041): Inferred latch for "ZLoIn[27]" at Bus.v(103)
-Info (10041): Inferred latch for "ZLoIn[28]" at Bus.v(103)
-Info (10041): Inferred latch for "ZLoIn[29]" at Bus.v(103)
-Info (10041): Inferred latch for "ZLoIn[30]" at Bus.v(103)
-Info (10041): Inferred latch for "ZLoIn[31]" at Bus.v(103)
-Info (10041): Inferred latch for "RegLoIn[0]" at Bus.v(101)
-Info (10041): Inferred latch for "RegLoIn[1]" at Bus.v(101)
-Info (10041): Inferred latch for "RegLoIn[2]" at Bus.v(101)
-Info (10041): Inferred latch for "RegLoIn[3]" at Bus.v(101)
-Info (10041): Inferred latch for "RegLoIn[4]" at Bus.v(101)
-Info (10041): Inferred latch for "RegLoIn[5]" at Bus.v(101)
-Info (10041): Inferred latch for "RegLoIn[6]" at Bus.v(101)
-Info (10041): Inferred latch for "RegLoIn[7]" at Bus.v(101)
-Info (10041): Inferred latch for "RegLoIn[8]" at Bus.v(101)
-Info (10041): Inferred latch for "RegLoIn[9]" at Bus.v(101)
-Info (10041): Inferred latch for "RegLoIn[10]" at Bus.v(101)
-Info (10041): Inferred latch for "RegLoIn[11]" at Bus.v(101)
-Info (10041): Inferred latch for "RegLoIn[12]" at Bus.v(101)
-Info (10041): Inferred latch for "RegLoIn[13]" at Bus.v(101)
-Info (10041): Inferred latch for "RegLoIn[14]" at Bus.v(101)
-Info (10041): Inferred latch for "RegLoIn[15]" at Bus.v(101)
-Info (10041): Inferred latch for "RegLoIn[16]" at Bus.v(101)
-Info (10041): Inferred latch for "RegLoIn[17]" at Bus.v(101)
-Info (10041): Inferred latch for "RegLoIn[18]" at Bus.v(101)
-Info (10041): Inferred latch for "RegLoIn[19]" at Bus.v(101)
-Info (10041): Inferred latch for "RegLoIn[20]" at Bus.v(101)
-Info (10041): Inferred latch for "RegLoIn[21]" at Bus.v(101)
-Info (10041): Inferred latch for "RegLoIn[22]" at Bus.v(101)
-Info (10041): Inferred latch for "RegLoIn[23]" at Bus.v(101)
-Info (10041): Inferred latch for "RegLoIn[24]" at Bus.v(101)
-Info (10041): Inferred latch for "RegLoIn[25]" at Bus.v(101)
-Info (10041): Inferred latch for "RegLoIn[26]" at Bus.v(101)
-Info (10041): Inferred latch for "RegLoIn[27]" at Bus.v(101)
-Info (10041): Inferred latch for "RegLoIn[28]" at Bus.v(101)
-Info (10041): Inferred latch for "RegLoIn[29]" at Bus.v(101)
-Info (10041): Inferred latch for "RegLoIn[30]" at Bus.v(101)
-Info (10041): Inferred latch for "RegLoIn[31]" at Bus.v(101)
-Info (10041): Inferred latch for "r15in[0]" at Bus.v(99)
-Info (10041): Inferred latch for "r15in[1]" at Bus.v(99)
-Info (10041): Inferred latch for "r15in[2]" at Bus.v(99)
-Info (10041): Inferred latch for "r15in[3]" at Bus.v(99)
-Info (10041): Inferred latch for "r15in[4]" at Bus.v(99)
-Info (10041): Inferred latch for "r15in[5]" at Bus.v(99)
-Info (10041): Inferred latch for "r15in[6]" at Bus.v(99)
-Info (10041): Inferred latch for "r15in[7]" at Bus.v(99)
-Info (10041): Inferred latch for "r15in[8]" at Bus.v(99)
-Info (10041): Inferred latch for "r15in[9]" at Bus.v(99)
-Info (10041): Inferred latch for "r15in[10]" at Bus.v(99)
-Info (10041): Inferred latch for "r15in[11]" at Bus.v(99)
-Info (10041): Inferred latch for "r15in[12]" at Bus.v(99)
-Info (10041): Inferred latch for "r15in[13]" at Bus.v(99)
-Info (10041): Inferred latch for "r15in[14]" at Bus.v(99)
-Info (10041): Inferred latch for "r15in[15]" at Bus.v(99)
-Info (10041): Inferred latch for "r15in[16]" at Bus.v(99)
-Info (10041): Inferred latch for "r15in[17]" at Bus.v(99)
-Info (10041): Inferred latch for "r15in[18]" at Bus.v(99)
-Info (10041): Inferred latch for "r15in[19]" at Bus.v(99)
-Info (10041): Inferred latch for "r15in[20]" at Bus.v(99)
-Info (10041): Inferred latch for "r15in[21]" at Bus.v(99)
-Info (10041): Inferred latch for "r15in[22]" at Bus.v(99)
-Info (10041): Inferred latch for "r15in[23]" at Bus.v(99)
-Info (10041): Inferred latch for "r15in[24]" at Bus.v(99)
-Info (10041): Inferred latch for "r15in[25]" at Bus.v(99)
-Info (10041): Inferred latch for "r15in[26]" at Bus.v(99)
-Info (10041): Inferred latch for "r15in[27]" at Bus.v(99)
-Info (10041): Inferred latch for "r15in[28]" at Bus.v(99)
-Info (10041): Inferred latch for "r15in[29]" at Bus.v(99)
-Info (10041): Inferred latch for "r15in[30]" at Bus.v(99)
-Info (10041): Inferred latch for "r15in[31]" at Bus.v(99)
-Info (10041): Inferred latch for "r14in[0]" at Bus.v(98)
-Info (10041): Inferred latch for "r14in[1]" at Bus.v(98)
-Info (10041): Inferred latch for "r14in[2]" at Bus.v(98)
-Info (10041): Inferred latch for "r14in[3]" at Bus.v(98)
-Info (10041): Inferred latch for "r14in[4]" at Bus.v(98)
-Info (10041): Inferred latch for "r14in[5]" at Bus.v(98)
-Info (10041): Inferred latch for "r14in[6]" at Bus.v(98)
-Info (10041): Inferred latch for "r14in[7]" at Bus.v(98)
-Info (10041): Inferred latch for "r14in[8]" at Bus.v(98)
-Info (10041): Inferred latch for "r14in[9]" at Bus.v(98)
-Info (10041): Inferred latch for "r14in[10]" at Bus.v(98)
-Info (10041): Inferred latch for "r14in[11]" at Bus.v(98)
-Info (10041): Inferred latch for "r14in[12]" at Bus.v(98)
-Info (10041): Inferred latch for "r14in[13]" at Bus.v(98)
-Info (10041): Inferred latch for "r14in[14]" at Bus.v(98)
-Info (10041): Inferred latch for "r14in[15]" at Bus.v(98)
-Info (10041): Inferred latch for "r14in[16]" at Bus.v(98)
-Info (10041): Inferred latch for "r14in[17]" at Bus.v(98)
-Info (10041): Inferred latch for "r14in[18]" at Bus.v(98)
-Info (10041): Inferred latch for "r14in[19]" at Bus.v(98)
-Info (10041): Inferred latch for "r14in[20]" at Bus.v(98)
-Info (10041): Inferred latch for "r14in[21]" at Bus.v(98)
-Info (10041): Inferred latch for "r14in[22]" at Bus.v(98)
-Info (10041): Inferred latch for "r14in[23]" at Bus.v(98)
-Info (10041): Inferred latch for "r14in[24]" at Bus.v(98)
-Info (10041): Inferred latch for "r14in[25]" at Bus.v(98)
-Info (10041): Inferred latch for "r14in[26]" at Bus.v(98)
-Info (10041): Inferred latch for "r14in[27]" at Bus.v(98)
-Info (10041): Inferred latch for "r14in[28]" at Bus.v(98)
-Info (10041): Inferred latch for "r14in[29]" at Bus.v(98)
-Info (10041): Inferred latch for "r14in[30]" at Bus.v(98)
-Info (10041): Inferred latch for "r14in[31]" at Bus.v(98)
-Info (10041): Inferred latch for "r13in[0]" at Bus.v(97)
-Info (10041): Inferred latch for "r13in[1]" at Bus.v(97)
-Info (10041): Inferred latch for "r13in[2]" at Bus.v(97)
-Info (10041): Inferred latch for "r13in[3]" at Bus.v(97)
-Info (10041): Inferred latch for "r13in[4]" at Bus.v(97)
-Info (10041): Inferred latch for "r13in[5]" at Bus.v(97)
-Info (10041): Inferred latch for "r13in[6]" at Bus.v(97)
-Info (10041): Inferred latch for "r13in[7]" at Bus.v(97)
-Info (10041): Inferred latch for "r13in[8]" at Bus.v(97)
-Info (10041): Inferred latch for "r13in[9]" at Bus.v(97)
-Info (10041): Inferred latch for "r13in[10]" at Bus.v(97)
-Info (10041): Inferred latch for "r13in[11]" at Bus.v(97)
-Info (10041): Inferred latch for "r13in[12]" at Bus.v(97)
-Info (10041): Inferred latch for "r13in[13]" at Bus.v(97)
-Info (10041): Inferred latch for "r13in[14]" at Bus.v(97)
-Info (10041): Inferred latch for "r13in[15]" at Bus.v(97)
-Info (10041): Inferred latch for "r13in[16]" at Bus.v(97)
-Info (10041): Inferred latch for "r13in[17]" at Bus.v(97)
-Info (10041): Inferred latch for "r13in[18]" at Bus.v(97)
-Info (10041): Inferred latch for "r13in[19]" at Bus.v(97)
-Info (10041): Inferred latch for "r13in[20]" at Bus.v(97)
-Info (10041): Inferred latch for "r13in[21]" at Bus.v(97)
-Info (10041): Inferred latch for "r13in[22]" at Bus.v(97)
-Info (10041): Inferred latch for "r13in[23]" at Bus.v(97)
-Info (10041): Inferred latch for "r13in[24]" at Bus.v(97)
-Info (10041): Inferred latch for "r13in[25]" at Bus.v(97)
-Info (10041): Inferred latch for "r13in[26]" at Bus.v(97)
-Info (10041): Inferred latch for "r13in[27]" at Bus.v(97)
-Info (10041): Inferred latch for "r13in[28]" at Bus.v(97)
-Info (10041): Inferred latch for "r13in[29]" at Bus.v(97)
-Info (10041): Inferred latch for "r13in[30]" at Bus.v(97)
-Info (10041): Inferred latch for "r13in[31]" at Bus.v(97)
-Info (10041): Inferred latch for "r12in[0]" at Bus.v(96)
-Info (10041): Inferred latch for "r12in[1]" at Bus.v(96)
-Info (10041): Inferred latch for "r12in[2]" at Bus.v(96)
-Info (10041): Inferred latch for "r12in[3]" at Bus.v(96)
-Info (10041): Inferred latch for "r12in[4]" at Bus.v(96)
-Info (10041): Inferred latch for "r12in[5]" at Bus.v(96)
-Info (10041): Inferred latch for "r12in[6]" at Bus.v(96)
-Info (10041): Inferred latch for "r12in[7]" at Bus.v(96)
-Info (10041): Inferred latch for "r12in[8]" at Bus.v(96)
-Info (10041): Inferred latch for "r12in[9]" at Bus.v(96)
-Info (10041): Inferred latch for "r12in[10]" at Bus.v(96)
-Info (10041): Inferred latch for "r12in[11]" at Bus.v(96)
-Info (10041): Inferred latch for "r12in[12]" at Bus.v(96)
-Info (10041): Inferred latch for "r12in[13]" at Bus.v(96)
-Info (10041): Inferred latch for "r12in[14]" at Bus.v(96)
-Info (10041): Inferred latch for "r12in[15]" at Bus.v(96)
-Info (10041): Inferred latch for "r12in[16]" at Bus.v(96)
-Info (10041): Inferred latch for "r12in[17]" at Bus.v(96)
-Info (10041): Inferred latch for "r12in[18]" at Bus.v(96)
-Info (10041): Inferred latch for "r12in[19]" at Bus.v(96)
-Info (10041): Inferred latch for "r12in[20]" at Bus.v(96)
-Info (10041): Inferred latch for "r12in[21]" at Bus.v(96)
-Info (10041): Inferred latch for "r12in[22]" at Bus.v(96)
-Info (10041): Inferred latch for "r12in[23]" at Bus.v(96)
-Info (10041): Inferred latch for "r12in[24]" at Bus.v(96)
-Info (10041): Inferred latch for "r12in[25]" at Bus.v(96)
-Info (10041): Inferred latch for "r12in[26]" at Bus.v(96)
-Info (10041): Inferred latch for "r12in[27]" at Bus.v(96)
-Info (10041): Inferred latch for "r12in[28]" at Bus.v(96)
-Info (10041): Inferred latch for "r12in[29]" at Bus.v(96)
-Info (10041): Inferred latch for "r12in[30]" at Bus.v(96)
-Info (10041): Inferred latch for "r12in[31]" at Bus.v(96)
-Info (10041): Inferred latch for "r11in[0]" at Bus.v(95)
-Info (10041): Inferred latch for "r11in[1]" at Bus.v(95)
-Info (10041): Inferred latch for "r11in[2]" at Bus.v(95)
-Info (10041): Inferred latch for "r11in[3]" at Bus.v(95)
-Info (10041): Inferred latch for "r11in[4]" at Bus.v(95)
-Info (10041): Inferred latch for "r11in[5]" at Bus.v(95)
-Info (10041): Inferred latch for "r11in[6]" at Bus.v(95)
-Info (10041): Inferred latch for "r11in[7]" at Bus.v(95)
-Info (10041): Inferred latch for "r11in[8]" at Bus.v(95)
-Info (10041): Inferred latch for "r11in[9]" at Bus.v(95)
-Info (10041): Inferred latch for "r11in[10]" at Bus.v(95)
-Info (10041): Inferred latch for "r11in[11]" at Bus.v(95)
-Info (10041): Inferred latch for "r11in[12]" at Bus.v(95)
-Info (10041): Inferred latch for "r11in[13]" at Bus.v(95)
-Info (10041): Inferred latch for "r11in[14]" at Bus.v(95)
-Info (10041): Inferred latch for "r11in[15]" at Bus.v(95)
-Info (10041): Inferred latch for "r11in[16]" at Bus.v(95)
-Info (10041): Inferred latch for "r11in[17]" at Bus.v(95)
-Info (10041): Inferred latch for "r11in[18]" at Bus.v(95)
-Info (10041): Inferred latch for "r11in[19]" at Bus.v(95)
-Info (10041): Inferred latch for "r11in[20]" at Bus.v(95)
-Info (10041): Inferred latch for "r11in[21]" at Bus.v(95)
-Info (10041): Inferred latch for "r11in[22]" at Bus.v(95)
-Info (10041): Inferred latch for "r11in[23]" at Bus.v(95)
-Info (10041): Inferred latch for "r11in[24]" at Bus.v(95)
-Info (10041): Inferred latch for "r11in[25]" at Bus.v(95)
-Info (10041): Inferred latch for "r11in[26]" at Bus.v(95)
-Info (10041): Inferred latch for "r11in[27]" at Bus.v(95)
-Info (10041): Inferred latch for "r11in[28]" at Bus.v(95)
-Info (10041): Inferred latch for "r11in[29]" at Bus.v(95)
-Info (10041): Inferred latch for "r11in[30]" at Bus.v(95)
-Info (10041): Inferred latch for "r11in[31]" at Bus.v(95)
-Info (10041): Inferred latch for "r10in[0]" at Bus.v(94)
-Info (10041): Inferred latch for "r10in[1]" at Bus.v(94)
-Info (10041): Inferred latch for "r10in[2]" at Bus.v(94)
-Info (10041): Inferred latch for "r10in[3]" at Bus.v(94)
-Info (10041): Inferred latch for "r10in[4]" at Bus.v(94)
-Info (10041): Inferred latch for "r10in[5]" at Bus.v(94)
-Info (10041): Inferred latch for "r10in[6]" at Bus.v(94)
-Info (10041): Inferred latch for "r10in[7]" at Bus.v(94)
-Info (10041): Inferred latch for "r10in[8]" at Bus.v(94)
-Info (10041): Inferred latch for "r10in[9]" at Bus.v(94)
-Info (10041): Inferred latch for "r10in[10]" at Bus.v(94)
-Info (10041): Inferred latch for "r10in[11]" at Bus.v(94)
-Info (10041): Inferred latch for "r10in[12]" at Bus.v(94)
-Info (10041): Inferred latch for "r10in[13]" at Bus.v(94)
-Info (10041): Inferred latch for "r10in[14]" at Bus.v(94)
-Info (10041): Inferred latch for "r10in[15]" at Bus.v(94)
-Info (10041): Inferred latch for "r10in[16]" at Bus.v(94)
-Info (10041): Inferred latch for "r10in[17]" at Bus.v(94)
-Info (10041): Inferred latch for "r10in[18]" at Bus.v(94)
-Info (10041): Inferred latch for "r10in[19]" at Bus.v(94)
-Info (10041): Inferred latch for "r10in[20]" at Bus.v(94)
-Info (10041): Inferred latch for "r10in[21]" at Bus.v(94)
-Info (10041): Inferred latch for "r10in[22]" at Bus.v(94)
-Info (10041): Inferred latch for "r10in[23]" at Bus.v(94)
-Info (10041): Inferred latch for "r10in[24]" at Bus.v(94)
-Info (10041): Inferred latch for "r10in[25]" at Bus.v(94)
-Info (10041): Inferred latch for "r10in[26]" at Bus.v(94)
-Info (10041): Inferred latch for "r10in[27]" at Bus.v(94)
-Info (10041): Inferred latch for "r10in[28]" at Bus.v(94)
-Info (10041): Inferred latch for "r10in[29]" at Bus.v(94)
-Info (10041): Inferred latch for "r10in[30]" at Bus.v(94)
-Info (10041): Inferred latch for "r10in[31]" at Bus.v(94)
-Info (10041): Inferred latch for "r9in[0]" at Bus.v(93)
-Info (10041): Inferred latch for "r9in[1]" at Bus.v(93)
-Info (10041): Inferred latch for "r9in[2]" at Bus.v(93)
-Info (10041): Inferred latch for "r9in[3]" at Bus.v(93)
-Info (10041): Inferred latch for "r9in[4]" at Bus.v(93)
-Info (10041): Inferred latch for "r9in[5]" at Bus.v(93)
-Info (10041): Inferred latch for "r9in[6]" at Bus.v(93)
-Info (10041): Inferred latch for "r9in[7]" at Bus.v(93)
-Info (10041): Inferred latch for "r9in[8]" at Bus.v(93)
-Info (10041): Inferred latch for "r9in[9]" at Bus.v(93)
-Info (10041): Inferred latch for "r9in[10]" at Bus.v(93)
-Info (10041): Inferred latch for "r9in[11]" at Bus.v(93)
-Info (10041): Inferred latch for "r9in[12]" at Bus.v(93)
-Info (10041): Inferred latch for "r9in[13]" at Bus.v(93)
-Info (10041): Inferred latch for "r9in[14]" at Bus.v(93)
-Info (10041): Inferred latch for "r9in[15]" at Bus.v(93)
-Info (10041): Inferred latch for "r9in[16]" at Bus.v(93)
-Info (10041): Inferred latch for "r9in[17]" at Bus.v(93)
-Info (10041): Inferred latch for "r9in[18]" at Bus.v(93)
-Info (10041): Inferred latch for "r9in[19]" at Bus.v(93)
-Info (10041): Inferred latch for "r9in[20]" at Bus.v(93)
-Info (10041): Inferred latch for "r9in[21]" at Bus.v(93)
-Info (10041): Inferred latch for "r9in[22]" at Bus.v(93)
-Info (10041): Inferred latch for "r9in[23]" at Bus.v(93)
-Info (10041): Inferred latch for "r9in[24]" at Bus.v(93)
-Info (10041): Inferred latch for "r9in[25]" at Bus.v(93)
-Info (10041): Inferred latch for "r9in[26]" at Bus.v(93)
-Info (10041): Inferred latch for "r9in[27]" at Bus.v(93)
-Info (10041): Inferred latch for "r9in[28]" at Bus.v(93)
-Info (10041): Inferred latch for "r9in[29]" at Bus.v(93)
-Info (10041): Inferred latch for "r9in[30]" at Bus.v(93)
-Info (10041): Inferred latch for "r9in[31]" at Bus.v(93)
-Info (10041): Inferred latch for "r8in[0]" at Bus.v(92)
-Info (10041): Inferred latch for "r8in[1]" at Bus.v(92)
-Info (10041): Inferred latch for "r8in[2]" at Bus.v(92)
-Info (10041): Inferred latch for "r8in[3]" at Bus.v(92)
-Info (10041): Inferred latch for "r8in[4]" at Bus.v(92)
-Info (10041): Inferred latch for "r8in[5]" at Bus.v(92)
-Info (10041): Inferred latch for "r8in[6]" at Bus.v(92)
-Info (10041): Inferred latch for "r8in[7]" at Bus.v(92)
-Info (10041): Inferred latch for "r8in[8]" at Bus.v(92)
-Info (10041): Inferred latch for "r8in[9]" at Bus.v(92)
-Info (10041): Inferred latch for "r8in[10]" at Bus.v(92)
-Info (10041): Inferred latch for "r8in[11]" at Bus.v(92)
-Info (10041): Inferred latch for "r8in[12]" at Bus.v(92)
-Info (10041): Inferred latch for "r8in[13]" at Bus.v(92)
-Info (10041): Inferred latch for "r8in[14]" at Bus.v(92)
-Info (10041): Inferred latch for "r8in[15]" at Bus.v(92)
-Info (10041): Inferred latch for "r8in[16]" at Bus.v(92)
-Info (10041): Inferred latch for "r8in[17]" at Bus.v(92)
-Info (10041): Inferred latch for "r8in[18]" at Bus.v(92)
-Info (10041): Inferred latch for "r8in[19]" at Bus.v(92)
-Info (10041): Inferred latch for "r8in[20]" at Bus.v(92)
-Info (10041): Inferred latch for "r8in[21]" at Bus.v(92)
-Info (10041): Inferred latch for "r8in[22]" at Bus.v(92)
-Info (10041): Inferred latch for "r8in[23]" at Bus.v(92)
-Info (10041): Inferred latch for "r8in[24]" at Bus.v(92)
-Info (10041): Inferred latch for "r8in[25]" at Bus.v(92)
-Info (10041): Inferred latch for "r8in[26]" at Bus.v(92)
-Info (10041): Inferred latch for "r8in[27]" at Bus.v(92)
-Info (10041): Inferred latch for "r8in[28]" at Bus.v(92)
-Info (10041): Inferred latch for "r8in[29]" at Bus.v(92)
-Info (10041): Inferred latch for "r8in[30]" at Bus.v(92)
-Info (10041): Inferred latch for "r8in[31]" at Bus.v(92)
-Info (10041): Inferred latch for "r7in[0]" at Bus.v(91)
-Info (10041): Inferred latch for "r7in[1]" at Bus.v(91)
-Info (10041): Inferred latch for "r7in[2]" at Bus.v(91)
-Info (10041): Inferred latch for "r7in[3]" at Bus.v(91)
-Info (10041): Inferred latch for "r7in[4]" at Bus.v(91)
-Info (10041): Inferred latch for "r7in[5]" at Bus.v(91)
-Info (10041): Inferred latch for "r7in[6]" at Bus.v(91)
-Info (10041): Inferred latch for "r7in[7]" at Bus.v(91)
-Info (10041): Inferred latch for "r7in[8]" at Bus.v(91)
-Info (10041): Inferred latch for "r7in[9]" at Bus.v(91)
-Info (10041): Inferred latch for "r7in[10]" at Bus.v(91)
-Info (10041): Inferred latch for "r7in[11]" at Bus.v(91)
-Info (10041): Inferred latch for "r7in[12]" at Bus.v(91)
-Info (10041): Inferred latch for "r7in[13]" at Bus.v(91)
-Info (10041): Inferred latch for "r7in[14]" at Bus.v(91)
-Info (10041): Inferred latch for "r7in[15]" at Bus.v(91)
-Info (10041): Inferred latch for "r7in[16]" at Bus.v(91)
-Info (10041): Inferred latch for "r7in[17]" at Bus.v(91)
-Info (10041): Inferred latch for "r7in[18]" at Bus.v(91)
-Info (10041): Inferred latch for "r7in[19]" at Bus.v(91)
-Info (10041): Inferred latch for "r7in[20]" at Bus.v(91)
-Info (10041): Inferred latch for "r7in[21]" at Bus.v(91)
-Info (10041): Inferred latch for "r7in[22]" at Bus.v(91)
-Info (10041): Inferred latch for "r7in[23]" at Bus.v(91)
-Info (10041): Inferred latch for "r7in[24]" at Bus.v(91)
-Info (10041): Inferred latch for "r7in[25]" at Bus.v(91)
-Info (10041): Inferred latch for "r7in[26]" at Bus.v(91)
-Info (10041): Inferred latch for "r7in[27]" at Bus.v(91)
-Info (10041): Inferred latch for "r7in[28]" at Bus.v(91)
-Info (10041): Inferred latch for "r7in[29]" at Bus.v(91)
-Info (10041): Inferred latch for "r7in[30]" at Bus.v(91)
-Info (10041): Inferred latch for "r7in[31]" at Bus.v(91)
-Info (10041): Inferred latch for "r6in[0]" at Bus.v(90)
-Info (10041): Inferred latch for "r6in[1]" at Bus.v(90)
-Info (10041): Inferred latch for "r6in[2]" at Bus.v(90)
-Info (10041): Inferred latch for "r6in[3]" at Bus.v(90)
-Info (10041): Inferred latch for "r6in[4]" at Bus.v(90)
-Info (10041): Inferred latch for "r6in[5]" at Bus.v(90)
-Info (10041): Inferred latch for "r6in[6]" at Bus.v(90)
-Info (10041): Inferred latch for "r6in[7]" at Bus.v(90)
-Info (10041): Inferred latch for "r6in[8]" at Bus.v(90)
-Info (10041): Inferred latch for "r6in[9]" at Bus.v(90)
-Info (10041): Inferred latch for "r6in[10]" at Bus.v(90)
-Info (10041): Inferred latch for "r6in[11]" at Bus.v(90)
-Info (10041): Inferred latch for "r6in[12]" at Bus.v(90)
-Info (10041): Inferred latch for "r6in[13]" at Bus.v(90)
-Info (10041): Inferred latch for "r6in[14]" at Bus.v(90)
-Info (10041): Inferred latch for "r6in[15]" at Bus.v(90)
-Info (10041): Inferred latch for "r6in[16]" at Bus.v(90)
-Info (10041): Inferred latch for "r6in[17]" at Bus.v(90)
-Info (10041): Inferred latch for "r6in[18]" at Bus.v(90)
-Info (10041): Inferred latch for "r6in[19]" at Bus.v(90)
-Info (10041): Inferred latch for "r6in[20]" at Bus.v(90)
-Info (10041): Inferred latch for "r6in[21]" at Bus.v(90)
-Info (10041): Inferred latch for "r6in[22]" at Bus.v(90)
-Info (10041): Inferred latch for "r6in[23]" at Bus.v(90)
-Info (10041): Inferred latch for "r6in[24]" at Bus.v(90)
-Info (10041): Inferred latch for "r6in[25]" at Bus.v(90)
-Info (10041): Inferred latch for "r6in[26]" at Bus.v(90)
-Info (10041): Inferred latch for "r6in[27]" at Bus.v(90)
-Info (10041): Inferred latch for "r6in[28]" at Bus.v(90)
-Info (10041): Inferred latch for "r6in[29]" at Bus.v(90)
-Info (10041): Inferred latch for "r6in[30]" at Bus.v(90)
-Info (10041): Inferred latch for "r6in[31]" at Bus.v(90)
-Info (10041): Inferred latch for "r5in[0]" at Bus.v(89)
-Info (10041): Inferred latch for "r5in[1]" at Bus.v(89)
-Info (10041): Inferred latch for "r5in[2]" at Bus.v(89)
-Info (10041): Inferred latch for "r5in[3]" at Bus.v(89)
-Info (10041): Inferred latch for "r5in[4]" at Bus.v(89)
-Info (10041): Inferred latch for "r5in[5]" at Bus.v(89)
-Info (10041): Inferred latch for "r5in[6]" at Bus.v(89)
-Info (10041): Inferred latch for "r5in[7]" at Bus.v(89)
-Info (10041): Inferred latch for "r5in[8]" at Bus.v(89)
-Info (10041): Inferred latch for "r5in[9]" at Bus.v(89)
-Info (10041): Inferred latch for "r5in[10]" at Bus.v(89)
-Info (10041): Inferred latch for "r5in[11]" at Bus.v(89)
-Info (10041): Inferred latch for "r5in[12]" at Bus.v(89)
-Info (10041): Inferred latch for "r5in[13]" at Bus.v(89)
-Info (10041): Inferred latch for "r5in[14]" at Bus.v(89)
-Info (10041): Inferred latch for "r5in[15]" at Bus.v(89)
-Info (10041): Inferred latch for "r5in[16]" at Bus.v(89)
-Info (10041): Inferred latch for "r5in[17]" at Bus.v(89)
-Info (10041): Inferred latch for "r5in[18]" at Bus.v(89)
-Info (10041): Inferred latch for "r5in[19]" at Bus.v(89)
-Info (10041): Inferred latch for "r5in[20]" at Bus.v(89)
-Info (10041): Inferred latch for "r5in[21]" at Bus.v(89)
-Info (10041): Inferred latch for "r5in[22]" at Bus.v(89)
-Info (10041): Inferred latch for "r5in[23]" at Bus.v(89)
-Info (10041): Inferred latch for "r5in[24]" at Bus.v(89)
-Info (10041): Inferred latch for "r5in[25]" at Bus.v(89)
-Info (10041): Inferred latch for "r5in[26]" at Bus.v(89)
-Info (10041): Inferred latch for "r5in[27]" at Bus.v(89)
-Info (10041): Inferred latch for "r5in[28]" at Bus.v(89)
-Info (10041): Inferred latch for "r5in[29]" at Bus.v(89)
-Info (10041): Inferred latch for "r5in[30]" at Bus.v(89)
-Info (10041): Inferred latch for "r5in[31]" at Bus.v(89)
-Info (10041): Inferred latch for "r4in[0]" at Bus.v(88)
-Info (10041): Inferred latch for "r4in[1]" at Bus.v(88)
-Info (10041): Inferred latch for "r4in[2]" at Bus.v(88)
-Info (10041): Inferred latch for "r4in[3]" at Bus.v(88)
-Info (10041): Inferred latch for "r4in[4]" at Bus.v(88)
-Info (10041): Inferred latch for "r4in[5]" at Bus.v(88)
-Info (10041): Inferred latch for "r4in[6]" at Bus.v(88)
-Info (10041): Inferred latch for "r4in[7]" at Bus.v(88)
-Info (10041): Inferred latch for "r4in[8]" at Bus.v(88)
-Info (10041): Inferred latch for "r4in[9]" at Bus.v(88)
-Info (10041): Inferred latch for "r4in[10]" at Bus.v(88)
-Info (10041): Inferred latch for "r4in[11]" at Bus.v(88)
-Info (10041): Inferred latch for "r4in[12]" at Bus.v(88)
-Info (10041): Inferred latch for "r4in[13]" at Bus.v(88)
-Info (10041): Inferred latch for "r4in[14]" at Bus.v(88)
-Info (10041): Inferred latch for "r4in[15]" at Bus.v(88)
-Info (10041): Inferred latch for "r4in[16]" at Bus.v(88)
-Info (10041): Inferred latch for "r4in[17]" at Bus.v(88)
-Info (10041): Inferred latch for "r4in[18]" at Bus.v(88)
-Info (10041): Inferred latch for "r4in[19]" at Bus.v(88)
-Info (10041): Inferred latch for "r4in[20]" at Bus.v(88)
-Info (10041): Inferred latch for "r4in[21]" at Bus.v(88)
-Info (10041): Inferred latch for "r4in[22]" at Bus.v(88)
-Info (10041): Inferred latch for "r4in[23]" at Bus.v(88)
-Info (10041): Inferred latch for "r4in[24]" at Bus.v(88)
-Info (10041): Inferred latch for "r4in[25]" at Bus.v(88)
-Info (10041): Inferred latch for "r4in[26]" at Bus.v(88)
-Info (10041): Inferred latch for "r4in[27]" at Bus.v(88)
-Info (10041): Inferred latch for "r4in[28]" at Bus.v(88)
-Info (10041): Inferred latch for "r4in[29]" at Bus.v(88)
-Info (10041): Inferred latch for "r4in[30]" at Bus.v(88)
-Info (10041): Inferred latch for "r4in[31]" at Bus.v(88)
-Info (10041): Inferred latch for "r3in[0]" at Bus.v(87)
-Info (10041): Inferred latch for "r3in[1]" at Bus.v(87)
-Info (10041): Inferred latch for "r3in[2]" at Bus.v(87)
-Info (10041): Inferred latch for "r3in[3]" at Bus.v(87)
-Info (10041): Inferred latch for "r3in[4]" at Bus.v(87)
-Info (10041): Inferred latch for "r3in[5]" at Bus.v(87)
-Info (10041): Inferred latch for "r3in[6]" at Bus.v(87)
-Info (10041): Inferred latch for "r3in[7]" at Bus.v(87)
-Info (10041): Inferred latch for "r3in[8]" at Bus.v(87)
-Info (10041): Inferred latch for "r3in[9]" at Bus.v(87)
-Info (10041): Inferred latch for "r3in[10]" at Bus.v(87)
-Info (10041): Inferred latch for "r3in[11]" at Bus.v(87)
-Info (10041): Inferred latch for "r3in[12]" at Bus.v(87)
-Info (10041): Inferred latch for "r3in[13]" at Bus.v(87)
-Info (10041): Inferred latch for "r3in[14]" at Bus.v(87)
-Info (10041): Inferred latch for "r3in[15]" at Bus.v(87)
-Info (10041): Inferred latch for "r3in[16]" at Bus.v(87)
-Info (10041): Inferred latch for "r3in[17]" at Bus.v(87)
-Info (10041): Inferred latch for "r3in[18]" at Bus.v(87)
-Info (10041): Inferred latch for "r3in[19]" at Bus.v(87)
-Info (10041): Inferred latch for "r3in[20]" at Bus.v(87)
-Info (10041): Inferred latch for "r3in[21]" at Bus.v(87)
-Info (10041): Inferred latch for "r3in[22]" at Bus.v(87)
-Info (10041): Inferred latch for "r3in[23]" at Bus.v(87)
-Info (10041): Inferred latch for "r3in[24]" at Bus.v(87)
-Info (10041): Inferred latch for "r3in[25]" at Bus.v(87)
-Info (10041): Inferred latch for "r3in[26]" at Bus.v(87)
-Info (10041): Inferred latch for "r3in[27]" at Bus.v(87)
-Info (10041): Inferred latch for "r3in[28]" at Bus.v(87)
-Info (10041): Inferred latch for "r3in[29]" at Bus.v(87)
-Info (10041): Inferred latch for "r3in[30]" at Bus.v(87)
-Info (10041): Inferred latch for "r3in[31]" at Bus.v(87)
-Info (10041): Inferred latch for "r2in[0]" at Bus.v(86)
-Info (10041): Inferred latch for "r2in[1]" at Bus.v(86)
-Info (10041): Inferred latch for "r2in[2]" at Bus.v(86)
-Info (10041): Inferred latch for "r2in[3]" at Bus.v(86)
-Info (10041): Inferred latch for "r2in[4]" at Bus.v(86)
-Info (10041): Inferred latch for "r2in[5]" at Bus.v(86)
-Info (10041): Inferred latch for "r2in[6]" at Bus.v(86)
-Info (10041): Inferred latch for "r2in[7]" at Bus.v(86)
-Info (10041): Inferred latch for "r2in[8]" at Bus.v(86)
-Info (10041): Inferred latch for "r2in[9]" at Bus.v(86)
-Info (10041): Inferred latch for "r2in[10]" at Bus.v(86)
-Info (10041): Inferred latch for "r2in[11]" at Bus.v(86)
-Info (10041): Inferred latch for "r2in[12]" at Bus.v(86)
-Info (10041): Inferred latch for "r2in[13]" at Bus.v(86)
-Info (10041): Inferred latch for "r2in[14]" at Bus.v(86)
-Info (10041): Inferred latch for "r2in[15]" at Bus.v(86)
-Info (10041): Inferred latch for "r2in[16]" at Bus.v(86)
-Info (10041): Inferred latch for "r2in[17]" at Bus.v(86)
-Info (10041): Inferred latch for "r2in[18]" at Bus.v(86)
-Info (10041): Inferred latch for "r2in[19]" at Bus.v(86)
-Info (10041): Inferred latch for "r2in[20]" at Bus.v(86)
-Info (10041): Inferred latch for "r2in[21]" at Bus.v(86)
-Info (10041): Inferred latch for "r2in[22]" at Bus.v(86)
-Info (10041): Inferred latch for "r2in[23]" at Bus.v(86)
-Info (10041): Inferred latch for "r2in[24]" at Bus.v(86)
-Info (10041): Inferred latch for "r2in[25]" at Bus.v(86)
-Info (10041): Inferred latch for "r2in[26]" at Bus.v(86)
-Info (10041): Inferred latch for "r2in[27]" at Bus.v(86)
-Info (10041): Inferred latch for "r2in[28]" at Bus.v(86)
-Info (10041): Inferred latch for "r2in[29]" at Bus.v(86)
-Info (10041): Inferred latch for "r2in[30]" at Bus.v(86)
-Info (10041): Inferred latch for "r2in[31]" at Bus.v(86)
-Info (10041): Inferred latch for "r1in[0]" at Bus.v(85)
-Info (10041): Inferred latch for "r1in[1]" at Bus.v(85)
-Info (10041): Inferred latch for "r1in[2]" at Bus.v(85)
-Info (10041): Inferred latch for "r1in[3]" at Bus.v(85)
-Info (10041): Inferred latch for "r1in[4]" at Bus.v(85)
-Info (10041): Inferred latch for "r1in[5]" at Bus.v(85)
-Info (10041): Inferred latch for "r1in[6]" at Bus.v(85)
-Info (10041): Inferred latch for "r1in[7]" at Bus.v(85)
-Info (10041): Inferred latch for "r1in[8]" at Bus.v(85)
-Info (10041): Inferred latch for "r1in[9]" at Bus.v(85)
-Info (10041): Inferred latch for "r1in[10]" at Bus.v(85)
-Info (10041): Inferred latch for "r1in[11]" at Bus.v(85)
-Info (10041): Inferred latch for "r1in[12]" at Bus.v(85)
-Info (10041): Inferred latch for "r1in[13]" at Bus.v(85)
-Info (10041): Inferred latch for "r1in[14]" at Bus.v(85)
-Info (10041): Inferred latch for "r1in[15]" at Bus.v(85)
-Info (10041): Inferred latch for "r1in[16]" at Bus.v(85)
-Info (10041): Inferred latch for "r1in[17]" at Bus.v(85)
-Info (10041): Inferred latch for "r1in[18]" at Bus.v(85)
-Info (10041): Inferred latch for "r1in[19]" at Bus.v(85)
-Info (10041): Inferred latch for "r1in[20]" at Bus.v(85)
-Info (10041): Inferred latch for "r1in[21]" at Bus.v(85)
-Info (10041): Inferred latch for "r1in[22]" at Bus.v(85)
-Info (10041): Inferred latch for "r1in[23]" at Bus.v(85)
-Info (10041): Inferred latch for "r1in[24]" at Bus.v(85)
-Info (10041): Inferred latch for "r1in[25]" at Bus.v(85)
-Info (10041): Inferred latch for "r1in[26]" at Bus.v(85)
-Info (10041): Inferred latch for "r1in[27]" at Bus.v(85)
-Info (10041): Inferred latch for "r1in[28]" at Bus.v(85)
-Info (10041): Inferred latch for "r1in[29]" at Bus.v(85)
-Info (10041): Inferred latch for "r1in[30]" at Bus.v(85)
-Info (10041): Inferred latch for "r1in[31]" at Bus.v(85)
-Info (10041): Inferred latch for "r0in[0]" at Bus.v(84)
-Info (10041): Inferred latch for "r0in[1]" at Bus.v(84)
-Info (10041): Inferred latch for "r0in[2]" at Bus.v(84)
-Info (10041): Inferred latch for "r0in[3]" at Bus.v(84)
-Info (10041): Inferred latch for "r0in[4]" at Bus.v(84)
-Info (10041): Inferred latch for "r0in[5]" at Bus.v(84)
-Info (10041): Inferred latch for "r0in[6]" at Bus.v(84)
-Info (10041): Inferred latch for "r0in[7]" at Bus.v(84)
-Info (10041): Inferred latch for "r0in[8]" at Bus.v(84)
-Info (10041): Inferred latch for "r0in[9]" at Bus.v(84)
-Info (10041): Inferred latch for "r0in[10]" at Bus.v(84)
-Info (10041): Inferred latch for "r0in[11]" at Bus.v(84)
-Info (10041): Inferred latch for "r0in[12]" at Bus.v(84)
-Info (10041): Inferred latch for "r0in[13]" at Bus.v(84)
-Info (10041): Inferred latch for "r0in[14]" at Bus.v(84)
-Info (10041): Inferred latch for "r0in[15]" at Bus.v(84)
-Info (10041): Inferred latch for "r0in[16]" at Bus.v(84)
-Info (10041): Inferred latch for "r0in[17]" at Bus.v(84)
-Info (10041): Inferred latch for "r0in[18]" at Bus.v(84)
-Info (10041): Inferred latch for "r0in[19]" at Bus.v(84)
-Info (10041): Inferred latch for "r0in[20]" at Bus.v(84)
-Info (10041): Inferred latch for "r0in[21]" at Bus.v(84)
-Info (10041): Inferred latch for "r0in[22]" at Bus.v(84)
-Info (10041): Inferred latch for "r0in[23]" at Bus.v(84)
-Info (10041): Inferred latch for "r0in[24]" at Bus.v(84)
-Info (10041): Inferred latch for "r0in[25]" at Bus.v(84)
-Info (10041): Inferred latch for "r0in[26]" at Bus.v(84)
-Info (10041): Inferred latch for "r0in[27]" at Bus.v(84)
-Info (10041): Inferred latch for "r0in[28]" at Bus.v(84)
-Info (10041): Inferred latch for "r0in[29]" at Bus.v(84)
-Info (10041): Inferred latch for "r0in[30]" at Bus.v(84)
-Info (10041): Inferred latch for "r0in[31]" at Bus.v(84)
+Info (10041): Inferred latch for "regB[0]" at Bus.v(83)
+Info (10041): Inferred latch for "regB[1]" at Bus.v(83)
+Info (10041): Inferred latch for "regB[2]" at Bus.v(83)
+Info (10041): Inferred latch for "regB[3]" at Bus.v(83)
+Info (10041): Inferred latch for "regB[4]" at Bus.v(83)
+Info (10041): Inferred latch for "regB[5]" at Bus.v(83)
+Info (10041): Inferred latch for "regB[6]" at Bus.v(83)
+Info (10041): Inferred latch for "regB[7]" at Bus.v(83)
+Info (10041): Inferred latch for "regB[8]" at Bus.v(83)
+Info (10041): Inferred latch for "regB[9]" at Bus.v(83)
+Info (10041): Inferred latch for "regB[10]" at Bus.v(83)
+Info (10041): Inferred latch for "regB[11]" at Bus.v(83)
+Info (10041): Inferred latch for "regB[12]" at Bus.v(83)
+Info (10041): Inferred latch for "regB[13]" at Bus.v(83)
+Info (10041): Inferred latch for "regB[14]" at Bus.v(83)
+Info (10041): Inferred latch for "regB[15]" at Bus.v(83)
+Info (10041): Inferred latch for "regB[16]" at Bus.v(83)
+Info (10041): Inferred latch for "regB[17]" at Bus.v(83)
+Info (10041): Inferred latch for "regB[18]" at Bus.v(83)
+Info (10041): Inferred latch for "regB[19]" at Bus.v(83)
+Info (10041): Inferred latch for "regB[20]" at Bus.v(83)
+Info (10041): Inferred latch for "regB[21]" at Bus.v(83)
+Info (10041): Inferred latch for "regB[22]" at Bus.v(83)
+Info (10041): Inferred latch for "regB[23]" at Bus.v(83)
+Info (10041): Inferred latch for "regB[24]" at Bus.v(83)
+Info (10041): Inferred latch for "regB[25]" at Bus.v(83)
+Info (10041): Inferred latch for "regB[26]" at Bus.v(83)
+Info (10041): Inferred latch for "regB[27]" at Bus.v(83)
+Info (10041): Inferred latch for "regB[28]" at Bus.v(83)
+Info (10041): Inferred latch for "regB[29]" at Bus.v(83)
+Info (10041): Inferred latch for "regB[30]" at Bus.v(83)
+Info (10041): Inferred latch for "regB[31]" at Bus.v(83)
+Info (10041): Inferred latch for "regA[0]" at Bus.v(79)
+Info (10041): Inferred latch for "regA[1]" at Bus.v(79)
+Info (10041): Inferred latch for "regA[2]" at Bus.v(79)
+Info (10041): Inferred latch for "regA[3]" at Bus.v(79)
+Info (10041): Inferred latch for "regA[4]" at Bus.v(79)
+Info (10041): Inferred latch for "regA[5]" at Bus.v(79)
+Info (10041): Inferred latch for "regA[6]" at Bus.v(79)
+Info (10041): Inferred latch for "regA[7]" at Bus.v(79)
+Info (10041): Inferred latch for "regA[8]" at Bus.v(79)
+Info (10041): Inferred latch for "regA[9]" at Bus.v(79)
+Info (10041): Inferred latch for "regA[10]" at Bus.v(79)
+Info (10041): Inferred latch for "regA[11]" at Bus.v(79)
+Info (10041): Inferred latch for "regA[12]" at Bus.v(79)
+Info (10041): Inferred latch for "regA[13]" at Bus.v(79)
+Info (10041): Inferred latch for "regA[14]" at Bus.v(79)
+Info (10041): Inferred latch for "regA[15]" at Bus.v(79)
+Info (10041): Inferred latch for "regA[16]" at Bus.v(79)
+Info (10041): Inferred latch for "regA[17]" at Bus.v(79)
+Info (10041): Inferred latch for "regA[18]" at Bus.v(79)
+Info (10041): Inferred latch for "regA[19]" at Bus.v(79)
+Info (10041): Inferred latch for "regA[20]" at Bus.v(79)
+Info (10041): Inferred latch for "regA[21]" at Bus.v(79)
+Info (10041): Inferred latch for "regA[22]" at Bus.v(79)
+Info (10041): Inferred latch for "regA[23]" at Bus.v(79)
+Info (10041): Inferred latch for "regA[24]" at Bus.v(79)
+Info (10041): Inferred latch for "regA[25]" at Bus.v(79)
+Info (10041): Inferred latch for "regA[26]" at Bus.v(79)
+Info (10041): Inferred latch for "regA[27]" at Bus.v(79)
+Info (10041): Inferred latch for "regA[28]" at Bus.v(79)
+Info (10041): Inferred latch for "regA[29]" at Bus.v(79)
+Info (10041): Inferred latch for "regA[30]" at Bus.v(79)
+Info (10041): Inferred latch for "regA[31]" at Bus.v(79)
 Info (12128): Elaborating entity "reg32bit" for hierarchy "reg32bit:PC"
 Info (12128): Elaborating entity "MDRunit" for hierarchy "MDRunit:mdr"
 Info (12128): Elaborating entity "ALU" for hierarchy "ALU:Logic"
@@ -1617,43 +655,9 @@ Info (10041): Inferred latch for "d[2]" at encoder.v(13)
 Info (10041): Inferred latch for "d[3]" at encoder.v(13)
 Info (10041): Inferred latch for "d[4]" at encoder.v(13)
 Info (12128): Elaborating entity "Multiplexer" for hierarchy "Multiplexer:Mux"
-Warning (10240): Verilog HDL Always Construct warning at Multiplexer.v(10): inferring latch(es) for variable "BusMuxOutTemp", which holds its previous value in one or more paths through the always construct
-Info (10041): Inferred latch for "BusMuxOutTemp[0]" at Multiplexer.v(33)
-Info (10041): Inferred latch for "BusMuxOutTemp[1]" at Multiplexer.v(33)
-Info (10041): Inferred latch for "BusMuxOutTemp[2]" at Multiplexer.v(33)
-Info (10041): Inferred latch for "BusMuxOutTemp[3]" at Multiplexer.v(33)
-Info (10041): Inferred latch for "BusMuxOutTemp[4]" at Multiplexer.v(33)
-Info (10041): Inferred latch for "BusMuxOutTemp[5]" at Multiplexer.v(33)
-Info (10041): Inferred latch for "BusMuxOutTemp[6]" at Multiplexer.v(33)
-Info (10041): Inferred latch for "BusMuxOutTemp[7]" at Multiplexer.v(33)
-Info (10041): Inferred latch for "BusMuxOutTemp[8]" at Multiplexer.v(33)
-Info (10041): Inferred latch for "BusMuxOutTemp[9]" at Multiplexer.v(33)
-Info (10041): Inferred latch for "BusMuxOutTemp[10]" at Multiplexer.v(33)
-Info (10041): Inferred latch for "BusMuxOutTemp[11]" at Multiplexer.v(33)
-Info (10041): Inferred latch for "BusMuxOutTemp[12]" at Multiplexer.v(33)
-Info (10041): Inferred latch for "BusMuxOutTemp[13]" at Multiplexer.v(33)
-Info (10041): Inferred latch for "BusMuxOutTemp[14]" at Multiplexer.v(33)
-Info (10041): Inferred latch for "BusMuxOutTemp[15]" at Multiplexer.v(33)
-Info (10041): Inferred latch for "BusMuxOutTemp[16]" at Multiplexer.v(33)
-Info (10041): Inferred latch for "BusMuxOutTemp[17]" at Multiplexer.v(33)
-Info (10041): Inferred latch for "BusMuxOutTemp[18]" at Multiplexer.v(33)
-Info (10041): Inferred latch for "BusMuxOutTemp[19]" at Multiplexer.v(33)
-Info (10041): Inferred latch for "BusMuxOutTemp[20]" at Multiplexer.v(33)
-Info (10041): Inferred latch for "BusMuxOutTemp[21]" at Multiplexer.v(33)
-Info (10041): Inferred latch for "BusMuxOutTemp[22]" at Multiplexer.v(33)
-Info (10041): Inferred latch for "BusMuxOutTemp[23]" at Multiplexer.v(33)
-Info (10041): Inferred latch for "BusMuxOutTemp[24]" at Multiplexer.v(33)
-Info (10041): Inferred latch for "BusMuxOutTemp[25]" at Multiplexer.v(33)
-Info (10041): Inferred latch for "BusMuxOutTemp[26]" at Multiplexer.v(33)
-Info (10041): Inferred latch for "BusMuxOutTemp[27]" at Multiplexer.v(33)
-Info (10041): Inferred latch for "BusMuxOutTemp[28]" at Multiplexer.v(33)
-Info (10041): Inferred latch for "BusMuxOutTemp[29]" at Multiplexer.v(33)
-Info (10041): Inferred latch for "BusMuxOutTemp[30]" at Multiplexer.v(33)
-Info (10041): Inferred latch for "BusMuxOutTemp[31]" at Multiplexer.v(33)
 Warning (12189): OpenCore Simulation-Only Evaluation feature is turned on for all cores in the design
     Warning (12191): Some cores in this design do not support the OpenCore Plus Hardware Evaluation feature
         Warning (12192): "8B10B Encoder-Decoder (6AF7_0079)" does not support the OpenCore Plus Hardware Evaluation feature
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "OutportOut[0]" is stuck at GND
     Warning (13410): Pin "OutportOut[1]" is stuck at GND
@@ -1693,7 +697,6 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
 Warning (21074): Design contains 85 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "clr"
     Warning (15610): No output dependent on input pin "clk"
-    Warning (15610): No output dependent on input pin "wren"
     Warning (15610): No output dependent on input pin "MDRRead"
     Warning (15610): No output dependent on input pin "ALUen"
     Warning (15610): No output dependent on input pin "R0out"
@@ -1742,6 +745,7 @@ Warning (21074): Design contains 85 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "ZLOins"
     Warning (15610): No output dependent on input pin "PCins"
     Warning (15610): No output dependent on input pin "MDRins"
+    Warning (15610): No output dependent on input pin "Inports"
     Warning (15610): No output dependent on input pin "Outports"
     Warning (15610): No output dependent on input pin "IRins"
     Warning (15610): No output dependent on input pin "MDRMDataIn[0]"
@@ -1779,9 +783,9 @@ Warning (21074): Design contains 85 input pin(s) that do not drive logic
 Info (21057): Implemented 117 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 85 input pins
     Info (21059): Implemented 32 output pins
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 158 warnings
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 129 warnings
     Info: Peak virtual memory: 4611 megabytes
-    Info: Processing ended: Mon Mar 13 19:45:21 2023
+    Info: Processing ended: Tue Mar 14 21:58:40 2023
     Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:04
 

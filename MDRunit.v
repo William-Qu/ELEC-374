@@ -7,7 +7,7 @@ module MDRunit(
 	reg [31:0]MuxOut;
 	
 	always @ (*) begin
-		MuxOut = read ? BusMuxOut : Mdatain;
+		MuxOut = read ? Mdatain : BusMuxOut;
 	end
 	
 	reg32bit MDR (MDRout, MuxOut, clr, clk, wren);
