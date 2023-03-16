@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Phase1
-Tue Mar 14 21:58:40 2023
+Thu Mar 16 15:56:05 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -55,7 +55,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                          ;
 +------------------------------------+--------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Mar 14 21:58:40 2023            ;
+; Analysis & Synthesis Status        ; Successful - Thu Mar 16 15:56:05 2023            ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                      ; Phase1                                           ;
 ; Top-level Entity Name              ; Bus                                              ;
@@ -164,46 +164,46 @@ applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-8         ;   0.0%      ;
+;     Processors 2-12        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                               ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                 ; Library ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------------------+---------+
-; Bus.v                            ; yes             ; User Verilog HDL File  ; C:/Users/789wi/Videos/ELEC-374/Bus.v                         ;         ;
-; CLA_8inputs_updated.v            ; yes             ; User Verilog HDL File  ; C:/Users/789wi/Videos/ELEC-374/CLA_8inputs_updated.v         ;         ;
-; mux2_1.v                         ; yes             ; User Verilog HDL File  ; C:/Users/789wi/Videos/ELEC-374/mux2_1.v                      ;         ;
-; twoCompliment.v                  ; yes             ; User Verilog HDL File  ; C:/Users/789wi/Videos/ELEC-374/twoCompliment.v               ;         ;
-; right_shift_combined.v           ; yes             ; User Verilog HDL File  ; C:/Users/789wi/Videos/ELEC-374/right_shift_combined.v        ;         ;
-; right_rotate.v                   ; yes             ; User Verilog HDL File  ; C:/Users/789wi/Videos/ELEC-374/right_rotate.v                ;         ;
-; reg32bit.v                       ; yes             ; User Verilog HDL File  ; C:/Users/789wi/Videos/ELEC-374/reg32bit.v                    ;         ;
-; P_G_block.v                      ; yes             ; User Verilog HDL File  ; C:/Users/789wi/Videos/ELEC-374/P_G_block.v                   ;         ;
-; NotOperation.v                   ; yes             ; User Verilog HDL File  ; C:/Users/789wi/Videos/ELEC-374/NotOperation.v                ;         ;
-; nonRestoringDivisionPosiNeg.v    ; yes             ; User Verilog HDL File  ; C:/Users/789wi/Videos/ELEC-374/nonRestoringDivisionPosiNeg.v ;         ;
-; Multiplexer.v                    ; yes             ; User Verilog HDL File  ; C:/Users/789wi/Videos/ELEC-374/Multiplexer.v                 ;         ;
-; MDRunit.v                        ; yes             ; User Verilog HDL File  ; C:/Users/789wi/Videos/ELEC-374/MDRunit.v                     ;         ;
-; logical_or.v                     ; yes             ; User Verilog HDL File  ; C:/Users/789wi/Videos/ELEC-374/logical_or.v                  ;         ;
-; logical_and.v                    ; yes             ; User Verilog HDL File  ; C:/Users/789wi/Videos/ELEC-374/logical_and.v                 ;         ;
-; left_shift.v                     ; yes             ; User Verilog HDL File  ; C:/Users/789wi/Videos/ELEC-374/left_shift.v                  ;         ;
-; left_rotate.v                    ; yes             ; User Verilog HDL File  ; C:/Users/789wi/Videos/ELEC-374/left_rotate.v                 ;         ;
-; Hierarchical_CLA.v               ; yes             ; User Verilog HDL File  ; C:/Users/789wi/Videos/ELEC-374/Hierarchical_CLA.v            ;         ;
-; encoder.v                        ; yes             ; User Verilog HDL File  ; C:/Users/789wi/Videos/ELEC-374/encoder.v                     ;         ;
-; dff_Q.v                          ; yes             ; User Verilog HDL File  ; C:/Users/789wi/Videos/ELEC-374/dff_Q.v                       ;         ;
-; boothMultiplier.v                ; yes             ; User Verilog HDL File  ; C:/Users/789wi/Videos/ELEC-374/boothMultiplier.v             ;         ;
-; ALU.v                            ; yes             ; User Verilog HDL File  ; C:/Users/789wi/Videos/ELEC-374/ALU.v                         ;         ;
-; ALURegisters.v                   ; yes             ; User Verilog HDL File  ; C:/Users/789wi/Videos/ELEC-374/ALURegisters.v                ;         ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                  ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                    ; Library ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------+---------+
+; Bus.v                            ; yes             ; User Verilog HDL File  ; C:/Users/emmaf/OneDrive/Documents/GitHub/ELEC-374/Bus.v                         ;         ;
+; CLA_8inputs_updated.v            ; yes             ; User Verilog HDL File  ; C:/Users/emmaf/OneDrive/Documents/GitHub/ELEC-374/CLA_8inputs_updated.v         ;         ;
+; mux2_1.v                         ; yes             ; User Verilog HDL File  ; C:/Users/emmaf/OneDrive/Documents/GitHub/ELEC-374/mux2_1.v                      ;         ;
+; twoCompliment.v                  ; yes             ; User Verilog HDL File  ; C:/Users/emmaf/OneDrive/Documents/GitHub/ELEC-374/twoCompliment.v               ;         ;
+; right_shift_combined.v           ; yes             ; User Verilog HDL File  ; C:/Users/emmaf/OneDrive/Documents/GitHub/ELEC-374/right_shift_combined.v        ;         ;
+; right_rotate.v                   ; yes             ; User Verilog HDL File  ; C:/Users/emmaf/OneDrive/Documents/GitHub/ELEC-374/right_rotate.v                ;         ;
+; reg32bit.v                       ; yes             ; User Verilog HDL File  ; C:/Users/emmaf/OneDrive/Documents/GitHub/ELEC-374/reg32bit.v                    ;         ;
+; P_G_block.v                      ; yes             ; User Verilog HDL File  ; C:/Users/emmaf/OneDrive/Documents/GitHub/ELEC-374/P_G_block.v                   ;         ;
+; NotOperation.v                   ; yes             ; User Verilog HDL File  ; C:/Users/emmaf/OneDrive/Documents/GitHub/ELEC-374/NotOperation.v                ;         ;
+; nonRestoringDivisionPosiNeg.v    ; yes             ; User Verilog HDL File  ; C:/Users/emmaf/OneDrive/Documents/GitHub/ELEC-374/nonRestoringDivisionPosiNeg.v ;         ;
+; Multiplexer.v                    ; yes             ; User Verilog HDL File  ; C:/Users/emmaf/OneDrive/Documents/GitHub/ELEC-374/Multiplexer.v                 ;         ;
+; MDRunit.v                        ; yes             ; User Verilog HDL File  ; C:/Users/emmaf/OneDrive/Documents/GitHub/ELEC-374/MDRunit.v                     ;         ;
+; logical_or.v                     ; yes             ; User Verilog HDL File  ; C:/Users/emmaf/OneDrive/Documents/GitHub/ELEC-374/logical_or.v                  ;         ;
+; logical_and.v                    ; yes             ; User Verilog HDL File  ; C:/Users/emmaf/OneDrive/Documents/GitHub/ELEC-374/logical_and.v                 ;         ;
+; left_shift.v                     ; yes             ; User Verilog HDL File  ; C:/Users/emmaf/OneDrive/Documents/GitHub/ELEC-374/left_shift.v                  ;         ;
+; left_rotate.v                    ; yes             ; User Verilog HDL File  ; C:/Users/emmaf/OneDrive/Documents/GitHub/ELEC-374/left_rotate.v                 ;         ;
+; Hierarchical_CLA.v               ; yes             ; User Verilog HDL File  ; C:/Users/emmaf/OneDrive/Documents/GitHub/ELEC-374/Hierarchical_CLA.v            ;         ;
+; encoder.v                        ; yes             ; User Verilog HDL File  ; C:/Users/emmaf/OneDrive/Documents/GitHub/ELEC-374/encoder.v                     ;         ;
+; dff_Q.v                          ; yes             ; User Verilog HDL File  ; C:/Users/emmaf/OneDrive/Documents/GitHub/ELEC-374/dff_Q.v                       ;         ;
+; boothMultiplier.v                ; yes             ; User Verilog HDL File  ; C:/Users/emmaf/OneDrive/Documents/GitHub/ELEC-374/boothMultiplier.v             ;         ;
+; ALU.v                            ; yes             ; User Verilog HDL File  ; C:/Users/emmaf/OneDrive/Documents/GitHub/ELEC-374/ALU.v                         ;         ;
+; ALURegisters.v                   ; yes             ; User Verilog HDL File  ; C:/Users/emmaf/OneDrive/Documents/GitHub/ELEC-374/ALURegisters.v                ;         ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -399,9 +399,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Tue Mar 14 21:58:36 2023
+    Info: Processing started: Thu Mar 16 15:55:59 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Phase1 -c Phase1
-Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
+Info (11104): Parallel Compilation has detected 12 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 6 of the 6 physical processors detected instead.
 Info (12021): Found 1 design units, including 1 entities, in source file add_tb.v
     Info (12023): Found entity 1: ADD_tb
 Info (12021): Found 1 design units, including 1 entities, in source file and_tb.v
@@ -493,6 +493,10 @@ Info (12021): Found 1 design units, including 1 entities, in source file alu.v
     Info (12023): Found entity 1: ALU
 Info (12021): Found 1 design units, including 1 entities, in source file aluregisters.v
     Info (12023): Found entity 1: ALURegisters
+Info (12021): Found 1 design units, including 1 entities, in source file select_encode.v
+    Info (12023): Found entity 1: select_encode
+Info (12021): Found 1 design units, including 1 entities, in source file four_sixteen_decoder.v
+    Info (12023): Found entity 1: four_sixteen_decoder
 Info (12127): Elaborating entity "Bus" for the top level hierarchy
 Warning (10240): Verilog HDL Always Construct warning at Bus.v(59): inferring latch(es) for variable "regA", which holds its previous value in one or more paths through the always construct
 Warning (10240): Verilog HDL Always Construct warning at Bus.v(59): inferring latch(es) for variable "regB", which holds its previous value in one or more paths through the always construct
@@ -691,7 +695,7 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "OutportOut[29]" is stuck at GND
     Warning (13410): Pin "OutportOut[30]" is stuck at GND
     Warning (13410): Pin "OutportOut[31]" is stuck at GND
-Info (144001): Generated suppressed messages file C:/Users/789wi/Videos/ELEC-374/output_files/Phase1.map.smsg
+Info (144001): Generated suppressed messages file C:/Users/emmaf/OneDrive/Documents/GitHub/ELEC-374/output_files/Phase1.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 85 input pin(s) that do not drive logic
@@ -785,14 +789,14 @@ Info (21057): Implemented 117 device resources after synthesis - the final resou
     Info (21059): Implemented 32 output pins
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 129 warnings
     Info: Peak virtual memory: 4611 megabytes
-    Info: Processing ended: Tue Mar 14 21:58:40 2023
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:04
+    Info: Processing ended: Thu Mar 16 15:56:05 2023
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:05
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/789wi/Videos/ELEC-374/output_files/Phase1.map.smsg.
+The suppressed messages can be found in C:/Users/emmaf/OneDrive/Documents/GitHub/ELEC-374/output_files/Phase1.map.smsg.
 
 
