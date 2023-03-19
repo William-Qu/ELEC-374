@@ -1,5 +1,5 @@
 EDA Netlist Writer report for Phase1
-Sun Mar 05 13:11:55 2023
+Thu Mar 16 15:56:29 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -36,9 +36,9 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Sun Mar 05 13:11:55 2023 ;
+; EDA Netlist Writer Status ; Successful - Thu Mar 16 15:56:29 2023 ;
 ; Revision Name             ; Phase1                                ;
-; Top-level Entity Name     ; boothMultiplier                       ;
+; Top-level Entity Name     ; Bus                                   ;
 ; Family                    ; Cyclone III                           ;
 ; Simulation Files Creation ; Successful                            ;
 +---------------------------+---------------------------------------+
@@ -66,20 +66,20 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------------------+---------------------------+
 
 
-+------------------------------------------------------------------------------------+
-; Simulation Generated Files                                                         ;
-+------------------------------------------------------------------------------------+
-; Generated Files                                                                    ;
-+------------------------------------------------------------------------------------+
-; C:/Users/789wi/Videos/ELEC-374/simulation/modelsim/Phase1_6_1200mv_85c_slow.vo     ;
-; C:/Users/789wi/Videos/ELEC-374/simulation/modelsim/Phase1_6_1200mv_0c_slow.vo      ;
-; C:/Users/789wi/Videos/ELEC-374/simulation/modelsim/Phase1_min_1200mv_0c_fast.vo    ;
-; C:/Users/789wi/Videos/ELEC-374/simulation/modelsim/Phase1.vo                       ;
-; C:/Users/789wi/Videos/ELEC-374/simulation/modelsim/Phase1_6_1200mv_85c_v_slow.sdo  ;
-; C:/Users/789wi/Videos/ELEC-374/simulation/modelsim/Phase1_6_1200mv_0c_v_slow.sdo   ;
-; C:/Users/789wi/Videos/ELEC-374/simulation/modelsim/Phase1_min_1200mv_0c_v_fast.sdo ;
-; C:/Users/789wi/Videos/ELEC-374/simulation/modelsim/Phase1_v.sdo                    ;
-+------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                            ;
++-------------------------------------------------------------------------------------------------------+
+; Generated Files                                                                                       ;
++-------------------------------------------------------------------------------------------------------+
+; C:/Users/emmaf/OneDrive/Documents/GitHub/ELEC-374/simulation/modelsim/Phase1_6_1200mv_85c_slow.vo     ;
+; C:/Users/emmaf/OneDrive/Documents/GitHub/ELEC-374/simulation/modelsim/Phase1_6_1200mv_0c_slow.vo      ;
+; C:/Users/emmaf/OneDrive/Documents/GitHub/ELEC-374/simulation/modelsim/Phase1_min_1200mv_0c_fast.vo    ;
+; C:/Users/emmaf/OneDrive/Documents/GitHub/ELEC-374/simulation/modelsim/Phase1.vo                       ;
+; C:/Users/emmaf/OneDrive/Documents/GitHub/ELEC-374/simulation/modelsim/Phase1_6_1200mv_85c_v_slow.sdo  ;
+; C:/Users/emmaf/OneDrive/Documents/GitHub/ELEC-374/simulation/modelsim/Phase1_6_1200mv_0c_v_slow.sdo   ;
+; C:/Users/emmaf/OneDrive/Documents/GitHub/ELEC-374/simulation/modelsim/Phase1_min_1200mv_0c_v_fast.sdo ;
+; C:/Users/emmaf/OneDrive/Documents/GitHub/ELEC-374/simulation/modelsim/Phase1_v.sdo                    ;
++-------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -88,20 +88,20 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Sun Mar 05 13:11:47 2023
+    Info: Processing started: Thu Mar 16 15:56:28 2023
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off Phase1 -c Phase1
-Info (204019): Generated file Phase1_6_1200mv_85c_slow.vo in folder "C:/Users/789wi/Videos/ELEC-374/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file Phase1_6_1200mv_0c_slow.vo in folder "C:/Users/789wi/Videos/ELEC-374/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file Phase1_min_1200mv_0c_fast.vo in folder "C:/Users/789wi/Videos/ELEC-374/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file Phase1.vo in folder "C:/Users/789wi/Videos/ELEC-374/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file Phase1_6_1200mv_85c_v_slow.sdo in folder "C:/Users/789wi/Videos/ELEC-374/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file Phase1_6_1200mv_0c_v_slow.sdo in folder "C:/Users/789wi/Videos/ELEC-374/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file Phase1_min_1200mv_0c_v_fast.sdo in folder "C:/Users/789wi/Videos/ELEC-374/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file Phase1_v.sdo in folder "C:/Users/789wi/Videos/ELEC-374/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file Phase1_6_1200mv_85c_slow.vo in folder "C:/Users/emmaf/OneDrive/Documents/GitHub/ELEC-374/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file Phase1_6_1200mv_0c_slow.vo in folder "C:/Users/emmaf/OneDrive/Documents/GitHub/ELEC-374/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file Phase1_min_1200mv_0c_fast.vo in folder "C:/Users/emmaf/OneDrive/Documents/GitHub/ELEC-374/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file Phase1.vo in folder "C:/Users/emmaf/OneDrive/Documents/GitHub/ELEC-374/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file Phase1_6_1200mv_85c_v_slow.sdo in folder "C:/Users/emmaf/OneDrive/Documents/GitHub/ELEC-374/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file Phase1_6_1200mv_0c_v_slow.sdo in folder "C:/Users/emmaf/OneDrive/Documents/GitHub/ELEC-374/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file Phase1_min_1200mv_0c_v_fast.sdo in folder "C:/Users/emmaf/OneDrive/Documents/GitHub/ELEC-374/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file Phase1_v.sdo in folder "C:/Users/emmaf/OneDrive/Documents/GitHub/ELEC-374/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4588 megabytes
-    Info: Processing ended: Sun Mar 05 13:11:55 2023
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:07
+    Info: Peak virtual memory: 4518 megabytes
+    Info: Processing ended: Thu Mar 16 15:56:29 2023
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
 
 
