@@ -1,5 +1,5 @@
 Flow report for Phase1
-Tue Mar 14 21:58:40 2023
+Thu Mar 16 19:26:28 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -40,7 +40,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Flow Summary                                                                          ;
 +------------------------------------+--------------------------------------------------+
-; Flow Status                        ; Successful - Tue Mar 14 21:58:40 2023            ;
+; Flow Status                        ; Successful - Thu Mar 16 19:26:28 2023            ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                      ; Phase1                                           ;
 ; Top-level Entity Name              ; Bus                                              ;
@@ -51,7 +51,7 @@ applicable agreement for further details.
 ;     Total combinational functions  ; 0                                                ;
 ;     Dedicated logic registers      ; 0                                                ;
 ; Total registers                    ; 0                                                ;
-; Total pins                         ; 117                                              ;
+; Total pins                         ; 118                                              ;
 ; Total virtual pins                 ; 0                                                ;
 ; Total memory bits                  ; 0                                                ;
 ; Embedded Multiplier 9-bit elements ; 0                                                ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/14/2023 21:58:37 ;
+; Start date & time ; 03/16/2023 19:26:24 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Phase1              ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +--------------------------------------+---------------------------------------+---------------+-------------+----------------------+
 ; Assignment Name                      ; Value                                 ; Default Value ; Entity Name ; Section Id           ;
 +--------------------------------------+---------------------------------------+---------------+-------------+----------------------+
-; COMPILER_SIGNATURE_ID                ; 71384935557563.167884551715772        ; --            ; --          ; --                   ;
+; COMPILER_SIGNATURE_ID                ; 71384935557563.167900918418232        ; --            ; --          ; --                   ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; TestbenchMultiplier  ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; TestbenchControlUnit ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; ADD_tb               ;
@@ -123,8 +123,8 @@ applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:03     ; 1.0                     ; 4600 MB             ; 00:00:03                           ;
-; Total                ; 00:00:03     ; --                      ; --                  ; 00:00:03                           ;
+; Analysis & Synthesis ; 00:00:05     ; 1.0                     ; 4599 MB             ; 00:00:05                           ;
+; Total                ; 00:00:05     ; --                      ; --                  ; 00:00:05                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

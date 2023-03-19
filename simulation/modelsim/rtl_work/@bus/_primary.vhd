@@ -6,6 +6,7 @@ entity \Bus\ is
         clk             : in     vl_logic;
         MDRRead         : in     vl_logic;
         ALUen           : in     vl_logic;
+        incPC           : in     vl_logic;
         R0out           : in     vl_logic;
         R1out           : in     vl_logic;
         R2out           : in     vl_logic;

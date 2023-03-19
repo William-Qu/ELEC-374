@@ -187,24 +187,19 @@
 # 
 #           File in use by: 789wi  Hostname: DESKTOP-MP94GB7  ProcessID: 25124
 # 
-#           Attempting to use alternate WLF file "./wlftcatnqc".
+#           Attempting to use alternate WLF file "./wlftfm20e9".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
 # 
-#           Using alternate file: ./wlftcatnqc
+#           Using alternate file: ./wlftfm20e9
 # 
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run 1000 ns
-add wave -position insertpoint sim:/ADD_tb/Datapath/Mux/*
-add wave -position insertpoint sim:/ADD_tb/Datapath/mdr/*
-add wave -position insertpoint sim:/ADD_tb/Datapath/IR/*
 add wave -position insertpoint sim:/ADD_tb/Datapath/LogicReg/gr2/*
 add wave -position insertpoint sim:/ADD_tb/Datapath/LogicReg/gr3/*
 add wave -position insertpoint sim:/ADD_tb/Datapath/LogicReg/gr0/*
 restart
 run 1000ns
-add wave -position insertpoint sim:/ADD_tb/Datapath/CLO/*
-restart
-run 1000ns
+# WARNING: No extended dataflow license exists

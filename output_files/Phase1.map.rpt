@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Phase1
-Tue Mar 14 21:58:40 2023
+Thu Mar 16 19:26:28 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -55,7 +55,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                          ;
 +------------------------------------+--------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Mar 14 21:58:40 2023            ;
+; Analysis & Synthesis Status        ; Successful - Thu Mar 16 19:26:28 2023            ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                      ; Phase1                                           ;
 ; Top-level Entity Name              ; Bus                                              ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 ;     Total combinational functions  ; 0                                                ;
 ;     Dedicated logic registers      ; 0                                                ;
 ; Total registers                    ; 0                                                ;
-; Total pins                         ; 117                                              ;
+; Total pins                         ; 118                                              ;
 ; Total virtual pins                 ; 0                                                ;
 ; Total memory bits                  ; 0                                                ;
 ; Embedded Multiplier 9-bit elements ; 0                                                ;
@@ -226,11 +226,11 @@ applicable agreement for further details.
 ;     -- Dedicated logic registers            ; 0     ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 117   ;
+; I/O pins                                    ; 118   ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 ; Maximum fan-out node                        ; clr   ;
 ; Maximum fan-out                             ; 1     ;
-; Total fan-out                               ; 117   ;
+; Total fan-out                               ; 118   ;
 ; Average fan-out                             ; 0.50  ;
 +---------------------------------------------+-------+
 
@@ -240,7 +240,7 @@ applicable agreement for further details.
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |Bus                       ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 117  ; 0            ; |Bus                ; work         ;
+; |Bus                       ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 118  ; 0            ; |Bus                ; work         ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -399,7 +399,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Tue Mar 14 21:58:36 2023
+    Info: Processing started: Thu Mar 16 19:26:22 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Phase1 -c Phase1
 Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
 Info (12021): Found 1 design units, including 1 entities, in source file add_tb.v
@@ -493,74 +493,76 @@ Info (12021): Found 1 design units, including 1 entities, in source file alu.v
     Info (12023): Found entity 1: ALU
 Info (12021): Found 1 design units, including 1 entities, in source file aluregisters.v
     Info (12023): Found entity 1: ALURegisters
+Info (12021): Found 1 design units, including 1 entities, in source file ram.v
+    Info (12023): Found entity 1: RAM
 Info (12127): Elaborating entity "Bus" for the top level hierarchy
-Warning (10240): Verilog HDL Always Construct warning at Bus.v(59): inferring latch(es) for variable "regA", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Bus.v(59): inferring latch(es) for variable "regB", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Bus.v(63): inferring latch(es) for variable "regA", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Bus.v(63): inferring latch(es) for variable "regB", which holds its previous value in one or more paths through the always construct
 Warning (10034): Output port "OutportOut" at Bus.v(8) has no driver
-Info (10041): Inferred latch for "regB[0]" at Bus.v(83)
-Info (10041): Inferred latch for "regB[1]" at Bus.v(83)
-Info (10041): Inferred latch for "regB[2]" at Bus.v(83)
-Info (10041): Inferred latch for "regB[3]" at Bus.v(83)
-Info (10041): Inferred latch for "regB[4]" at Bus.v(83)
-Info (10041): Inferred latch for "regB[5]" at Bus.v(83)
-Info (10041): Inferred latch for "regB[6]" at Bus.v(83)
-Info (10041): Inferred latch for "regB[7]" at Bus.v(83)
-Info (10041): Inferred latch for "regB[8]" at Bus.v(83)
-Info (10041): Inferred latch for "regB[9]" at Bus.v(83)
-Info (10041): Inferred latch for "regB[10]" at Bus.v(83)
-Info (10041): Inferred latch for "regB[11]" at Bus.v(83)
-Info (10041): Inferred latch for "regB[12]" at Bus.v(83)
-Info (10041): Inferred latch for "regB[13]" at Bus.v(83)
-Info (10041): Inferred latch for "regB[14]" at Bus.v(83)
-Info (10041): Inferred latch for "regB[15]" at Bus.v(83)
-Info (10041): Inferred latch for "regB[16]" at Bus.v(83)
-Info (10041): Inferred latch for "regB[17]" at Bus.v(83)
-Info (10041): Inferred latch for "regB[18]" at Bus.v(83)
-Info (10041): Inferred latch for "regB[19]" at Bus.v(83)
-Info (10041): Inferred latch for "regB[20]" at Bus.v(83)
-Info (10041): Inferred latch for "regB[21]" at Bus.v(83)
-Info (10041): Inferred latch for "regB[22]" at Bus.v(83)
-Info (10041): Inferred latch for "regB[23]" at Bus.v(83)
-Info (10041): Inferred latch for "regB[24]" at Bus.v(83)
-Info (10041): Inferred latch for "regB[25]" at Bus.v(83)
-Info (10041): Inferred latch for "regB[26]" at Bus.v(83)
-Info (10041): Inferred latch for "regB[27]" at Bus.v(83)
-Info (10041): Inferred latch for "regB[28]" at Bus.v(83)
-Info (10041): Inferred latch for "regB[29]" at Bus.v(83)
-Info (10041): Inferred latch for "regB[30]" at Bus.v(83)
-Info (10041): Inferred latch for "regB[31]" at Bus.v(83)
-Info (10041): Inferred latch for "regA[0]" at Bus.v(79)
-Info (10041): Inferred latch for "regA[1]" at Bus.v(79)
-Info (10041): Inferred latch for "regA[2]" at Bus.v(79)
-Info (10041): Inferred latch for "regA[3]" at Bus.v(79)
-Info (10041): Inferred latch for "regA[4]" at Bus.v(79)
-Info (10041): Inferred latch for "regA[5]" at Bus.v(79)
-Info (10041): Inferred latch for "regA[6]" at Bus.v(79)
-Info (10041): Inferred latch for "regA[7]" at Bus.v(79)
-Info (10041): Inferred latch for "regA[8]" at Bus.v(79)
-Info (10041): Inferred latch for "regA[9]" at Bus.v(79)
-Info (10041): Inferred latch for "regA[10]" at Bus.v(79)
-Info (10041): Inferred latch for "regA[11]" at Bus.v(79)
-Info (10041): Inferred latch for "regA[12]" at Bus.v(79)
-Info (10041): Inferred latch for "regA[13]" at Bus.v(79)
-Info (10041): Inferred latch for "regA[14]" at Bus.v(79)
-Info (10041): Inferred latch for "regA[15]" at Bus.v(79)
-Info (10041): Inferred latch for "regA[16]" at Bus.v(79)
-Info (10041): Inferred latch for "regA[17]" at Bus.v(79)
-Info (10041): Inferred latch for "regA[18]" at Bus.v(79)
-Info (10041): Inferred latch for "regA[19]" at Bus.v(79)
-Info (10041): Inferred latch for "regA[20]" at Bus.v(79)
-Info (10041): Inferred latch for "regA[21]" at Bus.v(79)
-Info (10041): Inferred latch for "regA[22]" at Bus.v(79)
-Info (10041): Inferred latch for "regA[23]" at Bus.v(79)
-Info (10041): Inferred latch for "regA[24]" at Bus.v(79)
-Info (10041): Inferred latch for "regA[25]" at Bus.v(79)
-Info (10041): Inferred latch for "regA[26]" at Bus.v(79)
-Info (10041): Inferred latch for "regA[27]" at Bus.v(79)
-Info (10041): Inferred latch for "regA[28]" at Bus.v(79)
-Info (10041): Inferred latch for "regA[29]" at Bus.v(79)
-Info (10041): Inferred latch for "regA[30]" at Bus.v(79)
-Info (10041): Inferred latch for "regA[31]" at Bus.v(79)
+Info (10041): Inferred latch for "regB[0]" at Bus.v(87)
+Info (10041): Inferred latch for "regB[1]" at Bus.v(87)
+Info (10041): Inferred latch for "regB[2]" at Bus.v(87)
+Info (10041): Inferred latch for "regB[3]" at Bus.v(87)
+Info (10041): Inferred latch for "regB[4]" at Bus.v(87)
+Info (10041): Inferred latch for "regB[5]" at Bus.v(87)
+Info (10041): Inferred latch for "regB[6]" at Bus.v(87)
+Info (10041): Inferred latch for "regB[7]" at Bus.v(87)
+Info (10041): Inferred latch for "regB[8]" at Bus.v(87)
+Info (10041): Inferred latch for "regB[9]" at Bus.v(87)
+Info (10041): Inferred latch for "regB[10]" at Bus.v(87)
+Info (10041): Inferred latch for "regB[11]" at Bus.v(87)
+Info (10041): Inferred latch for "regB[12]" at Bus.v(87)
+Info (10041): Inferred latch for "regB[13]" at Bus.v(87)
+Info (10041): Inferred latch for "regB[14]" at Bus.v(87)
+Info (10041): Inferred latch for "regB[15]" at Bus.v(87)
+Info (10041): Inferred latch for "regB[16]" at Bus.v(87)
+Info (10041): Inferred latch for "regB[17]" at Bus.v(87)
+Info (10041): Inferred latch for "regB[18]" at Bus.v(87)
+Info (10041): Inferred latch for "regB[19]" at Bus.v(87)
+Info (10041): Inferred latch for "regB[20]" at Bus.v(87)
+Info (10041): Inferred latch for "regB[21]" at Bus.v(87)
+Info (10041): Inferred latch for "regB[22]" at Bus.v(87)
+Info (10041): Inferred latch for "regB[23]" at Bus.v(87)
+Info (10041): Inferred latch for "regB[24]" at Bus.v(87)
+Info (10041): Inferred latch for "regB[25]" at Bus.v(87)
+Info (10041): Inferred latch for "regB[26]" at Bus.v(87)
+Info (10041): Inferred latch for "regB[27]" at Bus.v(87)
+Info (10041): Inferred latch for "regB[28]" at Bus.v(87)
+Info (10041): Inferred latch for "regB[29]" at Bus.v(87)
+Info (10041): Inferred latch for "regB[30]" at Bus.v(87)
+Info (10041): Inferred latch for "regB[31]" at Bus.v(87)
+Info (10041): Inferred latch for "regA[0]" at Bus.v(83)
+Info (10041): Inferred latch for "regA[1]" at Bus.v(83)
+Info (10041): Inferred latch for "regA[2]" at Bus.v(83)
+Info (10041): Inferred latch for "regA[3]" at Bus.v(83)
+Info (10041): Inferred latch for "regA[4]" at Bus.v(83)
+Info (10041): Inferred latch for "regA[5]" at Bus.v(83)
+Info (10041): Inferred latch for "regA[6]" at Bus.v(83)
+Info (10041): Inferred latch for "regA[7]" at Bus.v(83)
+Info (10041): Inferred latch for "regA[8]" at Bus.v(83)
+Info (10041): Inferred latch for "regA[9]" at Bus.v(83)
+Info (10041): Inferred latch for "regA[10]" at Bus.v(83)
+Info (10041): Inferred latch for "regA[11]" at Bus.v(83)
+Info (10041): Inferred latch for "regA[12]" at Bus.v(83)
+Info (10041): Inferred latch for "regA[13]" at Bus.v(83)
+Info (10041): Inferred latch for "regA[14]" at Bus.v(83)
+Info (10041): Inferred latch for "regA[15]" at Bus.v(83)
+Info (10041): Inferred latch for "regA[16]" at Bus.v(83)
+Info (10041): Inferred latch for "regA[17]" at Bus.v(83)
+Info (10041): Inferred latch for "regA[18]" at Bus.v(83)
+Info (10041): Inferred latch for "regA[19]" at Bus.v(83)
+Info (10041): Inferred latch for "regA[20]" at Bus.v(83)
+Info (10041): Inferred latch for "regA[21]" at Bus.v(83)
+Info (10041): Inferred latch for "regA[22]" at Bus.v(83)
+Info (10041): Inferred latch for "regA[23]" at Bus.v(83)
+Info (10041): Inferred latch for "regA[24]" at Bus.v(83)
+Info (10041): Inferred latch for "regA[25]" at Bus.v(83)
+Info (10041): Inferred latch for "regA[26]" at Bus.v(83)
+Info (10041): Inferred latch for "regA[27]" at Bus.v(83)
+Info (10041): Inferred latch for "regA[28]" at Bus.v(83)
+Info (10041): Inferred latch for "regA[29]" at Bus.v(83)
+Info (10041): Inferred latch for "regA[30]" at Bus.v(83)
+Info (10041): Inferred latch for "regA[31]" at Bus.v(83)
 Info (12128): Elaborating entity "reg32bit" for hierarchy "reg32bit:PC"
 Info (12128): Elaborating entity "MDRunit" for hierarchy "MDRunit:mdr"
 Info (12128): Elaborating entity "ALU" for hierarchy "ALU:Logic"
@@ -694,11 +696,12 @@ Warning (13024): Output pins are stuck at VCC or GND
 Info (144001): Generated suppressed messages file C:/Users/789wi/Videos/ELEC-374/output_files/Phase1.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 85 input pin(s) that do not drive logic
+Warning (21074): Design contains 86 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "clr"
     Warning (15610): No output dependent on input pin "clk"
     Warning (15610): No output dependent on input pin "MDRRead"
     Warning (15610): No output dependent on input pin "ALUen"
+    Warning (15610): No output dependent on input pin "incPC"
     Warning (15610): No output dependent on input pin "R0out"
     Warning (15610): No output dependent on input pin "R1out"
     Warning (15610): No output dependent on input pin "R2out"
@@ -780,14 +783,14 @@ Warning (21074): Design contains 85 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "MDRMDataIn[29]"
     Warning (15610): No output dependent on input pin "MDRMDataIn[30]"
     Warning (15610): No output dependent on input pin "MDRMDataIn[31]"
-Info (21057): Implemented 117 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 85 input pins
+Info (21057): Implemented 118 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 86 input pins
     Info (21059): Implemented 32 output pins
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 129 warnings
-    Info: Peak virtual memory: 4611 megabytes
-    Info: Processing ended: Tue Mar 14 21:58:40 2023
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:04
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 130 warnings
+    Info: Peak virtual memory: 4610 megabytes
+    Info: Processing ended: Thu Mar 16 19:26:28 2023
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:05
 
 
 +------------------------------------------+

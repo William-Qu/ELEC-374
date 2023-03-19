@@ -2,7 +2,7 @@
 `timescale 1ns/10ps
 module ADD_tb;
 
-	reg clr, clk, MDRRead, ALUen; //Bits for enabling and disabling register functions
+	reg clr, clk, MDRRead, ALUen, incPC; //Bits for enabling and disabling register functions
 	reg R0out, R1out, R2out, R3out, R4out, R5out, R6out, R7out,R8out, R9out, R10out, R11out, R12out, R13out, R14out, R15out,HIout, LOout, ZHIout, ZLOout,PCout, MDRout, InportOut, Cout; //Output Select Signals for which register were taking data from
 	reg r0ins, r1ins, r2ins, r3ins, r4ins, r5ins, r6ins, r7ins, r8ins, r9ins, r10ins, r11ins, r12ins, r13ins, r14ins, r15ins, HIins, LOins, ZHIins, ZLOins,PCins, MDRins, Inports, Outports, IRins; //Input Select Signals for which register were putting data into
 	reg [31:0] MDRMDataIn;//MDR Data In register
@@ -15,7 +15,7 @@ module ADD_tb;
 	reg [3:0] Present_state = Default;
 	
 	Bus Datapath(
-		clr, clk, MDRRead, ALUen, //Bits for enabling and disabling register functions
+		clr, clk, MDRRead, ALUen, incPC, //Bits for enabling and disabling register functions
 		R0out, R1out, R2out, R3out, R4out, R5out, R6out, R7out,R8out, R9out, R10out, R11out, R12out, R13out, R14out, R15out,HIout, LOout, ZHIout, ZLOout,PCout, MDRout, InportOut, Cout, //Output Select Signals for which register were taking data from
 		r0ins, r1ins, r2ins, r3ins, r4ins, r5ins, r6ins, r7ins, r8ins, r9ins, r10ins, r11ins, r12ins, r13ins, r14ins, r15ins, HIins, LOins, ZHIins, ZLOins,PCins, MDRins, Inports, Outports, IRins, //Input Select Signals for which register were putting data into
 		MDRMDataIn, OutportOut);
@@ -50,7 +50,7 @@ always @(Present_state) // do the required job in each state
 	begin
 		case (Present_state) // assert the required signals in each clk cycle
 			Default: begin
-								PCout <= 0; ZLOout <= 0; MDRout <= 0; // initialize the signals
+								PCout <= 0; ZLOout <= 0; MDRout <= 0; incPC <= 0;// initialize the signals
 								R4out <= 0; R5out <= 0; ZLOins <= 0; ZHIins <= 0;
 								PCins <=0; MDRins <= 0; IRins <= 0;
 								MDRRead <= 0; clr <= 1; ALUen <= 1;
@@ -68,9 +68,9 @@ always @(Present_state) // do the required job in each state
 								#15 MDRout <= 0; r2ins <= 0; // initialize R2 with the value $12
 			end
 			Reg_load2a: begin
-								MDRMDataIn <= 32'h00000014;
+								MDRMDataIn <= 32'h00000044;
 								#10 MDRRead <= 1; MDRins <= 1;
-								#15 MDRins <= 0;
+								#15 MDRRead <= 0; MDRins <= 0;
 			end
 			Reg_load2b: begin
 								#10 MDRout <= 1; r3ins <= 1;
@@ -82,17 +82,17 @@ always @(Present_state) // do the required job in each state
 								#15 MDRRead <= 0; MDRins <= 0;
 			end
 			Reg_load3b: begin
-								#10 MDRout <= 1; r0ins <= 1;
-								#15 MDRout <= 0; r0ins <= 0; // initialize R0 with the value $18
+								#10 MDRout <= 1; r2ins <= 1; incPC <= 1;
+								#15 MDRout <= 0; r2ins <= 0; incPC <= 0;// initialize R0 with the value $18
 			end
 			T0: begin // see if you need to de-assert these signals
-								#10 PCout <= 1; ZHIins <= 1; ZLOins <= 1;
-								#15 PCout <= 0; ZHIins <= 0; ZLOins <= 0;
+								#10 PCout <= 1; ZLOins <= 1;
+								#15 PCout <= 0; ZLOins <= 0;
 			end
 			T1: begin
-								 #10 ZLOout <= 1; PCins <= 1; MDRRead <= 1; MDRins <= 1;
+								 #10 ZLOout <= 1; MDRRead <= 1; MDRins <= 1;
 								 MDRMDataIn <= 32'b01010000000100011000000000000000; // opcode for “add R0, R2, R3”
-								 #15 ZLOout <= 0; PCins <= 0; MDRRead <= 0; MDRins <= 0;
+								 #15 ZLOout <= 0; MDRRead <= 0; MDRins <= 0;
 			end
 			T2: begin
 								 #10 MDRout <= 1; IRins <= 1;
