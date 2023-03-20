@@ -1,5 +1,5 @@
 Fitter report for Phase1
-Thu Mar 16 15:56:14 2023
+Sun Mar 19 18:37:42 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -58,7 +58,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                        ;
 +------------------------------------+--------------------------------------------------+
-; Fitter Status                      ; Successful - Thu Mar 16 15:56:14 2023            ;
+; Fitter Status                      ; Successful - Sun Mar 19 18:37:42 2023            ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                      ; Phase1                                           ;
 ; Top-level Entity Name              ; Bus                                              ;
@@ -69,7 +69,7 @@ applicable agreement for further details.
 ;     Total combinational functions  ; 0 / 15,408 ( 0 % )                               ;
 ;     Dedicated logic registers      ; 0 / 15,408 ( 0 % )                               ;
 ; Total registers                    ; 0                                                ;
-; Total pins                         ; 117 / 347 ( 34 % )                               ;
+; Total pins                         ; 118 / 347 ( 34 % )                               ;
 ; Total virtual pins                 ; 0                                                ;
 ; Total memory bits                  ; 0 / 516,096 ( 0 % )                              ;
 ; Embedded Multiplier 9-bit elements ; 0 / 112 ( 0 % )                                  ;
@@ -164,6 +164,7 @@ applicable agreement for further details.
 ; clk            ; Incomplete set of assignments ;
 ; MDRRead        ; Incomplete set of assignments ;
 ; ALUen          ; Incomplete set of assignments ;
+; incPC          ; Incomplete set of assignments ;
 ; R0out          ; Incomplete set of assignments ;
 ; R1out          ; Incomplete set of assignments ;
 ; R2out          ; Incomplete set of assignments ;
@@ -286,8 +287,8 @@ applicable agreement for further details.
 ; Type                ; Value                  ;
 +---------------------+------------------------+
 ; Placement (by node) ;                        ;
-;     -- Requested    ; 0 / 245 ( 0.00 % )     ;
-;     -- Achieved     ; 0 / 245 ( 0.00 % )     ;
+;     -- Requested    ; 0 / 247 ( 0.00 % )     ;
+;     -- Achieved     ; 0 / 247 ( 0.00 % )     ;
 ;                     ;                        ;
 ; Routing (by net)    ;                        ;
 ;     -- Requested    ; 0 / 0 ( 0.00 % )       ;
@@ -310,7 +311,7 @@ applicable agreement for further details.
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 ; Partition Name                 ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
-; Top                            ; 235     ; 0                 ; N/A                     ; Source File       ;
+; Top                            ; 237     ; 0                 ; N/A                     ; Source File       ;
 ; hard_block:auto_generated_inst ; 10      ; 0                 ; N/A                     ; Source File       ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 
@@ -347,7 +348,7 @@ The pin-out file can be found in C:/Users/emmaf/OneDrive/Documents/GitHub/ELEC-3
 ;                                             ;                     ;
 ; Total LABs:  partially or completely used   ; 0 / 963 ( 0 % )     ;
 ; Virtual pins                                ; 0                   ;
-; I/O pins                                    ; 117 / 347 ( 34 % )  ;
+; I/O pins                                    ; 118 / 347 ( 34 % )  ;
 ;     -- Clock pins                           ; 2 / 8 ( 25 % )      ;
 ;     -- Dedicated input pins                 ; 0 / 9 ( 0 % )       ;
 ;                                             ;                     ;
@@ -366,7 +367,7 @@ The pin-out file can be found in C:/Users/emmaf/OneDrive/Documents/GitHub/ELEC-3
 ; Peak interconnect usage (total/H/V)         ; 0% / 0% / 0%        ;
 ; Maximum fan-out                             ; 1                   ;
 ; Highest non-global fan-out                  ; 1                   ;
-; Total fan-out                               ; 122                 ;
+; Total fan-out                               ; 123                 ;
 ; Average fan-out                             ; 0.50                ;
 +---------------------------------------------+---------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
@@ -401,7 +402,7 @@ The pin-out file can be found in C:/Users/emmaf/OneDrive/Documents/GitHub/ELEC-3
 ; Total LABs:  partially or completely used   ; 0 / 963 ( 0 % )   ; 0 / 963 ( 0 % )                ;
 ;                                             ;                   ;                                ;
 ; Virtual pins                                ; 0                 ; 0                              ;
-; I/O pins                                    ; 117               ; 0                              ;
+; I/O pins                                    ; 118               ; 0                              ;
 ; Embedded Multiplier 9-bit elements          ; 0 / 112 ( 0 % )   ; 0 / 112 ( 0 % )                ;
 ; Total memory bits                           ; 0                 ; 0                              ;
 ; Total RAM block bits                        ; 0                 ; 0                              ;
@@ -413,7 +414,7 @@ The pin-out file can be found in C:/Users/emmaf/OneDrive/Documents/GitHub/ELEC-3
 ;     -- Registered Output Connections        ; 0                 ; 0                              ;
 ;                                             ;                   ;                                ;
 ; Internal Connections                        ;                   ;                                ;
-;     -- Total Connections                    ; 117               ; 5                              ;
+;     -- Total Connections                    ; 118               ; 5                              ;
 ;     -- Registered Connections               ; 0                 ; 0                              ;
 ;                                             ;                   ;                                ;
 ; External Connections                        ;                   ;                                ;
@@ -421,7 +422,7 @@ The pin-out file can be found in C:/Users/emmaf/OneDrive/Documents/GitHub/ELEC-3
 ;     -- hard_block:auto_generated_inst       ; 0                 ; 0                              ;
 ;                                             ;                   ;                                ;
 ; Partition Interface                         ;                   ;                                ;
-;     -- Input Ports                          ; 85                ; 0                              ;
+;     -- Input Ports                          ; 86                ; 0                              ;
 ;     -- Output Ports                         ; 32                ; 0                              ;
 ;     -- Bidir Ports                          ; 0                 ; 0                              ;
 ;                                             ;                   ;                                ;
@@ -446,91 +447,92 @@ The pin-out file can be found in C:/Users/emmaf/OneDrive/Documents/GitHub/ELEC-3
 +----------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+
 ; Name           ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination Control Block ; Location assigned by ;
 +----------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+
-; ALUen          ; F9    ; 8        ; 7            ; 29           ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; Cout           ; N22   ; 5        ; 41           ; 13           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; HIins          ; B12   ; 7        ; 19           ; 29           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; HIout          ; G13   ; 7        ; 30           ; 29           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; ALUen          ; E9    ; 8        ; 11           ; 29           ; 28           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; Cout           ; E14   ; 7        ; 28           ; 29           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; HIins          ; V12   ; 4        ; 23           ; 0            ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; HIout          ; AA13  ; 4        ; 23           ; 0            ; 28           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
 ; IRins          ; W17   ; 4        ; 35           ; 0            ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; InportOut      ; F12   ; 7        ; 28           ; 29           ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; Inports        ; G16   ; 7        ; 39           ; 29           ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; LOins          ; L7    ; 2        ; 0            ; 11           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; LOout          ; AA13  ; 4        ; 23           ; 0            ; 28           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; MDRMDataIn[0]  ; K15   ; 6        ; 41           ; 18           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; InportOut      ; N22   ; 5        ; 41           ; 13           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; Inports        ; AB13  ; 4        ; 23           ; 0            ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; LOins          ; L15   ; 6        ; 41           ; 17           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; LOout          ; B17   ; 7        ; 30           ; 29           ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; MDRMDataIn[0]  ; M6    ; 2        ; 0            ; 13           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
 ; MDRMDataIn[10] ; T12   ; 4        ; 28           ; 0            ; 28           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
 ; MDRMDataIn[11] ; U12   ; 4        ; 26           ; 0            ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; MDRMDataIn[12] ; F22   ; 6        ; 41           ; 22           ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; MDRMDataIn[12] ; G10   ; 8        ; 9            ; 29           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
 ; MDRMDataIn[13] ; U9    ; 3        ; 9            ; 0            ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; MDRMDataIn[14] ; H20   ; 6        ; 41           ; 22           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; MDRMDataIn[15] ; H19   ; 6        ; 41           ; 23           ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; MDRMDataIn[14] ; H10   ; 8        ; 9            ; 29           ; 28           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; MDRMDataIn[15] ; H9    ; 8        ; 7            ; 29           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
 ; MDRMDataIn[16] ; B1    ; 1        ; 0            ; 27           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; MDRMDataIn[17] ; M1    ; 2        ; 0            ; 13           ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; MDRMDataIn[18] ; J22   ; 6        ; 41           ; 19           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; MDRMDataIn[19] ; H13   ; 7        ; 28           ; 29           ; 28           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; MDRMDataIn[1]  ; V12   ; 4        ; 23           ; 0            ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; MDRMDataIn[20] ; D22   ; 6        ; 41           ; 24           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; MDRMDataIn[21] ; D21   ; 6        ; 41           ; 24           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; MDRMDataIn[22] ; D10   ; 8        ; 16           ; 29           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; MDRMDataIn[17] ; B5    ; 8        ; 7            ; 29           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; MDRMDataIn[18] ; F15   ; 7        ; 39           ; 29           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; MDRMDataIn[19] ; F10   ; 8        ; 7            ; 29           ; 28           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; MDRMDataIn[1]  ; P22   ; 5        ; 41           ; 11           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; MDRMDataIn[20] ; C6    ; 8        ; 5            ; 29           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; MDRMDataIn[21] ; B9    ; 8        ; 14           ; 29           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; MDRMDataIn[22] ; B4    ; 8        ; 5            ; 29           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
 ; MDRMDataIn[23] ; G12   ; 7        ; 26           ; 29           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; MDRMDataIn[24] ; P8    ; 2        ; 0            ; 2            ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; MDRMDataIn[25] ; H16   ; 6        ; 41           ; 24           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; MDRMDataIn[26] ; K19   ; 6        ; 41           ; 18           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; MDRMDataIn[27] ; Y1    ; 2        ; 0            ; 6            ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; MDRMDataIn[28] ; B22   ; 6        ; 41           ; 26           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; MDRMDataIn[24] ; G8    ; 8        ; 5            ; 29           ; 28           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; MDRMDataIn[25] ; H17   ; 6        ; 41           ; 25           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; MDRMDataIn[26] ; R14   ; 4        ; 39           ; 0            ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; MDRMDataIn[27] ; E12   ; 7        ; 21           ; 29           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; MDRMDataIn[28] ; C3    ; 8        ; 3            ; 29           ; 28           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
 ; MDRMDataIn[29] ; Y10   ; 3        ; 19           ; 0            ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; MDRMDataIn[2]  ; N16   ; 5        ; 41           ; 10           ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; MDRMDataIn[30] ; W14   ; 4        ; 30           ; 0            ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; MDRMDataIn[31] ; R8    ; 2        ; 0            ; 2            ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; MDRMDataIn[3]  ; J17   ; 6        ; 41           ; 24           ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; MDRMDataIn[4]  ; J2    ; 1        ; 0            ; 20           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; MDRMDataIn[5]  ; J16   ; 6        ; 41           ; 20           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; MDRMDataIn[6]  ; AB20  ; 4        ; 37           ; 0            ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; MDRMDataIn[7]  ; H22   ; 6        ; 41           ; 20           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; MDRMDataIn[8]  ; H21   ; 6        ; 41           ; 21           ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; MDRMDataIn[9]  ; H17   ; 6        ; 41           ; 25           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; MDRMDataIn[2]  ; H12   ; 7        ; 26           ; 29           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; MDRMDataIn[30] ; R8    ; 2        ; 0            ; 2            ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; MDRMDataIn[31] ; A14   ; 7        ; 23           ; 29           ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; MDRMDataIn[3]  ; J2    ; 1        ; 0            ; 20           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; MDRMDataIn[4]  ; A8    ; 8        ; 14           ; 29           ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; MDRMDataIn[5]  ; AB20  ; 4        ; 37           ; 0            ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; MDRMDataIn[6]  ; A7    ; 8        ; 11           ; 29           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; MDRMDataIn[7]  ; B7    ; 8        ; 11           ; 29           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; MDRMDataIn[8]  ; B10   ; 8        ; 16           ; 29           ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; MDRMDataIn[9]  ; J17   ; 6        ; 41           ; 24           ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
 ; MDRRead        ; E13   ; 7        ; 23           ; 29           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; MDRins         ; E16   ; 7        ; 39           ; 29           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; MDRout         ; A5    ; 8        ; 7            ; 29           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; MDRins         ; G16   ; 7        ; 39           ; 29           ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; MDRout         ; F12   ; 7        ; 28           ; 29           ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
 ; Outports       ; Y13   ; 4        ; 26           ; 0            ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; PCins          ; G21   ; 6        ; 41           ; 15           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; PCout          ; AB7   ; 3        ; 11           ; 0            ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; R0out          ; B18   ; 7        ; 32           ; 29           ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; R10out         ; B19   ; 7        ; 32           ; 29           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; R11out         ; A19   ; 7        ; 32           ; 29           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; R12out         ; H2    ; 1        ; 0            ; 21           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; R13out         ; AA15  ; 4        ; 26           ; 0            ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; R14out         ; T5    ; 2        ; 0            ; 3            ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; R15out         ; A13   ; 7        ; 21           ; 29           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; R1out          ; T10   ; 3        ; 14           ; 0            ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; R2out          ; G14   ; 7        ; 37           ; 29           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; R3out          ; AB17  ; 4        ; 28           ; 0            ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; R4out          ; D19   ; 7        ; 37           ; 29           ; 28           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; R5out          ; A20   ; 7        ; 35           ; 29           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; R6out          ; C17   ; 7        ; 35           ; 29           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; R7out          ; P6    ; 2        ; 0            ; 4            ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; R8out          ; H15   ; 7        ; 35           ; 29           ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; R9out          ; B16   ; 7        ; 28           ; 29           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; ZHIins         ; H9    ; 8        ; 7            ; 29           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; PCins          ; E16   ; 7        ; 39           ; 29           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; PCout          ; A5    ; 8        ; 7            ; 29           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; R0out          ; T10   ; 3        ; 14           ; 0            ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; R10out         ; A19   ; 7        ; 32           ; 29           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; R11out         ; H2    ; 1        ; 0            ; 21           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; R12out         ; AA15  ; 4        ; 26           ; 0            ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; R13out         ; T5    ; 2        ; 0            ; 3            ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; R14out         ; F8    ; 8        ; 5            ; 29           ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; R15out         ; G13   ; 7        ; 30           ; 29           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; R1out          ; G14   ; 7        ; 37           ; 29           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; R2out          ; AB17  ; 4        ; 28           ; 0            ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; R3out          ; D19   ; 7        ; 37           ; 29           ; 28           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; R4out          ; A20   ; 7        ; 35           ; 29           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; R5out          ; C17   ; 7        ; 35           ; 29           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; R6out          ; P6    ; 2        ; 0            ; 4            ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; R7out          ; H15   ; 7        ; 35           ; 29           ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; R8out          ; B16   ; 7        ; 28           ; 29           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; R9out          ; B19   ; 7        ; 32           ; 29           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; ZHIins         ; A11   ; 8        ; 19           ; 29           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
 ; ZHIout         ; AB3   ; 3        ; 7            ; 0            ; 28           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; ZLOins         ; G22   ; 6        ; 41           ; 15           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; ZLOins         ; B11   ; 8        ; 19           ; 29           ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
 ; ZLOout         ; Y7    ; 3        ; 9            ; 0            ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
 ; clk            ; R19   ; 5        ; 41           ; 9            ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
 ; clr            ; T15   ; 4        ; 32           ; 0            ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; r0ins          ; E14   ; 7        ; 28           ; 29           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; incPC          ; H13   ; 7        ; 28           ; 29           ; 28           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; r0ins          ; F7    ; 8        ; 1            ; 29           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
 ; r10ins         ; W15   ; 4        ; 32           ; 0            ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; r11ins         ; F8    ; 8        ; 5            ; 29           ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; r12ins         ; W21   ; 5        ; 41           ; 5            ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; r13ins         ; J15   ; 6        ; 41           ; 19           ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; r14ins         ; AB8   ; 3        ; 16           ; 0            ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; r15ins         ; A12   ; 7        ; 19           ; 29           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; r1ins          ; F19   ; 6        ; 41           ; 25           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; r2ins          ; F13   ; 7        ; 26           ; 29           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; r11ins         ; W21   ; 5        ; 41           ; 5            ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; r12ins         ; M2    ; 2        ; 0            ; 13           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; r13ins         ; F11   ; 7        ; 21           ; 29           ; 28           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; r14ins         ; A12   ; 7        ; 19           ; 29           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; r15ins         ; B12   ; 7        ; 19           ; 29           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; r1ins          ; F13   ; 7        ; 26           ; 29           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; r2ins          ; A15   ; 7        ; 26           ; 29           ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
 ; r3ins          ; U19   ; 5        ; 41           ; 5            ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; r4ins          ; B15   ; 7        ; 26           ; 29           ; 28           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; r5ins          ; Y21   ; 5        ; 41           ; 4            ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; r6ins          ; V14   ; 4        ; 30           ; 0            ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; r4ins          ; Y21   ; 5        ; 41           ; 4            ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; r5ins          ; D13   ; 7        ; 23           ; 29           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; r6ins          ; AB18  ; 4        ; 32           ; 0            ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
 ; r7ins          ; G7    ; 8        ; 1            ; 29           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; r8ins          ; V9    ; 3        ; 14           ; 0            ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; r9ins          ; C1    ; 1        ; 0            ; 26           ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; r8ins          ; AA8   ; 3        ; 16           ; 0            ; 28           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; r9ins          ; A13   ; 7        ; 21           ; 29           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
 +----------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+
 
 
@@ -541,71 +543,81 @@ The pin-out file can be found in C:/Users/emmaf/OneDrive/Documents/GitHub/ELEC-3
 +----------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
 ; OutportOut[0]  ; U13   ; 4        ; 30           ; 0            ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
 ; OutportOut[10] ; U15   ; 4        ; 39           ; 0            ; 28           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; OutportOut[11] ; AB18  ; 4        ; 32           ; 0            ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; OutportOut[11] ; AB14  ; 4        ; 23           ; 0            ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
 ; OutportOut[12] ; W13   ; 4        ; 26           ; 0            ; 28           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
 ; OutportOut[13] ; AA18  ; 4        ; 35           ; 0            ; 28           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; OutportOut[14] ; L22   ; 6        ; 41           ; 18           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; OutportOut[14] ; V6    ; 3        ; 1            ; 0            ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
 ; OutportOut[15] ; T7    ; 2        ; 0            ; 2            ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
 ; OutportOut[16] ; AA16  ; 4        ; 28           ; 0            ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
 ; OutportOut[17] ; G17   ; 6        ; 41           ; 27           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; OutportOut[18] ; AB15  ; 4        ; 26           ; 0            ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; OutportOut[19] ; Y6    ; 3        ; 5            ; 0            ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; OutportOut[1]  ; A3    ; 8        ; 3            ; 29           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; OutportOut[20] ; R14   ; 4        ; 39           ; 0            ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; OutportOut[21] ; E5    ; 8        ; 1            ; 29           ; 28           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; OutportOut[22] ; K18   ; 6        ; 41           ; 21           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; OutportOut[18] ; Y4    ; 3        ; 3            ; 0            ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; OutportOut[19] ; AA22  ; 5        ; 41           ; 2            ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; OutportOut[1]  ; C4    ; 8        ; 1            ; 29           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; OutportOut[20] ; P8    ; 2        ; 0            ; 2            ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; OutportOut[21] ; V14   ; 4        ; 30           ; 0            ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; OutportOut[22] ; K8    ; 1        ; 0            ; 22           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
 ; OutportOut[23] ; AA20  ; 4        ; 37           ; 0            ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; OutportOut[24] ; G15   ; 7        ; 39           ; 29           ; 28           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; OutportOut[25] ; K16   ; 6        ; 41           ; 20           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; OutportOut[24] ; B18   ; 7        ; 32           ; 29           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; OutportOut[25] ; B8    ; 8        ; 14           ; 29           ; 28           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
 ; OutportOut[26] ; AB16  ; 4        ; 28           ; 0            ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
 ; OutportOut[27] ; AA9   ; 3        ; 16           ; 0            ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
 ; OutportOut[28] ; AA17  ; 4        ; 28           ; 0            ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
 ; OutportOut[29] ; B13   ; 7        ; 21           ; 29           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; OutportOut[2]  ; C22   ; 6        ; 41           ; 26           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; OutportOut[2]  ; AB19  ; 4        ; 35           ; 0            ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
 ; OutportOut[30] ; C19   ; 7        ; 37           ; 29           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
 ; OutportOut[31] ; T16   ; 4        ; 37           ; 0            ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; OutportOut[3]  ; R11   ; 3        ; 3            ; 0            ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; OutportOut[3]  ; V15   ; 4        ; 32           ; 0            ; 28           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
 ; OutportOut[4]  ; A4    ; 8        ; 5            ; 29           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
 ; OutportOut[5]  ; E15   ; 7        ; 30           ; 29           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; OutportOut[6]  ; AA14  ; 4        ; 23           ; 0            ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; OutportOut[7]  ; H1    ; 1        ; 0            ; 21           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; OutportOut[6]  ; H1    ; 1        ; 0            ; 21           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; OutportOut[7]  ; N1    ; 2        ; 0            ; 12           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
 ; OutportOut[8]  ; G11   ; 8        ; 14           ; 29           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
 ; OutportOut[9]  ; F16   ; 7        ; 39           ; 29           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
 +----------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------+
-; Dual Purpose and Dedicated Pins                                                                                                    ;
-+----------+----------------------------------------+--------------------------+-------------------------+---------------------------+
-; Location ; Pin Name                               ; Reserved As              ; User Signal Name        ; Pin Type                  ;
-+----------+----------------------------------------+--------------------------+-------------------------+---------------------------+
-; D1       ; DIFFIO_L4n, DATA1, ASDO                ; As input tri-stated      ; ~ALTERA_ASDO_DATA1~     ; Dual Purpose Pin          ;
-; E2       ; DIFFIO_L6p, FLASH_nCE, nCSO            ; As input tri-stated      ; ~ALTERA_FLASH_nCE_nCSO~ ; Dual Purpose Pin          ;
-; K6       ; nSTATUS                                ; -                        ; -                       ; Dedicated Programming Pin ;
-; K2       ; DCLK                                   ; As output driving ground ; ~ALTERA_DCLK~           ; Dual Purpose Pin          ;
-; K1       ; DATA0                                  ; As input tri-stated      ; ~ALTERA_DATA0~          ; Dual Purpose Pin          ;
-; K5       ; nCONFIG                                ; -                        ; -                       ; Dedicated Programming Pin ;
-; L3       ; nCE                                    ; -                        ; -                       ; Dedicated Programming Pin ;
-; N22      ; DIFFIO_R21n, DEV_OE                    ; Use as regular IO        ; Cout                    ; Dual Purpose Pin          ;
-; M18      ; CONF_DONE                              ; -                        ; -                       ; Dedicated Programming Pin ;
-; M17      ; MSEL0                                  ; -                        ; -                       ; Dedicated Programming Pin ;
-; L18      ; MSEL1                                  ; -                        ; -                       ; Dedicated Programming Pin ;
-; L17      ; MSEL2                                  ; -                        ; -                       ; Dedicated Programming Pin ;
-; K20      ; MSEL3                                  ; -                        ; -                       ; Dedicated Programming Pin ;
-; L22      ; DIFFIO_R17n, INIT_DONE                 ; Use as regular IO        ; OutportOut[14]          ; Dual Purpose Pin          ;
-; K22      ; DIFFIO_R16n, nCEO                      ; Use as programming pin   ; ~ALTERA_nCEO~           ; Dual Purpose Pin          ;
-; F19      ; DIFFIO_R6p                             ; Use as regular IO        ; r1ins                   ; Dual Purpose Pin          ;
-; B22      ; DIFFIO_R3n, PADD22                     ; Use as regular IO        ; MDRMDataIn[28]          ; Dual Purpose Pin          ;
-; B18      ; DIFFIO_T27p, PADD0                     ; Use as regular IO        ; R0out                   ; Dual Purpose Pin          ;
-; E14      ; DIFFIO_T23n, PADD3                     ; Use as regular IO        ; r0ins                   ; Dual Purpose Pin          ;
-; F13      ; DIFFIO_T21p, PADD4, DQS2T/CQ3T,DPCLK8  ; Use as regular IO        ; r2ins                   ; Dual Purpose Pin          ;
-; B15      ; DIFFIO_T20p, PADD6                     ; Use as regular IO        ; r4ins                   ; Dual Purpose Pin          ;
-; A13      ; DIFFIO_T17n, PADD11                    ; Use as regular IO        ; R15out                  ; Dual Purpose Pin          ;
-; B13      ; DIFFIO_T17p, PADD12, DQS4T/CQ5T,DPCLK9 ; Use as regular IO        ; OutportOut[29]          ; Dual Purpose Pin          ;
-; A5       ; DATA5                                  ; Use as regular IO        ; MDRout                  ; Dual Purpose Pin          ;
-; F8       ; DIFFIO_T4n, DATA9                      ; Use as regular IO        ; r11ins                  ; Dual Purpose Pin          ;
-; A3       ; DIFFIO_T3n, DATA10                     ; Use as regular IO        ; OutportOut[1]           ; Dual Purpose Pin          ;
-+----------+----------------------------------------+--------------------------+-------------------------+---------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Dual Purpose and Dedicated Pins                                                                                                      ;
++----------+------------------------------------------+--------------------------+-------------------------+---------------------------+
+; Location ; Pin Name                                 ; Reserved As              ; User Signal Name        ; Pin Type                  ;
++----------+------------------------------------------+--------------------------+-------------------------+---------------------------+
+; D1       ; DIFFIO_L4n, DATA1, ASDO                  ; As input tri-stated      ; ~ALTERA_ASDO_DATA1~     ; Dual Purpose Pin          ;
+; E2       ; DIFFIO_L6p, FLASH_nCE, nCSO              ; As input tri-stated      ; ~ALTERA_FLASH_nCE_nCSO~ ; Dual Purpose Pin          ;
+; K6       ; nSTATUS                                  ; -                        ; -                       ; Dedicated Programming Pin ;
+; K2       ; DCLK                                     ; As output driving ground ; ~ALTERA_DCLK~           ; Dual Purpose Pin          ;
+; K1       ; DATA0                                    ; As input tri-stated      ; ~ALTERA_DATA0~          ; Dual Purpose Pin          ;
+; K5       ; nCONFIG                                  ; -                        ; -                       ; Dedicated Programming Pin ;
+; L3       ; nCE                                      ; -                        ; -                       ; Dedicated Programming Pin ;
+; N22      ; DIFFIO_R21n, DEV_OE                      ; Use as regular IO        ; InportOut               ; Dual Purpose Pin          ;
+; M18      ; CONF_DONE                                ; -                        ; -                       ; Dedicated Programming Pin ;
+; M17      ; MSEL0                                    ; -                        ; -                       ; Dedicated Programming Pin ;
+; L18      ; MSEL1                                    ; -                        ; -                       ; Dedicated Programming Pin ;
+; L17      ; MSEL2                                    ; -                        ; -                       ; Dedicated Programming Pin ;
+; K20      ; MSEL3                                    ; -                        ; -                       ; Dedicated Programming Pin ;
+; K22      ; DIFFIO_R16n, nCEO                        ; Use as programming pin   ; ~ALTERA_nCEO~           ; Dual Purpose Pin          ;
+; B18      ; DIFFIO_T27p, PADD0                       ; Use as regular IO        ; OutportOut[24]          ; Dual Purpose Pin          ;
+; B17      ; DIFFIO_T25p, PADD2                       ; Use as regular IO        ; LOout                   ; Dual Purpose Pin          ;
+; E14      ; DIFFIO_T23n, PADD3                       ; Use as regular IO        ; Cout                    ; Dual Purpose Pin          ;
+; F13      ; DIFFIO_T21p, PADD4, DQS2T/CQ3T,DPCLK8    ; Use as regular IO        ; r1ins                   ; Dual Purpose Pin          ;
+; A15      ; DIFFIO_T20n, PADD5                       ; Use as regular IO        ; r2ins                   ; Dual Purpose Pin          ;
+; D13      ; DIFFIO_T19p, PADD8                       ; Use as regular IO        ; r5ins                   ; Dual Purpose Pin          ;
+; A14      ; DIFFIO_T18n, PADD9                       ; Use as regular IO        ; MDRMDataIn[31]          ; Dual Purpose Pin          ;
+; A13      ; DIFFIO_T17n, PADD11                      ; Use as regular IO        ; r9ins                   ; Dual Purpose Pin          ;
+; B13      ; DIFFIO_T17p, PADD12, DQS4T/CQ5T,DPCLK9   ; Use as regular IO        ; OutportOut[29]          ; Dual Purpose Pin          ;
+; F11      ; DIFFIO_T16p, PADD14                      ; Use as regular IO        ; r13ins                  ; Dual Purpose Pin          ;
+; B10      ; DIFFIO_T14p, PADD15                      ; Use as regular IO        ; MDRMDataIn[8]           ; Dual Purpose Pin          ;
+; B9       ; DIFFIO_T13p, PADD17, DQS5T/CQ5T#,DPCLK10 ; Use as regular IO        ; MDRMDataIn[21]          ; Dual Purpose Pin          ;
+; A8       ; DIFFIO_T12n, DATA2                       ; Use as regular IO        ; MDRMDataIn[4]           ; Dual Purpose Pin          ;
+; B8       ; DIFFIO_T12p, DATA3                       ; Use as regular IO        ; OutportOut[25]          ; Dual Purpose Pin          ;
+; A7       ; DIFFIO_T11n, PADD18                      ; Use as regular IO        ; MDRMDataIn[6]           ; Dual Purpose Pin          ;
+; B7       ; DIFFIO_T11p, DATA4                       ; Use as regular IO        ; MDRMDataIn[7]           ; Dual Purpose Pin          ;
+; A5       ; DATA5                                    ; Use as regular IO        ; PCout                   ; Dual Purpose Pin          ;
+; F10      ; DIFFIO_T6p, DATA6                        ; Use as regular IO        ; MDRMDataIn[19]          ; Dual Purpose Pin          ;
+; C6       ; DATA7                                    ; Use as regular IO        ; MDRMDataIn[20]          ; Dual Purpose Pin          ;
+; B4       ; DIFFIO_T5p, DATA8                        ; Use as regular IO        ; MDRMDataIn[22]          ; Dual Purpose Pin          ;
+; F8       ; DIFFIO_T4n, DATA9                        ; Use as regular IO        ; R14out                  ; Dual Purpose Pin          ;
+; C4       ; DIFFIO_T2p, DATA12, DQS1T/CQ1T#,CDPCLK7  ; Use as regular IO        ; OutportOut[1]           ; Dual Purpose Pin          ;
++----------+------------------------------------------+--------------------------+-------------------------+---------------------------+
 
 
 +------------------------------------------------------------+
@@ -615,12 +627,12 @@ The pin-out file can be found in C:/Users/emmaf/OneDrive/Documents/GitHub/ELEC-3
 +----------+------------------+---------------+--------------+
 ; 1        ; 9 / 33 ( 27 % )  ; 2.5V          ; --           ;
 ; 2        ; 8 / 48 ( 17 % )  ; 2.5V          ; --           ;
-; 3        ; 11 / 46 ( 24 % ) ; 2.5V          ; --           ;
-; 4        ; 26 / 41 ( 63 % ) ; 2.5V          ; --           ;
-; 5        ; 6 / 46 ( 13 % )  ; 2.5V          ; --           ;
-; 6        ; 25 / 43 ( 58 % ) ; 2.5V          ; --           ;
-; 7        ; 27 / 47 ( 57 % ) ; 2.5V          ; --           ;
-; 8        ; 10 / 43 ( 23 % ) ; 2.5V          ; --           ;
+; 3        ; 9 / 46 ( 20 % )  ; 2.5V          ; --           ;
+; 4        ; 27 / 41 ( 66 % ) ; 2.5V          ; --           ;
+; 5        ; 7 / 46 ( 15 % )  ; 2.5V          ; --           ;
+; 6        ; 5 / 43 ( 12 % )  ; 2.5V          ; --           ;
+; 7        ; 33 / 47 ( 70 % ) ; 2.5V          ; --           ;
+; 8        ; 25 / 43 ( 58 % ) ; 2.5V          ; --           ;
 +----------+------------------+---------------+--------------+
 
 
@@ -631,24 +643,24 @@ The pin-out file can be found in C:/Users/emmaf/OneDrive/Documents/GitHub/ELEC-3
 +----------+------------+----------+-----------------------------------------------------------+--------+--------------+---------+------------+-----------------+----------+--------------+
 ; A1       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; A2       ;            ; 8        ; VCCIO8                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
-; A3       ; 354        ; 8        ; OutportOut[1]                                             ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; A3       ; 354        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; A4       ; 350        ; 8        ; OutportOut[4]                                             ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; A5       ; 345        ; 8        ; MDRout                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; A5       ; 345        ; 8        ; PCout                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; A6       ; 336        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; A7       ; 334        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; A8       ; 332        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; A7       ; 334        ; 8        ; MDRMDataIn[6]                                             ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; A8       ; 332        ; 8        ; MDRMDataIn[4]                                             ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; A9       ; 328        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; A10      ; 326        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; A11      ; 321        ; 8        ; GND+                                                      ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
-; A12      ; 319        ; 7        ; r15ins                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; A13      ; 314        ; 7        ; R15out                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; A14      ; 312        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; A15      ; 307        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; A11      ; 321        ; 8        ; ZHIins                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; A12      ; 319        ; 7        ; r14ins                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; A13      ; 314        ; 7        ; r9ins                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; A14      ; 312        ; 7        ; MDRMDataIn[31]                                            ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; A15      ; 307        ; 7        ; r2ins                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; A16      ; 298        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; A17      ; 296        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; A18      ; 291        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; A19      ; 290        ; 7        ; R11out                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; A20      ; 284        ; 7        ; R5out                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; A19      ; 290        ; 7        ; R10out                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; A20      ; 284        ; 7        ; R4out                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; A21      ;            ; 7        ; VCCIO7                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; A22      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AA1      ; 76         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
@@ -658,71 +670,71 @@ The pin-out file can be found in C:/Users/emmaf/OneDrive/Documents/GitHub/ELEC-3
 ; AA5      ; 108        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AA6      ;            ; 3        ; VCCIO3                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; AA7      ; 115        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; AA8      ; 123        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; AA8      ; 123        ; 3        ; r8ins                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AA9      ; 126        ; 3        ; OutportOut[27]                                            ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AA10     ; 132        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AA11     ; 134        ; 3        ; GND+                                                      ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; AA12     ; 136        ; 4        ; GND+                                                      ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
-; AA13     ; 138        ; 4        ; LOout                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; AA14     ; 140        ; 4        ; OutportOut[6]                                             ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; AA15     ; 145        ; 4        ; R13out                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; AA13     ; 138        ; 4        ; HIout                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; AA14     ; 140        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; AA15     ; 145        ; 4        ; R12out                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AA16     ; 149        ; 4        ; OutportOut[16]                                            ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AA17     ; 151        ; 4        ; OutportOut[28]                                            ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AA18     ; 163        ; 4        ; OutportOut[13]                                            ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AA19     ; 164        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AA20     ; 169        ; 4        ; OutportOut[23]                                            ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AA21     ; 179        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; AA22     ; 178        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; AA22     ; 178        ; 5        ; OutportOut[19]                                            ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; AB1      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AB2      ;            ; 3        ; VCCIO3                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; AB3      ; 103        ; 3        ; ZHIout                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AB4      ; 107        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AB5      ; 109        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AB6      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; AB7      ; 116        ; 3        ; PCout                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; AB8      ; 124        ; 3        ; r14ins                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; AB7      ; 116        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; AB8      ; 124        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AB9      ; 127        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AB10     ; 133        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AB11     ; 135        ; 3        ; GND+                                                      ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; AB12     ; 137        ; 4        ; GND+                                                      ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
-; AB13     ; 139        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; AB14     ; 141        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; AB15     ; 146        ; 4        ; OutportOut[18]                                            ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; AB13     ; 139        ; 4        ; Inports                                                   ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; AB14     ; 141        ; 4        ; OutportOut[11]                                            ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; AB15     ; 146        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AB16     ; 150        ; 4        ; OutportOut[26]                                            ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; AB17     ; 152        ; 4        ; R3out                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; AB18     ; 162        ; 4        ; OutportOut[11]                                            ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; AB19     ; 165        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; AB20     ; 170        ; 4        ; MDRMDataIn[6]                                             ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; AB17     ; 152        ; 4        ; R2out                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; AB18     ; 162        ; 4        ; r6ins                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; AB19     ; 165        ; 4        ; OutportOut[2]                                             ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; AB20     ; 170        ; 4        ; MDRMDataIn[5]                                             ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AB21     ;            ; 4        ; VCCIO4                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; AB22     ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; B1       ; 2          ; 1        ; MDRMDataIn[16]                                            ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; B2       ; 1          ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; B3       ; 355        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; B4       ; 351        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; B5       ; 346        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; B4       ; 351        ; 8        ; MDRMDataIn[22]                                            ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; B5       ; 346        ; 8        ; MDRMDataIn[17]                                            ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; B6       ; 337        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; B7       ; 335        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; B8       ; 333        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; B9       ; 329        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; B10      ; 327        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; B11      ; 322        ; 8        ; GND+                                                      ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
-; B12      ; 320        ; 7        ; HIins                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; B7       ; 335        ; 8        ; MDRMDataIn[7]                                             ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; B8       ; 333        ; 8        ; OutportOut[25]                                            ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; B9       ; 329        ; 8        ; MDRMDataIn[21]                                            ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; B10      ; 327        ; 8        ; MDRMDataIn[8]                                             ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; B11      ; 322        ; 8        ; ZLOins                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; B12      ; 320        ; 7        ; r15ins                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; B13      ; 315        ; 7        ; OutportOut[29]                                            ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; B14      ; 313        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; B15      ; 308        ; 7        ; r4ins                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; B16      ; 299        ; 7        ; R9out                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; B17      ; 297        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; B18      ; 292        ; 7        ; R0out                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; B19      ; 289        ; 7        ; R10out                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; B15      ; 308        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; B16      ; 299        ; 7        ; R8out                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; B17      ; 297        ; 7        ; LOout                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; B18      ; 292        ; 7        ; OutportOut[24]                                            ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; B19      ; 289        ; 7        ; R9out                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; B20      ; 285        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; B21      ; 269        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; B22      ; 268        ; 6        ; MDRMDataIn[28]                                            ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
-; C1       ; 7          ; 1        ; r9ins                                                     ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; B22      ; 268        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; C1       ; 7          ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; C2       ; 6          ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; C3       ; 358        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; C4       ; 359        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; C3       ; 358        ; 8        ; MDRMDataIn[28]                                            ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; C4       ; 359        ; 8        ; OutportOut[1]                                             ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; C5       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; C6       ; 349        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; C6       ; 349        ; 8        ; MDRMDataIn[20]                                            ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; C7       ; 340        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; C8       ; 339        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; C9       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -733,12 +745,12 @@ The pin-out file can be found in C:/Users/emmaf/OneDrive/Documents/GitHub/ELEC-3
 ; C14      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; C15      ; 300        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; C16      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; C17      ; 286        ; 7        ; R6out                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; C17      ; 286        ; 7        ; R5out                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; C18      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; C19      ; 282        ; 7        ; OutportOut[30]                                            ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; C20      ; 270        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; C21      ; 267        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; C22      ; 266        ; 6        ; OutportOut[2]                                             ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; C22      ; 266        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; D1       ; 9          ; 1        ; ~ALTERA_ASDO_DATA1~ / RESERVED_INPUT_WITH_WEAK_PULLUP     ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; On           ;
 ; D2       ; 8          ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; D3       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -748,35 +760,35 @@ The pin-out file can be found in C:/Users/emmaf/OneDrive/Documents/GitHub/ELEC-3
 ; D7       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; D8       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; D9       ;            ; 8        ; VCCIO8                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
-; D10      ; 324        ; 8        ; MDRMDataIn[22]                                            ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; D10      ; 324        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; D11      ;            ; 8        ; VCCIO8                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; D12      ;            ; 7        ; VCCIO7                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
-; D13      ; 310        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; D13      ; 310        ; 7        ; r5ins                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; D14      ;            ; 7        ; VCCIO7                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; D15      ; 293        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; D16      ;            ; 7        ; VCCIO7                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; D17      ; 281        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; D18      ;            ; 7        ; VCCIO7                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
-; D19      ; 283        ; 7        ; R4out                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; D19      ; 283        ; 7        ; R3out                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; D20      ; 271        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; D21      ; 261        ; 6        ; MDRMDataIn[21]                                            ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
-; D22      ; 260        ; 6        ; MDRMDataIn[20]                                            ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; D21      ; 261        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; D22      ; 260        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; E1       ; 14         ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; E2       ; 13         ; 1        ; ~ALTERA_FLASH_nCE_nCSO~ / RESERVED_INPUT_WITH_WEAK_PULLUP ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; On           ;
 ; E3       ; 5          ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; E4       ; 4          ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; E5       ; 363        ; 8        ; OutportOut[21]                                            ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; E5       ; 363        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; E6       ; 362        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; E7       ; 357        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; E8       ;            ; 8        ; VCCIO8                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
-; E9       ; 338        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
+; E9       ; 338        ; 8        ; ALUen                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; E10      ; 325        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; E11      ; 317        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; E12      ; 316        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; E12      ; 316        ; 7        ; MDRMDataIn[27]                                            ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; E13      ; 311        ; 7        ; MDRRead                                                   ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; E14      ; 301        ; 7        ; r0ins                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; E14      ; 301        ; 7        ; Cout                                                      ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; E15      ; 294        ; 7        ; OutportOut[5]                                             ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; E16      ; 275        ; 7        ; MDRins                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; E16      ; 275        ; 7        ; PCins                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; E17      ;            ;          ; VCCD_PLL2                                                 ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; E18      ;            ;          ; GNDA2                                                     ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; E19      ;            ; 6        ; VCCIO6                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
@@ -789,22 +801,22 @@ The pin-out file can be found in C:/Users/emmaf/OneDrive/Documents/GitHub/ELEC-3
 ; F4       ;            ; 1        ; VCCIO1                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; F5       ;            ;          ; GNDA3                                                     ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; F6       ;            ;          ; VCCD_PLL3                                                 ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
-; F7       ; 360        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; F8       ; 352        ; 8        ; r11ins                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; F9       ; 347        ; 8        ; ALUen                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; F10      ; 348        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; F11      ; 318        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; F12      ; 302        ; 7        ; InportOut                                                 ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; F13      ; 306        ; 7        ; r2ins                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; F7       ; 360        ; 8        ; r0ins                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; F8       ; 352        ; 8        ; R14out                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; F9       ; 347        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; F10      ; 348        ; 8        ; MDRMDataIn[19]                                            ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; F11      ; 318        ; 7        ; r13ins                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; F12      ; 302        ; 7        ; MDRout                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; F13      ; 306        ; 7        ; r1ins                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; F14      ; 279        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; F15      ; 276        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; F15      ; 276        ; 7        ; MDRMDataIn[18]                                            ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; F16      ; 274        ; 7        ; OutportOut[9]                                             ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; F17      ; 272        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; F18      ;            ; --       ; VCCA2                                                     ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
-; F19      ; 263        ; 6        ; r1ins                                                     ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; F19      ; 263        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; F20      ; 262        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; F21      ; 251        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; F22      ; 250        ; 6        ; MDRMDataIn[12]                                            ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; F22      ; 250        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; G1       ; 39         ; 1        ; GND+                                                      ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; G2       ; 38         ; 1        ; GND+                                                      ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; G3       ; 18         ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
@@ -812,45 +824,45 @@ The pin-out file can be found in C:/Users/emmaf/OneDrive/Documents/GitHub/ELEC-3
 ; G5       ; 3          ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; G6       ;            ; --       ; VCCA3                                                     ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; G7       ; 361        ; 8        ; r7ins                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; G8       ; 353        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; G8       ; 353        ; 8        ; MDRMDataIn[24]                                            ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; G9       ; 342        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; G10      ; 341        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; G10      ; 341        ; 8        ; MDRMDataIn[12]                                            ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; G11      ; 331        ; 8        ; OutportOut[8]                                             ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; G12      ; 305        ; 7        ; MDRMDataIn[23]                                            ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; G13      ; 295        ; 7        ; HIout                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; G14      ; 280        ; 7        ; R2out                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; G15      ; 278        ; 7        ; OutportOut[24]                                            ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; G16      ; 277        ; 7        ; Inports                                                   ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; G13      ; 295        ; 7        ; R15out                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; G14      ; 280        ; 7        ; R1out                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; G15      ; 278        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; G16      ; 277        ; 7        ; MDRins                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; G17      ; 273        ; 6        ; OutportOut[17]                                            ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; G18      ; 264        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; G19      ;            ; 6        ; VCCIO6                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; G20      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; G21      ; 226        ; 6        ; PCins                                                     ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
-; G22      ; 225        ; 6        ; ZLOins                                                    ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
-; H1       ; 26         ; 1        ; OutportOut[7]                                             ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
-; H2       ; 25         ; 1        ; R12out                                                    ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; G21      ; 226        ; 6        ; GND+                                                      ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
+; G22      ; 225        ; 6        ; GND+                                                      ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
+; H1       ; 26         ; 1        ; OutportOut[6]                                             ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; H2       ; 25         ; 1        ; R11out                                                    ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; H3       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; H4       ;            ; 1        ; VCCIO1                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; H5       ; 0          ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; H6       ; 11         ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; H7       ; 10         ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; H8       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; H9       ; 344        ; 8        ; ZHIins                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; H10      ; 343        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; H9       ; 344        ; 8        ; MDRMDataIn[15]                                            ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; H10      ; 343        ; 8        ; MDRMDataIn[14]                                            ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; H11      ; 323        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; H12      ; 304        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; H13      ; 303        ; 7        ; MDRMDataIn[19]                                            ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; H12      ; 304        ; 7        ; MDRMDataIn[2]                                             ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; H13      ; 303        ; 7        ; incPC                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; H14      ; 288        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; H15      ; 287        ; 7        ; R8out                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; H16      ; 259        ; 6        ; MDRMDataIn[25]                                            ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
-; H17      ; 265        ; 6        ; MDRMDataIn[9]                                             ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; H15      ; 287        ; 7        ; R7out                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; H16      ; 259        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; H17      ; 265        ; 6        ; MDRMDataIn[25]                                            ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; H18      ; 257        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
-; H19      ; 254        ; 6        ; MDRMDataIn[15]                                            ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
-; H20      ; 253        ; 6        ; MDRMDataIn[14]                                            ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
-; H21      ; 246        ; 6        ; MDRMDataIn[8]                                             ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
-; H22      ; 245        ; 6        ; MDRMDataIn[7]                                             ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; H19      ; 254        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; H20      ; 253        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; H21      ; 246        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; H22      ; 245        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; J1       ; 29         ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; J2       ; 28         ; 1        ; MDRMDataIn[4]                                             ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; J2       ; 28         ; 1        ; MDRMDataIn[3]                                             ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; J3       ; 27         ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; J4       ; 24         ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; J5       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -863,14 +875,14 @@ The pin-out file can be found in C:/Users/emmaf/OneDrive/Documents/GitHub/ELEC-3
 ; J12      ;            ;          ; VCCINT                                                    ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; J13      ;            ;          ; VCCINT                                                    ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; J14      ;            ;          ; VCCINT                                                    ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
-; J15      ; 238        ; 6        ; r13ins                                                    ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
-; J16      ; 243        ; 6        ; MDRMDataIn[5]                                             ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
-; J17      ; 258        ; 6        ; MDRMDataIn[3]                                             ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; J15      ; 238        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; J16      ; 243        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; J17      ; 258        ; 6        ; MDRMDataIn[9]                                             ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; J18      ; 249        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; J19      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; J20      ;            ; 6        ; VCCIO6                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; J21      ; 242        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; J22      ; 241        ; 6        ; MDRMDataIn[18]                                            ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; J22      ; 241        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; K1       ; 31         ; 1        ; ~ALTERA_DATA0~ / RESERVED_INPUT_WITH_WEAK_PULLUP          ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; On           ;
 ; K2       ; 30         ; 1        ; ~ALTERA_DCLK~                                             ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; On           ;
 ; K3       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -878,18 +890,18 @@ The pin-out file can be found in C:/Users/emmaf/OneDrive/Documents/GitHub/ELEC-3
 ; K5       ; 32         ; 1        ; ^nCONFIG                                                  ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; K6       ; 19         ; 1        ; ^nSTATUS                                                  ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; K7       ; 23         ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; K8       ; 21         ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; K8       ; 21         ; 1        ; OutportOut[22]                                            ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; K9       ;            ;          ; VCCINT                                                    ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; K10      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; K11      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; K12      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; K13      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; K14      ;            ;          ; VCCINT                                                    ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
-; K15      ; 236        ; 6        ; MDRMDataIn[0]                                             ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
-; K16      ; 244        ; 6        ; OutportOut[25]                                            ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; K15      ; 236        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; K16      ; 244        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; K17      ; 247        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; K18      ; 248        ; 6        ; OutportOut[22]                                            ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
-; K19      ; 237        ; 6        ; MDRMDataIn[26]                                            ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; K18      ; 248        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; K19      ; 237        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; K20      ; 231        ; 6        ; ^MSEL3                                                    ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; K21      ; 240        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; K22      ; 239        ; 6        ; ~ALTERA_nCEO~ / RESERVED_OUTPUT_OPEN_DRAIN                ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
@@ -899,7 +911,7 @@ The pin-out file can be found in C:/Users/emmaf/OneDrive/Documents/GitHub/ELEC-3
 ; L4       ; 36         ; 1        ; #TDO                                                      ; output ;              ;         ; --         ;                 ; --       ; --           ;
 ; L5       ; 33         ; 1        ; #TDI                                                      ; input  ;              ;         ; --         ;                 ; --       ; --           ;
 ; L6       ; 42         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; L7       ; 50         ; 2        ; LOins                                                     ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; L7       ; 50         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; L8       ; 20         ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; L9       ;            ;          ; VCCINT                                                    ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; L10      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -907,20 +919,20 @@ The pin-out file can be found in C:/Users/emmaf/OneDrive/Documents/GitHub/ELEC-3
 ; L12      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; L13      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; L14      ;            ;          ; VCCINT                                                    ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
-; L15      ; 233        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; L15      ; 233        ; 6        ; LOins                                                     ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; L16      ; 232        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; L17      ; 230        ; 6        ; ^MSEL2                                                    ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; L18      ; 229        ; 6        ; ^MSEL1                                                    ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; L19      ;            ; 6        ; VCCIO6                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; L20      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; L21      ; 235        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; L22      ; 234        ; 6        ; OutportOut[14]                                            ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
-; M1       ; 45         ; 2        ; MDRMDataIn[17]                                            ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
-; M2       ; 44         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; L22      ; 234        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; M1       ; 45         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; M2       ; 44         ; 2        ; r12ins                                                    ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; M3       ; 47         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; M4       ; 46         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; M5       ; 51         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
-; M6       ; 43         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; M6       ; 43         ; 2        ; MDRMDataIn[0]                                             ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; M7       ; 65         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; M8       ; 66         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; M9       ;            ;          ; VCCINT                                                    ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
@@ -937,7 +949,7 @@ The pin-out file can be found in C:/Users/emmaf/OneDrive/Documents/GitHub/ELEC-3
 ; M20      ; 220        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; M21      ; 219        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; M22      ; 218        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; N1       ; 49         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; N1       ; 49         ; 2        ; OutportOut[7]                                             ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; N2       ; 48         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; N3       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; N4       ;            ; 2        ; VCCIO2                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
@@ -952,21 +964,21 @@ The pin-out file can be found in C:/Users/emmaf/OneDrive/Documents/GitHub/ELEC-3
 ; N13      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; N14      ; 189        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; N15      ; 196        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; N16      ; 205        ; 5        ; MDRMDataIn[2]                                             ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; N16      ; 205        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; N17      ; 214        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; N18      ; 215        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; N19      ; 213        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; N20      ; 212        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; N21      ; 217        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; N22      ; 216        ; 5        ; Cout                                                      ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; N22      ; 216        ; 5        ; InportOut                                                 ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; P1       ; 53         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; P2       ; 52         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; P3       ; 58         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; P4       ; 57         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; P5       ; 63         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; P6       ; 79         ; 2        ; R7out                                                     ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; P6       ; 79         ; 2        ; R6out                                                     ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; P7       ; 74         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; P8       ; 86         ; 2        ; MDRMDataIn[24]                                            ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; P8       ; 86         ; 2        ; OutportOut[20]                                            ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; P9       ;            ;          ; VCCINT                                                    ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; P10      ;            ;          ; VCCINT                                                    ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; P11      ;            ;          ; VCCINT                                                    ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
@@ -980,7 +992,7 @@ The pin-out file can be found in C:/Users/emmaf/OneDrive/Documents/GitHub/ELEC-3
 ; P19      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; P20      ; 208        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; P21      ; 211        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; P22      ; 210        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; P22      ; 210        ; 5        ; MDRMDataIn[1]                                             ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; R1       ; 55         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; R2       ; 54         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; R3       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -988,13 +1000,13 @@ The pin-out file can be found in C:/Users/emmaf/OneDrive/Documents/GitHub/ELEC-3
 ; R5       ; 80         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; R6       ; 83         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; R7       ; 84         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; R8       ; 87         ; 2        ; MDRMDataIn[31]                                            ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; R8       ; 87         ; 2        ; MDRMDataIn[30]                                            ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; R9       ; 88         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; R10      ; 90         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; R11      ; 97         ; 3        ; OutportOut[3]                                             ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; R11      ; 97         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; R12      ; 98         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; R13      ; 153        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; R14      ; 175        ; 4        ; OutportOut[20]                                            ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; R14      ; 175        ; 4        ; MDRMDataIn[26]                                            ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; R15      ; 176        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; R16      ; 172        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; R17      ; 194        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
@@ -1007,12 +1019,12 @@ The pin-out file can be found in C:/Users/emmaf/OneDrive/Documents/GitHub/ELEC-3
 ; T2       ; 40         ; 2        ; GND+                                                      ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; T3       ; 72         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; T4       ; 81         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; T5       ; 82         ; 2        ; R14out                                                    ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; T5       ; 82         ; 2        ; R13out                                                    ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; T6       ;            ; --       ; VCCA1                                                     ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; T7       ; 85         ; 2        ; OutportOut[15]                                            ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; T8       ; 89         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; T9       ; 91         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; T10      ; 121        ; 3        ; R1out                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; T10      ; 121        ; 3        ; R0out                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; T11      ; 125        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; T12      ; 148        ; 4        ; MDRMDataIn[10]                                            ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; T13      ;            ;          ; VCCINT                                                    ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
@@ -1052,16 +1064,16 @@ The pin-out file can be found in C:/Users/emmaf/OneDrive/Documents/GitHub/ELEC-3
 ; V3       ; 78         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; V4       ; 77         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; V5       ; 93         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; V6       ; 92         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; V6       ; 92         ; 3        ; OutportOut[14]                                            ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; V7       ; 105        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; V8       ; 113        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; V9       ; 119        ; 3        ; r8ins                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; V9       ; 119        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; V10      ; 120        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; V11      ; 129        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; V12      ; 142        ; 4        ; MDRMDataIn[1]                                             ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; V12      ; 142        ; 4        ; HIins                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; V13      ; 154        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; V14      ; 157        ; 4        ; r6ins                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; V15      ; 158        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; V14      ; 157        ; 4        ; OutportOut[21]                                            ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; V15      ; 158        ; 4        ; OutportOut[3]                                             ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; V16      ; 168        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; V17      ;            ;          ; VCCD_PLL4                                                 ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; V18      ;            ;          ; GNDA4                                                     ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -1082,21 +1094,21 @@ The pin-out file can be found in C:/Users/emmaf/OneDrive/Documents/GitHub/ELEC-3
 ; W11      ;            ; 3        ; VCCIO3                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; W12      ;            ; 4        ; VCCIO4                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; W13      ; 143        ; 4        ; OutportOut[12]                                            ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; W14      ; 155        ; 4        ; MDRMDataIn[30]                                            ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; W14      ; 155        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; W15      ; 159        ; 4        ; r10ins                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; W16      ;            ; 4        ; VCCIO4                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; W17      ; 166        ; 4        ; IRins                                                     ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; W18      ;            ; 4        ; VCCIO4                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; W19      ; 184        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; W20      ; 183        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; W21      ; 191        ; 5        ; r12ins                                                    ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; W21      ; 191        ; 5        ; r11ins                                                    ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; W22      ; 190        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; Y1       ; 71         ; 2        ; MDRMDataIn[27]                                            ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; Y1       ; 71         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; Y2       ; 70         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; Y3       ; 99         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; Y4       ; 96         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
+; Y4       ; 96         ; 3        ; OutportOut[18]                                            ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; Y5       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; Y6       ; 101        ; 3        ; OutportOut[19]                                            ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; Y6       ; 101        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; Y7       ; 111        ; 3        ; ZLOout                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; Y8       ; 117        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; Y9       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -1111,7 +1123,7 @@ The pin-out file can be found in C:/Users/emmaf/OneDrive/Documents/GitHub/ELEC-3
 ; Y18      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; Y19      ;            ; 5        ; VCCIO5                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; Y20      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; Y21      ; 186        ; 5        ; r5ins                                                     ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; Y21      ; 186        ; 5        ; r4ins                                                     ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; Y22      ; 185        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 +----------+------------+----------+-----------------------------------------------------------+--------+--------------+---------+------------+-----------------+----------+--------------+
 Note: Pin directions (input, output or bidir) are based on device operating in user mode.
@@ -1122,7 +1134,7 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+--------------+
-; |Bus                       ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 117  ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |Bus                ; work         ;
+; |Bus                       ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 118  ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |Bus                ; work         ;
 +----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1136,6 +1148,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; clk            ; Input    ; --            ; --            ; --                    ; --  ; --   ;
 ; MDRRead        ; Input    ; --            ; --            ; --                    ; --  ; --   ;
 ; ALUen          ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; incPC          ; Input    ; --            ; --            ; --                    ; --  ; --   ;
 ; R0out          ; Input    ; --            ; --            ; --                    ; --  ; --   ;
 ; R1out          ; Input    ; --            ; --            ; --                    ; --  ; --   ;
 ; R2out          ; Input    ; --            ; --            ; --                    ; --  ; --   ;
@@ -1261,6 +1274,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; clk                 ;                   ;         ;
 ; MDRRead             ;                   ;         ;
 ; ALUen               ;                   ;         ;
+; incPC               ;                   ;         ;
 ; R0out               ;                   ;         ;
 ; R1out               ;                   ;         ;
 ; R2out               ;                   ;         ;
@@ -1417,14 +1431,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
 ; Pin/Rules          ; IO_000001    ; IO_000002    ; IO_000003    ; IO_000004    ; IO_000005    ; IO_000006 ; IO_000007    ; IO_000008    ; IO_000009 ; IO_000010 ; IO_000011    ; IO_000012    ; IO_000013    ; IO_000014    ; IO_000015    ; IO_000018    ; IO_000019    ; IO_000020    ; IO_000021    ; IO_000022    ; IO_000023    ; IO_000024    ; IO_000026    ; IO_000027    ; IO_000045    ; IO_000046    ; IO_000047    ; IO_000033 ; IO_000034    ; IO_000042    ;
 +--------------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
-; Total Pass         ; 0            ; 0            ; 0            ; 0            ; 0            ; 117       ; 0            ; 0            ; 117       ; 117       ; 0            ; 32           ; 0            ; 0            ; 85           ; 0            ; 32           ; 85           ; 0            ; 0            ; 0            ; 32           ; 0            ; 0            ; 0            ; 0            ; 0            ; 117       ; 0            ; 0            ;
+; Total Pass         ; 0            ; 0            ; 0            ; 0            ; 0            ; 118       ; 0            ; 0            ; 118       ; 118       ; 0            ; 32           ; 0            ; 0            ; 86           ; 0            ; 32           ; 86           ; 0            ; 0            ; 0            ; 32           ; 0            ; 0            ; 0            ; 0            ; 0            ; 118       ; 0            ; 0            ;
 ; Total Unchecked    ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ;
-; Total Inapplicable ; 117          ; 117          ; 117          ; 117          ; 117          ; 0         ; 117          ; 117          ; 0         ; 0         ; 117          ; 85           ; 117          ; 117          ; 32           ; 117          ; 85           ; 32           ; 117          ; 117          ; 117          ; 85           ; 117          ; 117          ; 117          ; 117          ; 117          ; 0         ; 117          ; 117          ;
+; Total Inapplicable ; 118          ; 118          ; 118          ; 118          ; 118          ; 0         ; 118          ; 118          ; 0         ; 0         ; 118          ; 86           ; 118          ; 118          ; 32           ; 118          ; 86           ; 32           ; 118          ; 118          ; 118          ; 86           ; 118          ; 118          ; 118          ; 118          ; 118          ; 0         ; 118          ; 118          ;
 ; Total Fail         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ;
 ; clr                ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; clk                ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; MDRRead            ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; ALUen              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; incPC              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; R0out              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; R1out              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; R2out              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
@@ -1598,11 +1613,12 @@ Info (169124): Fitter converted 5 user pins into dedicated programming pins
     Info (169125): Pin ~ALTERA_DATA0~ is reserved at location K1
     Info (169125): Pin ~ALTERA_nCEO~ is reserved at location K22
 Warning (15714): Some pins have incomplete I/O assignments. Refer to the I/O Assignment Warnings report for details
-Critical Warning (169085): No exact pin location assignment(s) for 117 pins of 117 total pins
+Critical Warning (169085): No exact pin location assignment(s) for 118 pins of 118 total pins
     Info (169086): Pin clr not assigned to an exact location on the device
     Info (169086): Pin clk not assigned to an exact location on the device
     Info (169086): Pin MDRRead not assigned to an exact location on the device
     Info (169086): Pin ALUen not assigned to an exact location on the device
+    Info (169086): Pin incPC not assigned to an exact location on the device
     Info (169086): Pin R0out not assigned to an exact location on the device
     Info (169086): Pin R1out not assigned to an exact location on the device
     Info (169086): Pin R2out not assigned to an exact location on the device
@@ -1727,7 +1743,7 @@ Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
 Info (176214): Statistics of I/O pins that need to be placed that use the same VCCIO and VREF, before I/O pin placement
-    Info (176211): Number of I/O pins in group: 117 (unused VREF, 2.5V VCCIO, 85 input, 32 output, 0 bidirectional)
+    Info (176211): Number of I/O pins in group: 118 (unused VREF, 2.5V VCCIO, 86 input, 32 output, 0 bidirectional)
         Info (176212): I/O standards used: 2.5 V.
 Info (176215): I/O bank details before I/O pin placement
     Info (176214): Statistics of I/O banks
@@ -1752,7 +1768,7 @@ Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.14 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.08 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -1760,10 +1776,10 @@ Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Info (144001): Generated suppressed messages file C:/Users/emmaf/OneDrive/Documents/GitHub/ELEC-374/output_files/Phase1.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 5432 megabytes
-    Info: Processing ended: Thu Mar 16 15:56:14 2023
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:09
+    Info: Peak virtual memory: 5434 megabytes
+    Info: Processing ended: Sun Mar 19 18:37:42 2023
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:06
 
 
 +----------------------------+
