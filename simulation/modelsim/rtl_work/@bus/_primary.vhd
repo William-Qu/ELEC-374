@@ -7,6 +7,7 @@ entity \Bus\ is
         MDRRead         : in     vl_logic;
         ALUen           : in     vl_logic;
         incPC           : in     vl_logic;
+        BAOut           : in     vl_logic;
         R0out           : in     vl_logic;
         R1out           : in     vl_logic;
         R2out           : in     vl_logic;
@@ -53,6 +54,7 @@ entity \Bus\ is
         ZLOins          : in     vl_logic;
         PCins           : in     vl_logic;
         MDRins          : in     vl_logic;
+        MARins          : in     vl_logic;
         Inports         : in     vl_logic;
         Outports        : in     vl_logic;
         IRins           : in     vl_logic;

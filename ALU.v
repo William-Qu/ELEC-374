@@ -41,33 +41,43 @@ reg [31:0] regLO, regHI;
 	endgenerate
 
 	always @ (*) begin
-		if (OPCode == 'b00001) regLO = regLOshl;	else							//SHL Module Name: left_shift
-		if (OPCode == 'b00010) regLO = regLOshrl; else							//SHR logical Module Name: right_shift_combined
-		if (OPCode == 'b00011) regLO = regLOshra; else							//SHR arithmetic Module Name: right_shift_combined
-		if (OPCode == 'b00100) regLO = regLOrotatel; else						//Rotate L Module Name: left_rotate
-		if (OPCode == 'b00101) regLO = regLOrotater; else						//Rotate R Module Name: left_rotate
-		if (OPCode == 'b00110) regLO = regLOlog_and; else						//AND Module Name: logical_and
-		if (OPCode == 'b00111) regLO = regLOlog_or; else						//OR Module Name: logical_or
-		if (OPCode == 'b01000) regLO = regLOnot; else							//NOT Module Name: NOT
-		if (OPCode == 'b01001) regLO = regLOneg; else							//Neg Module Name: twoCompliment
-		if (OPCode == 'b01010)begin													//Add Module Name: Hierarchical_CLA
+		if (OPCode == 5'b00001) regLO = regLOshl;	else							//SHL Module Name: left_shift
+		if (OPCode == 5'b00010) regLO = regLOshrl; else							//SHR logical Module Name: right_shift_combined
+		if (OPCode == 5'b00011) regLO = regLOshra; else							//SHR arithmetic Module Name: right_shift_combined
+		if (OPCode == 5'b00100) regLO = regLOrotatel; else						//Rotate L Module Name: left_rotate
+		if (OPCode == 5'b00101) regLO = regLOrotater; else						//Rotate R Module Name: left_rotate
+		if (OPCode == 5'b00110) regLO = regLOlog_and; else						//AND Module Name: logical_and
+		if (OPCode == 5'b00111) regLO = regLOlog_or; else						//OR Module Name: logical_or
+		if (OPCode == 5'b01000) regLO = regLOnot; else							//NOT Module Name: NOT
+		if (OPCode == 5'b01001) regLO = regLOneg; else							//Neg Module Name: twoCompliment
+		if (OPCode == 5'b01010)begin													//Add Module Name: Hierarchical_CLA
 			regLO = regLOadd;	
 			regHI = regHIadd;
 		end else
-		if (OPCode == 'b01011)begin													//Subtract Module Name: Hierarchical_CLA
+		if (OPCode == 5'b01011)begin													//Subtract Module Name: Hierarchical_CLA
 			regLO = regLOsub;
 			regHI = regHIsub;
 		end else
-		if (OPCode == 'b01100)begin													//Multiply Module Name: boothMultiplier
+		if (OPCode == 5'b01100)begin													//Multiply Module Name: boothMultiplier
 			regLO = regLOmul;	
 			regHI = regHImul;
 		end else
-		if (OPCode == 'b01101)begin													//Divide Module Name: nonRestoringDivisionPosiNeg
+		if (OPCode == 5'b01101)begin													//Divide Module Name: nonRestoringDivisionPosiNeg
 			regLO = regLOdiv;	
 			regHI = regHIdiv;
 		end else
-		if (OPCode == 'b10000) regLO = regA;
+		if (OPCode == 5'b10000) regLO = regA; else								//Movi instruction
+		if (OPCode == 5'b10001)begin													//Add Immediate Instruction
+			regLO = regLOadd;	
+			regHI = regHIadd;
+		end else
+		if (OPCode == 5'b10010) regLO = regLOlog_and; else 					//AND Immediate Module Name
+		if (OPCode == 5'b10011) regLO = regLOlog_or;       					//OR Immediate Module Name
 	end
+	
+	//OPCodes 5'b10100 
+	//        5'b10101
+	//        5'b10110 are all blocked
 	
 	assign regZ[31:0]  = regLO[31:0];
 	assign regZ[63:32] = regHI[31:0];

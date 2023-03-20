@@ -1,5 +1,5 @@
 Flow report for Phase1
-Thu Mar 16 15:56:29 2023
+Mon Mar 20 14:08:13 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -40,22 +40,22 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Flow Summary                                                                          ;
 +------------------------------------+--------------------------------------------------+
-; Flow Status                        ; Successful - Thu Mar 16 15:56:29 2023            ;
+; Flow Status                        ; Successful - Mon Mar 20 14:08:13 2023            ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                      ; Phase1                                           ;
 ; Top-level Entity Name              ; Bus                                              ;
 ; Family                             ; Cyclone III                                      ;
 ; Device                             ; EP3C16F484C6                                     ;
 ; Timing Models                      ; Final                                            ;
-; Total logic elements               ; 0 / 15,408 ( 0 % )                               ;
-;     Total combinational functions  ; 0 / 15,408 ( 0 % )                               ;
-;     Dedicated logic registers      ; 0 / 15,408 ( 0 % )                               ;
-; Total registers                    ; 0                                                ;
-; Total pins                         ; 117 / 347 ( 34 % )                               ;
+; Total logic elements               ; 36,751                                           ;
+;     Total combinational functions  ; 19,731                                           ;
+;     Dedicated logic registers      ; 17,254                                           ;
+; Total registers                    ; 17254                                            ;
+; Total pins                         ; 120                                              ;
 ; Total virtual pins                 ; 0                                                ;
-; Total memory bits                  ; 0 / 516,096 ( 0 % )                              ;
-; Embedded Multiplier 9-bit elements ; 0 / 112 ( 0 % )                                  ;
-; Total PLLs                         ; 0 / 4 ( 0 % )                                    ;
+; Total memory bits                  ; 0                                                ;
+; Embedded Multiplier 9-bit elements ; 0                                                ;
+; Total PLLs                         ; 0                                                ;
 +------------------------------------+--------------------------------------------------+
 
 
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/16/2023 15:56:01 ;
+; Start date & time ; 03/20/2023 14:07:02 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Phase1              ;
 +-------------------+---------------------+
@@ -75,10 +75,11 @@ applicable agreement for further details.
 +--------------------------------------+---------------------------------------+---------------+-------------+----------------------+
 ; Assignment Name                      ; Value                                 ; Default Value ; Entity Name ; Section Id           ;
 +--------------------------------------+---------------------------------------+---------------+-------------+----------------------+
-; COMPILER_SIGNATURE_ID                ; 38923010049.167899656135208           ; --            ; --          ; --                   ;
+; COMPILER_SIGNATURE_ID                ; 38923010049.167933562220548           ; --            ; --          ; --                   ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; TestbenchMultiplier  ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; TestbenchControlUnit ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; ADD_tb               ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; StrLdiTB             ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; ADD_tb                                ; --            ; --          ; eda_simulation       ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                           ; --            ; --          ; eda_simulation       ;
 ; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (Verilog)             ; <None>        ; --          ; --                   ;
@@ -86,15 +87,19 @@ applicable agreement for further details.
 ; EDA_TEST_BENCH_FILE                  ; TestbenchMultiplier.v                 ; --            ; --          ; TestbenchMultiplier  ;
 ; EDA_TEST_BENCH_FILE                  ; TestbenchControlUnit.v                ; --            ; --          ; TestbenchControlUnit ;
 ; EDA_TEST_BENCH_FILE                  ; ADD_tb.v                              ; --            ; --          ; ADD_tb               ;
+; EDA_TEST_BENCH_FILE                  ; StrLdiTB.v                            ; --            ; --          ; StrLdiTB             ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; TestbenchMultiplier                   ; --            ; --          ; TestbenchMultiplier  ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; TestbenchControlUnit                  ; --            ; --          ; TestbenchControlUnit ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; ADD_tb                                ; --            ; --          ; ADD_tb               ;
+; EDA_TEST_BENCH_MODULE_NAME           ; StrLdiTB                              ; --            ; --          ; StrLdiTB             ;
 ; EDA_TEST_BENCH_NAME                  ; TestbenchMultiplier                   ; --            ; --          ; eda_simulation       ;
 ; EDA_TEST_BENCH_NAME                  ; TestbenchControlUnit                  ; --            ; --          ; eda_simulation       ;
 ; EDA_TEST_BENCH_NAME                  ; ADD_tb                                ; --            ; --          ; eda_simulation       ;
+; EDA_TEST_BENCH_NAME                  ; StrLdiTB                              ; --            ; --          ; eda_simulation       ;
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 500 ns                                ; --            ; --          ; TestbenchMultiplier  ;
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 800 ns                                ; --            ; --          ; TestbenchControlUnit ;
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 1000 ns                               ; --            ; --          ; ADD_tb               ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 1000 ns                               ; --            ; --          ; StrLdiTB             ;
 ; EDA_TIME_SCALE                       ; 1 ps                                  ; --            ; --          ; eda_simulation       ;
 ; IP_TOOL_NAME                         ; 8B10B Encoder-Decoder                 ; --            ; --          ; --                   ;
 ; IP_TOOL_VERSION                      ; 13.0                                  ; --            ; --          ; --                   ;
@@ -118,41 +123,29 @@ applicable agreement for further details.
 +--------------------------------------+---------------------------------------+---------------+-------------+----------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------+
-; Flow Elapsed Time                                                                                                             ;
-+---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
-+---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:05     ; 1.0                     ; 4600 MB             ; 00:00:04                           ;
-; Fitter                    ; 00:00:08     ; 1.0                     ; 5432 MB             ; 00:00:08                           ;
-; Assembler                 ; 00:00:02     ; 1.0                     ; 4558 MB             ; 00:00:02                           ;
-; TimeQuest Timing Analyzer ; 00:00:08     ; 1.0                     ; 4632 MB             ; 00:00:03                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4507 MB             ; 00:00:01                           ;
-; Total                     ; 00:00:24     ; --                      ; --                  ; 00:00:18                           ;
-+---------------------------+--------------+-------------------------+---------------------+------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                        ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis ; 00:01:07     ; 1.0                     ; 4812 MB             ; 00:01:06                           ;
+; Total                ; 00:01:07     ; --                      ; --                  ; 00:01:06                           ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+----------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                        ;
-+---------------------------+------------------+-----------+------------+----------------+
-; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
-+---------------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis      ; MSI              ; Windows 7 ; 6.2        ; x86_64         ;
-; Fitter                    ; MSI              ; Windows 7 ; 6.2        ; x86_64         ;
-; Assembler                 ; MSI              ; Windows 7 ; 6.2        ; x86_64         ;
-; TimeQuest Timing Analyzer ; MSI              ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; MSI              ; Windows 7 ; 6.2        ; x86_64         ;
-+---------------------------+------------------+-----------+------------+----------------+
++-----------------------------------------------------------------------------------+
+; Flow OS Summary                                                                   ;
++----------------------+------------------+-----------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
++----------------------+------------------+-----------+------------+----------------+
+; Analysis & Synthesis ; DESKTOP-MP94GB7  ; Windows 7 ; 6.2        ; x86_64         ;
++----------------------+------------------+-----------+------------+----------------+
 
 
 ------------
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off Phase1 -c Phase1
-quartus_fit --read_settings_files=off --write_settings_files=off Phase1 -c Phase1
-quartus_asm --read_settings_files=off --write_settings_files=off Phase1 -c Phase1
-quartus_sta Phase1 -c Phase1
-quartus_eda --read_settings_files=off --write_settings_files=off Phase1 -c Phase1
 
 
 

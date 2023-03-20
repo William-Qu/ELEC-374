@@ -72,7 +72,7 @@ Mreg510Out, Mreg511Out;
 
 //Make the input enable signals 
 //---------------------------------------------------------------------------------------------------------------------------
-reg [31:0]
+reg
 Mreg0Ins, Mreg10Ins, Mreg20Ins, Mreg30Ins, Mreg40Ins, Mreg50Ins, Mreg60Ins, Mreg70Ins, Mreg80Ins, Mreg90Ins,
 Mreg1Ins, Mreg11Ins, Mreg21Ins, Mreg31Ins, Mreg41Ins, Mreg51Ins, Mreg61Ins, Mreg71Ins, Mreg81Ins, Mreg91Ins,
 Mreg2Ins, Mreg12Ins, Mreg22Ins, Mreg32Ins, Mreg42Ins, Mreg52Ins, Mreg62Ins, Mreg72Ins, Mreg82Ins, Mreg92Ins,
