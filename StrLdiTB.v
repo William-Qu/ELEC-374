@@ -73,7 +73,7 @@ always @(Present_state) // do the required job in each state
 								#10 MARins <= 1;
 								#20 MARins <= 0;
 								#40 //Store Instruction should be complete by this point
-								#20 MDRMDataIn <= 32'b10100000000000000000000111111111; // opcode for “ldi”
+								#20 MDRMDataIn <= 32'b10100000000000000000000111111111; // opcode for “ld”
 								#10 Inports <= 1;
 								#20 Inports <= 0;
 								#40

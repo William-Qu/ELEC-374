@@ -20,6 +20,9 @@ output [31:0] OutportOut //Outport Output Signal to output signals to a display
 			reg [31:0] IncrementedPC, PCIN;
 			reg incPCTemp, PCinsTemp, Branch;
 			reg [31:0] BusMuxOutTempPC;
+			wire [31:0] RAOut;
+			reg[31:0] JumpOut;
+			reg RAinsTemp;
 			
 			//Memory Necessary Registers
 			reg [31:0] r0outf, MARIn, MemIn, MemOffset, MemAddr;
@@ -39,6 +42,7 @@ output [31:0] OutportOut //Outport Output Signal to output signals to a display
 				reg32bit IR  (IROut, BusMuxOut, clr, clk, IRins);
 				reg32bit ZLO (ZLoOut, BusMuxOut, clr, clk, ZLOins);
 				reg32bit ZHI (ZHiOut, BusMuxOut, clr, clk, ZHIins);
+				reg32bit RA (RAOut, JumpOut, clr, clk, RAinsTemp);
 				reg32bit MAR (MAROut, MARIn, clr, clk, MARins);
 				MDRunit  mdr (MDRRead, clr, clk, MDRins, BusMuxOut, MemOut, MDROut);
 				
@@ -51,9 +55,10 @@ output [31:0] OutportOut //Outport Output Signal to output signals to a display
 				ALU Logic (regA, regB, OPCode, ALUOutput);
 				ALURegisters LogicReg (clr, clk, r0outTemp, r1outf, r2outf, r3outf, r4outf, r5outf, r6outf, r7outf, r8outf, r9outf, r10outf, r11outf, r12outf, r13outf, r14outf, r15outf, r0ins, r1ins, r2ins, r3ins, r4ins, r5ins, r6ins, r7ins, r8ins, r9ins, r10ins, r11ins, r12ins, r13ins, r14ins, r15ins, BusMuxOut);
 				
+				//CON_FF branchChecker (IROut, BusMuxOut, 1'b1, clr, clk, CONOut);
 				RAM memory (clr, clk, MemWrite, MemIn, MAROut[8:0], MemOut);
 			endgenerate 
-			
+
 			//Generate the Bus Control System (Encoder and Multiplexer)
 			generate
 				encoder EnO (R0out, R1out, R2out, R3out, R4out, R5out, R6out, R7out,R8out, R9out, R10out, R11out, R12out, R13out, R14out, R15out,HIout, LOout, ZHIout, ZLOout,PCout, MDRout, InportOut, Cout, EnOut);
@@ -93,7 +98,7 @@ output [31:0] OutportOut //Outport Output Signal to output signals to a display
 				if (regASel == 4'b1110) regA = r14outf[31:0]; else
 				if (regASel == 4'b1111) regA = r15outf[31:0];
 				
-				if (OPCode == 5'b10100 || OPCode == 5'b10000 || OPCode == 5'b10001 || OPCode == 5'b10010 || OPCode == 5'b10011) regA = immVal;
+				if (OPCode == 5'b10100 || OPCode == 5'b10000 || OPCode == 5'b10001 || OPCode == 5'b10010 || OPCode == 5'b10011 || OPCode == 5'b11100 || OPCode == 5'b11101) regA = immVal;
 				//Ldi, movi, addi, andi, ori
 				
 				//Put contents of the correct register into regB using regBSel from the IR
@@ -146,16 +151,24 @@ output [31:0] OutportOut //Outport Output Signal to output signals to a display
 			
 			//Increment PC
 			always @ (posedge clk) begin
-				if (OPCode == 5'b11000) Branch = 1'b1; else //Branch Zero Instruction brzr 
-				if (OPCode == 5'b11001) Branch = 1'b1; else //Branch Non-Zero Instruction brnz
-				if (OPCode == 5'b11010) Branch = 1'b1; else //Branch Positive Instruction brpl
-				if (OPCode == 5'b11011) Branch = 1'b1;      //Branch Negative Instruction brmi
+				if (OPCode == 5'b11000 && regB == 32'b0) Branch = 1'b1; else    //Branch Zero Instruction brzr 
+				if (OPCode == 5'b11001 && regB != 32'b0) Branch = 1'b1; else    //Branch Non-Zero Instruction brnz
+				if (OPCode == 5'b11010 && regB[31] == 1'b0) Branch = 1'b1; else //Branch Positive Instruction brpl
+				if (OPCode == 5'b11011 && regB[31] == 1'b1) Branch = 1'b1; else //Branch Negative Instruction brmi
+				if (OPCode == 5'b11100) begin //Jump and Link Instruction brpl
+					Branch = 1'b1; 
+					RAinsTemp = 1'b1;
+					JumpOut = PCOut;
+				end else 
+				if (OPCode == 5'b11101) Branch = 1'b1; //Jump Instruction brpl
 				else Branch = 0;
 			
+				if (OPCode != 5'b11100) RAinsTemp = 1'b0;
+				
 				BusMuxOutTempPC = Branch ? regA : BusMuxOut;
 				IncrementedPC = PCOut + incPC;
 				PCIN = incPC ? IncrementedPC : BusMuxOutTempPC;
-				PCinsTemp = incPC ? incPC : PCins;
+				PCinsTemp = incPC ? incPC : PCins || Branch;
 			end
 			
 endmodule

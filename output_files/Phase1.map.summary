@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Sun Mar 19 18:37:34 2023
+Analysis & Synthesis Status : Successful - Mon Mar 20 17:45:28 2023
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
 Revision Name : Phase1
 Top-level Entity Name : Bus
 Family : Cyclone III
-Total logic elements : 0
-    Total combinational functions : 0
-    Dedicated logic registers : 0
-Total registers : 0
-Total pins : 118
+Total logic elements : 36,757
+    Total combinational functions : 19,737
+    Dedicated logic registers : 17,254
+Total registers : 17254
+Total pins : 120
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0
