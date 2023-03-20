@@ -20,7 +20,6 @@ module CON_FF (input [31:0] IR,
 		assign d = ((decoder_output[0] & equal) | (decoder_output[1] & notequal) | (decoder_output[2] & equalorless) | (decoder_output[3] & greater));
 		
 		dff_Q CONFF (.D(d), .clk(CONin), .clr(1'b0), .Q(CONout));
-		
 endmodule
 		
 		
