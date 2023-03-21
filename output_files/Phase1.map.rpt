@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Phase1
-Mon Mar 20 17:45:28 2023
+Mon Mar 20 23:10:53 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -58,7 +58,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                          ;
 +------------------------------------+--------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Mar 20 17:45:28 2023            ;
+; Analysis & Synthesis Status        ; Successful - Mon Mar 20 23:10:52 2023            ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                      ; Phase1                                           ;
 ; Top-level Entity Name              ; Bus                                              ;
@@ -1675,7 +1675,7 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:57     ;
+; Top            ; 00:01:01     ;
 +----------------+--------------+
 
 
@@ -1685,7 +1685,7 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Mon Mar 20 17:44:20 2023
+    Info: Processing started: Mon Mar 20 23:09:40 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Phase1 -c Phase1
 Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
 Info (12021): Found 1 design units, including 1 entities, in source file strlditb.v
@@ -3167,10 +3167,10 @@ Info (21057): Implemented 36941 device resources after synthesis - the final res
     Info (21059): Implemented 32 output pins
     Info (21061): Implemented 36821 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 656 warnings
-    Info: Peak virtual memory: 4800 megabytes
-    Info: Processing ended: Mon Mar 20 17:45:28 2023
-    Info: Elapsed time: 00:01:08
-    Info: Total CPU time (on all processors): 00:01:06
+    Info: Peak virtual memory: 4810 megabytes
+    Info: Processing ended: Mon Mar 20 23:10:53 2023
+    Info: Elapsed time: 00:01:13
+    Info: Total CPU time (on all processors): 00:01:11
 
 
 +------------------------------------------+

@@ -60,27 +60,30 @@ always @(Present_state) // do the required job in each state
 								#10 Inports <= 1;
 								#20 Inports <= 0;
 								#40
-								#10 InportOut <= 1; HIins <= 1;
-								#20 InportOut <= 0; HIins <= 0; // initialize R0 with the value $12
+								#10 InportOut <= 1; r0ins <= 1;
+								#20 InportOut <= 0; r0ins <= 0; // initialize R0 with the value $12
 								#40
-								#20 MDRMDataIn <= 32'h00000032;
+								#20 MDRMDataIn <= 32'b10001000000000000000000100110110; // opcode for “addi”
 								#10 Inports <= 1;
 								#20 Inports <= 0;
 								#40
-								#10 InportOut <= 1; LOins <= 1;
-								#20 InportOut <= 0; LOins <= 0; // initialize R0 with the value $12
-								#40 //Mov from HI
-								#10 HIout <= 1; ZHIins <= 1;
-								#20 HIout <= 0; ZHIins <= 0; // initialize R0 with the value $12
-								#40 //Mov from LO
-								#10 LOout <= 1; ZLOins <= 1;
-								#20 LOout <= 0; ZLOins <= 0; // initialize R0 with the value $12
+								#10 InportOut <= 1; IRins <= 1;
+								#20 InportOut <= 0; IRins <= 0; 
 								#40
-								#10 ZLOout <= 1; Outports <= 1;
-								#20 ZLOout <= 0; Outports <= 0; // initialize R0 with the value $12
-
+								#20 MDRMDataIn <= 32'b10010000000000000000000111111111; // opcode for “andi”
+								#10 Inports <= 1;
+								#20 Inports <= 0;
+								#40
+								#10 InportOut <= 1; IRins <= 1;
+								#20 InportOut <= 0; IRins <= 0; #40
+								#20 MDRMDataIn <= 32'b10011000000000000000000101010101; // opcode for “ori”
+								#10 Inports <= 1;
+								#20 Inports <= 0;
+								#40
+								#10 InportOut <= 1; IRins <= 1;
+								#20 InportOut <= 0; IRins <= 0; 
 								
 			end
-		endcase			
+		endcase
 	end
 endmodule  

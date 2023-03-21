@@ -194,20 +194,18 @@
 # 
 #           File in use by: 789wi  Hostname: DESKTOP-MP94GB7  ProcessID: 25124
 # 
-#           Attempting to use alternate WLF file "./wlftvamgnk".
+#           Attempting to use alternate WLF file "./wlftvneqhq".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
 # 
-#           Using alternate file: ./wlftvamgnk
+#           Using alternate file: ./wlftvneqhq
 # 
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run 1000 ns
-add wave -position insertpoint sim:/ADD_tb/Datapath/InPort/*
-add wave -position insertpoint sim:/ADD_tb/Datapath/RegLo/*
-add wave -position insertpoint sim:/ADD_tb/Datapath/RegHi/*
-add wave -position insertpoint sim:/ADD_tb/Datapath/ZLO/*
-add wave -position insertpoint sim:/ADD_tb/Datapath/ZHI/*
+add wave -position insertpoint sim:/ADD_tb/Datapath/IR/*
+add wave -position insertpoint sim:/ADD_tb/Datapath/LogicReg/gr0/*
+add wave -position insertpoint sim:/ADD_tb/Datapath/CLO/*
 restart
 run 1000ns
