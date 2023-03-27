@@ -145,6 +145,12 @@
 # 
 # Top level modules:
 # 	ALURegisters
+# vlog -vlog01compat -work work +incdir+C:/Users/789wi/Videos/ELEC-374 {C:/Users/789wi/Videos/ELEC-374/ControlUnitBus.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ControlUnitBus
+# 
+# Top level modules:
+# 	ControlUnitBus
 # 
 # vlog -vlog01compat -work work +incdir+C:/Users/789wi/Videos/ELEC-374 {C:/Users/789wi/Videos/ELEC-374/ADD_tb.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
@@ -165,6 +171,7 @@
 # //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
 # //
 # Loading work.ADD_tb
+# Loading work.ControlUnitBus
 # Loading work.Bus
 # Loading work.reg32bit
 # Loading work.MDRunit
@@ -194,18 +201,22 @@
 # 
 #           File in use by: 789wi  Hostname: DESKTOP-MP94GB7  ProcessID: 25124
 # 
-#           Attempting to use alternate WLF file "./wlftvneqhq".
+#           Attempting to use alternate WLF file "./wlftrsjf6r".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
 # 
-#           Using alternate file: ./wlftvneqhq
+#           Using alternate file: ./wlftrsjf6r
 # 
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run 1000 ns
-add wave -position insertpoint sim:/ADD_tb/Datapath/IR/*
-add wave -position insertpoint sim:/ADD_tb/Datapath/LogicReg/gr0/*
-add wave -position insertpoint sim:/ADD_tb/Datapath/CLO/*
+add wave -position insertpoint  \
+sim:/ADD_tb/CTRL/PresentState
+add wave -position insertpoint  \
+sim:/ADD_tb/CTRL/StateHolder
+add wave -position insertpoint sim:/ADD_tb/CTRL/B/PC/*
+add wave -position insertpoint  \
+sim:/ADD_tb/CTRL/B/incPC
 restart
 run 1000ns

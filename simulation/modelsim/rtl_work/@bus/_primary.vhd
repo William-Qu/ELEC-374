@@ -59,6 +59,7 @@ entity \Bus\ is
         Outports        : in     vl_logic;
         IRins           : in     vl_logic;
         MDRMDataIn      : in     vl_logic_vector(31 downto 0);
-        OutportOut      : out    vl_logic_vector(31 downto 0)
+        OutportOut      : out    vl_logic_vector(31 downto 0);
+        IROut           : out    vl_logic_vector(31 downto 0)
     );
 end \Bus\;

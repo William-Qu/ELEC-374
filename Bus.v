@@ -4,12 +4,12 @@ input clr, clk, MDRRead, ALUen, incPC, BAOut, //Bits for enabling and disabling 
 input R0out, R1out, R2out, R3out, R4out, R5out, R6out, R7out,R8out, R9out, R10out, R11out, R12out, R13out, R14out, R15out,HIout, LOout, ZHIout, ZLOout,PCout, MDRout, InportOut, Cout, //Output Select Signals for which register were taking data from
 input r0ins, r1ins, r2ins, r3ins, r4ins, r5ins, r6ins, r7ins, r8ins, r9ins, r10ins, r11ins, r12ins, r13ins, r14ins, r15ins, HIins, LOins, ZHIins, ZLOins,PCins, MDRins, MARins, Inports, Outports, IRins, //Input Select Signals for which register were putting data into
 input [31:0] MDRMDataIn, //MDR Data In register
-output [31:0] OutportOut //Outport Output Signal to output signals to a display
+output [31:0] OutportOut, IROut //Outport Output Signal to output signals to a display
 );
 			
 			//These are the output wires of the hardware modules
 			wire [31:0] r0outTemp, r1outf, r2outf, r3outf, r4outf, r5outf, r6outf, r7outf, r8outf, r9outf, r10outf, r11outf, r12outf, r13outf, r14outf, r15outf;
-			wire [31:0] MDROut, MAROut, PCOut, RegHiOut, RegLoOut, IROut, ZLoOut, ZHiOut, BusMuxOut, RegInportOut, CLoOut, CHiOut, MemOut;
+			wire [31:0] MDROut, MAROut, PCOut, RegHiOut, RegLoOut, ZLoOut, ZHiOut, BusMuxOut, RegInportOut, CLoOut, CHiOut, MemOut;
 			wire [63:0] ALUOutput;
 			wire [4:0] EnOut;
 			
@@ -23,6 +23,10 @@ output [31:0] OutportOut //Outport Output Signal to output signals to a display
 			wire [31:0] RAOut;
 			reg[31:0] JumpOut;
 			reg RAinsTemp;
+			
+			//In and Out commands registers
+			reg [31:0] OutportOutTemp;
+			reg OutportOutCheck, OutportsTemp;
 			
 			//Memory Necessary Registers
 			reg [31:0] r0outf, MARIn, MemIn, MemOffset, MemAddr;
@@ -47,7 +51,7 @@ output [31:0] OutportOut //Outport Output Signal to output signals to a display
 				MDRunit  mdr (MDRRead, clr, clk, MDRins, BusMuxOut, MemOut, MDROut);
 				
 				reg32bit InPort (RegInportOut, MDRMDataIn, clr, clk, Inports);
-				reg32bit OutPort (OutportOut, BusMuxOut, clr, clk, Outports);
+				reg32bit OutPort (OutportOut, OutportOutTemp, clr, clk, OutportsTemp);
 				
 				reg32bit CLO (CLoOut, CLoIn, clr, clk, ALUen);
 				reg32bit CHI (CHiOut, CHiIn, clr, clk, ALUen);
@@ -56,7 +60,7 @@ output [31:0] OutportOut //Outport Output Signal to output signals to a display
 				ALURegisters LogicReg (clr, clk, r0outTemp, r1outf, r2outf, r3outf, r4outf, r5outf, r6outf, r7outf, r8outf, r9outf, r10outf, r11outf, r12outf, r13outf, r14outf, r15outf, r0ins, r1ins, r2ins, r3ins, r4ins, r5ins, r6ins, r7ins, r8ins, r9ins, r10ins, r11ins, r12ins, r13ins, r14ins, r15ins, BusMuxOut);
 				
 				//CON_FF branchChecker (IROut, BusMuxOut, 1'b1, clr, clk, CONOut);
-				RAM memory (clr, clk, MemWrite, MemIn, MAROut[8:0], MemOut);
+				Memory memory (clr, clk, MemWrite, MemIn, MAROut[8:0], MemOut);
 			endgenerate 
 
 			//Generate the Bus Control System (Encoder and Multiplexer)
@@ -98,8 +102,11 @@ output [31:0] OutportOut //Outport Output Signal to output signals to a display
 				if (regASel == 4'b1110) regA = r14outf[31:0]; else
 				if (regASel == 4'b1111) regA = r15outf[31:0];
 				
-				if (OPCode == 5'b10100 || OPCode == 5'b10000 || OPCode == 5'b10001 || OPCode == 5'b10010 || OPCode == 5'b10011 || OPCode == 5'b11100 || OPCode == 5'b11101) regA = immVal;
 				//Ldi, movi, addi, andi, ori
+				if (OPCode == 5'b10100 || OPCode == 5'b10000 || OPCode == 5'b10001 || OPCode == 5'b10010 || OPCode == 5'b10011 || OPCode == 5'b11100 || OPCode == 5'b11101) regA = immVal;
+				
+				//In command
+				if (OPCode == 5'b01110) regA = RegInportOut;
 				
 				//Put contents of the correct register into regB using regBSel from the IR
 				if (regBSel == 4'b0000) regB = r0outf[31:0]; else
@@ -145,8 +152,15 @@ output [31:0] OutportOut //Outport Output Signal to output signals to a display
 					MARIn = MemAddr;
 					MemWrite = 1; 
 				end
-			
-				if (OPCode != 5'b10110) MemWrite = 0; //Turn off write if not a store OPCode
+				
+				//Out Instruction
+				if (OPCode == 5'b01111) OutportOutCheck = 1'b1;
+				if (OPCode != 5'b01111) OutportOutCheck = 1'b0;
+				
+				if (OPCode != 5'b10110) MemWrite = 1'b0; //Turn off write if not a store OPCode
+				
+				OutportsTemp = OutportOutCheck ? OutportOutCheck : Outports;
+				OutportOutTemp = OutportOutCheck ? CLoIn : BusMuxOut;
 			end
 			
 			//Increment PC
@@ -155,20 +169,20 @@ output [31:0] OutportOut //Outport Output Signal to output signals to a display
 				if (OPCode == 5'b11001 && regB != 32'b0) Branch = 1'b1; else    //Branch Non-Zero Instruction brnz
 				if (OPCode == 5'b11010 && regB[31] == 1'b0) Branch = 1'b1; else //Branch Positive Instruction brpl
 				if (OPCode == 5'b11011 && regB[31] == 1'b1) Branch = 1'b1; else //Branch Negative Instruction brmi
-				if (OPCode == 5'b11100) begin //Jump and Link Instruction brpl
+				if (OPCode == 5'b11100) begin //Jump and Link Instruction jal
 					Branch = 1'b1; 
 					RAinsTemp = 1'b1;
 					JumpOut = PCOut;
 				end else 
-				if (OPCode == 5'b11101) Branch = 1'b1; //Jump Instruction brpl
+				if (OPCode == 5'b11101) Branch = 1'b1; //Jump Instruction jr
 				else Branch = 0;
 			
 				if (OPCode != 5'b11100) RAinsTemp = 1'b0;
 				
 				BusMuxOutTempPC = Branch ? regA : BusMuxOut;
 				IncrementedPC = PCOut + incPC;
-				PCIN = incPC ? IncrementedPC : BusMuxOutTempPC;
 				PCinsTemp = incPC ? incPC : PCins || Branch;
+				PCIN = incPC ? IncrementedPC : BusMuxOutTempPC;
 			end
 			
 endmodule
