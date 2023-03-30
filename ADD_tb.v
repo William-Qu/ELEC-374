@@ -46,8 +46,8 @@ always @(Present_state) // do the required job in each state
 				clr <= 0; Halt <= 0; MDRMDataIn <= 0;
 			end
 			Reg_load1a: begin
-								#5 clr <= 1;
-								#10 clr <= 0;
+								#20 clr <= 1;
+								#20 clr <= 0;
 								#40 MDRMDataIn <= 32'hAAAAAAAA;
 								#40 clr <= 1;
 								#10 clr <= 0;
@@ -55,17 +55,13 @@ always @(Present_state) // do the required job in each state
 								#100 Halt <= 0;
 								#40 Halt <= 1;
 								#10 Halt <= 0;
-								#40 Halt <= 1;
-								#10 Halt <= 0;
-								#40 Halt <= 1;
-								#10 Halt <= 0;
-								#40 clr <= 1; Halt <= 1;
-								#10 clr <= 0; Halt <= 0;
-								#40 Halt <= 1;
-								#10 Halt <= 0;
-								//#10 clr <= 1;
-								//#20 clr <= 0;
 								#10 MDRMDataIn <= 32'b0;
+								#40 Halt <= 1;
+								#100 Halt <= 0;
+								#40 Halt <= 1;
+								#10 Halt <= 0;
+								#10 clr <= 1;
+								#10 clr <= 0;
 			end
 		endcase
 	end

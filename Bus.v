@@ -108,6 +108,10 @@ output [31:0] OutportOut, IROut //Outport Output Signal to output signals to a d
 				//In command
 				if (OPCode == 5'b01110) regA = RegInportOut;
 				
+				//mfl, mfhi commands
+				if (OPCode == 5'b10111) regA = CLoOut;	 //mfl Instruction
+				if (OPCode == 5'b11110) regA = CHiOut;	 //mfhi Instruction
+				
 				//Put contents of the correct register into regB using regBSel from the IR
 				if (regBSel == 4'b0000) regB = r0outf[31:0]; else
 				if (regBSel == 4'b0001) regB = r1outf[31:0]; else
@@ -145,13 +149,14 @@ output [31:0] OutportOut, IROut //Outport Output Signal to output signals to a d
 				end else 
 				if (OPCode == 5'b10101) begin //ld Instructions
 					CLoIn = MemOut;
-					MARIn = MemOffset;
+					MARIn = MemIn;
 					if (MemAddr > 9'b111111111) MARIn = 9'b111111111; //Max out the data set
 				end else 
 				if (OPCode == 5'b10110) begin //st Instructions
 					MARIn = MemAddr;
 					MemWrite = 1; 
 				end
+				else MARIn = PCOut;
 				
 				//Out Instruction
 				if (OPCode == 5'b01111) OutportOutCheck = 1'b1;

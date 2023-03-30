@@ -7,12 +7,6 @@
 # vmap work rtl_work
 # Modifying C:\altera\13.0sp1\modelsim_ae\win32aloem/../modelsim.ini
 # 
-# vlog -vlog01compat -work work +incdir+C:/Users/789wi/Videos/ELEC-374 {C:/Users/789wi/Videos/ELEC-374/RAM.v}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module RAM
-# 
-# Top level modules:
-# 	RAM
 # vlog -vlog01compat -work work +incdir+C:/Users/789wi/Videos/ELEC-374 {C:/Users/789wi/Videos/ELEC-374/Bus.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module Bus
@@ -151,6 +145,12 @@
 # 
 # Top level modules:
 # 	ControlUnitBus
+# vlog -vlog01compat -work work +incdir+C:/Users/789wi/Videos/ELEC-374 {C:/Users/789wi/Videos/ELEC-374/Memory.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Memory
+# 
+# Top level modules:
+# 	Memory
 # 
 # vlog -vlog01compat -work work +incdir+C:/Users/789wi/Videos/ELEC-374 {C:/Users/789wi/Videos/ELEC-374/ADD_tb.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
@@ -192,7 +192,7 @@
 # Loading work.boothMultiplier
 # Loading work.nonRestoringDivisionPosiNeg
 # Loading work.ALURegisters
-# Loading work.RAM
+# Loading work.Memory
 # Loading work.encoder
 # Loading work.Multiplexer
 # 
@@ -201,22 +201,128 @@
 # 
 #           File in use by: 789wi  Hostname: DESKTOP-MP94GB7  ProcessID: 25124
 # 
-#           Attempting to use alternate WLF file "./wlftrsjf6r".
+#           Attempting to use alternate WLF file "./wlfthfnqm2".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
 # 
-#           Using alternate file: ./wlftrsjf6r
+#           Using alternate file: ./wlfthfnqm2
 # 
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run 1000 ns
+#          x
+#          x
+#          x
+#          x
+#          x
+# 2692743170
+# 2692743170
+# 2692743170
+# 2692743170
+# 2692743170
+# 2692743170
+# 2692743170
+# 2835349608
+# 2835349608
+# 2835349608
+# 2835349608
+# 2835349608
+# 2835349608
+# 2835349608
+# 2835349608
+# 2835349608
+# 2835349608
+# 2835349608
+# 2835349608
+# 2835349608
+# 2835349608
+# 2835349608
+# 2835349608
+# 2835349608
+# 2835349608
+# 2692743170
+# 2692743170
+# 2692743170
+# 2692743170
+# 2692743170
+# 2692743170
+# 2692743170
+# 2692743170
+# 2692743170
+# 2835349608
+# 2835349608
+# 2835349608
+# 2835349608
+# 2835349608
+# 2835349608
+# 2835349608
+# 2835349608
+# 2835349608
+# 2835349608
+# 2835349608
 add wave -position insertpoint  \
 sim:/ADD_tb/CTRL/PresentState
 add wave -position insertpoint  \
 sim:/ADD_tb/CTRL/StateHolder
-add wave -position insertpoint sim:/ADD_tb/CTRL/B/PC/*
 add wave -position insertpoint  \
 sim:/ADD_tb/CTRL/B/incPC
+add wave -position insertpoint  \
+sim:/ADD_tb/CTRL/B/PCout
+add wave -position insertpoint  \
+sim:/ADD_tb/CTRL/B/MARins
+add wave -position insertpoint sim:/ADD_tb/CTRL/B/PC/*
+restartt
+# invalid command name "restartt"
 restart
 run 1000ns
+#          x
+#          x
+#          x
+#          x
+#          x
+# 2692743170
+# 2692743170
+# 2692743170
+# 2692743170
+# 2692743170
+# 2692743170
+# 2692743170
+# 2835349608
+# 2835349608
+# 2835349608
+# 2835349608
+# 2835349608
+# 2835349608
+# 2835349608
+# 2835349608
+# 2835349608
+# 2835349608
+# 2835349608
+# 2835349608
+# 2835349608
+# 2835349608
+# 2835349608
+# 2835349608
+# 2835349608
+# 2835349608
+# 2692743170
+# 2692743170
+# 2692743170
+# 2692743170
+# 2692743170
+# 2692743170
+# 2692743170
+# 2692743170
+# 2692743170
+# 2835349608
+# 2835349608
+# 2835349608
+# 2835349608
+# 2835349608
+# 2835349608
+# 2835349608
+# 2835349608
+# 2835349608
+# 2835349608
+# 2835349608

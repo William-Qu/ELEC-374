@@ -74,7 +74,9 @@ reg [31:0] regLO, regHI;
 		if (OPCode == 5'b10010) regLO = regLOlog_and; else 					//AND Immediate Module Name
 		if (OPCode == 5'b10011) regLO = regLOlog_or;  else     				//OR Immediate Module Name
 		if (OPCode == 5'b01111) regLO = regA; else								//Out Instruction
-		if (OPCode == 5'b01110) regLO = regA;										//In Instruction
+		if (OPCode == 5'b01110) regLO = regA; else								//In Instruction
+		if (OPCode == 5'b10111) regLO = regA; else								//mfl Instruction
+		if (OPCode == 5'b11110) regHI = regA;										//mfhi Instruction
 	end
 	
 	//OPCodes 5'b10100 
