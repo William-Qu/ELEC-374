@@ -1,5 +1,5 @@
 Flow report for Phase1
-Mon Mar 27 21:32:08 2023
+Mon Apr 03 16:31:36 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -40,15 +40,15 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Flow Summary                                                                          ;
 +------------------------------------+--------------------------------------------------+
-; Flow Status                        ; Successful - Mon Mar 27 21:32:08 2023            ;
+; Flow Status                        ; Successful - Mon Apr 03 16:31:35 2023            ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                      ; Phase1                                           ;
 ; Top-level Entity Name              ; ControlUnitBus                                   ;
 ; Family                             ; Cyclone III                                      ;
 ; Device                             ; EP3C16F484C6                                     ;
 ; Timing Models                      ; Final                                            ;
-; Total logic elements               ; 9,744                                            ;
-;     Total combinational functions  ; 9,109                                            ;
+; Total logic elements               ; 9,579                                            ;
+;     Total combinational functions  ; 8,944                                            ;
 ;     Dedicated logic registers      ; 931                                              ;
 ; Total registers                    ; 931                                              ;
 ; Total pins                         ; 67                                               ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/27/2023 21:31:37 ;
+; Start date & time ; 04/03/2023 16:31:02 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Phase1              ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +--------------------------------------+---------------------------------------+---------------+----------------+----------------------+
 ; Assignment Name                      ; Value                                 ; Default Value ; Entity Name    ; Section Id           ;
 +--------------------------------------+---------------------------------------+---------------+----------------+----------------------+
-; COMPILER_SIGNATURE_ID                ; 38923010049.167996709701804           ; --            ; --             ; --                   ;
+; COMPILER_SIGNATURE_ID                ; 38923010049.168055386208708           ; --            ; --             ; --                   ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --             ; TestbenchMultiplier  ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --             ; TestbenchControlUnit ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --             ; ADD_tb               ;
@@ -123,8 +123,8 @@ applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:32     ; 1.0                     ; 4685 MB             ; 00:00:29                           ;
-; Total                ; 00:00:32     ; --                      ; --                  ; 00:00:29                           ;
+; Analysis & Synthesis ; 00:00:33     ; 1.0                     ; 4685 MB             ; 00:00:32                           ;
+; Total                ; 00:00:33     ; --                      ; --                  ; 00:00:32                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

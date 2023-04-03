@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Phase1
-Mon Mar 27 21:32:08 2023
+Mon Apr 03 16:31:36 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -66,13 +66,13 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                          ;
 +------------------------------------+--------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Mar 27 21:32:07 2023            ;
+; Analysis & Synthesis Status        ; Successful - Mon Apr 03 16:31:35 2023            ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                      ; Phase1                                           ;
 ; Top-level Entity Name              ; ControlUnitBus                                   ;
 ; Family                             ; Cyclone III                                      ;
-; Total logic elements               ; 9,744                                            ;
-;     Total combinational functions  ; 9,109                                            ;
+; Total logic elements               ; 9,579                                            ;
+;     Total combinational functions  ; 8,944                                            ;
 ;     Dedicated logic registers      ; 931                                              ;
 ; Total registers                    ; 931                                              ;
 ; Total pins                         ; 67                                               ;
@@ -237,17 +237,17 @@ applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 9,744     ;
+; Estimated Total logic elements              ; 9,579     ;
 ;                                             ;           ;
-; Total combinational functions               ; 9109      ;
+; Total combinational functions               ; 8944      ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 2889      ;
-;     -- 3 input functions                    ; 5713      ;
-;     -- <=2 input functions                  ; 507       ;
+;     -- 4 input functions                    ; 2618      ;
+;     -- 3 input functions                    ; 5765      ;
+;     -- <=2 input functions                  ; 561       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 5042      ;
-;     -- arithmetic mode                      ; 4067      ;
+;     -- normal mode                          ; 4885      ;
+;     -- arithmetic mode                      ; 4059      ;
 ;                                             ;           ;
 ; Total registers                             ; 931       ;
 ;     -- Dedicated logic registers            ; 931       ;
@@ -258,8 +258,8 @@ applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 963       ;
-; Total fan-out                               ; 33008     ;
-; Average fan-out                             ; 3.23      ;
+; Total fan-out                               ; 32188     ;
+; Average fan-out                             ; 3.21      ;
 +---------------------------------------------+-----------+
 
 
@@ -268,38 +268,34 @@ applicable agreement for further details.
 +----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                      ; Library Name ;
 +----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------+--------------+
-; |ControlUnitBus                              ; 9109 (73)         ; 931 (29)     ; 16384       ; 0            ; 0       ; 0         ; 67   ; 0            ; |ControlUnitBus                                                                                          ; work         ;
-;    |Bus:B|                                   ; 9036 (888)        ; 902 (33)     ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B                                                                                    ; work         ;
-;       |ALU:Logic|                            ; 7781 (596)        ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALU:Logic                                                                          ; work         ;
-;          |Hierarchical_CLA:add|              ; 124 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALU:Logic|Hierarchical_CLA:add                                                     ; work         ;
-;             |CLA_8inputs_updated:b2v_inst38| ; 32 (23)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALU:Logic|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst38                      ; work         ;
-;                |P_G_block:b2v_inst35|        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALU:Logic|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst38|P_G_block:b2v_inst35 ; work         ;
-;                |P_G_block:b2v_inst36|        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALU:Logic|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst38|P_G_block:b2v_inst36 ; work         ;
+; |ControlUnitBus                              ; 8944 (72)         ; 931 (29)     ; 16384       ; 0            ; 0       ; 0         ; 67   ; 0            ; |ControlUnitBus                                                                                          ; work         ;
+;    |Bus:B|                                   ; 8872 (857)        ; 902 (33)     ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B                                                                                    ; work         ;
+;       |ALU:Logic|                            ; 7652 (707)        ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALU:Logic                                                                          ; work         ;
+;          |Hierarchical_CLA:add|              ; 104 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALU:Logic|Hierarchical_CLA:add                                                     ; work         ;
+;             |CLA_8inputs_updated:b2v_inst38| ; 32 (21)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALU:Logic|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst38                      ; work         ;
+;                |P_G_block:b2v_inst35|        ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALU:Logic|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst38|P_G_block:b2v_inst35 ; work         ;
+;                |P_G_block:b2v_inst36|        ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALU:Logic|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst38|P_G_block:b2v_inst36 ; work         ;
 ;                |P_G_block:b2v_inst37|        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALU:Logic|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst38|P_G_block:b2v_inst37 ; work         ;
-;                |P_G_block:b2v_inst38|        ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALU:Logic|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst38|P_G_block:b2v_inst38 ; work         ;
-;                |P_G_block:b2v_inst39|        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALU:Logic|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst38|P_G_block:b2v_inst39 ; work         ;
+;                |P_G_block:b2v_inst38|        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALU:Logic|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst38|P_G_block:b2v_inst38 ; work         ;
+;                |P_G_block:b2v_inst39|        ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALU:Logic|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst38|P_G_block:b2v_inst39 ; work         ;
 ;                |P_G_block:b2v_inst40|        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALU:Logic|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst38|P_G_block:b2v_inst40 ; work         ;
-;                |P_G_block:b2v_inst41|        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALU:Logic|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst38|P_G_block:b2v_inst41 ; work         ;
-;                |P_G_block:b2v_inst|          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALU:Logic|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst38|P_G_block:b2v_inst   ; work         ;
-;             |CLA_8inputs_updated:b2v_inst39| ; 34 (23)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALU:Logic|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst39                      ; work         ;
-;                |P_G_block:b2v_inst35|        ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALU:Logic|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst39|P_G_block:b2v_inst35 ; work         ;
+;                |P_G_block:b2v_inst41|        ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALU:Logic|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst38|P_G_block:b2v_inst41 ; work         ;
+;             |CLA_8inputs_updated:b2v_inst39| ; 25 (19)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALU:Logic|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst39                      ; work         ;
+;                |P_G_block:b2v_inst35|        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALU:Logic|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst39|P_G_block:b2v_inst35 ; work         ;
 ;                |P_G_block:b2v_inst36|        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALU:Logic|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst39|P_G_block:b2v_inst36 ; work         ;
 ;                |P_G_block:b2v_inst37|        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALU:Logic|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst39|P_G_block:b2v_inst37 ; work         ;
-;                |P_G_block:b2v_inst38|        ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALU:Logic|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst39|P_G_block:b2v_inst38 ; work         ;
-;                |P_G_block:b2v_inst39|        ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALU:Logic|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst39|P_G_block:b2v_inst39 ; work         ;
-;                |P_G_block:b2v_inst40|        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALU:Logic|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst39|P_G_block:b2v_inst40 ; work         ;
-;                |P_G_block:b2v_inst41|        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALU:Logic|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst39|P_G_block:b2v_inst41 ; work         ;
+;                |P_G_block:b2v_inst38|        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALU:Logic|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst39|P_G_block:b2v_inst38 ; work         ;
+;                |P_G_block:b2v_inst39|        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALU:Logic|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst39|P_G_block:b2v_inst39 ; work         ;
 ;                |P_G_block:b2v_inst|          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALU:Logic|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst39|P_G_block:b2v_inst   ; work         ;
-;             |CLA_8inputs_updated:b2v_inst40| ; 31 (22)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALU:Logic|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst40                      ; work         ;
+;             |CLA_8inputs_updated:b2v_inst40| ; 23 (17)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALU:Logic|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst40                      ; work         ;
 ;                |P_G_block:b2v_inst35|        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALU:Logic|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst40|P_G_block:b2v_inst35 ; work         ;
 ;                |P_G_block:b2v_inst36|        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALU:Logic|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst40|P_G_block:b2v_inst36 ; work         ;
-;                |P_G_block:b2v_inst37|        ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALU:Logic|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst40|P_G_block:b2v_inst37 ; work         ;
-;                |P_G_block:b2v_inst38|        ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALU:Logic|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst40|P_G_block:b2v_inst38 ; work         ;
-;                |P_G_block:b2v_inst39|        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALU:Logic|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst40|P_G_block:b2v_inst39 ; work         ;
+;                |P_G_block:b2v_inst37|        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALU:Logic|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst40|P_G_block:b2v_inst37 ; work         ;
+;                |P_G_block:b2v_inst38|        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALU:Logic|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst40|P_G_block:b2v_inst38 ; work         ;
 ;                |P_G_block:b2v_inst40|        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALU:Logic|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst40|P_G_block:b2v_inst40 ; work         ;
-;                |P_G_block:b2v_inst41|        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALU:Logic|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst40|P_G_block:b2v_inst41 ; work         ;
-;             |CLA_8inputs_updated:b2v_inst4|  ; 27 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALU:Logic|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst4                       ; work         ;
-;                |P_G_block:b2v_inst35|        ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALU:Logic|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst4|P_G_block:b2v_inst35  ; work         ;
+;                |P_G_block:b2v_inst|          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALU:Logic|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst40|P_G_block:b2v_inst   ; work         ;
+;             |CLA_8inputs_updated:b2v_inst4|  ; 24 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALU:Logic|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst4                       ; work         ;
+;                |P_G_block:b2v_inst35|        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALU:Logic|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst4|P_G_block:b2v_inst35  ; work         ;
 ;                |P_G_block:b2v_inst36|        ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALU:Logic|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst4|P_G_block:b2v_inst36  ; work         ;
 ;                |P_G_block:b2v_inst37|        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALU:Logic|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst4|P_G_block:b2v_inst37  ; work         ;
 ;                |P_G_block:b2v_inst38|        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALU:Logic|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst4|P_G_block:b2v_inst38  ; work         ;
@@ -307,18 +303,18 @@ applicable agreement for further details.
 ;                |P_G_block:b2v_inst40|        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALU:Logic|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst4|P_G_block:b2v_inst40  ; work         ;
 ;                |P_G_block:b2v_inst41|        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALU:Logic|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst4|P_G_block:b2v_inst41  ; work         ;
 ;                |P_G_block:b2v_inst|          ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALU:Logic|Hierarchical_CLA:add|CLA_8inputs_updated:b2v_inst4|P_G_block:b2v_inst    ; work         ;
-;          |Hierarchical_CLA:sub|              ; 20 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALU:Logic|Hierarchical_CLA:sub                                                     ; work         ;
+;          |Hierarchical_CLA:sub|              ; 17 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALU:Logic|Hierarchical_CLA:sub                                                     ; work         ;
 ;             |CLA_8inputs_updated:b2v_inst38| ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALU:Logic|Hierarchical_CLA:sub|CLA_8inputs_updated:b2v_inst38                      ; work         ;
-;             |CLA_8inputs_updated:b2v_inst39| ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALU:Logic|Hierarchical_CLA:sub|CLA_8inputs_updated:b2v_inst39                      ; work         ;
-;             |CLA_8inputs_updated:b2v_inst40| ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALU:Logic|Hierarchical_CLA:sub|CLA_8inputs_updated:b2v_inst40                      ; work         ;
-;             |CLA_8inputs_updated:b2v_inst4|  ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALU:Logic|Hierarchical_CLA:sub|CLA_8inputs_updated:b2v_inst4                       ; work         ;
-;          |boothMultiplier:mul|               ; 3625 (3625)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALU:Logic|boothMultiplier:mul                                                      ; work         ;
-;          |logical_and:log_and|               ; 15 (15)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALU:Logic|logical_and:log_and                                                      ; work         ;
-;          |nonRestoringDivisionPosiNeg:div|   ; 3369 (3337)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALU:Logic|nonRestoringDivisionPosiNeg:div                                          ; work         ;
+;             |CLA_8inputs_updated:b2v_inst39| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALU:Logic|Hierarchical_CLA:sub|CLA_8inputs_updated:b2v_inst39                      ; work         ;
+;             |CLA_8inputs_updated:b2v_inst40| ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALU:Logic|Hierarchical_CLA:sub|CLA_8inputs_updated:b2v_inst40                      ; work         ;
+;             |CLA_8inputs_updated:b2v_inst4|  ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALU:Logic|Hierarchical_CLA:sub|CLA_8inputs_updated:b2v_inst4                       ; work         ;
+;          |boothMultiplier:mul|               ; 3478 (3478)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALU:Logic|boothMultiplier:mul                                                      ; work         ;
+;          |logical_and:log_and|               ; 11 (11)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALU:Logic|logical_and:log_and                                                      ; work         ;
+;          |nonRestoringDivisionPosiNeg:div|   ; 3303 (3271)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALU:Logic|nonRestoringDivisionPosiNeg:div                                          ; work         ;
 ;             |twoCompliment:two|              ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALU:Logic|nonRestoringDivisionPosiNeg:div|twoCompliment:two                        ; work         ;
 ;          |twoCompliment:neg|                 ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALU:Logic|twoCompliment:neg                                                        ; work         ;
-;       |ALURegisters:LogicReg|                ; 39 (0)            ; 512 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALURegisters:LogicReg                                                              ; work         ;
-;          |reg32bit:gr0|                      ; 24 (24)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALURegisters:LogicReg|reg32bit:gr0                                                 ; work         ;
+;       |ALURegisters:LogicReg|                ; 20 (0)            ; 512 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALURegisters:LogicReg                                                              ; work         ;
+;          |reg32bit:gr0|                      ; 5 (5)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALURegisters:LogicReg|reg32bit:gr0                                                 ; work         ;
 ;          |reg32bit:gr10|                     ; 1 (1)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALURegisters:LogicReg|reg32bit:gr10                                                ; work         ;
 ;          |reg32bit:gr11|                     ; 1 (1)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALURegisters:LogicReg|reg32bit:gr11                                                ; work         ;
 ;          |reg32bit:gr12|                     ; 1 (1)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|ALURegisters:LogicReg|reg32bit:gr12                                                ; work         ;
@@ -339,15 +335,15 @@ applicable agreement for further details.
 ;       |Memory:memory|                        ; 80 (80)           ; 124 (124)    ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|Memory:memory                                                                      ; work         ;
 ;          |altsyncram:RAMregisters_rtl_0|     ; 0 (0)             ; 0 (0)        ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|Memory:memory|altsyncram:RAMregisters_rtl_0                                        ; work         ;
 ;             |altsyncram_nqg1:auto_generated| ; 0 (0)             ; 0 (0)        ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|Memory:memory|altsyncram:RAMregisters_rtl_0|altsyncram_nqg1:auto_generated         ; work         ;
-;       |Multiplexer:Mux|                      ; 65 (65)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|Multiplexer:Mux                                                                    ; work         ;
+;       |Multiplexer:Mux|                      ; 85 (85)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|Multiplexer:Mux                                                                    ; work         ;
 ;       |encoder:EnO|                          ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|encoder:EnO                                                                        ; work         ;
 ;       |reg32bit:CHI|                         ; 32 (32)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|reg32bit:CHI                                                                       ; work         ;
 ;       |reg32bit:CLO|                         ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|reg32bit:CLO                                                                       ; work         ;
-;       |reg32bit:IR|                          ; 11 (11)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|reg32bit:IR                                                                        ; work         ;
-;       |reg32bit:MAR|                         ; 32 (32)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|reg32bit:MAR                                                                       ; work         ;
+;       |reg32bit:IR|                          ; 10 (10)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|reg32bit:IR                                                                        ; work         ;
+;       |reg32bit:MAR|                         ; 9 (9)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|reg32bit:MAR                                                                       ; work         ;
 ;       |reg32bit:OutPort|                     ; 33 (33)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|reg32bit:OutPort                                                                   ; work         ;
 ;       |reg32bit:PC|                          ; 33 (33)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|reg32bit:PC                                                                        ; work         ;
-;       |reg32bit:ZLO|                         ; 1 (1)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|reg32bit:ZLO                                                                       ; work         ;
+;       |reg32bit:ZLO|                         ; 20 (20)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ControlUnitBus|Bus:B|reg32bit:ZLO                                                                       ; work         ;
 +----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -398,10 +394,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Bus:B|ALU:Logic|regLO[29]                           ; Bus:B|ALU:Logic|regLO[31] ; yes                    ;
 ; Bus:B|ALU:Logic|regLO[30]                           ; Bus:B|ALU:Logic|regLO[31] ; yes                    ;
 ; Bus:B|ALU:Logic|regLO[31]                           ; Bus:B|ALU:Logic|regLO[31] ; yes                    ;
-; Bus:B|MemWrite                                      ; VCC                       ; yes                    ;
 ; Bus:B|encoder:EnO|d[2]                              ; GND                       ; yes                    ;
 ; Bus:B|encoder:EnO|d[0]                              ; GND                       ; yes                    ;
 ; Bus:B|encoder:EnO|d[1]                              ; GND                       ; yes                    ;
+; Bus:B|MemWrite                                      ; VCC                       ; yes                    ;
 ; Bus:B|ALU:Logic|regHI[0]                            ; Bus:B|ALU:Logic|regHI[31] ; yes                    ;
 ; Bus:B|ALU:Logic|regHI[31]                           ; Bus:B|ALU:Logic|regHI[31] ; yes                    ;
 ; Bus:B|ALU:Logic|regHI[30]                           ; Bus:B|ALU:Logic|regHI[31] ; yes                    ;
@@ -478,9 +474,10 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Bus:B|reg32bit:ZHI|r[0..31]             ; Merged with Bus:B|reg32bit:InPort|r[0] ;
 ; MDRout                                  ; Merged with IRins                      ;
 ; MDRins                                  ; Merged with MDRRead                    ;
-; PCout                                   ; Merged with MARins                     ;
+; MARins                                  ; Merged with AddressCounterEnable       ;
+; PCout                                   ; Merged with AddressCounterEnable       ;
 ; Bus:B|reg32bit:InPort|r[0]              ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 159 ;                                        ;
+; Total Number of Removed Registers = 160 ;                                        ;
 +-----------------------------------------+----------------------------------------+
 
 
@@ -659,30 +656,31 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |ControlUnitBus|Bus:B|reg32bit:OutPort|r[0]                     ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |ControlUnitBus|Bus:B|reg32bit:IR|r[15]                         ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |ControlUnitBus|Bus:B|reg32bit:PC|r[8]                          ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |ControlUnitBus|Bus:B|MDRunit:mdr|reg32bit:MDR|r[2]             ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |ControlUnitBus|Bus:B|reg32bit:ZLO|r[28]                        ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |ControlUnitBus|Bus:B|ALURegisters:LogicReg|reg32bit:gr0|r[11]  ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |ControlUnitBus|Bus:B|ALURegisters:LogicReg|reg32bit:gr8|r[18]  ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |ControlUnitBus|Bus:B|ALURegisters:LogicReg|reg32bit:gr4|r[10]  ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |ControlUnitBus|Bus:B|ALURegisters:LogicReg|reg32bit:gr12|r[24] ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |ControlUnitBus|Bus:B|ALURegisters:LogicReg|reg32bit:gr2|r[10]  ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |ControlUnitBus|Bus:B|ALURegisters:LogicReg|reg32bit:gr10|r[18] ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |ControlUnitBus|Bus:B|ALURegisters:LogicReg|reg32bit:gr6|r[0]   ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |ControlUnitBus|Bus:B|ALURegisters:LogicReg|reg32bit:gr14|r[12] ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |ControlUnitBus|Bus:B|ALURegisters:LogicReg|reg32bit:gr1|r[12]  ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |ControlUnitBus|Bus:B|ALURegisters:LogicReg|reg32bit:gr9|r[12]  ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |ControlUnitBus|Bus:B|ALURegisters:LogicReg|reg32bit:gr5|r[19]  ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |ControlUnitBus|Bus:B|ALURegisters:LogicReg|reg32bit:gr13|r[26] ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |ControlUnitBus|Bus:B|ALURegisters:LogicReg|reg32bit:gr3|r[19]  ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |ControlUnitBus|Bus:B|ALURegisters:LogicReg|reg32bit:gr11|r[2]  ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |ControlUnitBus|Bus:B|ALURegisters:LogicReg|reg32bit:gr7|r[28]  ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |ControlUnitBus|Bus:B|ALURegisters:LogicReg|reg32bit:gr15|r[28] ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |ControlUnitBus|Bus:B|PCIN[20]                                  ;
-; 9:1                ; 3 bits    ; 18 LEs        ; 15 LEs               ; 3 LEs                  ; Yes        ; |ControlUnitBus|PresentState[0]                                 ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |ControlUnitBus|Bus:B|reg32bit:OutPort|r[1]                     ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |ControlUnitBus|Bus:B|reg32bit:IR|r[12]                         ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |ControlUnitBus|Bus:B|reg32bit:PC|r[5]                          ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |ControlUnitBus|Bus:B|MDRunit:mdr|reg32bit:MDR|r[15]            ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |ControlUnitBus|Bus:B|reg32bit:ZLO|r[16]                        ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |ControlUnitBus|Bus:B|ALURegisters:LogicReg|reg32bit:gr0|r[21]  ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |ControlUnitBus|Bus:B|ALURegisters:LogicReg|reg32bit:gr8|r[6]   ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |ControlUnitBus|Bus:B|ALURegisters:LogicReg|reg32bit:gr4|r[6]   ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |ControlUnitBus|Bus:B|ALURegisters:LogicReg|reg32bit:gr12|r[6]  ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |ControlUnitBus|Bus:B|ALURegisters:LogicReg|reg32bit:gr2|r[15]  ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |ControlUnitBus|Bus:B|ALURegisters:LogicReg|reg32bit:gr10|r[10] ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |ControlUnitBus|Bus:B|ALURegisters:LogicReg|reg32bit:gr6|r[21]  ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |ControlUnitBus|Bus:B|ALURegisters:LogicReg|reg32bit:gr14|r[14] ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |ControlUnitBus|Bus:B|ALURegisters:LogicReg|reg32bit:gr1|r[26]  ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |ControlUnitBus|Bus:B|ALURegisters:LogicReg|reg32bit:gr9|r[25]  ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |ControlUnitBus|Bus:B|ALURegisters:LogicReg|reg32bit:gr5|r[20]  ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |ControlUnitBus|Bus:B|ALURegisters:LogicReg|reg32bit:gr13|r[24] ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |ControlUnitBus|Bus:B|ALURegisters:LogicReg|reg32bit:gr3|r[12]  ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |ControlUnitBus|Bus:B|ALURegisters:LogicReg|reg32bit:gr11|r[23] ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |ControlUnitBus|Bus:B|ALURegisters:LogicReg|reg32bit:gr7|r[19]  ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |ControlUnitBus|Bus:B|ALURegisters:LogicReg|reg32bit:gr15|r[19] ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |ControlUnitBus|Bus:B|PCIN[7]                                   ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 15 LEs               ; 3 LEs                  ; Yes        ; |ControlUnitBus|PresentState[2]                                 ;
 ; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |ControlUnitBus|Bus:B|CLoIn[0]                                  ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |ControlUnitBus|Bus:B|reg32bit:MAR|r                            ;
 ; 8:1                ; 32 bits   ; 160 LEs       ; 96 LEs               ; 64 LEs                 ; No         ; |ControlUnitBus|Bus:B|Multiplexer:Mux|BusMuxOutTemp             ;
 ; 5:1                ; 30 bits   ; 90 LEs        ; 90 LEs               ; 0 LEs                  ; No         ; |ControlUnitBus|Bus:B|ALU:Logic|boothMultiplier:mul|ans         ;
 ; 8:1                ; 2 bits    ; 10 LEs        ; 6 LEs                ; 4 LEs                  ; No         ; |ControlUnitBus|Bus:B|ALU:Logic|boothMultiplier:mul|ans         ;
@@ -700,11 +698,10 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; 8:1                ; 30 bits   ; 150 LEs       ; 90 LEs               ; 60 LEs                 ; No         ; |ControlUnitBus|Bus:B|ALU:Logic|boothMultiplier:mul|ans         ;
 ; 8:1                ; 30 bits   ; 150 LEs       ; 90 LEs               ; 60 LEs                 ; No         ; |ControlUnitBus|Bus:B|ALU:Logic|boothMultiplier:mul|ans         ;
 ; 8:1                ; 30 bits   ; 150 LEs       ; 90 LEs               ; 60 LEs                 ; No         ; |ControlUnitBus|Bus:B|ALU:Logic|boothMultiplier:mul|ans         ;
-; 16:1               ; 32 bits   ; 320 LEs       ; 320 LEs              ; 0 LEs                  ; No         ; |ControlUnitBus|Bus:B|regB[13]                                  ;
-; 8:1                ; 9 bits    ; 45 LEs        ; 36 LEs               ; 9 LEs                  ; No         ; |ControlUnitBus|Bus:B|reg32bit:MAR|r                            ;
-; 20:1               ; 13 bits   ; 169 LEs       ; 156 LEs              ; 13 LEs                 ; No         ; |ControlUnitBus|Bus:B|regA[24]                                  ;
-; 20:1               ; 19 bits   ; 247 LEs       ; 247 LEs              ; 0 LEs                  ; No         ; |ControlUnitBus|Bus:B|regA[4]                                   ;
-; 14:1               ; 29 bits   ; 261 LEs       ; 174 LEs              ; 87 LEs                 ; No         ; |ControlUnitBus|Bus:B|ALU:Logic|regHI[28]                       ;
+; 16:1               ; 32 bits   ; 320 LEs       ; 320 LEs              ; 0 LEs                  ; No         ; |ControlUnitBus|Bus:B|regB[2]                                   ;
+; 21:1               ; 13 bits   ; 182 LEs       ; 156 LEs              ; 26 LEs                 ; No         ; |ControlUnitBus|Bus:B|regA[30]                                  ;
+; 21:1               ; 19 bits   ; 266 LEs       ; 266 LEs              ; 0 LEs                  ; No         ; |ControlUnitBus|Bus:B|regA[16]                                  ;
+; 14:1               ; 29 bits   ; 261 LEs       ; 174 LEs              ; 87 LEs                 ; No         ; |ControlUnitBus|Bus:B|ALU:Logic|regHI[29]                       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
 
 
@@ -945,7 +942,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:24     ;
+; Top            ; 00:00:26     ;
 +----------------+--------------+
 
 
@@ -955,7 +952,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Mon Mar 27 21:31:34 2023
+    Info: Processing started: Mon Apr 03 16:31:00 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Phase1 -c Phase1
 Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
 Info (12021): Found 1 design units, including 1 entities, in source file strlditb.v
@@ -1082,76 +1079,112 @@ Warning (10036): Verilog HDL or VHDL warning at ControlUnitBus.v(21): object "re
 Warning (10036): Verilog HDL or VHDL warning at ControlUnitBus.v(21): object "regBSel" assigned a value but never read
 Warning (10230): Verilog HDL assignment warning at ControlUnitBus.v(39): truncated value with size 32 to match size of target (3)
 Info (12128): Elaborating entity "Bus" for hierarchy "Bus:B"
-Warning (10240): Verilog HDL Always Construct warning at Bus.v(85): inferring latch(es) for variable "regA", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Bus.v(85): inferring latch(es) for variable "regB", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Bus.v(136): inferring latch(es) for variable "MemWrite", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Bus.v(136): inferring latch(es) for variable "OutportOutCheck", which holds its previous value in one or more paths through the always construct
-Info (10041): Inferred latch for "MemWrite" at Bus.v(165)
-Info (10041): Inferred latch for "OutportOutCheck" at Bus.v(163)
-Info (10041): Inferred latch for "regB[0]" at Bus.v(117)
-Info (10041): Inferred latch for "regB[1]" at Bus.v(117)
-Info (10041): Inferred latch for "regB[2]" at Bus.v(117)
-Info (10041): Inferred latch for "regB[3]" at Bus.v(117)
-Info (10041): Inferred latch for "regB[4]" at Bus.v(117)
-Info (10041): Inferred latch for "regB[5]" at Bus.v(117)
-Info (10041): Inferred latch for "regB[6]" at Bus.v(117)
-Info (10041): Inferred latch for "regB[7]" at Bus.v(117)
-Info (10041): Inferred latch for "regB[8]" at Bus.v(117)
-Info (10041): Inferred latch for "regB[9]" at Bus.v(117)
-Info (10041): Inferred latch for "regB[10]" at Bus.v(117)
-Info (10041): Inferred latch for "regB[11]" at Bus.v(117)
-Info (10041): Inferred latch for "regB[12]" at Bus.v(117)
-Info (10041): Inferred latch for "regB[13]" at Bus.v(117)
-Info (10041): Inferred latch for "regB[14]" at Bus.v(117)
-Info (10041): Inferred latch for "regB[15]" at Bus.v(117)
-Info (10041): Inferred latch for "regB[16]" at Bus.v(117)
-Info (10041): Inferred latch for "regB[17]" at Bus.v(117)
-Info (10041): Inferred latch for "regB[18]" at Bus.v(117)
-Info (10041): Inferred latch for "regB[19]" at Bus.v(117)
-Info (10041): Inferred latch for "regB[20]" at Bus.v(117)
-Info (10041): Inferred latch for "regB[21]" at Bus.v(117)
-Info (10041): Inferred latch for "regB[22]" at Bus.v(117)
-Info (10041): Inferred latch for "regB[23]" at Bus.v(117)
-Info (10041): Inferred latch for "regB[24]" at Bus.v(117)
-Info (10041): Inferred latch for "regB[25]" at Bus.v(117)
-Info (10041): Inferred latch for "regB[26]" at Bus.v(117)
-Info (10041): Inferred latch for "regB[27]" at Bus.v(117)
-Info (10041): Inferred latch for "regB[28]" at Bus.v(117)
-Info (10041): Inferred latch for "regB[29]" at Bus.v(117)
-Info (10041): Inferred latch for "regB[30]" at Bus.v(117)
-Info (10041): Inferred latch for "regB[31]" at Bus.v(117)
-Info (10041): Inferred latch for "regA[0]" at Bus.v(113)
-Info (10041): Inferred latch for "regA[1]" at Bus.v(113)
-Info (10041): Inferred latch for "regA[2]" at Bus.v(113)
-Info (10041): Inferred latch for "regA[3]" at Bus.v(113)
-Info (10041): Inferred latch for "regA[4]" at Bus.v(113)
-Info (10041): Inferred latch for "regA[5]" at Bus.v(113)
-Info (10041): Inferred latch for "regA[6]" at Bus.v(113)
-Info (10041): Inferred latch for "regA[7]" at Bus.v(113)
-Info (10041): Inferred latch for "regA[8]" at Bus.v(113)
-Info (10041): Inferred latch for "regA[9]" at Bus.v(113)
-Info (10041): Inferred latch for "regA[10]" at Bus.v(113)
-Info (10041): Inferred latch for "regA[11]" at Bus.v(113)
-Info (10041): Inferred latch for "regA[12]" at Bus.v(113)
-Info (10041): Inferred latch for "regA[13]" at Bus.v(113)
-Info (10041): Inferred latch for "regA[14]" at Bus.v(113)
-Info (10041): Inferred latch for "regA[15]" at Bus.v(113)
-Info (10041): Inferred latch for "regA[16]" at Bus.v(113)
-Info (10041): Inferred latch for "regA[17]" at Bus.v(113)
-Info (10041): Inferred latch for "regA[18]" at Bus.v(113)
-Info (10041): Inferred latch for "regA[19]" at Bus.v(113)
-Info (10041): Inferred latch for "regA[20]" at Bus.v(113)
-Info (10041): Inferred latch for "regA[21]" at Bus.v(113)
-Info (10041): Inferred latch for "regA[22]" at Bus.v(113)
-Info (10041): Inferred latch for "regA[23]" at Bus.v(113)
-Info (10041): Inferred latch for "regA[24]" at Bus.v(113)
-Info (10041): Inferred latch for "regA[25]" at Bus.v(113)
-Info (10041): Inferred latch for "regA[26]" at Bus.v(113)
-Info (10041): Inferred latch for "regA[27]" at Bus.v(113)
-Info (10041): Inferred latch for "regA[28]" at Bus.v(113)
-Info (10041): Inferred latch for "regA[29]" at Bus.v(113)
-Info (10041): Inferred latch for "regA[30]" at Bus.v(113)
-Info (10041): Inferred latch for "regA[31]" at Bus.v(113)
+Warning (10240): Verilog HDL Always Construct warning at Bus.v(86): inferring latch(es) for variable "regA", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Bus.v(86): inferring latch(es) for variable "regB", which holds its previous value in one or more paths through the always construct
+Warning (10235): Verilog HDL Always Construct warning at Bus.v(140): variable "OPCode" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Bus.v(140): variable "PCOut" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Bus.v(140): variable "BusMuxOut" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10240): Verilog HDL Always Construct warning at Bus.v(146): inferring latch(es) for variable "MARInTemp", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Bus.v(146): inferring latch(es) for variable "MemWrite", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Bus.v(146): inferring latch(es) for variable "OutportOutCheck", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "MemWrite" at Bus.v(176)
+Info (10041): Inferred latch for "OutportOutCheck" at Bus.v(174)
+Info (10041): Inferred latch for "MARInTemp[0]" at Bus.v(160)
+Info (10041): Inferred latch for "MARInTemp[1]" at Bus.v(160)
+Info (10041): Inferred latch for "MARInTemp[2]" at Bus.v(160)
+Info (10041): Inferred latch for "MARInTemp[3]" at Bus.v(160)
+Info (10041): Inferred latch for "MARInTemp[4]" at Bus.v(160)
+Info (10041): Inferred latch for "MARInTemp[5]" at Bus.v(160)
+Info (10041): Inferred latch for "MARInTemp[6]" at Bus.v(160)
+Info (10041): Inferred latch for "MARInTemp[7]" at Bus.v(160)
+Info (10041): Inferred latch for "MARInTemp[8]" at Bus.v(160)
+Info (10041): Inferred latch for "MARInTemp[9]" at Bus.v(160)
+Info (10041): Inferred latch for "MARInTemp[10]" at Bus.v(160)
+Info (10041): Inferred latch for "MARInTemp[11]" at Bus.v(160)
+Info (10041): Inferred latch for "MARInTemp[12]" at Bus.v(160)
+Info (10041): Inferred latch for "MARInTemp[13]" at Bus.v(160)
+Info (10041): Inferred latch for "MARInTemp[14]" at Bus.v(160)
+Info (10041): Inferred latch for "MARInTemp[15]" at Bus.v(160)
+Info (10041): Inferred latch for "MARInTemp[16]" at Bus.v(160)
+Info (10041): Inferred latch for "MARInTemp[17]" at Bus.v(160)
+Info (10041): Inferred latch for "MARInTemp[18]" at Bus.v(160)
+Info (10041): Inferred latch for "MARInTemp[19]" at Bus.v(160)
+Info (10041): Inferred latch for "MARInTemp[20]" at Bus.v(160)
+Info (10041): Inferred latch for "MARInTemp[21]" at Bus.v(160)
+Info (10041): Inferred latch for "MARInTemp[22]" at Bus.v(160)
+Info (10041): Inferred latch for "MARInTemp[23]" at Bus.v(160)
+Info (10041): Inferred latch for "MARInTemp[24]" at Bus.v(160)
+Info (10041): Inferred latch for "MARInTemp[25]" at Bus.v(160)
+Info (10041): Inferred latch for "MARInTemp[26]" at Bus.v(160)
+Info (10041): Inferred latch for "MARInTemp[27]" at Bus.v(160)
+Info (10041): Inferred latch for "MARInTemp[28]" at Bus.v(160)
+Info (10041): Inferred latch for "MARInTemp[29]" at Bus.v(160)
+Info (10041): Inferred latch for "MARInTemp[30]" at Bus.v(160)
+Info (10041): Inferred latch for "MARInTemp[31]" at Bus.v(160)
+Info (10041): Inferred latch for "regB[0]" at Bus.v(121)
+Info (10041): Inferred latch for "regB[1]" at Bus.v(121)
+Info (10041): Inferred latch for "regB[2]" at Bus.v(121)
+Info (10041): Inferred latch for "regB[3]" at Bus.v(121)
+Info (10041): Inferred latch for "regB[4]" at Bus.v(121)
+Info (10041): Inferred latch for "regB[5]" at Bus.v(121)
+Info (10041): Inferred latch for "regB[6]" at Bus.v(121)
+Info (10041): Inferred latch for "regB[7]" at Bus.v(121)
+Info (10041): Inferred latch for "regB[8]" at Bus.v(121)
+Info (10041): Inferred latch for "regB[9]" at Bus.v(121)
+Info (10041): Inferred latch for "regB[10]" at Bus.v(121)
+Info (10041): Inferred latch for "regB[11]" at Bus.v(121)
+Info (10041): Inferred latch for "regB[12]" at Bus.v(121)
+Info (10041): Inferred latch for "regB[13]" at Bus.v(121)
+Info (10041): Inferred latch for "regB[14]" at Bus.v(121)
+Info (10041): Inferred latch for "regB[15]" at Bus.v(121)
+Info (10041): Inferred latch for "regB[16]" at Bus.v(121)
+Info (10041): Inferred latch for "regB[17]" at Bus.v(121)
+Info (10041): Inferred latch for "regB[18]" at Bus.v(121)
+Info (10041): Inferred latch for "regB[19]" at Bus.v(121)
+Info (10041): Inferred latch for "regB[20]" at Bus.v(121)
+Info (10041): Inferred latch for "regB[21]" at Bus.v(121)
+Info (10041): Inferred latch for "regB[22]" at Bus.v(121)
+Info (10041): Inferred latch for "regB[23]" at Bus.v(121)
+Info (10041): Inferred latch for "regB[24]" at Bus.v(121)
+Info (10041): Inferred latch for "regB[25]" at Bus.v(121)
+Info (10041): Inferred latch for "regB[26]" at Bus.v(121)
+Info (10041): Inferred latch for "regB[27]" at Bus.v(121)
+Info (10041): Inferred latch for "regB[28]" at Bus.v(121)
+Info (10041): Inferred latch for "regB[29]" at Bus.v(121)
+Info (10041): Inferred latch for "regB[30]" at Bus.v(121)
+Info (10041): Inferred latch for "regB[31]" at Bus.v(121)
+Info (10041): Inferred latch for "regA[0]" at Bus.v(117)
+Info (10041): Inferred latch for "regA[1]" at Bus.v(117)
+Info (10041): Inferred latch for "regA[2]" at Bus.v(117)
+Info (10041): Inferred latch for "regA[3]" at Bus.v(117)
+Info (10041): Inferred latch for "regA[4]" at Bus.v(117)
+Info (10041): Inferred latch for "regA[5]" at Bus.v(117)
+Info (10041): Inferred latch for "regA[6]" at Bus.v(117)
+Info (10041): Inferred latch for "regA[7]" at Bus.v(117)
+Info (10041): Inferred latch for "regA[8]" at Bus.v(117)
+Info (10041): Inferred latch for "regA[9]" at Bus.v(117)
+Info (10041): Inferred latch for "regA[10]" at Bus.v(117)
+Info (10041): Inferred latch for "regA[11]" at Bus.v(117)
+Info (10041): Inferred latch for "regA[12]" at Bus.v(117)
+Info (10041): Inferred latch for "regA[13]" at Bus.v(117)
+Info (10041): Inferred latch for "regA[14]" at Bus.v(117)
+Info (10041): Inferred latch for "regA[15]" at Bus.v(117)
+Info (10041): Inferred latch for "regA[16]" at Bus.v(117)
+Info (10041): Inferred latch for "regA[17]" at Bus.v(117)
+Info (10041): Inferred latch for "regA[18]" at Bus.v(117)
+Info (10041): Inferred latch for "regA[19]" at Bus.v(117)
+Info (10041): Inferred latch for "regA[20]" at Bus.v(117)
+Info (10041): Inferred latch for "regA[21]" at Bus.v(117)
+Info (10041): Inferred latch for "regA[22]" at Bus.v(117)
+Info (10041): Inferred latch for "regA[23]" at Bus.v(117)
+Info (10041): Inferred latch for "regA[24]" at Bus.v(117)
+Info (10041): Inferred latch for "regA[25]" at Bus.v(117)
+Info (10041): Inferred latch for "regA[26]" at Bus.v(117)
+Info (10041): Inferred latch for "regA[27]" at Bus.v(117)
+Info (10041): Inferred latch for "regA[28]" at Bus.v(117)
+Info (10041): Inferred latch for "regA[29]" at Bus.v(117)
+Info (10041): Inferred latch for "regA[30]" at Bus.v(117)
+Info (10041): Inferred latch for "regA[31]" at Bus.v(117)
 Info (12128): Elaborating entity "reg32bit" for hierarchy "Bus:B|reg32bit:PC"
 Info (12128): Elaborating entity "MDRunit" for hierarchy "Bus:B|MDRunit:mdr"
 Info (12128): Elaborating entity "ALU" for hierarchy "Bus:B|ALU:Logic"
@@ -1524,16 +1557,16 @@ Warning (21074): Design contains 32 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "MDRMDataIn[29]"
     Warning (15610): No output dependent on input pin "MDRMDataIn[30]"
     Warning (15610): No output dependent on input pin "MDRMDataIn[31]"
-Info (21057): Implemented 9948 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 9783 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 35 input pins
     Info (21059): Implemented 32 output pins
-    Info (21061): Implemented 9849 logic cells
+    Info (21061): Implemented 9684 logic cells
     Info (21064): Implemented 32 RAM segments
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 250 warnings
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 254 warnings
     Info: Peak virtual memory: 4685 megabytes
-    Info: Processing ended: Mon Mar 27 21:32:08 2023
-    Info: Elapsed time: 00:00:34
-    Info: Total CPU time (on all processors): 00:00:31
+    Info: Processing ended: Mon Apr 03 16:31:36 2023
+    Info: Elapsed time: 00:00:36
+    Info: Total CPU time (on all processors): 00:00:34
 
 
 +------------------------------------------+

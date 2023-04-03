@@ -8,6 +8,7 @@ entity \Bus\ is
         ALUen           : in     vl_logic;
         incPC           : in     vl_logic;
         BAOut           : in     vl_logic;
+        AddressCounterEnable: in     vl_logic;
         R0out           : in     vl_logic;
         R1out           : in     vl_logic;
         R2out           : in     vl_logic;

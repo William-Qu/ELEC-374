@@ -1,6 +1,6 @@
 //Initialize MUX
 module Bus(
-input clr, clk, MDRRead, ALUen, incPC, BAOut, //Bits for enabling and disabling register functions
+input clr, clk, MDRRead, ALUen, incPC, BAOut, AddressCounterEnable, //Bits for enabling and disabling register functions
 input R0out, R1out, R2out, R3out, R4out, R5out, R6out, R7out,R8out, R9out, R10out, R11out, R12out, R13out, R14out, R15out,HIout, LOout, ZHIout, ZLOout,PCout, MDRout, InportOut, Cout, //Output Select Signals for which register were taking data from
 input r0ins, r1ins, r2ins, r3ins, r4ins, r5ins, r6ins, r7ins, r8ins, r9ins, r10ins, r11ins, r12ins, r13ins, r14ins, r15ins, HIins, LOins, ZHIins, ZLOins,PCins, MDRins, MARins, Inports, Outports, IRins, //Input Select Signals for which register were putting data into
 input [31:0] MDRMDataIn, //MDR Data In register
@@ -29,8 +29,9 @@ output [31:0] OutportOut, IROut //Outport Output Signal to output signals to a d
 			reg OutportOutCheck, OutportsTemp;
 			
 			//Memory Necessary Registers
-			reg [31:0] r0outf, MARIn, MemIn, MemOffset, MemAddr;
+			reg [31:0] r0outf, MARIn, MemIn, MemOffset, MemAddr, MARInTemp;
 			reg MemWrite;
+			reg [31:0] BranchPCIn;
 			
 			//IR Breakdown Registers
 			wire [4:0] OPCode;
@@ -112,6 +113,9 @@ output [31:0] OutportOut, IROut //Outport Output Signal to output signals to a d
 				if (OPCode == 5'b10111) regA = CLoOut;	 //mfl Instruction
 				if (OPCode == 5'b11110) regA = CHiOut;	 //mfhi Instruction
 				
+				//Branch and jump instructions
+				if (OPCode == 5'b11000 || OPCode == 5'b11001 || OPCode == 5'b11010 || OPCode == 5'b11011) regA = BranchPCIn;
+				
 				//Put contents of the correct register into regB using regBSel from the IR
 				if (regBSel == 4'b0000) regB = r0outf[31:0]; else
 				if (regBSel == 4'b0001) regB = r1outf[31:0]; else
@@ -130,6 +134,12 @@ output [31:0] OutportOut, IROut //Outport Output Signal to output signals to a d
 				if (regBSel == 4'b1110) regB = r14outf[31:0]; else
 				if (regBSel == 4'b1111) regB = r15outf[31:0];
 			end
+			
+			//Change the branch value on every IRout change
+			always @ (IROut)begin
+				if (OPCode == 5'b11000 || OPCode == 5'b11001 || OPCode == 5'b11010 || OPCode == 5'b11011) BranchPCIn = PCOut + BusMuxOut[18:0];
+				else BranchPCIn = 32'b0;
+			end
 		
 			//Put the ALU result into the C register or the memory output depending on the OPCode
 			always @ (*) begin
@@ -143,20 +153,21 @@ output [31:0] OutportOut, IROut //Outport Output Signal to output signals to a d
 				MemOffset = regB;				
 				
 				if (OPCode == 5'b10100) begin //ldi Instructions
-					MARIn = MemOffset + MemAddr;
+					MARInTemp = MemOffset + MemAddr;
 					CLoIn = MemOut; 
-					if (MemOffset + MemAddr > 9'b111111111) MARIn = 9'b111111111; //Max out the data set
+					if (MemOffset + MemAddr > 9'b111111111) MARInTemp = 9'b111111111; //Max out the data set
 				end else 
 				if (OPCode == 5'b10101) begin //ld Instructions
 					CLoIn = MemOut;
-					MARIn = MemIn;
-					if (MemAddr > 9'b111111111) MARIn = 9'b111111111; //Max out the data set
+					MARInTemp = MemIn;
+					if (MemAddr > 9'b111111111) MARInTemp = 9'b111111111; //Max out the data set
 				end else 
 				if (OPCode == 5'b10110) begin //st Instructions
-					MARIn = MemAddr;
+					MARInTemp = MemAddr;
 					MemWrite = 1; 
 				end
-				else MARIn = PCOut;
+				
+				MARIn = AddressCounterEnable ? PCOut : MARInTemp;
 				
 				//Out Instruction
 				if (OPCode == 5'b01111) OutportOutCheck = 1'b1;
