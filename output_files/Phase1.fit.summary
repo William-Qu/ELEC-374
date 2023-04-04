@@ -1,16 +1,16 @@
-Fitter Status : Successful - Sun Mar 19 18:37:42 2023
+Fitter Status : Successful - Mon Apr 03 20:02:07 2023
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
 Revision Name : Phase1
-Top-level Entity Name : Bus
+Top-level Entity Name : ControlUnitBus
 Family : Cyclone III
 Device : EP3C16F484C6
 Timing Models : Final
-Total logic elements : 0 / 15,408 ( 0 % )
-    Total combinational functions : 0 / 15,408 ( 0 % )
-    Dedicated logic registers : 0 / 15,408 ( 0 % )
-Total registers : 0
-Total pins : 118 / 347 ( 34 % )
+Total logic elements : 9,368 / 15,408 ( 61 % )
+    Total combinational functions : 8,976 / 15,408 ( 58 % )
+    Dedicated logic registers : 931 / 15,408 ( 6 % )
+Total registers : 931
+Total pins : 67 / 347 ( 19 % )
 Total virtual pins : 0
-Total memory bits : 0 / 516,096 ( 0 % )
+Total memory bits : 16,384 / 516,096 ( 3 % )
 Embedded Multiplier 9-bit elements : 0 / 112 ( 0 % )
 Total PLLs : 0 / 4 ( 0 % )
